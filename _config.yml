@@ -1,6 +1,5 @@
 markdown: kramdown
-remote_theme: koirand/pulp
-#theme: jekyll-theme-tactile
+theme: minima
 locale                   : "en-US"
 title                    : "Fatih Mehmet ARSLAN - FMArslan"
 title_separator          : "-"
