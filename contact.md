@@ -1,5 +1,5 @@
 ---
 layout: default
 title: contact
-permalink: mailto:contact@fmarslan.com
+permalink: "mailto:contact@fmarslan.com"
 ---
