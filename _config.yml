@@ -26,7 +26,7 @@ pages:
 
  
 minima:
-  skin: solarized-dark
+  skin: dark
   date_format: "%b %-d, %Y"
   social_links:
     twitter: FMArslan46
