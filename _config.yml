@@ -1,5 +1,7 @@
 plugins:
-  - jekyll-remote-theme
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-remote-theme
 
 remote_theme: jekyll/minima
 
@@ -16,9 +18,6 @@ description: >
   I have experience at NoSQL, RDBMS, Javascript, Bigdata, CI Tools, Kubernetes, Cloud Programming, and various other technologies required by projects I worked on. 
   Through all my professional experience, I have worked hard to improve myself. My previous job experiences are listed on my Linkedin profile.
 
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
 
 header_pages:
 # - contact.md
