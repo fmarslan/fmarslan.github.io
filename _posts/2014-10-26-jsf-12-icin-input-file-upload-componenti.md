@@ -6,6 +6,8 @@ categories: JSF
 
 Malum kullanan varmıdır bilmiyorum ama JSF 1.2 de file upload yok bunu tolere edebilmek için ben yeniden bir inputFile componenti yazdım başkası ihtiyacı olan bir başkası uğraşmasın
 
+HtmlInputFile.java 
+
 ```title:HtmlInputFile.java 
 
 package tr.com.app.base.component.inputfile;
@@ -89,6 +91,7 @@ public class HtmlInputFile extends javax.faces.component.html.HtmlInputText
 
 ```
 
+HtmlInputFileRender.java 
 
 ```title:HtmlInputFileRender.java 
 
@@ -141,6 +144,7 @@ public class HtmlInputFileRender extends Renderer {
 
 ```
 
+UploadServlet.java
 
 ```title:UploadServlet.java
 
@@ -220,6 +224,8 @@ public class UploadServlet extends HttpServlet {
 
 ```
 
+fileUpload.js 
+
 ```title:fileUpload.js 
 
 var appUpload = function(item) {
@@ -268,6 +274,8 @@ var appUpload = function(item) {
 ```
 
 Configuration
+
+Web.xml
 
 ```title:Web.xml
 
