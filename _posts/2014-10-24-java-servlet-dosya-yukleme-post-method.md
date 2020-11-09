@@ -4,6 +4,8 @@ title: "Java Servlet dosya yükleme (POST Method)"
 categories: Java
 ---
 
+Javada servlet aracılığı ile dosya yükleme
+
 ```Java
 
 package tr.com.app.servlet;
