@@ -18,6 +18,12 @@ description: >
 
 show_excerpts: true
 
+header_pages:
+  - mailto:contact@fmarslan.com
+
+pages:
+  - Contact
+
  
 minima:
   skin: solarized-dark
