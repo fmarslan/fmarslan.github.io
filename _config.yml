@@ -15,7 +15,13 @@ description: > # this means to ignore newlines until "show_excerpts:"
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
- 
+
+header_pages:
+ - mailto:contact@fmarslan.com
+
+pages:
+ - contact
+
 minima:
   date_format: "%b %-d, %Y"
   # generate social links in footer
