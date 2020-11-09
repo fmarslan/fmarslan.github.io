@@ -1,3 +1,9 @@
+---
+layout: post
+title: "JQuery Ajax File Upload"
+categories: javascript
+---
+
 Eğer birgün JQuery ajax ile dosya upload etmek isterseniz aşağıdaki gibi bir kodu input file nesnesinin change metodunda çalıştırarak yapabilirsiniz
 
 ```javascript
