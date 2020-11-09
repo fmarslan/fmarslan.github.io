@@ -17,14 +17,12 @@ plugins:
  - jekyll-seo-tag
 
 header_pages:
- - mailto.md
 
 pages:
- - contact
 
 minima:
   date_format: "%b %-d, %Y"
   social_links:
     twitter: FMArslan46
     github: fmarslan
-    linkedin: fmarslan
+    # linkedin: fmarslan
