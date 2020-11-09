@@ -16,7 +16,7 @@ plugins:
  - jekyll-seo-tag
 
 header_pages:
- - contact.md
+# - contact.md
  
 minima:
   skin: dark
