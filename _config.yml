@@ -1,4 +1,9 @@
-theme: minima
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: jekyll/minima
+
+#theme: minima
 locale: "en-US"
 title: FMarslan
 author:
