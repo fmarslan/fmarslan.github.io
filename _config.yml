@@ -17,8 +17,6 @@ description: >
 
 show_excerpts: true
 
-header_pages:
- - 
  
 minima:
   skin: solarized-dark
