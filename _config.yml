@@ -17,9 +17,8 @@ plugins:
  - jekyll-seo-tag
 
 header_pages:
-
-pages:
-
+ - contact.md
+ 
 minima:
   skin: dark
   date_format: "%b %-d, %Y"
