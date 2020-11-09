@@ -1,4 +1,8 @@
 markdown: kramdown
 remote_theme: koirand/pulp
 #theme: jekyll-theme-tactile
-@import "/assets/css/style.css"
+locale                   : "en-US"
+title                    : "Fatih Mehmet ARSLAN - FMArslan"
+title_separator          : "-"
+name                     : &name "FMArslan"
+description              : &description "Fatih Mehmet ARSLAN"
