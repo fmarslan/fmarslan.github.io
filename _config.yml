@@ -1,7 +1,7 @@
 markdown: kramdown
 theme: minima
 locale                   : "en-US"
-title                    : "Fatih Mehmet ARSLAN - FMArslan"
+title                    : "Fatih Mehmet ARSLAN"
 title_separator          : "-"
 name                     : &name "FMArslan"
 description              : &description "Fatih Mehmet ARSLAN"
