@@ -1,2 +1,4 @@
 markdown: kramdown
 remote_theme: koirand/pulp
+
+theme: jekyll-theme-tactile
