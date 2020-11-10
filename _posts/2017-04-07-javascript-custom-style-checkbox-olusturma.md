@@ -3,6 +3,8 @@ layout: post
 title: "javascript custom style checkbox oluşturma"
 categories: javascript
 ---
+
+
 Bazı web sayfalarında görüp ya bir checkbox componentini nasıl böyle yapıyorlar nasıl böyle görünüyor gibi ifadelere sinir olanlardansanız işte size basit bir css ile checkbox style değiştirme örneği. Ayrıca aynı zamanda bir javascript hayranı olarak belki checkbox'ı da javascript ile hazırlamak istersiniz diye javascript ile checkbox hazırlayan scripti de yanında hediye.
 
 Bittimi ?
