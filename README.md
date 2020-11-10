@@ -1,11 +1,11 @@
 <div class="identity" >
   <div class="picture">
-  </div>
+  </div>  
+  <h2 class="name">Fatih Mehmet ARSLAN</h2>
+  <h4 class="title">Software Archiect & Project Lead</h4>
   <div class="social-links">
       {%- include social.html -%}
   </div>
-  <h2 class="name">Fatih Mehmet ARSLAN</h2>
-  <h4 class="title">Software Archiect & Project Lead</h4>
 </div>
 
 
