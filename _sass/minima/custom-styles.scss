@@ -13,7 +13,10 @@ body{
     background-attachment: fixed;
     background-blend-mode: soft-light;
     div.identity{
-        content:"";
+        height:20em;
+        *{
+            float:left;
+        }
         div.picture{
             border-radius: 100%;
             width: 15em;
