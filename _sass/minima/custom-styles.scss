@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
+$primaryColor: #012c32;
+$white: #fdfdfd;
+
 body{
     background-image: url(/assets/svg/background.svg);
     background-repeat: no-repeat;
@@ -13,8 +16,8 @@ body{
        background-color: #eeeeff75;
     }
     header.site-header{
-        background-color: #012c32;
-        box-shadow: 0px 1px 5px -2px #012C32;
+        background-color: $primaryColor;
+        box-shadow: 0px 1px 5px -2px $primaryColor;
         border: none;
         .site-title, .site-title:visited, .site-title:hover, .site-title:active{
             font-family: 'Yellowtail', cursive;
@@ -27,5 +30,9 @@ body{
             -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
         }
+    }
+    footer.site-footer{
+        background-color: mix($primaryColor,$white,91);
+        border-top:1px solid mix($primaryColor,$white,81);
     }
 }
