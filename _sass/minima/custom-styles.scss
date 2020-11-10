@@ -1,6 +1,8 @@
 body{
-      background: url(/assets/svg/background.svg);
+    background-image: url(/assets/svg/background.svg);
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-size: contain;
+    background-attachment: fixed;
+    background-blend-mode: color;
 }
