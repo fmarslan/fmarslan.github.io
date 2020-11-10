@@ -8,6 +8,10 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: soft-light;
+    pre, code{
+       background-color: #eef;
+       background-color: #eeeeff75;
+    }
     header.site-header{
         background-color: #012c32;
         box-shadow: 0px 1px 5px -2px #012C32;
