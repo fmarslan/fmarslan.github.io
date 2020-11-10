@@ -10,6 +10,7 @@ Bittimi ?
 Tabiki bitmedi içerisinde birde checkbox yanına colorbox koymak isteyenler için bir geliştirme var tabiki bu geliştirme http://jscolor.com/ kütüphanesi ile yapılıyor onuda ayrıca başka bir zaman anlatmaya çalışacağım.
 
 NOT: Bu kadar yoğun olunca ister istemez karmaşıklıkta yanında geliyor her zamanki gibi anlamadığınız takıldığınız yerleri sorabilirsiniz. Ayrıca style için http://fontawesome.io/ kütüphanesini eklemeyi unutmayın.
+
 ```javascript
 var createCheckBox = function(name, value, caption, showColorBox) {
    var wrapper = document.createElement("div");
@@ -105,11 +106,11 @@ var createCheckBox = function(name, value, caption, showColorBox) {
    }
    return wrapper;
   }
-
+```
 
 
 Css
-
+```css
 .cbs-checkbox{
  line-height:100%;
  margin-bottom: 5px;
