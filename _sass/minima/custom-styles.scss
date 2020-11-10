@@ -3,7 +3,7 @@
 $primaryColor: #012c32;
 $mixColor: #fdfdfd;
 $secondcColor:  #0392a5;
-$descColor: lighten(mix($primaryColor,$secondcColor,80),50);
+$descColor: mix($primaryColor,$mixColor,30);
 
 body{
     background-image: url(/assets/svg/background.svg);
