@@ -4,6 +4,11 @@
   <h2 class="name">Fatih Mehmet ARSLAN</h2>
   <h4 class="title">Software Archiect & Project Lead</h4>
   <div class="social-links">
+      <a href="{{ 'feed.xml' | relative_url }}">
+        <svg class="svg-icon orange">
+          <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+        </svg><span>Subscribe</span>
+      </a>
       {%- include social.html -%}
   </div>
 </div>
