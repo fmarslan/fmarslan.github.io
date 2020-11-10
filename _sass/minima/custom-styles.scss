@@ -139,16 +139,17 @@ body{
         }
     }
     footer.site-footer{
-        background-color: mix($primaryColor,$mixColor,10);
+        background-color: mix($primaryColor,$mixColor,2);
         border-top:1px solid mix($primaryColor,$mixColor,20);
         background-image: url(/assets/svg/footer.svg);
         background-repeat: no-repeat;
         background-position-x: 0;
-        background-position-y: -19em;
-        background-size: auto;
+        background-position-y: 20em;
+        background-size: 100%;
         background-attachment: fixed;
-        background-blend-mode: unset;
+        background-blend-mode: normal;
         .social-media-list{
+            display:none;
             margin-right:0px;
             border:none;
             padding:0px;
