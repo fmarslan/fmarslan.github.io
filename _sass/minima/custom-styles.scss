@@ -93,10 +93,12 @@ body{
                 margin-bottom: .2em;
                 color: $secondcColor;
                 text-decoration: none;
-                &:visited{
-                    color: darken($secondcColor,10);
-                    &:before{
-                        content:"";
+                a{
+                    &:visited{
+                        color: darken($secondcColor,10);
+                        &:before{
+                            content:"";
+                        }
                     }
                 }
             }
