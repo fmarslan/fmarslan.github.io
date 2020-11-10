@@ -1,12 +1,14 @@
 ---
 layout: post
 title: "Centos 8 üzerine Kubernete Kurulumu"
-categories: bash
+categories: linux
 ---
-Tavsiyeler
+
+### Tavsiyeler
 Öncelikle OS ve Data disk bölümünü eğer mümkünse disk olarak değilse partition oalrak ayırmanızı tavsiye ederim daha sonra olurda başka bir sunucuya taşınmak durumunda kalırsanız sadece image veya mount işlemi ile taşınabilirsiniz.
 Data bölümünü küçük partitionlar halinde tutabilirseniz yine yeni ortama taşınma aşamasında işleri kolaylaştıracaktır.
-Centos 8 Parition Yönetimi
+
+[Centos 8 Parition Yönetimi](/linux/2020/11/09/centos-8-partition-olusturma-silme.html)
 
 
 Kubernete kurulumu yapmak isteyenler minikube, kubernete kurulumu şeklinde 2 farklı kubernete sürümü ile karşılaşacaklardır. mini kube tamamen bilgisayarınızda sanal bir makina oluşturarark size hazır ortam sunacaktır eğer ki basit test vs ile uğraşacaksanız localinizde çalıştıracaksanız bu kurulumu tavsiye ederim fakt burada ben 1 node kubernete kurulumunun adımlarını yazacağım
