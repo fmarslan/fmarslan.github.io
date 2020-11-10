@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bilgisayar Kapatma veya yeniden başlatma"
-categories:
+categories: Windows
 ---
 Bilgisayarı command line üzerinden veya yazılımla yeniden başlatıp kapatabilmek için
 
