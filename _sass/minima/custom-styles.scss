@@ -148,13 +148,22 @@ body{
         background-size: 100%;
         background-attachment: fixed;
         background-blend-mode: normal;
+        padding: .5em;
+        .footer-col{
+            margin-bottom:0em;
+        }
         .contact-list{
-            content:"";
+            float: right;
+            font-size: .8em;    
             *{
                 content:"";
             }
             .p-name{
-                content:"";
+                font-family: 'Yellowtail', cursive;
+                padding-right: 1em;
+                margin-right: 1em;
+                border-right: 1px solid #012c32;
+                font-size: 1.2em;
             }
             .p-email{
                 content:"";
