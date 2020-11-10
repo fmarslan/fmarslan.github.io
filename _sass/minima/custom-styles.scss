@@ -89,19 +89,24 @@ body{
                 font-style: italic;
             }
             h3{
-                font-size: 1.2rem;
                 margin-bottom: .2em;
                 a.post-link{
+                    font-size: 1em;
                     color: $secondcColor;
                     text-decoration: none;
                     &:before{
                         content:" ";
+                        width: 1em;
+                        height: 1em;
+                        border: 1px solid red;
+                        display: block;
+                        float: left;
+                        &:visited{
+                            background-color:red;
+                        }
                     }
                     &:visited{
                         color: darken($secondcColor,10);
-                        &:before{
-                            content:" ";
-                        }
                     }
                 }
             }
