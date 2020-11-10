@@ -99,10 +99,9 @@ body{
                         content:" ";
                         width: 1em;
                         height: 1em;
-                        border: 1px solid red;
                         display: block;
                         float: left;
-                        &:visited{
+                        &::visited{
                             background-color:red;
                         }
                     }
