@@ -5,8 +5,10 @@ categories: shell
 ---
 Batch file ile winrar kullanarak klasör sıkıştırma işlemi yapmak için aşağıdaki komutlar işinizi görebilir dosya adreslerin kendinize göre düzenleyin
 
-C:
+
 ```shell
+C:
+
 cd\
 
 cd C:\Program Files (x86)\WinRAR
