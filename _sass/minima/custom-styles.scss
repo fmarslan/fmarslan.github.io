@@ -32,7 +32,7 @@ body{
         }
     }
     footer.site-footer{
-        background-color: mix($primaryColor,$mixColor,.1);
-        border-top:1px solid mix($primaryColor,$mixColor,.2);
+        background-color: mix($primaryColor,$mixColor,10);
+        border-top:1px solid mix($primaryColor,$mixColor,20);
     }
 }
