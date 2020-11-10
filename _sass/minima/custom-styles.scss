@@ -2,7 +2,7 @@
 
 $primaryColor: #012c32;
 $mixColor: #fdfdfd;
-$secondcColor:  #0392a5;
+$secondaryColor:  #0392a5;
 $descColor: mix($primaryColor,$mixColor,30);
 
 body{
@@ -94,7 +94,7 @@ body{
                 margin-bottom: .2em;
                 a.post-link{
                     font-size: 1em;
-                    color: $secondcColor;
+                    color: $secondarycColor;
                     text-decoration: none;
                     &:before{
                         content:" ";
@@ -120,8 +120,42 @@ body{
     }
     .highlight ,.highlighter-rouge .highlight{
        background-color:darken(mix($mixColor,$primaryColor,10),30);
+       background-color:opacify(darken(mix($mixColor,$primaryColor,10),30));
        border: 1px solid darken(mix($mixColor,$primaryColor,10),40);
-       color: $mixColor;
+       color: white;
+        ::-webkit-scrollbar {
+          width: 11px;
+          height: 11px;
+        }
+        ::-webkit-scrollbar-button {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background:  darken($secondaryColor,1);
+          border: 0px none #ffffff;
+          border-radius: 50px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background:  darken($secondaryColor,1);
+        }
+        ::-webkit-scrollbar-thumb:active {
+          background: darken($secondaryColor,20);
+        }
+        ::-webkit-scrollbar-track {
+          background: $primaryColor;
+          border: 0px none #ffffff;
+          border-radius: .4em;
+        }
+        ::-webkit-scrollbar-track:hover {
+          background: darken($primaryColor,20);
+        }
+        ::-webkit-scrollbar-track:active {
+          background: lighten($primaryColor,20);
+        }
+        ::-webkit-scrollbar-corner {
+          background: transparent;
+        }
     }
     header.site-header{
         background-color: $primaryColor;
