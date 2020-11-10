@@ -9,8 +9,9 @@ Shutdown.exe yi aşağıdaki parametreler ile ihtiyacınıza göre çalıştırm
 
 Parametreler
 
-
+```
 Shutdown.exe = komut
 -s => Kapat
 -r => Yeniden Başlat
 -t 00 => 00 işlem başlamadan geçecek süreyi belirtiyor. Bu parametreyi hiç yazmazsak 30 saniye sonra işlem başlar
+```
