@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Log4j Mail Özelliği"
+title: "Log4j Mail Özelleştirme"
 categories: java
 ---
 log4j ile yazılan logları mail olarak göndermek için yapılandırdınız fakat gönderdiğiniz mailleri size özel biçimlendirmek istiyorsunuz onun için yapmanız gerekenler
