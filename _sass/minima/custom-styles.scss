@@ -57,8 +57,16 @@ body{
                 margin-right:0px;
                 border:none;
                 padding:0px;
-                li a:hover{
-                    border:none;
+                border:none;
+                li:{
+                    content:"";
+                    a{
+                        padding:0px;
+                        border:none;
+                        &:hover{
+                            border:none;
+                        }
+                    }
                 }
             }
         }
