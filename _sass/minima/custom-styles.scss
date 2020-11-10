@@ -2,6 +2,7 @@
 
 $primaryColor: #012c32;
 $mixColor: #fdfdfd;
+$descColor:  #0392a5;
 
 body{
     background-image: url(/assets/svg/background.svg);
@@ -20,6 +21,20 @@ body{
             }
             &:after{
                 content:"";
+            }
+        }
+    }
+    ul.post-list{
+        li{
+            .post-meta {
+                font-size: .8em;
+                color: $descColor;
+                font-style: italic;
+            }
+            h3 .post-link{
+                font-size: 1.2rem;
+                color: #012c32;
+                text-decoration: none;
             }
         }
     }
