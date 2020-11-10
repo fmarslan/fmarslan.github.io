@@ -8,13 +8,13 @@ Birgün gelirde sizinde benim gibi treeview ihtiyacınız olursa işte kodlar ta
 Bağımlılıklar : jQuery & Font Awesome
 
 Kullanımı(dtoList öğeleri INode interface den türetilmesi lazım)
-
+```xhtml
 <me:treeView id="testTree" value="#{TreeSampleAction.selectedDtoList}">
 
 <f:selectItems value="#{TreeSampleAction.dtoList}" />
 
 </me:treeView>
-
+```
 
 Öncelikle Control Class
 ```java
