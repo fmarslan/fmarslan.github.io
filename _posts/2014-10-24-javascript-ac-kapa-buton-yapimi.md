@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "javascript aç/kapa buton yapımı"
-categories:javascript
+categories: javascript
 ---
+
+
 web uygulamalarınızda aç/kapa buttonlara veya checkbox lara ihtiyaç duyabilirsiniz bu gibi durumlar için kullanabileceğiniz bir script
 
 HTML
