@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "HTML5 video tag"
-categories:html
+categories: html
 ---
+
 Sitenizde Video player mi kullanmak istiyorsunuz kendinizi çok yormayın HTML5 sayesinde "<img/>" tagı gibi  "<video/>" tagını kullanabilirsiniz. Detaylı bilgi için buraya bakabilirsiniz
 
 ```html
