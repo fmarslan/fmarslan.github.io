@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
 $primaryColor: #012c32;
-$white: #fdfdfd;
+$mixColor: #fdfdfd;
 
 body{
     background-image: url(/assets/svg/background.svg);
@@ -32,7 +32,7 @@ body{
         }
     }
     footer.site-footer{
-        background-color: mix($primaryColor,$white,91);
-        border-top:1px solid mix($primaryColor,$white,81);
+        background-color: mix($primaryColor,$mixColor,.1);
+        border-top:1px solid mix($primaryColor,$mixColor,.2);
     }
 }
