@@ -32,6 +32,7 @@ body{
             background-position-y: 50%;
             position: static;
             &:before{
+                content:" ";
                 position: absolute;
                 background-color: #012c32;
                 width: 100%;
