@@ -148,6 +148,18 @@ body{
         background-size: 100%;
         background-attachment: fixed;
         background-blend-mode: normal;
+        .contact-list{
+            content:"";
+            *{
+                content:"";
+            }
+            .p-name{
+                content:"";
+            }
+            .p-email{
+                content:"";
+            }
+        }
         .social-media-list{
             display:none;
             margin-right:0px;
