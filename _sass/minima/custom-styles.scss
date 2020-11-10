@@ -88,16 +88,19 @@ body{
                 color: $descColor;
                 font-style: italic;
             }
-            h3 .post-link, h3{
+            h3{
                 font-size: 1.2rem;
                 margin-bottom: .2em;
-                color: $secondcColor;
-                text-decoration: none;
-                a{
+                a.post-link{
+                    color: $secondcColor;
+                    text-decoration: none;
+                    &:before{
+                        content:" ";
+                    }
                     &:visited{
                         color: darken($secondcColor,10);
                         &:before{
-                            content:"";
+                            content:" ";
                         }
                     }
                 }
