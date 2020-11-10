@@ -17,7 +17,8 @@ description: >
   I'm giving consulting about software architect and I'm  a freelance software development
 
 show_excerpts: true
- 
+paginate: true
+
 minima:
   skin: classic
   date_format: "%b %-d, %Y"
