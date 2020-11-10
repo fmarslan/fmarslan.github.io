@@ -9,16 +9,17 @@ web uygulamalarınızda aç/kapa buttonlara veya checkbox lara ihtiyaç duyabili
 
 HTML
 
-```xhtml
-
+```html
 <table recordID="1" cellpadding="0" cellspacing="0" class="checkBox">
     <tr>
         <td selected>0</td>
         <td>1</td>
     </tr>
 </table>
-Script
+```
 
+Script
+```javascript
 jQuery(".checkBox").click(function() {
     jQuery(this).removeClass("errCheckBox");
     jQuery(this).find("td").each(function(id) {
