@@ -1,6 +1,5 @@
 <div class="identity" >
   <div class="picture">
-    <img src="https://fmarslan.com/assets/profile.png" />
   </div>
   <h2 class="name">Fatih Mehmet ARSLAN</h2>
   <h4 class="title">Software Archiect & Project Lead</h4>
