@@ -6,13 +6,7 @@ $secondcColor:  #0392a5;
 $descColor: mix($primaryColor,$mixColor,30);
 
 body{
-    background-image: url(/assets/svg/background.svg);
-    background-repeat: no-repeat;
-    background-position-x: 0;
-    background-position-y: 50%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: soft-light;
+    background-color:mix($mixColor,$primaryColor,92);
     div.identity{
         height:20em;
         *{
@@ -42,6 +36,13 @@ body{
                 left: 0px;
                 margin-top: 4em;
                 z-index: -1;
+                background-image: url(/assets/svg/background.svg);
+                background-repeat: no-repeat;
+                background-position-x: 0;
+                background-position-y: 50%;
+                background-size: cover;
+                background-attachment: fixed;
+                background-blend-mode: soft-light;
             }
             &:after{
                 content:"";
