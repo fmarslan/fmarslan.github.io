@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "javascript ile base64"
-categories:javascript
+categories: javascript
 ---
+
 Sayfanızda bulunan resim üzerine tıklayınca resim değiştirip yeni resmi ajax ile sunucuya kaydetmek isterseniz aşağıdaki kod işinizi görecektir.
 
 Html
