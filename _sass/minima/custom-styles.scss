@@ -102,7 +102,7 @@ body{
                         height: 1em;
                         display: block;
                         float: left;
-                        &::visited{
+                        &:visited{
                             background-color:red;
                         }
                     }
@@ -127,37 +127,37 @@ body{
        background-color:opacify(mix($mixColor,$primaryColor,10));
        border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
        color: white;
-        ::-webkit-scrollbar {
+       &::-webkit-scrollbar {
           width: 11px;
           height: 11px;
         }
-        ::-webkit-scrollbar-button {
+        &::-webkit-scrollbar-button {
           width: 8px;
           height: 8px;
         }
-        ::-webkit-scrollbar-thumb {
+        &::-webkit-scrollbar-thumb {
           background:  darken($secondaryColor,1);
           border: 0px none #ffffff;
           border-radius: 50px;
         }
-        ::-webkit-scrollbar-thumb:hover {
+        &::-webkit-scrollbar-thumb:hover {
           background:  darken($secondaryColor,1);
         }
-        ::-webkit-scrollbar-thumb:active {
+        &::-webkit-scrollbar-thumb:active {
           background: darken($secondaryColor,20);
         }
-        ::-webkit-scrollbar-track {
+        &::-webkit-scrollbar-track {
           background: $primaryColor;
           border: 0px none #ffffff;
           border-radius: .4em;
         }
-        ::-webkit-scrollbar-track:hover {
+        &::-webkit-scrollbar-track:hover {
           background: darken($primaryColor,20);
         }
-        ::-webkit-scrollbar-track:active {
+        &::-webkit-scrollbar-track:active {
           background: lighten($primaryColor,20);
         }
-        ::-webkit-scrollbar-corner {
+        &::-webkit-scrollbar-corner {
           background: transparent;
         }
     }
