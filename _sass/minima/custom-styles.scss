@@ -34,5 +34,13 @@ body{
     footer.site-footer{
         background-color: mix($primaryColor,$mixColor,10);
         border-top:1px solid mix($primaryColor,$mixColor,20);
+        .social-media-list{
+            margin-right:0px;
+            border:none;
+            padding:0px;
+            li a:hover{
+                border:none;
+            }
+        }
     }
 }
