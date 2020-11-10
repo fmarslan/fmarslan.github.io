@@ -2,7 +2,8 @@
 
 $primaryColor: #012c32;
 $mixColor: #fdfdfd;
-$descColor:  #0392a5;
+$secondcColor:  #0392a5;
+$descColor: lighten(mix($primaryColor,$secondcColor,50),20);
 
 body{
     background-image: url(/assets/svg/background.svg);
@@ -89,15 +90,17 @@ body{
             }
             h3 .post-link, h3{
                 font-size: 1.2rem;
-                color: lighten($primaryColor,10);
+                margin-bottom: .2em;
+                color: $secondcColor;
                 text-decoration: none;
                 &:visited{
-                    color: darken($primaryColor,10);
+                    color: darken($secondcColor,10);
                 }
             }
             p{
                 font-size:.95em;
                 font-style: italic;
+                color:lighten($primaryColor,10);
             }
         }
     }
