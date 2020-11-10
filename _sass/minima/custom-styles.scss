@@ -118,10 +118,14 @@ body{
             }
         }
     }
-    .highlight ,.highlighter-rouge .highlight{
-       background-color:darken(mix($mixColor,$primaryColor,10),30);
-       background-color:opacify(darken(mix($mixColor,$primaryColor,10),30));
-       border: 1px solid darken(mix($mixColor,$primaryColor,10),40);
+    pre, code{
+        border:none;
+        background:transparent;
+    }
+    div.highlight ,.highlighter-rouge div.highlight{
+       background-color:mix($mixColor,$primaryColor,10);
+       background-color:opacify(mix($mixColor,$primaryColor,10));
+       border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
        color: white;
         ::-webkit-scrollbar {
           width: 11px;
