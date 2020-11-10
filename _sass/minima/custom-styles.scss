@@ -126,7 +126,7 @@ body{
           height: 8px;
         }
        &::-webkit-scrollbar-thumb {
-          background:  darken($secondaryColor,1);
+          background: darken($secondaryColor,8);
           border: 0px none #ffffff;
           border-radius: 5px;
         }
@@ -134,18 +134,18 @@ body{
           background:  darken($secondaryColor,4);
         }
         &::-webkit-scrollbar-thumb:active {
-          background: darken($secondaryColor,8);
+          background:  darken($secondaryColor,4);
         }
         &::-webkit-scrollbar-track {
-          background: $primaryColor;
+          background: lighten($primaryColor,3);
           border: 0px none #ffffff;
           border-radius: 5px;
         }
         &::-webkit-scrollbar-track:hover {
-          background: darken($primaryColor,3);
+          background: $primaryColor;
         }
         &::-webkit-scrollbar-track:active {
-          background: lighten($primaryColor,3);
+          background: $primaryColor;
         }
         &::-webkit-scrollbar-corner {
           background: transparent;
