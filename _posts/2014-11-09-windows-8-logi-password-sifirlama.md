@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Windows 8 login password sıfırlama"
-categories:
+categories: windows
 ---
+
 Windows 8 login şifresini sıfırlamak istediğiniz zaman aşağıdaki adımları takip edin
 
 
