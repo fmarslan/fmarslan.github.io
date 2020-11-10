@@ -107,7 +107,7 @@ body{
                         }
                     }
                     &:visited{
-                        color: lighten(mix($primaryColor,$secondcColor,30),30);
+                        color: mix($primaryColor,$mixColor,30);
                     }
                 }
             }
