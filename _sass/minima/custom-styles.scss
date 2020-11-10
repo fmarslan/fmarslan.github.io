@@ -95,6 +95,9 @@ body{
                 text-decoration: none;
                 &:visited{
                     color: darken($secondcColor,10);
+                    &:before{
+                        content:"";
+                    }
                 }
             }
             p{
