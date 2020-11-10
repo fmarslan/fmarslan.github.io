@@ -31,10 +31,16 @@ body{
                 color: $descColor;
                 font-style: italic;
             }
-            h3 .post-link{
+            h3 .post-link, h3{
                 font-size: 1.2rem;
-                color: #012c32;
+                color: lighten($primaryColor,10);
                 text-decoration: none;
+                &:visited{
+                    color: darken($primaryColor,10);
+                }
+            }
+            p{
+                
             }
         }
     }
