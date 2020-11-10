@@ -127,7 +127,7 @@ body{
        &::-webkit-scrollbar-thumb {
           background:  darken($secondaryColor,1);
           border: 0px none #ffffff;
-          border-radius: 50px;
+          border-radius: 5px;
         }
         &::-webkit-scrollbar-thumb:hover {
           background:  darken($secondaryColor,4);
@@ -138,7 +138,7 @@ body{
         &::-webkit-scrollbar-track {
           background: $primaryColor;
           border: 0px none #ffffff;
-          border-radius: .4em;
+          border-radius: 5px;
         }
         &::-webkit-scrollbar-track:hover {
           background: darken($primaryColor,3);
