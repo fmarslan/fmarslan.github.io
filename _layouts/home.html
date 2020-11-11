@@ -19,18 +19,15 @@ layout: default
 <div class="content">
 
   {{ content }}
-
-{{ site.paginate }}
   
   {% if site.paginate %}
-  paginator.posts
     {% assign posts = paginator.posts %}
   {% else %}
   site.posts
     {% assign posts = site.posts %}
   {% endif %}
 
-
+{{ posts.size }}
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
