@@ -133,14 +133,16 @@ body{
                     }
                     .icon{
                         width: 1em;
-                        height: 1em;
-                        display:block;
-                        color:transparent;
+                        height: .9em;
+                        color: transparent;
+                        display: inline-block;
+                        line-height: 1em;
+                        vertical-align: middle;
                     }
                     &:visited{
                         color: mix($primaryColor,$mixColor,70);
                         .icon{
-                            color: mix($primaryColor,$mixColor,70);
+                            color: mix($primaryColor,$mixColor,50);
                         }
                     }
                 }
@@ -148,7 +150,7 @@ body{
             div.excerpt{
                 font-size:.8em;
                 font-style: italic;
-                color:mix($primaryColor,$mixColor,20);
+                color:mix($primaryColor,$mixColor,50);
             }
         }
     }
