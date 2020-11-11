@@ -19,7 +19,7 @@ layout: default
 <div class="content">
 
   {{ content }}
-   
+  <div class="posts">
   {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
@@ -28,9 +28,11 @@ layout: default
       {%- for post in paginator.posts -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="categories {{ post.categories | 'default' }}">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+            <i class="icon"/>
+            {{ post.title | escape }}            
           </a>
         </h3>
         {%- if site.show_excerpts -%}
@@ -59,5 +61,6 @@ layout: default
     <span class="next ">Next</span>
   {% endif %}
 </div>
+    </div>
 </div>
 </div>
