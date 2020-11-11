@@ -2,6 +2,7 @@
 layout: post
 title: "Centos 8 üzerine Kubernete Kurulumu"
 categories: linux
+permalink: /:categories/:year/:month/:day/:title:output_ext
 ---
 ### Tavsiyeler
 Öncelikle OS ve Data disk bölümünü eğer mümkünse disk olarak değilse partition oalrak ayırmanızı tavsiye ederim daha sonra olurda başka bir sunucuya taşınmak durumunda kalırsanız sadece image veya mount işlemi ile taşınabilirsiniz.
@@ -121,3 +122,4 @@ systemctl enable iptables
 ```
 bu işlemlerden sonra node read gördüğümüzde kubernete kurulumumuz tamamlanmıştır. storage deployment işlemlerinizi yapabilirsiniz.
 
+Katkıları için [Kazım Sarıkaya](https://srkykzm.com/)'ya teşekkür ederim
