@@ -159,8 +159,12 @@ body{
                 font-size:.8em;
                 font-style: italic;
                 color:mix($primaryColor,$mixColor,50);
+                text-align: justify;
             }
         }
+    }
+    .content{
+        text-align: justify;
     }
     .page-content{
         pre, code{
@@ -253,6 +257,7 @@ body{
         background-attachment: fixed;
         background-blend-mode: normal;
         padding: .5em;
+        position: relative;
         .credits{
             position: absolute;
             right: .5em;
