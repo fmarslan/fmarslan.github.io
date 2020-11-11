@@ -122,54 +122,51 @@ body{
         }
     }
     .page-content{
-        .post-content{
-            pre, code{
-                border:none;
-                background:transparent;
+        pre, code{
+            border:none;
+            background:transparent;
+        }
+        pre{
+            &:not(.highlight){
+               background-color:mix($mixColor,$primaryColor,10);
+               background-color:opacify(mix($mixColor,$primaryColor,10),.5);
+               border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
+               color: white;
             }
-        }
-    }
-    
-    pre{
-        &:not(.highlight){
-           background-color:mix($mixColor,$primaryColor,10);
-           background-color:opacify(mix($mixColor,$primaryColor,10),.5);
-           border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
-           color: white;
-        }
-        margin: 0px !important;
-        &::-webkit-scrollbar {
-          width: 11px;
-          height: 11px;
-        }
-       &::-webkit-scrollbar-button {
-          width: 8px;
-          height: 8px;
-        }
-       &::-webkit-scrollbar-thumb {
-          background: darken($secondaryColor,8);
-          border: 0px none #ffffff;
-          border-radius: 0px;
-        }
-        &::-webkit-scrollbar-thumb:hover {
-          background:  darken($secondaryColor,4);
-        }
-        &::-webkit-scrollbar-thumb:active {
-          background:  darken($secondaryColor,4);
-        }
-        &::-webkit-scrollbar-track {
-          background: transparent;
-          border: 0px none #ffffff;
-          border-radius: 0px;
-        }
-        &::-webkit-scrollbar-track:hover {
-          background: transparent;
-        }
-        &::-webkit-scrollbar-track:active {
-          background: transparent;
-        }
-        &::-webkit-scrollbar-corner {
-          background: transparent;
+            margin: 0px !important;
+            &::-webkit-scrollbar {
+              width: 11px;
+              height: 11px;
+            }
+           &::-webkit-scrollbar-button {
+              width: 8px;
+              height: 8px;
+            }
+           &::-webkit-scrollbar-thumb {
+              background: darken($secondaryColor,8);
+              border: 0px none #ffffff;
+              border-radius: 0px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+              background:  darken($secondaryColor,4);
+            }
+            &::-webkit-scrollbar-thumb:active {
+              background:  darken($secondaryColor,4);
+            }
+            &::-webkit-scrollbar-track {
+              background: transparent;
+              border: 0px none #ffffff;
+              border-radius: 0px;
+            }
+            &::-webkit-scrollbar-track:hover {
+              background: transparent;
+            }
+            &::-webkit-scrollbar-track:active {
+              background: transparent;
+            }
+            &::-webkit-scrollbar-corner {
+              background: transparent;
+            }
         }
     }
     div.highlight ,.highlighter-rouge div.highlight{
