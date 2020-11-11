@@ -6,7 +6,7 @@ categories: Java
 
 Javada servlet aracılığı ile dosya yükleme
 
-```Java
+```java
 
 package tr.com.app.servlet;
 
