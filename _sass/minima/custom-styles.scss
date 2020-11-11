@@ -92,15 +92,15 @@ body{
     ul.post-list{
         li{
             margin-bottom:.2em;
+            margin-bottom: 1em;
+            box-shadow: 0px 1em 0.2em -1em #bbb;
+            padding-bottom: .3em;
             .post-meta {
                 font-size: .8em;
                 color: $descColor;
                 font-style: italic;
                 margin-right: .3em;
                 width: 6em;
-                margin-bottom: 1em;
-                box-shadow: 0px 2em 0.2em -2em #bbb;
-                padding-bottom: .1em;
                 &:before{
                     content:"";
                 }
