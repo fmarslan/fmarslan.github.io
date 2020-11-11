@@ -5,8 +5,7 @@ plugins:
  - jekyll-seo-tag
  - jekyll-remote-theme
  - jekyll-sitemap
-gems:
-  - jekyll-paginate-v2
+ - jekyll-paginate
 
 remote_theme: jekyll/minima
 
