@@ -282,6 +282,7 @@ body{
 @media only screen and (max-width: 768px) {
     body{
         div.identity{
+            height:auto;
         *{
             float:unset;
             margin:auto 0;
@@ -305,6 +306,7 @@ body{
            .social-media-list{
                 margin: auto;
                 margin: auto .5em;
+                text-align: center;
                 li{
                     display: inline-block;
                     margin: 1em .5em;
