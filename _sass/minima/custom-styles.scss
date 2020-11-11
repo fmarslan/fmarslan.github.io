@@ -100,6 +100,27 @@ body{
                     content:"";
                 }
             }
+            .categories{
+                content:"";
+                &.csharp{
+                    content:"";
+                }
+                &.java{
+                    content:"";
+                }
+                &.linux{
+                    content:"";
+                }
+                &.windows{
+                    content:"";
+                }
+                &.javascript{
+                    content:"";
+                }
+                &.default{
+                    content:"";
+                }
+            }
             h3{
                 margin-bottom: .2em;
                 font-size:1em;
@@ -111,7 +132,15 @@ body{
                         content:" ";
                     }
                     &:visited{
-                        color: mix($primaryColor,$mixColor,30);
+                        color: mix($primaryColor,$mixColor,50);
+                        i.icon{
+                            &:before{
+                                content:"";
+                            }
+                            &:after{
+                                content:"";
+                            }
+                        }
                     }
                 }
             }
