@@ -8,7 +8,9 @@ log4j ile yazılan logları mail olarak göndermek için yapılandırdınız fak
 1. org.apache.log4j.net.SMTPAppender classını extend eden bir class hazırlayın
 2. log4j içerisinde "log4j.appender.mail" özelliki için kendi hazırladığınız classı gösterin
 3.  Aşağıdaki kodu bu classın içerisine ekleyerek istediğiniz gibi mesajınızı özelleştirebilirsiniz.
+
 ```java
+
 @Override
  protected void sendBuffer() {  
   try {
@@ -61,4 +63,5 @@ log4j ile yazılan logları mail olarak göndermek için yapılandırdınız fak
    LogLog.error("Error occured while sending e-mail notification.", e);
   }
  }
+ 
 ```
