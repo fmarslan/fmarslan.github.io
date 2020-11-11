@@ -90,6 +90,14 @@ body{
                 font-size: .8em;
                 color: $descColor;
                 font-style: italic;
+                margin-right: .3em;
+                width: 6em;
+                &:before{
+                    content:"";
+                }
+                &:after{
+                    content:"";
+                }
             }
             h3{
                 margin-bottom: .2em;
