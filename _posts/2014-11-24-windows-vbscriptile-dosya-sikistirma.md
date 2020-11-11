@@ -4,7 +4,7 @@ title: "Windows VBScript ile dosya sıkıştırma"
 categories: VBScript
 ---
 VBScript ile dosya sıkıştırma yapmak için aşağıdaki kod işinizi görebilir
-```vbscript
+```vb
 InputFolder = "D:\temp"
 ZipFile = "D:\temp " & Replace(Replace(Replace(FormatDateTime(Now),":","-"),".","-"),"/","-") &".zip"
 
