@@ -168,13 +168,17 @@ body{
               background: transparent;
             }
         }
+        div.highlight ,.highlighter-rouge div.highlight{
+           background-color:mix($mixColor,$primaryColor,10);
+           background-color:opacify(mix($mixColor,$primaryColor,10),.5);
+           border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
+           color: white;
+           pre.highlight{
+               background-color:transparent;
+           }
+        }
     }
-    div.highlight ,.highlighter-rouge div.highlight{
-       background-color:mix($mixColor,$primaryColor,10);
-       background-color:opacify(mix($mixColor,$primaryColor,10),.5);
-       border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
-       color: white;
-    }
+    
     header.site-header{
         background-color: $primaryColor;
         box-shadow: 0px 1px 5px -2px $primaryColor;
