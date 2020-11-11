@@ -121,9 +121,11 @@ body{
             }
         }
     }
-    pre, code{
-        border:none;
-        background:transparent !important;
+    page-content{
+        post-content.pre, post-content.code{
+            border:none;
+            background:transparent;
+        }
     }
     
     pre{
