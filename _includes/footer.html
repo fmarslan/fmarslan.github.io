@@ -3,17 +3,23 @@
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
-      {%- if site.author %}
-        <div class="contact-list">
-          {% if site.author.name -%}
-            <span class="p-name">{{ site.author.name | escape }}</span>
-          {% endif -%}
-          {% if site.author.email -%}
-            <span class="p-email"><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
-          {%- endif %}
-        </div>
-      {%- endif %}
+        {%- if site.author %}
+          <div class="contact-list">
+            {% if site.author.name -%}
+              <span class="p-name">{{ site.author.name | escape }}</span>
+            {% endif -%}
+            {% if site.author.email -%}
+              <span class="p-email"><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
+            {%- endif %}
+          </div>
+        {%- endif %}
       </div>
     </div>
   </div>
+  <div class="credits">
+          <ul>
+            <li><a href="https://pages.github.com/">Github Pages</a></li>
+            <li><a href="https://jekyllrb.com/">Jekyll</a></li>
+          </ul>
+        </div>
 </footer>

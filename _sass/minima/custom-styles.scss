@@ -213,6 +213,26 @@ body{
         background-attachment: fixed;
         background-blend-mode: normal;
         padding: .5em;
+        .credits{
+            position: absolute;
+            right: .5em;
+            bottom: .5em;
+            ul{
+                content:"";
+                li{
+                    float: left;
+                    padding: 0 .5em;
+                    list-style: none;
+                    font-size: .7em;
+                    &:first-child{
+                        border-right: 1px solid mix($primaryColor,$mixColor,50);
+                    }
+                    a{
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
         .footer-col{
             margin-bottom:0em;
         }
