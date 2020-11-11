@@ -20,6 +20,8 @@ description: >
 paginate: true
 paginate_path: "/blog/page:num/"
 
+google_analytics: G-ZPHHT8GE5Z
+
 minima:
   skin: classic
   date_format: "%b %-d, %Y"
