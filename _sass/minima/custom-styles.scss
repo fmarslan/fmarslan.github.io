@@ -133,7 +133,8 @@ body{
                     }
                     &:visited{
                         color: mix($primaryColor,$mixColor,50);
-                        i.icon{
+                        .icon{
+                            content:"";
                             &:before{
                                 content:"";
                             }
@@ -145,9 +146,9 @@ body{
                 }
             }
             div.excerpt{
-                font-size:.95em;
+                font-size:.8em;
                 font-style: italic;
-                color:lighten($primaryColor,10);
+                color:lighten($primaryColor,20);
             }
         }
     }
