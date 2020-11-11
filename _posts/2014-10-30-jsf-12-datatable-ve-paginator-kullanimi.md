@@ -8,7 +8,7 @@ JSF 1.2 de sayfalama özelliğiyle birlikte datatable kullanımı için aşağı
 
 XHTML
 
-```xhtml
+```html
 <h:dataTable id="tablo" rows="#10" value="#{SorgulamaAction.aktifSorgulamaList}" binding="#{PaginationAction.paginationDmdDataTable}" var="list">
     <h:column>
         <f:facet name="header">
