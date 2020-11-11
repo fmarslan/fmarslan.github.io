@@ -2,6 +2,7 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-remote-theme
+ - jekyll-paginate
 
 remote_theme: jekyll/minima
 
