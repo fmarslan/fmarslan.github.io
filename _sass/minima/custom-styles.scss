@@ -287,64 +287,34 @@ body{
             margin:auto 0;
         }
         div.picture{
-            border-radius: 100%;
-            width: 15em;
-            height: 15em;
-            border: 9px solid #012c32;
-            padding: .3em;
-            display: block;
-            margin: auto;
-            background-image: url(/assets/profile.png);
-            background-size: 140%;
-            background-repeat: no-repeat;
-            background-position-x: 1%;
-            background-position-y: 50%;
-            position: static;
-            &:before{
-                content: " ";
-                position: absolute;
-                background-color: $primaryColor;
-                width: 100%;
-                height: 8em;
-                left: 0px;
-                margin-top: 4em;
-                z-index: -1;
-                background-image: url(/assets/svg/background.svg);
-                background-repeat: no-repeat;
-                background-position-x: 0;
-                background-position-y: -19em;
-                background-size: auto;
-                background-attachment: fixed;
-                background-blend-mode: unset;
-                box-shadow: inset 0px -13px 17px -20px $mixColor;
-            }
-            &:after{
-                content:"";
-            }
+           margin: auto;
         }
         h2.name{
-            margin-top: 4em;
+            margin: .3em 0 auto;
             color: $primaryColor;
-            margin-left: .6em;
+            text-align: center;
         }
         h4.title{
             color: mix($primaryColor,$mixColor,30);
-            margin-left: 1em;
-            margin-top: -1em;
+            margin: 0 auto;
+            text-align: center;
         }
         .social-links{
-            float: right;
+            float: unset;
             margin-top: 0em;
            .social-media-list{
-                margin-right:0px;
-                border:none;
-                padding:0px;
-                border:none;
+                margin: auto;
+                margin: auto .5em;
                 li{
-                    content:"";
+                    display: inline-block;
+                    margin: 1em .5em;
                     a{
                         .svg-icon.grey{
-                            color: mix($primaryColor,$mixColor,70);
+                            background-color: mix($primaryColor,$mixColor,70);
+                            font-size: 2em;
+                            color: #fdfdfd;
+                            padding: .3em;
+                            box-shadow: 0px 0px 1px 0px $primaryColor;
                         }
                         padding:0px;
                         border:none;
