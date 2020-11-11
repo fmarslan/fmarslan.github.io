@@ -1,7 +1,3 @@
----
-layout: home
----
-
 <div class="identity" >
   <div class="picture">
   </div>  
