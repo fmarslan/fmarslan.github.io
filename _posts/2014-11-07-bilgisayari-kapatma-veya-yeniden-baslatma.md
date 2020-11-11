@@ -9,7 +9,7 @@ Shutdown.exe yi aşağıdaki parametreler ile ihtiyacınıza göre çalıştırm
 
 Parametreler
 
-```
+```sh
 Shutdown.exe = komut
 -s => Kapat
 -r => Yeniden Başlat
