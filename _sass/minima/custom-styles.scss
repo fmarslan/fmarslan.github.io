@@ -213,20 +213,23 @@ body{
         background-attachment: fixed;
         background-blend-mode: normal;
         padding: .5em;
-        .footer-col{
-            margin-bottom:0em;
-            .credits{
+        .credits{
+           float: right;
+            ul{
                 content:"";
-                ul{
-                    content:"";
-                    li{
-                        content:"";
-                        a{
-                            content:"";
-                        }
+                li{
+                    float: left;
+                    margin: 0 1em;
+                    list-style: none;
+                    font-size: .7em;
+                    a{
+                        color: mix($primaryColor,$mixColor,30);
                     }
                 }
             }
+        }
+        .footer-col{
+            margin-bottom:0em;
         }
         .contact-list{
             float: right;
