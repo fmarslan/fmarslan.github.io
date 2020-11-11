@@ -84,6 +84,11 @@ body{
             }
         }
     }
+    .posts{
+        margin-top: 2em;
+        border-top: 1px solid #ccc;
+        padding-top: 2em;
+    }
     ul.post-list{
         li{
             margin-bottom:.2em;
@@ -93,6 +98,9 @@ body{
                 font-style: italic;
                 margin-right: .3em;
                 width: 6em;
+                margin-bottom: 1em;
+                box-shadow: 0px 2em 0.2em -2em #bbb;
+                padding-bottom: .1em;
                 &:before{
                     content:"";
                 }
