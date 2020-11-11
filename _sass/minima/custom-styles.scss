@@ -135,12 +135,12 @@ body{
             }
             margin: 0px !important;
             &::-webkit-scrollbar {
-              width: 11px;
-              height: 11px;
+              width: 5px;
+              height: 5px;
             }
            &::-webkit-scrollbar-button {
-              width: 8px;
-              height: 8px;
+              width: 0px;
+              height: 0px;
             }
            &::-webkit-scrollbar-thumb {
               background: darken($secondaryColor,8);
