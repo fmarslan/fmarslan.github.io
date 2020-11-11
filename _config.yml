@@ -20,8 +20,7 @@ description: >
   I'm a software engineer.  
   I'm giving consulting about software architect and I'm  a freelance software development
 
-paginate: true
-paginate_path: "/blog/page:num/"
+paginate: 5
 
 google_analytics: G-ZPHHT8GE5Z
     
