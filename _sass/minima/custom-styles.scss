@@ -124,6 +124,12 @@ body{
     pre, code{
         border:none;
         background:transparent !important;
+        &:not(.highlight){
+           background-color:mix($mixColor,$primaryColor,10);
+           background-color:opacify(mix($mixColor,$primaryColor,10),.5);
+           border: 1px solid darken(mix($mixColor,$primaryColor,10),10);
+           color: white;
+        }
     }
     pre{
         margin: 0px !important;
