@@ -214,16 +214,19 @@ body{
         background-blend-mode: normal;
         padding: .5em;
         .credits{
-           float: right;
+            position: absolute;
+            right: 0px;
+            bottom: .5em;
             ul{
                 content:"";
                 li{
                     float: left;
-                    margin: 0 1em;
+                    padding: 0 .5em;
                     list-style: none;
                     font-size: .7em;
+                    border-right: 1px solid $primaryColor;
                     a{
-                        color: mix($primaryColor,$mixColor,30);
+                        color: $primaryColor;
                     }
                 }
             }
