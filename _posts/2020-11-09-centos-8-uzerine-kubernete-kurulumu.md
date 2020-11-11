@@ -3,7 +3,7 @@ layout: post
 title: "Centos 8 üzerine Kubernete Kurulumu"
 categories: linux
 ---
-### Tavsiyeler111
+### Tavsiyeler
 Öncelikle OS ve Data disk bölümünü eğer mümkünse disk olarak değilse partition oalrak ayırmanızı tavsiye ederim daha sonra olurda başka bir sunucuya taşınmak durumunda kalırsanız sadece image veya mount işlemi ile taşınabilirsiniz.
 Data bölümünü küçük partitionlar halinde tutabilirseniz yine yeni ortama taşınma aşamasında işleri kolaylaştıracaktır.
 
