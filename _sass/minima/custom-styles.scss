@@ -85,6 +85,7 @@ body{
     }
     ul.post-list{
         li{
+            margin-bottom:.2em;
             .post-meta {
                 font-size: .8em;
                 color: $descColor;
@@ -92,6 +93,7 @@ body{
             }
             h3{
                 margin-bottom: .2em;
+                font-size:1em;
                 a.post-link{
                     font-size: 1em;
                     color: $secondaryColor;
