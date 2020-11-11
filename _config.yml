@@ -24,7 +24,9 @@ description: >
 paginate: 10
 show_excerpts: true
 google_analytics: G-ZPHHT8GE5Z
-    
+permalink: /:categories/:year/:month/:day/:title:output_ext
+paginate_path: /blog/:num
+
 minima:
   skin: classic
   date_format: "%b %-d, %Y"
