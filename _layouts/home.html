@@ -20,7 +20,8 @@ layout: default
 
   {{ content }}
 
-{{site.paginate}}
+{{ site.paginate }}
+  
   {% if site.paginate %}
   paginator.posts
     {% assign posts = paginator.posts %}
