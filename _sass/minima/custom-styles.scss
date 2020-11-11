@@ -215,6 +215,18 @@ body{
         padding: .5em;
         .footer-col{
             margin-bottom:0em;
+            .credits{
+                content:"";
+                ul{
+                    content:"";
+                    li{
+                        content:"";
+                        a{
+                            content:"";
+                        }
+                    }
+                }
+            }
         }
         .contact-list{
             float: right;
