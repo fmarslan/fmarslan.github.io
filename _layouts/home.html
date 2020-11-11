@@ -20,13 +20,18 @@ layout: default
 
   {{ content }}
   
-  {% if site.paginate %}
+  {%- if site.paginate -%}
     {% assign posts = paginator.posts %}
+    page : {{ paginator.page }}
+    per_page : {{ paginator.per_page }}
+    posts: {{ paginator.posts }}
+    total_posts: {{ paginator.total_posts }}
+    total_pages: {{ paginator.total_pages }}
+    previous_page: {{ paginator.previous_page }}
+    next_page: {{ paginator.next_page }}
   {% else %}
     {% assign posts = site.posts %}
   {% endif %}
-
-  {{ posts.size }}
   
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
