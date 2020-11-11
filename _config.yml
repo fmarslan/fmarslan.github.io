@@ -23,8 +23,6 @@ paginate: true
 paginate_path: "/blog/page:num/"
 
 google_analytics: G-ZPHHT8GE5Z
-disqus:
-    shortname: fmarslan
     
 minima:
   skin: classic
