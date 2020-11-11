@@ -17,7 +17,7 @@ description: >
   I'm a software engineer.  
   I'm giving consulting about software architect and I'm  a freelance software development
 
-paginate: 5
+paginate: true
 paginate_path: "/blog/page:num/"
 
 minima:
