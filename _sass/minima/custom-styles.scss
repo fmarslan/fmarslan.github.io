@@ -8,7 +8,7 @@ $secondaryColor:  #0392a5;
 $descColor: mix($primaryColor,$mixColor,30);
 
 body{
-    background-color:mix($mixColor,$primaryColor,92);
+    background-color:mix($mixColor,$primaryColor,95);
     div.identity{
         height:20em;
         *{
@@ -96,7 +96,7 @@ body{
             display: block;
             margin-bottom: 1em;
             font-size: 1.8em;
-            color: #888;
+            color: $descColor: mix($primaryColor,$mixColor,40);
             font-family: 'Damion', cursive;
         }
     }
