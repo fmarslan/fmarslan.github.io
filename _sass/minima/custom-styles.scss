@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
 
 $primaryColor: #012c32;
 $mixColor: #fdfdfd;
@@ -89,7 +91,13 @@ body{
         border-top: 1px solid #ccc;
         padding-top: 2em;
         &:before{
-            content:"";
+            content: "Notes to Myself:";
+            margin-top: -3em;
+            display: block;
+            margin-bottom: 1em;
+            font-size: 1.8em;
+            color: #888;
+            font-family: 'Damion', cursive;
         }
     }
     ul.post-list{
