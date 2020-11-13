@@ -8,6 +8,7 @@ categories: Linux
 2. Adım checkpoint web panelinden paylaşılan SNX dosyasını indirim kurulumunu sağlayalım
 
 Linux Supported Platforms
+<table>
 <tbody>
 <tr><td>Latest<br>Linux<br>Distribution</td><td>32-bit Prerequisites</td><td>64-bit Prerequisites</td><td>Installation command</td></tr>
 <tr><td>Ubuntu<br>&nbsp;14.04<br>&nbsp;16.04<br>&nbsp;16.10<br>&nbsp;17.04</td><td>libpam0g:i386<br>libx11-6:i386<br>libstdc++6:i386<br>libstdc++5:i386</td><td>libpam0g:i386<br>libx11-6:i386<br>libstdc++6:i386<br>libstdc++5:i386<br>libnss3-tools (certutil)&nbsp;</td><td>Apt-get</td></tr>
@@ -18,7 +19,8 @@ Linux Supported Platforms
 <tr><td>RHEL 7.3 / 7.4</td><td>None</td><td>Same as Fedora 16 64-bit</td><td>yum-config-manager --enable rhel-7-server-optional-rpms<br>yum install</td></tr>
 <tr><td>RHEL 6.1</td><td>Same as&nbsp;<br>Fedora&nbsp;<br>(16 32-bit)</td><td>Same as Fedora 16 64-bit</td><td></td></tr>
 </tbody>
-
+</table>
+  
 3. Adım aşağıdaki şekilde linux terminal üzerinden bağlantı sağlanabilir. [(Kaynak)](https://sc1.checkpoint.com/documents/R77/CP_R77_VPN_AdminGuide/html_frameset.htm?topic=documents/R77/CP_R77_VPN_AdminGuide/14702&anchor=o14729)
 
 Not: Eğer kimlik doğrulama hatası alırsanız [burada](https://forum.porteus.org/viewtopic.php?t=6510) anlatıldığı üzere snx farklı sürümlerini deneyebilirsiniz
@@ -27,6 +29,7 @@ Not: Eğer kimlik doğrulama hatası alırsanız [burada](https://forum.porteus.
 [CheckPointVPN_SNX_Linux_800007075.sh](https://drive.google.com/open?id=1CzfmNL7W_rsvf7KjxMsXS5DNyF7PJc0n)
 
 SSL Network Extender Command Attributes
+<table>
 <tbody>
 <tr><th>Attributes</th><th>Description</th></tr>
 <tr><td>snx -f &lt;configuration file&gt;</td><td>Run SSL Network Extender using parameters defined in a configuration file other than the default name or location.</td></tr>
@@ -39,3 +42,4 @@ SSL Network Extender Command Attributes
 <tr><td>snx -g</td><td>Enable debugging. snx.elg log file is created.</td></tr>
 <tr><td>snx -e &lt;cipher&gt;</td><tdForce a specific encryption algorithm. Valid values - RC4 and 3DES.</td></tr>
 </tbody>
+  </table>
