@@ -1,3 +1,8 @@
+---
+title: S3 Server Kullanımı ve Bağlantı Sağlama
+category: tools, fileserver
+---
+
 ### S3 Server Nasıl çalışır.
 
 S3 server git mantığı ile çalışır her bir repo için bir bucket diyebiliriz aynı şekilde istediğiniz kadar alt altta klasör oluşturduğunuzu düşünün(sadece gösterimden ibaret)  bu kısım sadece prefix gibi çalışır. Örnek mys3 bucket oluşturdunuz altına 10 tane klasör oluşturup her birine bir dosya attınız bucket içinde 10 dosya vardır 
@@ -29,7 +34,7 @@ mys3/g-9
 mys3/g-10
 ```
 
-bununla aynı anlama gelir mys3 içinde kaç dosya var dediğimizde 10 dosya vardır ama gösterime bakarsan 7 klasör var gibi görünür. bu bilgiden sonraki nokta şurasıdır özellikle prefix ile veya bucket içindeki tüm dosya dosya listesini alacaksanız böylew bir ihtiyacınız var ise performans için bucket içinde dosya sayısını az tutmanızda fayda var bucket sayısının çok önemi yoktur. 
+bununla aynı anlama gelir mys3 içinde kaç dosya var dediğimizde 10 dosya vardır ama gösterime bakarsan 7 klasör var gibi görünür. bu bilgiden sonraki nokta şurasıdır özellikle prefix ile veya bucket içindeki tüm dosya listesini alacaksanız böyle bir ihtiyacınız var ise performans için bucket içinde dosya sayısını az tutmanızda fayda var bucket sayısının çok önemi yoktur. 
 
 Her bir bcuket bir tablo gibi düşünürseniz select attığınızda tabloda kayıt ne akdar az ise o kadar performanslı sonuç alırsınız.
 
