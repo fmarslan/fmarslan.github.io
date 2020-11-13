@@ -302,6 +302,7 @@ body{
                             div.gsc-input-box{
                                 border: 1px solid darken($primaryColor,30);
                                 background-color: mix($primaryColor,$mixColor,10);
+                                padding: .2em 0 .2em 1em;
                                 table.gsc-input{
                                     margin:0px;
                                     border: none;
