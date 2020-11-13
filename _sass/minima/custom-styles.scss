@@ -263,6 +263,45 @@ body{
             -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
         }
+        .search-box{
+            width: 30em;
+            float: right;
+            border: none;
+            line-height:1em;
+            td, table{
+                border:none;
+                padding:none;
+                margin:none;
+            }
+            .gsc-control-cse{
+                padding: 0px;
+                border: none;
+                background: none;
+                form.gsc-search-box{
+                    margin: 0px;
+                    border: none;
+                    table.gsc-search-box{
+                        margin: 0px;
+                        border: none;
+                        td.gsc-search-button{
+                                padding: 1em 0;
+                        }
+                        td.gsc-input{
+                           padding: 1em .5em 1em 0; 
+                            border: none;
+                            div.gsc-input-box{
+                                border: 1px solid darken($primaryColor,30);
+                                background-color: mix($primaryColor,$mixColor,10);
+                                table.gsc-input{
+                                    margin:0px;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     footer.site-footer{
         background-color: mix($primaryColor,$mixColor,2);
