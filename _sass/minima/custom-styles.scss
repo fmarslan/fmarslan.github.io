@@ -264,14 +264,14 @@ body{
             user-select: none;
         }
         .search-box,
-            width: 30em;
+            width: 20em;
             float: right;
             border: none;
             line-height:1em;
             td, table{
                 border:none;
-                padding:none;
-                margin:none;
+                padding:0px;
+                margin:0px;
             }
             .gsc-control-cse{
                 padding: 0px;
@@ -284,7 +284,17 @@ body{
                         margin: 0px;
                         border: none;
                         td.gsc-search-button{
-                                padding: 1em 0;
+                            padding: 1em 0;
+                            button.gsc-search-button{
+                                border: 1px solid darken($secondaryColor,30);
+                                background-color:$secondaryColor;
+                            }
+                        }
+                        td.gsib_b{
+                            padding:0px;
+                        }
+                        td.gsib_b{
+                            padding-left: 1em;
                         }
                         td.gsc-input{
                            padding: 1em .5em 1em 0; 
