@@ -1,4 +1,4 @@
-exclude: ['posts']
+exclude: ['posts','sr.md']
 url: https://fmarslan.com
 plugins:
  - jekyll-feed
