@@ -1,6 +1,6 @@
 ---
 title: S3 Server Kullanımı ve Bağlantı Sağlama
-category: tools, fileserver
+category: tools
 ---
 
 ### S3 Server Nasıl çalışır.
