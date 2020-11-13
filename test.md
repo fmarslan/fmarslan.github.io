@@ -1,4 +1,4 @@
 ---
-title: test
-layout: home
+title: Search Result
+layout: default
 ---
