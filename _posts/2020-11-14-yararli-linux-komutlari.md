@@ -46,3 +46,58 @@ screen -r dbquery
 screen -X -S dbquery quit
 
 ```
+
+
+repoda uygulama aramak
+
+```sh
+#centos
+yum search xxx
+
+# ubuntu
+apt search xxx
+
+```
+
+bir json dosyasını/çıktısını terminale yazdırırken pretty olarak görünmesini istiyorsanız (örnek rest api call cevabı)
+
+
+```sh
+
+<command> | json_pp
+
+```
+
+bir çıktıda satır sayısını sayırmak için
+
+```sh
+<command> | wc -l
+```
+
+bir çıktıda bir sütunu almak için (detaylı regex vs özellikleri var)
+```sh
+ <command>awk '{print $9}'
+```
+
+
+bir çıktıda sıralama için
+```sh
+# sayılar için
+<command> | sort -n -k1 
+
+#metin için
+<command> | sort -n -k2
+```
+
+bir listeyi uniq olarak yazdırmak için 
+```sh
+<command> | uniq
+
+#sonuna -c eklerseniz count ile birlikte yazar
+
+```
+
+
+
+
+
