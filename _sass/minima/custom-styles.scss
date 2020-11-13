@@ -263,7 +263,7 @@ body{
             -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
         }
-        .search-box{
+        .search-box,
             width: 30em;
             float: right;
             border: none;
@@ -295,6 +295,9 @@ body{
                                 table.gsc-input{
                                     margin:0px;
                                     border: none;
+                                    input.gsc-input{
+                                        background-color: mix($primaryColor,$mixColor,10) !important;
+                                    }
                                 }
                             }
                         }
