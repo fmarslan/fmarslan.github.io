@@ -4,6 +4,7 @@ title: Elastik search için cli üzerinden rest api ile sorgu
 category: tools
 ---
 
+*Zaman içinde güncellenebilir*
 
 Aşağıdaki komutlar cli için curl ile verilmiştir aynı istekelr postman veya doğrudan tarayıcıdan yapılabilir eğer json result verisinin pretty oalrak görünmesini istemiyorsanız en son daki &pretty=true bölümünü kaldırmalısınız
 
