@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Search Result
-url: /search
+permalink: /search
 ---
 
 <div class="gcse-searchresults-only">
