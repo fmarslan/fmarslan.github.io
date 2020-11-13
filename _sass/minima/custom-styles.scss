@@ -288,6 +288,7 @@ body{
                             button.gsc-search-button{
                                 border: 1px solid darken($secondaryColor,30);
                                 background-color:$secondaryColor;
+                                height: 28px;
                             }
                         }
                         td.gsib_b{
@@ -302,12 +303,14 @@ body{
                             div.gsc-input-box{
                                 border: 1px solid darken($primaryColor,30);
                                 background-color: mix($primaryColor,$mixColor,10);
-                                padding: .2em 0 .2em 1em;
+                                padding: 0 0 0 1em;
+                                height: 26px;
                                 table.gsc-input{
                                     margin:0px;
                                     border: none;
                                     input.gsc-input{
                                         background-color: mix($primaryColor,$mixColor,10) !important;
+                                        font-size: .9em;
                                     }
                                 }
                             }
