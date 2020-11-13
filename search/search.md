@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Search Result
-permalink: /search
 ---
+
+Arama Sonuçları
 
 <div class="gcse-searchresults-only">
