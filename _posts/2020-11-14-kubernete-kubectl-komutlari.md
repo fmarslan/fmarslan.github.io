@@ -85,3 +85,7 @@ kubectl apply -f myapp.yaml  # var olan yaml ı birdaha uygularsanız sadece de�
 kubectl delete -f myapp.yaml
 
 ```
+
+
+
+[https://kubernetes.io/docs/concepts/workloads/controllers/deployment/](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
