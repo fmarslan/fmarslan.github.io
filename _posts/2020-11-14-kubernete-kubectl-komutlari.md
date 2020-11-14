@@ -9,6 +9,19 @@ Kubectl Config Bildirimi
 ```sh
 export KUBECONFIG=/workspace/conf/mykube_conf
 ```
+
+namespace işlemleri
+```sh
+#oluşturmak için
+kubectl create namespace mynamespace
+
+
+#silmek için
+kubectl delete namespace mynamespace
+
+```
+
+
 Pod İşlemleri
 
 ```sh
@@ -25,7 +38,8 @@ kubectl -n mynamespace logs -f myapp-deployment-78495789c9-szj6p
 kubectl -n mynamespace delete pod -l app=mylabel
 
 #pod silme pod name ile
-kubectl -n mynamespace delete pod/myapp-deployment-78495789c9-szj6p
+kubectl -n mynamespace delete pod/myapp-deployment-78495789c9-szj6p  #pod/ diyerek silerseniz sadece pod silinir kube yeniden otomaitk başlatır eğer deploy/ statefulset/ vb gibi silerseniz kalıcı olarak silinir.
+
 
 #pod içinde bir dosyayı run etme
 kubectl -n mynamespace exec -ti myapp-deployment-6fccc87578-jq2kb /mydata/mybatch.sh
@@ -50,6 +64,8 @@ kubectl -n mynamespace get secret/mydbdb-db-credentials   -o yaml
 kubectl -n mynamespace describe pod/myapp-deployment-6fccc87578-jq2kb
 
 ```
+
+
 
 Job manuel başlatma (cron job veya normla job olabilir)
 
