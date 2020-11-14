@@ -5,7 +5,90 @@ category: kubernete
 ---
 
 
-Öncelikle elimize bir nfs sunucu olmalıdır eğer mevcutta bir nfs sunucunuz var ise bu kısım ile işiniz yok bunun için aşağıdaki gibi bir yaml hazırlıyoruz bu yaml içerisinde kullanacağı disk bölümü vs kendimize göre yapılandırıyoruz
+Öncelikle elimize bir nfs sunucu olmalıdır eğer mevcutta bir nfs sunucunuz var ise bu kısım ile işiniz yok 
+
+yetkilendirme işlemi için rbac kurulumunu yapmalıyız
+
+Yetkilendirme için rbac aşağıdaki gibi bir yaml hazırlayarak ekleyebilirsiniz
+
+```yaml  
+
+--- Cluster Role tanımı yapıyoruz
+
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: nfs-provisioner-runner
+  namespace: storage
+rules:
+  - apiGroups: [""]
+    resources: ["persistentvolumes"]
+    verbs: ["get", "list", "watch", "create", "delete"]
+  - apiGroups: [""]
+    resources: ["persistentvolumeclaims"]
+    verbs: ["get", "list", "watch", "update"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["storageclasses"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: [""]
+    resources: ["events"]
+    verbs: ["create", "update", "patch"]
+  - apiGroups: [""]
+    resources: ["services", "endpoints"]
+    verbs: ["get"]
+  - apiGroups: ["extensions"]
+    resources: ["podsecuritypolicies"]
+    resourceNames: ["nfs-provisioner"]
+    verbs: ["use"]
+
+--- Servis hesabına Bind işlemini yapıyoruz hesabı aşağıda oluşturacağız
+
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: run-nfs-provisioner
+subjects:
+  - kind: ServiceAccount
+    name: nfs-provisioner
+    namespace: storage
+roleRef:
+  kind: ClusterRole
+  name: nfs-provisioner-runner
+  apiGroup: rbac.authorization.k8s.io
+
+--- Role tanımı yapıyoruz
+
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: leader-locking-nfs-provisioner
+  namespace: storage
+rules:
+  - apiGroups: [""]
+    resources: ["endpoints"]
+    verbs: ["get", "list", "watch", "create", "update", "patch"]
+
+--- Bind işlemini yapıyoruz.
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: leader-locking-nfs-provisioner
+subjects:
+  - kind: ServiceAccount
+    name: nfs-provisioner
+    namespace: storage
+roleRef:
+  kind: Role
+  name: leader-locking-nfs-provisioner
+  apiGroup: rbac.authorization.k8s.io
+
+```
+
+
+
+
+aşağıdaki gibi bir yaml hazırlıyoruz bu yaml içerisinde kullanacağı disk bölümü vs kendimize göre yapılandırıyoruz
 
 ```yaml
 
