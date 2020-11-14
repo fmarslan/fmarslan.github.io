@@ -34,6 +34,12 @@ sudo yum install -y yum-utils
 
 ```
 
+sanal bellek miktarını artıralım bu komutu suncuuyu reboot ettiğinizde tekrar uygulaması için ``` /etc/sysctl.conf ``` içine eklmeyi unutmayın
+
+```sh
+sysctl -w vm.max_map_count=262144
+```
+
 repoyu ekleyelim
 ```bash
 sudo yum-config-manager \
@@ -120,6 +126,8 @@ sudo yum install iptables-services
 systemctl start iptables
 systemctl enable iptables
 ```
+
+
 bu işlemlerden sonra node read gördüğümüzde kubernete kurulumumuz tamamlanmıştır. storage deployment işlemlerinizi yapabilirsiniz.
 
 Katkıları için [Kazım Sarıkaya](https://srkykzm.com/)'ya teşekkür ederim
