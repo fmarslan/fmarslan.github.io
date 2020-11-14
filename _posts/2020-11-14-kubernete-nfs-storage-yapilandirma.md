@@ -41,7 +41,7 @@ rules:
     resourceNames: ["nfs-provisioner"]
     verbs: ["use"]
 
---- Servis hesabına Bind işlemini yapıyoruz hesabı aşağıda oluşturacağız
+--- #Servis hesabına Bind işlemini yapıyoruz hesabı aşağıda oluşturacağız
 
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
@@ -56,7 +56,7 @@ roleRef:
   name: nfs-provisioner-runner
   apiGroup: rbac.authorization.k8s.io
 
---- Role tanımı yapıyoruz
+--- #Role tanımı yapıyoruz
 
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
@@ -68,7 +68,7 @@ rules:
     resources: ["endpoints"]
     verbs: ["get", "list", "watch", "create", "update", "patch"]
 
---- Bind işlemini yapıyoruz.
+--- #Bind işlemini yapıyoruz.
 
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
@@ -115,7 +115,7 @@ metadata:
   labels:
     app: nfs-provisioner
 spec:
-  clusterIP: <10.99.106.163> --- bu bölümü önce boş bırakıp çalıştırdıktan sonra deployment ın aldığı ip yi buraya yazabilirsiniz.
+  clusterIP: <10.99.106.163> --- #bu bölümü önce boş bırakıp çalıştırdıktan sonra deployment ın aldığı ip yi buraya yazabilirsiniz.
   ports:
   - name: port111-tcp
     port: 111
@@ -241,7 +241,7 @@ spec:
       volumes:
         - name: export-volume
           hostPath:
-            path: <my-data-folder> --- fiziksel suncu üzerinde data kaydedeceğimiz path
+            path: <my-data-folder> --- #fiziksel suncu üzerinde data kaydedeceğimiz path
       tolerations:
       - key: node.kubernetes.io/unschedulable
         operator: Exists
