@@ -93,6 +93,4 @@ burada ```deployment.``` şeklinde başlayan bizim yaptığımız deployment con
 
 buradaki kubernate ipsine erişim olan bir makinadan service karşısında görülen 10.98.63.85 ip adresine istek yaptığınızda nginx sayfasını göreceksiniz.
 
-İyi çalışmalar.
-
 Katkılar için [Kazım Sarıkaya'ya](https://srkykzm.com/) Teşekkürler
