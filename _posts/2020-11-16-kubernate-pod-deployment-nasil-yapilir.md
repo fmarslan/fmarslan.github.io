@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kubernate Deployment Hazırlam
+title: Kubernate Deployment Hazırlama
 categories: kubernate
 ---
 
