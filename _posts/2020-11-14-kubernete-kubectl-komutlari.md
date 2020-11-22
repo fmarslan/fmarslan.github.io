@@ -91,6 +91,7 @@ kubernate dns
 ```sh
 kubectl -n kube-system get cm coredns -o yaml
 kubectl -n kube-system edit cm coredns --record
+kubectl -n kube-system delete pod -l k8s-app=kube-dns
 ```
 
 
