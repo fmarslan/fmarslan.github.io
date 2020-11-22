@@ -41,7 +41,8 @@ screen -ls
 mevcut bir oturuma bağlanmak için (devam komutları çıktıları aynı şekilde görüntülersiniz)
 screen -r dbquery
 
-# oturum içindeyken ctrl+d ile direkt çıkarsanız oturum komple sonlanır oturuma bağlı değilken kapatmak için
+# oturum içindeyken ctrl+d ile direkt çıkarsanız oturum kom
+le sonlanır oturuma bağlı değilken kapatmak için
 
 screen -X -S dbquery quit
 
@@ -97,6 +98,25 @@ bir listeyi uniq olarak yazdırmak için
 
 ```
 
+
+DNS  Centos
+
+```sh
+ /etc/resolv.conf
+ /etc/named.conf
+ /etc/named.rfc1912.zones
+ /etc/sysconfig/network-scripts/ifcfg-enp2s0
+ systemctl enable --now named
+ dig @10.96.0.10 google.com
+ 
+```
+
+
+iptables
+
+```sh
+/etc/sysconfig/iptables
+```
 
 
 
