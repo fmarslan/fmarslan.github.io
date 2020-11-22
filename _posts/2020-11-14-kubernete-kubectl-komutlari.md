@@ -86,6 +86,14 @@ kubectl delete -f myapp.yaml
 
 ```
 
+kubernate dns
+
+```sh
+kubectl -n kube-system get cm coredns -o yaml
+kubectl -n kube-system edit cm coredns --record
+```
+
+
 
 
 [https://kubernetes.io/docs/concepts/workloads/controllers/deployment/](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
