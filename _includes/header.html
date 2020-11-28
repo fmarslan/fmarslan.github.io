@@ -6,7 +6,10 @@
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
     <div class="search-box">
-      <div class="gcse-searchbox"></div>
+      <form action="/search" method="get">
+        <input type="text" id="q" name="q" autocomplete="off" placeholder="Search"><br><br>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </div>
   </div>
 </header>
