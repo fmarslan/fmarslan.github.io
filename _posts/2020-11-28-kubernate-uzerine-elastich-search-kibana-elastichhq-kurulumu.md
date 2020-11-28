@@ -121,7 +121,7 @@ metadata:
 spec:
   selector:
     app: elasticsearch
-  clusterIP: None
+  clusterIP: None # ben dns kullandığım için IP yi kapattım aşağıdaki örneklerde ip açık kendinize göre konfigure edebilirsiniz.
   ports:
     - port: 9200
       name: rest
