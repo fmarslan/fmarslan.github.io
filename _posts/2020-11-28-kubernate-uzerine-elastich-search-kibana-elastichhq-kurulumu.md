@@ -234,7 +234,14 @@ ip adreslerini görüntülemek için
 kubectl -n es get services
 
 ```
+aşağıdaki şekilde servisleri listeleyecektir.
 
+```sh
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+elasticsearch   ClusterIP   None            <none>        9200/TCP,9300/TCP   164m
+es              ClusterIP   10.105.216.20   <none>        5000/TCP            14h
+kibana          ClusterIP   10.98.151.53    <none>        5601/TCP            14h
+```
 
 URL Adresleri
 
