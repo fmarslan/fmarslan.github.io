@@ -269,14 +269,12 @@ body{
             user-select: none;
         }
         .search-box{
-            width: 20em;
             float: right;
             border: none;
-            line-height:1em;
             form{
                 content:" ";
                 input{
-                    content:" ";
+                    padding: .3em 2em .3em 0.5em;
                 }
                 button{
                     content:" ";
