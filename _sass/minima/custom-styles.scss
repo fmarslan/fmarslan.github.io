@@ -9,6 +9,11 @@ $descColor: mix($primaryColor,$mixColor,30);
 
 body{
     background-color:mix($mixColor,$primaryColor,95);
+    td, table{
+                border:none;
+                padding:0px;
+                margin:0px;
+            }
     div.identity{
         height:20em;
         *{
@@ -268,11 +273,6 @@ body{
             float: right;
             border: none;
             line-height:1em;
-            td, table{
-                border:none;
-                padding:0px;
-                margin:0px;
-            }
             .gcse-searchbox{
                 padding: 0px;
                 border: none;
