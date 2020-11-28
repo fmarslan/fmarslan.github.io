@@ -243,7 +243,7 @@ body{
            pre.highlight{
                background-color:transparent;
            }
-        }
+        }        
     }
     
     header.site-header{
@@ -273,50 +273,13 @@ body{
             float: right;
             border: none;
             line-height:1em;
-            .gcse-searchbox{
-                padding: 0px;
-                border: none;
-                background: none;
-                form.gsc-search-box{
-                    margin: 0px;
-                    border: none;
-                    table.gsc-search-box{
-                        margin: 0px;
-                        border: none;
-                        td.gsc-search-button{
-                            padding: 1em 0;
-                            button.gsc-search-button{
-                                border: 1px solid darken($secondaryColor,30);
-                                background-color:$secondaryColor;
-                                height: 28px;
-                            }
-                        }
-                        td.gsib_b{
-                            padding:0px;
-                        }
-                        td.gsib_b{
-                            padding-left: 1em;
-                        }
-                        td.gsc-input{
-                           padding: 1em .5em 1em 0; 
-                            border: none;
-                            div.gsc-input-box{
-                                border: 1px solid darken($primaryColor,30);
-                                background-color: mix($primaryColor,$mixColor,10);
-                                padding: 0 0 0 1em;
-                                height: 26px;
-                                table.gsc-input{
-                                    margin:0px;
-                                    border: none;
-                                    height: 26px;
-                                    input.gsc-input{
-                                        background-color: mix($primaryColor,$mixColor,10) !important;
-                                        font-size: .9em;
-                                    }
-                                }
-                            }
-                        }
-                    }
+            form{
+                content:" ";
+                input{
+                    content:" ";
+                }
+                button{
+                    content:" ";
                 }
             }
         }
