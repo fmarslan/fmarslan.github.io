@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Kubernate Deployment Hazırlama
-categories: kubernate
+title: Kubernete Deployment Hazırlama
+categories: kubernete
 ---
 
-Kubernate ile deployment nasıl yapılır temel olarak bir uygulama yapacağız. İlk adım olarak öncelikle deploy edeceğimiz uygulamayı tanımak ve belkide hakim olmak yerine göre önem arzetmektedir, ben basit olması sebebiyle nginx tercih ettim sadece boş bir nginx server ayağa kaldıracağız uygulama eklemeyeceğiz belki daha sonra başka bir dökümanda deploy aşamasını yer verebilirim buyrun başlayalım.
+Kubernete ile deployment nasıl yapılır temel olarak bir uygulama yapacağız. İlk adım olarak öncelikle deploy edeceğimiz uygulamayı tanımak ve belkide hakim olmak yerine göre önem arzetmektedir, ben basit olması sebebiyle nginx tercih ettim sadece boş bir nginx server ayağa kaldıracağız uygulama eklemeyeceğiz belki daha sonra başka bir dökümanda deploy aşamasını yer verebilirim buyrun başlayalım.
 
 Deployment için öncelikle bir yaml hazırlıyoruz ve bu hazırladığımız yaml dosyalarını git gibi bir konumda saklamanızı öneririm bunun size öncelikil 2 faydası olacaktır
 
@@ -91,6 +91,6 @@ replicaset.apps/nginx-app-746d97db4d   1         1         1       5s
 burada ```deployment.``` şeklinde başlayan bizim yaptığımız deployment configurasyonu ```pod/``` şeklinde başlayan bu konfigurasyona göre çalışmış olan instance ```service/``` şeklinde başlayan ise service configurasyonumuza göre çalışmış olan service nesnesidir. ```replicaset.``` şeklinde başlayanise git benzeri burada tutulan geçmiş konfigurasyon bilgisidir şuan ilk uygulamamız olduğunda ilk versiyonu var bunlar arasında geçiş yapılaiblir.
 
 
-buradaki kubernate ipsine erişim olan bir makinadan service karşısında görülen 10.98.63.85 ip adresine istek yaptığınızda nginx sayfasını göreceksiniz.
+buradaki kubernete ipsine erişim olan bir makinadan service karşısında görülen 10.98.63.85 ip adresine istek yaptığınızda nginx sayfasını göreceksiniz.
 
 Katkılar için [Kazım Sarıkaya'ya](https://srkykzm.com/) Teşekkürler
