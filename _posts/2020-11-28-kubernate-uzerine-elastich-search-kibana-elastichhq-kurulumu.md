@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kubernate Üzerine Elastich Search + Kibana % ElasticHQ kurulumu
+title: Kubernate Üzerine Elastich Search + Kibana + ElasticHQ kurulumu
 categories: kubernete
 ---
 
