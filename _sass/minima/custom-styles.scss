@@ -274,10 +274,23 @@ body{
             form{
                 content:" ";
                 input{
-                    padding: .3em 2em .3em 0.5em;
+                    height: 1.5em;
+                    padding: .3em 3em .3em 0.5em;
+                    border: 1px solid darken($primaryColor,15);
+                    outline:none;
+                    &:active, &:hover, &:focus{
+                        border: 1px solid darken($primaryColor,15);
+                        outline:none;
+                    }
                 }
                 button{
-                    content:" ";
+                        margin: 0 0 0 -3em;
+                        height: calc(2.1em + 2px);
+                        width: 3em;
+                        padding: 0em;
+                        border: none;
+                        color: $primaryColor;
+                        background-color: transparent;
                 }
             }
         }
