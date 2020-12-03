@@ -37,7 +37,7 @@ resimde çakışan versionları görebilrisiniz.
 
 *3. Adım* olarak bu okio versionları arasındaki [change logları](https://square.github.io/okio/changelog/#version-222) izleyerek değpişkliklerden problem çıkarmayacak version bulmaya çalışıyoruz
 
-*4. Adım* beb brada 4.0.0 ile okio:2.2.2  de uygun sürümü yakaladım şimdi bunu maven pomda uyguluyoruz
+*4. Adım* ben burada 4.0.0 ile okio:2.2.2  de uygun sürümü yakaladım şimdi bunu maven pomda uyguluyorum
 
 ```xml
 ...
