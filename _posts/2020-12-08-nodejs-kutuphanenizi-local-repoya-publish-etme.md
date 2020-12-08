@@ -29,7 +29,6 @@ sonrasında kütüphanemiz hazırsa publish etme aşamasına geldik burada ben n
 kütüphanenin ```package.json``` dosyasına aşağıdaki gibi publish cofngi eklmeliyiz
 
 ```json
-,
   "publishConfig": {
     "registry": "http://nexus.fmarslan.com/repository/npm-repository"
   }
