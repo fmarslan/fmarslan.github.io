@@ -1,5 +1,5 @@
 ---
-title: Angular ile kendi kütüphanenizi yayınlayın
+title: Nodejs için kendi kütüphanenizi yayınlayın
 layout: post
 category: nodejs
 ---
