@@ -75,7 +75,7 @@ artık aşağıdaki gibi kullanımlarımızda log doğrudan rabbit mq ya ilgili 
 ```
 
 *Detaylı bilgiler*
-rabbit mq kurulumu için [buraya](https://www.rabbitmq.com/getstarted.html) bakabilirsiniz
 
+rabbit mq kurulumu için [buraya](https://www.rabbitmq.com/getstarted.html) bakabilirsiniz
 spring amqp için [buraya](https://docs.spring.io/spring-amqp/docs/current/reference/html/) bakabilirsiniz.
 
