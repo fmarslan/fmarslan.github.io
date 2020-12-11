@@ -8,7 +8,7 @@ Log4j2 ile rabbit mqya log yazdırmak için basit bir kaç ayarı burada paylaş
 
 log4j2 xml yapılandırmasında packages olarak kullanacağımız plugin olan `org.springframework.amqp.rabbit.log4j2` paketini ekliyoruz ve `RabbitMQ` bilgileirmizi giriyoruz
 
-```XML
+```xml
 <Configuration  packages="org.springframework.amqp.rabbit.log4j2">
 	<Appenders>
 		<Console name="console" target="SYSTEM_OUT">
