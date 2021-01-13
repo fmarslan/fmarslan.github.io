@@ -49,3 +49,4 @@ Merhaba bugün notlarımıza telegram da bot oluşturmayı ekleyelim
 
 ``https://api.telegram.org/botxxxx:yyy-zzzzz/sendMessage?chat_id=xxx&parse_mode=Markdown&text=Selam``
 
+[Detaylı Bilgi için https://core.telegram.org/bots/api](https://core.telegram.org/bots/api)
