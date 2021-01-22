@@ -3,13 +3,16 @@ title: Big Data sistemleri ve tool seçimi
 category: bigdata
 ---
 
-![https://favpng.com/png_view/cloud-computing-big-data-cloud-computing-cloud-storage-png/TwiQ3FDM#](https://fmarslan.com/assets/img/favpng_big-data-cloud-computing-cloud-storage.png)
+
 
 Piyasada birçok open-source olarak geçen tool var bunları yeteri kadar takip edebilirsek çok güzel big data sistemlerini basit bir şekilde kurabiliriz. Hepsi bu kadar mi? Peki böyle ise neden birçok firmanın bu tip hizmetler için çok yüksek maliyetleri oluyor? 
 
 Sorunun büyük kısmı tam da bu noktada başlıyor. Türkiye’de büyük bir yanlış algı var bir yazılım open source ise ben bundan her şekilde faydalanabilirim şeklinde, burada genellikle gözden kaçan önemli ayrıntılara yer vermek istiyorum. 
 
 En başta big data nedir bunu ele alalım. Big data tabiri hemen her firmada projede artık konuşulmaya/duyulmaya başlandı, tabi ki insanlar ile konuşulduğunda herkes aynı tabiri kullanıyor 10K 100K 1M kayıt öyle big data olarak ölçülmez 1M kullanıcı kaydınız olsun postgresql ile çok rahat select sorgularına vs dahil edebilirsiniz hatta güzel indexleme yaparsanız join vs de dahi problem yaşamazsınız 25M 30M kayıt olan tablolarda çok güzel ve performanslı joinler gördüm. Peki o zaman bu big data nedir ? 
+
+![https://favpng.com/png_view/cloud-computing-big-data-cloud-computing-cloud-storage-png/TwiQ3FDM#](https://fmarslan.com/assets/img/favpng_big-data-cloud-computing-cloud-storage.png)
+
 
 Big data;
 * **Yoğun data üretimi olan noktalarda olur** Örnek dk içerisinde 100 larca belki 1000 lerce insert yapmanız gerekebilir elbette çok daha yoğun sistemler var burada önemli nokta kullandığımız sistem biryandan sürekli yazma yaparken bir yandan okuma isteklerine takılmadan cevap verebilmelidir. Postgresql tarzı relational db ler de transaction olayından dolayı sürekli stream şeklinde yapılan yazma işlemleri okuma işlemlerini aşırı şekilde yavaşlatacaktır.
