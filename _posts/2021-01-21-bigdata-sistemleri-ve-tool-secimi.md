@@ -2,7 +2,9 @@
 title: Big Data sistemleri ve tool seçimi
 category: bigdata
 ---
- 
+
+![https://favpng.com/png_view/cloud-computing-big-data-cloud-computing-cloud-storage-png/TwiQ3FDM#](https://fmarslan.com/assets/img/favpng_big-data-cloud-computing-cloud-storage.png)
+
 Piyasada birçok open-source olarak geçen tool var bunları yeteri kadar takip edebilirsek çok güzel big data sistemlerini basit bir şekilde kurabiliriz. Hepsi bu kadar mi? Peki böyle ise neden birçok firmanın bu tip hizmetler için çok yüksek maliyetleri oluyor? 
 
 Sorunun büyük kısmı tam da bu noktada başlıyor. Türkiye’de büyük bir yanlış algı var bir yazılım open source ise ben bundan her şekilde faydalanabilirim şeklinde, burada genellikle gözden kaçan önemli ayrıntılara yer vermek istiyorum. 
@@ -39,3 +41,4 @@ Tekrar maddemize dönecek olursak araç seçiminde lisans için karar verdik nel
 **NOT:** Lisanssız vey lisans kapsamı dışında ürün kullanmayın ve kullandırmayın bu konuda birazcık empati yapmamız gerekiyor, benim düşüncem lisanssız yazılım kullanmak ***HIRSIZLIKTIR.***
 
 
+Resim - [https://favpng.com/png_user/goretast](https://favpng.com/png_user/goretast)
