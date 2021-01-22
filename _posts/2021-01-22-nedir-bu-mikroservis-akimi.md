@@ -1,0 +1,21 @@
+---
+title: Nedir Bu Mikroservis Akımı ?
+layout: post
+category: microservice
+---
+
+Çevrenizde hep duymuşsunuzdur “biz mikroservis mimarisinde proje geliştiriyoruz” cümlesini, tabiki herkeste mikroservis projeleri çok iyidir güzeldir şeklinde yorum yapar, fakat özellikle bazı projeleri incelediğimizde görüyoruz ki mikroservis dediğimiz şeyin bakımı ne kadar zor oluyor mesela bir serviste geliştirme yapılır tüm servisler bir anda deploy edilmek durumunda kalınır veya bir hata olduğunda arayıp bulmak insana aşırı yük getirir. Hatta version kontrolü vs dediğimiz zaman işin içinden hiç çıkılamaz duruma gelir. Peki mikroservis bu mudur ?
+
+![Mikroservis](https://fmarslan.com/assets/img/microservice.png)
+
+Öncelikle bir mikroservis nedir şöyle bi hatırlarsak çoğu insan aynı cümleyi kurar “uygulamanın küçük servisler halinde parçalanması”, buna “gateway içerir, bir message service içerir” vs gibi eklemeler yapanlarda olabilir. Bunun tanımını yapmayacağım bu konularda benden çok daha iyi anlatabilecek yazarlar veya dökümanlar bulabilirsiniz. Benim değineceğim nokta benim düşünceme göre burada yanlış bulduğum ve bu konularda daha dikkatli davranmamız gerektiğini düşündüğüm noktalar var bunlara kısaca değineceğim.
+
+**İlk olarak her proje mikroservis olmak zorunda değil.** Bende mikroservis projesi yaptım diyebilmek için elindeki projeleri maceraya, çıkmaza belki mevcut halinden daha kötüye sürüklemek başarı yerine yıkımı getirir.  Bir projeyi mikroservis yapalım demeden önce *ekip yetkinliğini göz önünde bulundurmak gerekiyor*, eğer ekibiniz bu yeniliği bu dönüşümü kaldıramayacak durumda veya bu konularda tecrübesiz ise ciddi bir mesai, iş yükü sizi bekliyor olacaktır hatta yapacağınız hatalar ilerde elinizi kolunuzu bağlayacaktır. Bu sebepten iyi bir yol haritası ve uygulama tasarımı çıkarmamız gerekiyor.
+ 
+**Mikroservis dediğimiz yapı illa message servis veya gateway içermek zorunda değildir.** Mikroservis bir konsepttir, bu konsept içinde genel amaç böl parçala yönet ile büyük uygulamaları küçük parçalara bölüp daha kolay geliştirme bakım ve güncelleme yapabilmektir. Bahsi geçen queue, kong gibi araçlar yardımcı araçlardır eğer ihtiyacınız yoksa kullanmayın ekosisteme koyduğunuz her bir araç size yük olarak dönecektir.
+
+**Servisler birbirinden bağımsız olmalıdır.** Eğer servislerimizi belirledikten sonra birbirlerinden bağımsız teknolojiler kullanamıyorsak deploy sürecinde yine hepsini aynı anda deploy yapmamız gerekiyor ise, karşılıklı servisler arasında karmaşık ilişkiler kurma ihtiyacınız devam ediyorsa orada bir sıkıntı vardır. Mesela çözümü elbet var ama iki servis arasında transaction olması pek başarılı olamadığımızı gösteriyor. Bir microservice projesinde bence başarı ne kadar bağımsız parçalayabildiğimizdir. Mikro Servisin amacı büyük projelerin yükünden kurtulup küçük projeler ile çalışmaktır. Yani birbirini hiç tanımayan farklı ekipler bu projeleri bağımsız olarak götürebilmeliler standart olan aradaki protokoller olmalıdır. Bu şekilde her servisi bir proje gibi düşünüp bağımsız proje planları yapabilirsiniz, süreçlerini ayrı ayrı yönetebilirsiniz.
+
+**Detaylı monitoring arayüzleriniz olmalıdır.** Aksi durumda bir hata ile karşılaştığınızda hatanın hangi serviste veya hangi aşamada olduğunu kestirmek için fal açmanız gerekebilir :) tabiki bu monitoring sistemini kurmak içinde sistemden olabildiğince çok metric ve log toplamanız gerekecektir. Bunu da yapmaya başladığınızda grafana, prometheus, solr(önceden elasticsearch vardı ama lisans dolayısıyla artık yok) vb gibi birçok araçları kullanma ihtiyacınız olacak, yazdığınız servislerde belki hali hazırda vardır ama yoksa actuator, prometheus client, log4j2, api-docs vb birçok kütüphanede size kolaylık sağlamak için bekliyor olacaktır.  Tabiki bu araçlarında yönetimi vs olduğunu unutmayın bu da sizi CAAS yapısına götürecek oradan belki kubernetes vs artık yürürüz. Tekrar yukarıda belirttiğim ifade ihtiyacınız olmayan aracı kullanmayın iyi düşünün.
+
+Kısaca özetleyecek olursam microservice diyorsanız önce iyi analiz edip ona göre karar verin derim kötü demiyorum güzel şeyler ama bilerek ve emin adımlarla gitmek gerek. Sadece macera olsun öğreneyim diye niyetiniz varsa SaaS, FaaS deneyebilirsiniz :). 
