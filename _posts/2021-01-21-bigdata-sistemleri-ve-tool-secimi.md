@@ -41,6 +41,8 @@ Bunlar sadece basit özet olarak yazdığım şeyler lisans detayları için htt
 
 Tekrar maddemize dönecek olursak araç seçiminde lisans için karar verdik nelere dikkat etmeliyiz. Bi kere şunu kabullenmek lazım big data tarafında hala en iyi çözüm diyebileceğimiz çok az tool var mesela Apache lucene ve üzerine geliştirilen solr alanında rüştünü ispat etmiş, fakat bununla birlikte o toolları geliştiren destek veren firmaların kendi ihtiyaçlarına göre modeller oluşturulmuş durumda yani time series db dediğinizde onlarca çeşit göreceksiniz bunların her birinin bir diğerine göre farklılığı var bu özelliklere çok dikkat etmeli ve ona göre seçim yapmalısınız bu kısımda da bol bol tutorial okumak gerekecektir ben ise hiç sevmem kendisini :). Peki ne yapıyorum ekosistemleri inceliyorum ve mecburen yine tutorial okuyorum.
 
+Tabiki burada yazdıklarım sadece işin küçük bir bölümü bir tool seçerken kararlı çalışma, geliştiriciler tarafından desteğin devam etmesi vs gibi bir çok etken vardır.
+
 **NOT:** Lisanssız vey lisans kapsamı dışında ürün kullanmayın ve kullandırmayın bu konuda birazcık empati yapmamız gerekiyor, benim düşüncem lisanssız yazılım kullanmak ***HIRSIZLIKTIR.***
 
 
