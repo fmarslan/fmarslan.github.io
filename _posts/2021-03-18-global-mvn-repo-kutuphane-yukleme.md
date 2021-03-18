@@ -13,7 +13,7 @@ categories: maven
 5. issue ya txt kaydı oalrka eklediğinizi belirtir bir comment yazıyorsunuz
 6. aşağıdakine benzer bir cevap gelecek ve paket adı sizin hesabınıza tanımlanmış olacaktır. ve bu gelen commentte nasıl deploy yacağınız detaylı olarak anlatılmış durumdadır.
 
-``
+```
 {{your group name}} has been prepared, now user(s) {{your username}} can:
 Publish snapshot and release artifacts to https://s01.oss.sonatype.org
 Have a look at this section of our official guide for deployment instructions:
@@ -23,7 +23,7 @@ Please comment on this ticket when you've released your first component(s), so w
 Depending on your build configuration, this might happen automatically. If not, you can follow the steps in this section of our guide:
 https://central.sonatype.org/pages/releasing-the-deployment.html
 
-``
+```
 
 Artık sizinde bir global repoda yeriniz var tüm repolar için benzer şekilde yöntemler mevcuttur.
 
