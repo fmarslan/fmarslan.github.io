@@ -16,5 +16,5 @@ Elastic Search lisans değiştirdikten sonra yoğun bi şekilde solr kullanmaya 
 bu işlemi yaptıktan sonra solr arayüzüne gidip Collections sayfasında add collection butonuna tıkladığımızda zk üzerinde ki büütn confları bizim yükleidğimizde dahil görebiliyor olacağız sonrası artık solr ile sizin aranızda :).
 
 
-[ZK Tutorial](https://zookeeper.apache.org/doc/current/)
-[Solr Tutorial](https://solr.apache.org/resources.html#tutorials)
+- [ZK Tutorial](https://zookeeper.apache.org/doc/current/)
+- [Solr Tutorial](https://solr.apache.org/resources.html#tutorials)
