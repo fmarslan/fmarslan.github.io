@@ -28,3 +28,18 @@ Remove-DnsClientNrptRule -Name "{4A9B924F-A8AD-46EB-A4D3-5B4B0E8CB044}"
 sudo  echo 10.8.1.1 > /etc/resolver/.fmarslan
 ```
 
+veya
+
+
+```sh
+sudo vim /etc/systemd/resolved.conf
+
+# -----
+# [Resolve]
+# DNS=10.8.1.1
+# Domains=~fmarslan
+# -----
+
+
+```
+
