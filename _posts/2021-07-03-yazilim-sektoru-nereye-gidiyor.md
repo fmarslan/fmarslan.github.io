@@ -48,3 +48,5 @@ Tüm bunlar şuan için aklıma gelenler bunları geçmişle birlikte okuduğumu
 - **Open-Source** tarafında **Microsoft**’ un katkıları göz ardı edilemez maaşlı personel ile **Google** gibi yatırım yapıyor bunun sonucu **Java**' nın güçlü olduğu tek alanı da elinden alacaklar gibi
 
 Konuşulacak daha çok nokta var belki ama daha fazla uzatmamak adına şimdilik burada bırakacağım son olarak bir noktaya dikkat çekmek istiyorum şuan **Java** çok güçlü ve yaygın kullanılan bir dil ama yukarıdan beri konuştuğumuz üzere **Java'** nın buralarda adı hiç geçmiyor kim bilir belkide artık onunda **Pascal** **VBasic** gibi tarihin tozlu sayfalarında yeri ayrılmıştır. **Python** konusuna gelince de o kolay kolay ölmez gibi henüz rakip olabilecek o kadar güçlü bi script dili yok, ama yine zamanın ne getireceği belli olmaz. Şu an belki elektriğin icadı gibi olmasa da bir çağın kapanıp başka bir çağın açıldığı dönemdeyiz hızlı olup bu değişime ayak uydurabilirsek kazananlardan aksi durumda kaybedenlerden olacağız.
+
+[Fotoğraf Freepik](https://www.freepik.com/photos/computer)
