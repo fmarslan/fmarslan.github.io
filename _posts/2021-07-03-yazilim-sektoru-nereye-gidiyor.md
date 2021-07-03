@@ -34,7 +34,7 @@ Tarih dersimizi bitirip günümüze geldiğimize göre şöyle bi araştıracak 
 
 Tüm bunlar şuan için aklıma gelenler bunları geçmişle birlikte okuduğumuzda nereye gidiyoruz diye düşünürsek benim düşüncelerime göre;
 
-### Peki Nelere Olacak ?
+### Peki Neler Olacak ?
 
 - **Google** ve **Microsoft** el ele vermiş piyasayı yeni bir geleceğe hazırlıyorlar, ikiside cloud servisleri, **Windows**  ve **Chrome OS** işletim sistemleri ile cloud based kişisel bilgisayar devrinin kapılarını açıyor, 
 - Web tarafındaki problemleri çözerek native/web uygulama kavramlarını tamamen silmeyi yerine sadece “uygulama“ kavramını getirmeyi hedefliyorlar
