@@ -51,3 +51,5 @@ $ sudo reboot
 ```
 
 yeniden başladıktan sonra eğer wifi bilgileriniz doğru ve wifi access point açık ise bağlantı sağlanacaktır.
+
+[Detaylı Bilgi](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet)
