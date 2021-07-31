@@ -36,18 +36,6 @@ Solrda nested field gibi güzel bir yetenek mevcut bu yetenekten faydalanmak iç
     
     <field name="child2_col1" type="text" indexed="true" stored="true"  multiValued="true"  />
     <field name="child2_col2" type="text" indexed="true" stored="true"  multiValued="true"  />
-
-
-    <field name="child1" type="_nest_path_"  multiValued="false">
-        <field name="child1_col1" type="text" indexed="true" stored="true"  multiValued="false" />
-        <field name="child1_col2" type="text" indexed="true" stored="true"  multiValued="false" />
-    </field>
-    
-    <field name="child2" type="_nest_path_"  multiValued="true">
-        <field name="child2_col1" type="text" indexed="true" stored="true"  multiValued="true" />
-        <field name="child2_col2" type="text" indexed="true" stored="true"  multiValued="true" />
-        <field name="col1" type="text" indexed="true" stored="true"/>
-    </field>
     
     <field name="_version_" type="long" indexed="true" stored="true" multiValued="false"/>
     <field name="defaultSearchField" type="text" multiValued="true"/>
