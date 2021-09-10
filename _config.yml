@@ -21,7 +21,7 @@ description: >
   I'm a software engineer.  
   I'm giving consulting about software architect and I'm  a freelance software development
 
-paginate: 10
+paginate: 20
 show_excerpts: true
 google_analytics: G-ZPHHT8GE5Z
 permalink: /:categories/:year/:month/:day/:title:output_ext
