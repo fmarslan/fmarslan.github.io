@@ -18,7 +18,9 @@ kpartx uygulaması kurulu değilse kuruyoruz
 sudo kpartx -av 2021-03-04-raspios-buster-armhf-lite.img
 ```
 **4. Adım**
+```sh 
 sudo mkdir /newimage
+```
 
 **5. Adım**
 ```sh 
