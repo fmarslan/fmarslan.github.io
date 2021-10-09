@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Raspberry pi Custom Image Hazırlama"
+title: "Raspberry pi Özelleştirilmiş Image Hazırlama"
 categories: raspberry
 ---
 
