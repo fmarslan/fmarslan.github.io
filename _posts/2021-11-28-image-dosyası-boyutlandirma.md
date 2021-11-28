@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Image dosyası boyutlandırma"
+categories: SYS
+---
+
+
 Bazen elimizde bir image(.img gibi) dosyası olur bunun boyutunu artırmamız gerekebilir bu durumlarda aşağıdaki adımları takipe debiliriz bizim image dosyamız bir raspberry os image dosyası
 
 aşağıdaki uygulamarı kuruyoruz bu işlemleri yaparken raspberry pi lite os kullandım bu adımlar sorunsuz çalıştı.
