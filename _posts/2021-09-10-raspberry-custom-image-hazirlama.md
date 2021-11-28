@@ -50,7 +50,10 @@ işlemlerimiz bittiyse image dosyamız hazır kullanabiliriz.
 Eğer ihtiyaç olursa raspberry image boyutu artırmak için 
 
 ```sh
-sudo apt install qemu-utils qemu-system-arm unzip
+sudo apt install qemu-utils qemu-system-arm unzip lsof
+
+# image kullanılıyormu
+lsof $img
 
 qemu-img resize $img +1G
 
