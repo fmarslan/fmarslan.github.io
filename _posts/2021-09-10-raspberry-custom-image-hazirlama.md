@@ -47,26 +47,6 @@ sudo umount /newimage
 
 işlemlerimiz bittiyse image dosyamız hazır kullanabiliriz.
 
-Eğer ihtiyaç olursa raspberry image boyutu artırmak için 
-
-```sh
-sudo apt install qemu-utils qemu-system-arm unzip lsof
-
-# image kullanılıyormu
-lsof $img
-
-qemu-img resize $img +1G
-
-reboot 
-
-kpartx -a -v $img
-
-## fdisk partition progress
-
-reboot
-
-```
-
 
 **Önemli not!!**
 Çalışılan işletim sistemi ile kullandığınız işletim sistemi aynı işlemci türünde derlenmiş olmalı bu örnekte benim yine başka bir raspberry üzerinde yaptığım için sorun yaşamadım ama bir linux desktop üzerinde yapmış olsaydım yöntemler bu şekilde çalışmayacaktır.
