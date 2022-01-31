@@ -119,5 +119,7 @@ iptables
 ```
 
 
-
+```sh
+ <command1> | grep <filter> | xargs <command>
+```
 
