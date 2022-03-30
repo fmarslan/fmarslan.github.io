@@ -94,7 +94,12 @@ kubectl -n kube-system edit cm coredns --record
 kubectl -n kube-system delete pod -l k8s-app=kube-dns
 ```
 
+yaml kontrol
 
+```sh
+kubectl -n <namespace> —dry-run=server apply ## server ile yaml farkını kontrol ediyor
+kubectl -n <namespace> —dry-run=client apply ## yaml validate yapıyor
+```
 
 
 [https://kubernetes.io/docs/concepts/workloads/controllers/deployment/](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
