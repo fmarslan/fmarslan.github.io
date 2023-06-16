@@ -8,7 +8,7 @@ categories: OpenAI GPT
 
 Bu Python uygulaması, ChatGPT API'sini kullanarak basit bir metin tabanlı sohbet uygulaması oluşturmanızı sağlar.
 
-1. Öncelikle, API endpoint URL'sini ve API anahtarınızı `API_ENDPOINT` ve `API_KEY` değişkenlerine girin. bunu [Open AI Platform](https://platform.openai.com/)'dan temin edebilirsiniz.
+1. Öncelikle, API endpoint URL'sini ve API anahtarınızı `API_ENDPOINT` ve `API_KEY` değişkenlerine girin. bunu [Open AI Platform](https://platform.openai.com/) 'dan temin edebilirsiniz.
 
 2. Ardından, `send_message` fonksiyonunu kullanarak kullanıcının mesajını API'ya gönderin ve yanıtı alın. Bu fonksiyon, API ile etkileşim sağlar ve yanıtı geri döndürür.
 
@@ -17,6 +17,7 @@ Bu Python uygulaması, ChatGPT API'sini kullanarak basit bir metin tabanlı sohb
 **Kod Örneği:**
 
 ```python
+
 import requests
 
 API_ENDPOINT = 'https://api.openai.com/v1/chat/completions'
