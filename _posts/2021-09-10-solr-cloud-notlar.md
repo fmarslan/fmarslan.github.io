@@ -6,8 +6,9 @@ categories: solr
 
 leader seçimi
 
+```
 http://XXX:8983/solr/admin/collections?action=FORCELEADER&collection={collection}&shard={shard}
-
+```
 
 UP config
 
