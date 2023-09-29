@@ -29,7 +29,3 @@ paginate_path: /blog/:num
 minima:
   skin: classic
   date_format: "%b %-d, %Y"
-  social_links:
-    twitter: FMArslan46
-    github: fmarslan
-    linkedin: fmarslan
