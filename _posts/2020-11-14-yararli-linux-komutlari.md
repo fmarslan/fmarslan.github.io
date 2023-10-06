@@ -118,8 +118,14 @@ iptables
 /etc/sysconfig/iptables
 ```
 
+çıktı yı başka bir komuta vermek
 
 ```sh
  <command1> | grep <filter> | xargs <command>
 ```
 
+tüm docker containerları silmek
+
+```sh
+docker ps --all | awk  '{print $1}' | xargs docker rm
+```
