@@ -129,3 +129,13 @@ tüm docker containerları silmek
 ```sh
 docker ps --all | awk  '{print $1}' | xargs docker rm
 ```
+
+bir git repodan curl ile son release indirme
+```sh
+curl -Lo /tmp/opencart.zip $(sh -c 'curl -s https://api.github.com/repos/opencart/opencart/releases/latest | grep "browser_download_url" | cut -d : -f 2,3 | tr -d \"'); \
+```
+
+unzip ile zip çinde klasör arama
+```sh
+unzip -l /tmp/opencart.zip | awk '{print $4}' | grep -E 'opencart-[a-z0-9.]+/upload/$';
+```
