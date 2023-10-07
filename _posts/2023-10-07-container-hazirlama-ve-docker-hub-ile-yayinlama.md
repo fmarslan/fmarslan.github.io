@@ -1,4 +1,7 @@
-Elbette, Docker ile ilgili hazırladığım dökümanı ve GitHub Actions ile Docker Hub'a yükleme sürecini birleştirerek tek bir döküman haline getirdim. İşte birleştirilmiş döküman:
+---
+layout: post
+title: "Docker ile container hazırlama ve docker hubta yayınlama"
+categories: container
 
 ---
 
@@ -91,4 +94,8 @@ Bu kadar! Artık özel Docker konteynırınız çalışıyor ve Docker Hub'da pa
 ## Referanslar ve Kaynaklar
 
 - Docker Resmi Web Sitesi: [Docker](https://www.docker.com/)
-- Dockerfile Referansı
+- Dockerfile Referansı: [Dockerfile Referansı](https://docs.docker.com/engine/reference/builder/)
+- GitHub Actions Dökümantasyonu: [GitHub Actions](https://docs.github.com/en/actions)
+- Docker Hub Resmi Web Sitesi: [Docker Hub](https://hub.docker.com/)
+
+Bu kaynaklar, Docker konteynerleri oluşturmak ve yönetmek için daha fazla bilgi edinmek isteyenler için faydalıdır.
