@@ -4,6 +4,9 @@ title: "Azure Functions Örneği"
 categories: azure
 ---
 
+![image](https://github.com/fmarslan/fmarslan.github.io/assets/12278069/6f7fe91f-754c-45be-a9d1-827ad3a40d9a)
+
+
 ## Azure Functions Nedir?
 
 Azure Functions, Microsoft'un sunuculess (sunucu olmadan) hesaplama platformudur. Bu platform, uygulamalarınızı ve servislerinizi küçük, bağımsız işlevlere bölebileceğiniz ve bu işlevleri olay tetikleyicileri veya HTTP istekleri ile tetikleyebileceğiniz bir çevre sunar. Azure Functions, işlevleri çalıştırmak ve yönetmek için kullanıcıya hizmet sağlar ve işlevlerin ölçeklenebilirliğini otomatik olarak yönetir.
