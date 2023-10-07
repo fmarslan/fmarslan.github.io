@@ -4,6 +4,10 @@ title: "Docker ile container hazırlama ve docker hubta yayınlama"
 categories: container
 
 ---
+
+![image](https://github.com/fmarslan/fmarslan.github.io/assets/12278069/49564cdf-bd96-4051-bb18-c950b74fda29)
+
+
 Docker, uygulamalarınızı hızlı ve taşınabilir bir şekilde çalıştırmanıza olanak tanıyan güçlü bir konteynerleştirme platformudur. Bu rehberde, kendi özel bir Docker konteynırı oluşturmanın temel adımlarını öğreneceksiniz ve bu konteynırı Docker Hub'a yüklemeyi öğreneceksiniz. İşte başlamanız için adım adım talimatlar:
 
 ## Adım 1: Docker'ı İndirin ve Kurun
