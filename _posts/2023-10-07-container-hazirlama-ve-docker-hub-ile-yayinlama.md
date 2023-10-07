@@ -4,9 +4,6 @@ title: "Docker ile container hazırlama ve docker hubta yayınlama"
 categories: container
 
 ---
-
-# Docker ile Özel Bir Uygulama Konteynırı Oluşturmak ve Docker Hub'a Yüklemek
-
 Docker, uygulamalarınızı hızlı ve taşınabilir bir şekilde çalıştırmanıza olanak tanıyan güçlü bir konteynerleştirme platformudur. Bu rehberde, kendi özel bir Docker konteynırı oluşturmanın temel adımlarını öğreneceksiniz ve bu konteynırı Docker Hub'a yüklemeyi öğreneceksiniz. İşte başlamanız için adım adım talimatlar:
 
 ## Adım 1: Docker'ı İndirin ve Kurun
