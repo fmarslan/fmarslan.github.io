@@ -5,6 +5,7 @@ categories: javascript
 ---
 
 ![image](https://github.com/fmarslan/fmarslan.github.io/assets/12278069/d97da58d-cfb2-4878-aecb-71f9fdf85b50)
+*Görsel [Bing Görüntü Oluşturucu](https://www.bing.com/images/create) ile hazırlanmıştır*
 
 Mikro servisler, yazılım geliştirme dünyasında giderek daha fazla popülerlik kazanıyor. Büyük monolitik uygulamaların yerine, daha küçük ve bağımsız hizmetlerin bir araya getirildiği bu yaklaşım, geliştirme süreçlerini hızlandırabilir ve ölçeklenebilirliği artırabilir. Özellikle FaaS ile desteklendiğinde çok başarılı sonuçlara ulaşılabilir. Ancak, serverless mimarisi başarıyla uygulanırken dikkat edilmesi gereken bir dizi önemli nokta vardır. Bu blog yazısında, serverless mimarinizi hazırlarken dikkate almanız gereken temel konuları ele alacağız. Öncelikle serverless bir mimaride yaşayabileceğiniz potansiyel sorunları düşünecek olursak:
 
