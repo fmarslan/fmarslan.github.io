@@ -6,6 +6,9 @@ categories: Postgresql
 
 ### PostgreSQL Cluster Oluşturma: Spilo, Patroni, WAL-G ve PSQL ile Güçlü Bir Yapı
 
+![image](https://github.com/fmarslan/fmarslan.github.io/assets/spilo.jpeg)
+*Görsel Spilo resmi repository hesabindan alinmistir*
+
 PostgreSQL, dayanıklılığı, geniş ölçeklenebilirliği ve yüksek performansı ile bilinen bir veritabanı yönetim sistemidir. Ancak, bir PostgreSQL veritabanını yüksek erişilebilirlik (HA) ve veri güvenliği sağlamak için yapılandırmak oldukça karmaşık olabilir. Bu noktada Spilo, Patroni, WAL-G ve PSQL gibi araçlar devreye girer ve PostgreSQL cluster kurulumunu kolaylaştırır. Bu yazıda, bu dört aracın uyumlu bir şekilde nasıl çalıştığını ve bize sağladıkları kolaylıkları ele alacağız.
 
 ### Spilo: PostgreSQL ve Patroni'yi Bir Araya Getiren İmaj
