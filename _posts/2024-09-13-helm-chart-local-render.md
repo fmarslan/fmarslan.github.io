@@ -18,7 +18,7 @@ Helm, Kubernetes ortamında uygulamaları yönetmek ve dağıtmak için en yayg�
 
 **Chart**, Kubernetes uygulamaları için şablonlanmış bir paket yapısıdır. İçerisinde Deployment, Service, ConfigMap gibi Kubernetes kaynaklarının YAML dosyaları bulunur. Bu şablonlar sayesinde bir Kubernetes uygulaması kolayca dağıtılabilir ve yönetilebilir hale gelir.
 
-### Helm’i Doğrudan Kubernetes Üzerine Kurmanın Riskleri (Şahsi Görüş)
+### Helm’i Doğrudan Kubernetes Üzerine Kurmanın Riskleri
 
 Helm chart'larını doğrudan Kubernetes’e kurmak bazı riskler barındırır. Özellikle production ortamında, hatalı yapılandırmalar ciddi sorunlara yol açabilir. Bu yüzden şahsi görüşüm, chart’ları Kubernetes’e uygulamadan önce localde test edip gözden geçirmenin daha güvenli olduğudur. Yanlış yapılandırılmış bir chart, Kubernetes kümesinde hatalı kaynaklar oluşturabilir ve istenmeyen sonuçlar doğurabilir.
 
