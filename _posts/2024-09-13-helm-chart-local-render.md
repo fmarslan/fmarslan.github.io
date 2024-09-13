@@ -49,4 +49,11 @@ helm template release-name ./chart-directory --values ./values.yaml --output-dir
 ```
 Bu komutlar, chart'ı farklı çevrelerde (örn. prod, dev) çalışacak şekilde özelleştirmeni sağlar.
 
+Çıktıyı Tek Bir Dosyaya Kaydetme
+Render edilen şablonları tek bir YAML dosyasına kaydetmek için PowerShell veya Bash’de > operatörünü kullanabilirsiniz. Örneğin:
+```bash
+helm template my-release ./my-nginx-chart --namespace my-namespace > a.yaml
+```
+Bu komut, my-namespace adlı bir namespace içinde çalışacak şekilde Nginx chart’ını render eder ve çıktıyı a.yaml dosyasına kaydeder. Bu dosyayı daha sonra ``kubectl apply -f a.yaml`` komutuyla Kubernetes’e uygulayabilirsiniz.
+
 Detaylı bilgi için Helm’in [resmi dokümantasyonuna](https://helm.sh/docs/) göz atabilirsiniz.
