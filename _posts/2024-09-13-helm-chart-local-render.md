@@ -38,7 +38,7 @@ helm template komutuna --set ya da --values parametreleri ile çevresel değişk
 
 ### Çevresel değişkenlerle kullanımı:
 
-bash
+
 ```bash
 helm template release-name ./chart-directory --set env=production --output-dir ./output-directory
 ```
