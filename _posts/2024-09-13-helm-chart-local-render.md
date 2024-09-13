@@ -5,6 +5,7 @@ categories: Helm
 ---
 
 ![image](/assets/img/image1-4.png.png)
+
 *Görsel redhat blog sayfasindan alinmistir*
 
 Helm, Kubernetes ortamında uygulamaları yönetmek ve dağıtmak için en yaygın kullanılan araçlardan biridir. Bu yazıda, **Helm'in temel kullanımı**, **chart'ları localde render etme** ve **OCI tabanlı chart'larla nasıl çalışabileceğinizi** anlatacağız. Ayrıca, Helm'i doğrudan Kubernetes'e yüklemek yerine neden önce localde test etmenin daha güvenli olduğunu açıklayacağız.
