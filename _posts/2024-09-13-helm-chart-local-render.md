@@ -25,95 +25,28 @@ Helm chart'larını doğrudan Kubernetes’e kurmak bazı riskler barındırır.
 Bu nedenle, Helm chart'larını önce **localde render etmek** ve Kubernetes’e göndermeden önce oluşacak kaynakları incelemek en iyi uygulama olacaktır.
 
 ### Helm Template Komutu ile Localde Render Etme
+Helm chart'larını Kubernetes'e yüklemeden önce manifest dosyalarını localde görmek için `helm template` komutunu kullanabilirsin:
 
-Helm chart'larını Kubernetes’e yüklemeden önce localde manifest dosyalarını görmek için `helm template` komutunu kullanabilirsiniz. Bu komut, Kubernetes'e uygulanacak şablonları localde oluşturur ve dosyalara kaydeder.
-
-#### `helm template` Komutu:
 ```bash
-helm template release-name ./chart-directory --output-dir ./output-directory
+helm template release-name oci://...  --output-dir ./output-directory
 ```
 
-Bu komut:
-- **`release-name`**: Helm release’in adı.
-- **`./chart-directory`**: Helm chart’ın bulunduğu yerel dizin veya **OCI tabanlı bir chart deposu** olabilir. Örneğin, Docker Hub'daki chart için şu şekilde kullanabilirsiniz:
+Bu komut, chart'ın tüm Kubernetes manifest dosyalarını localde render eder ve belirtilen dizine kaydeder. Bu sayede, Kubernetes'e uygulamadan önce gözden geçirip düzeltebilirsin.
 
-  ```bash
-  helm template release-name oci://registry-1.docker.io/bitnami/nginx --output-dir ./output-directory
-  ```
+Çevresel Değerler (Environment Variables) ve Parametreler:
+helm template komutuna --set ya da --values parametreleri ile çevresel değişkenler (environment variables) geçebilirsin. Örneğin, bir değer dosyası kullanarak ya da doğrudan komut satırında parametre verebilirsin.
 
-- **`--output-dir`**: Oluşturulan manifest dosyalarının kaydedileceği dizin.
+Çevresel değişkenlerle kullanımı:
 
-### Çevresel Değerler ve Parametreler Geçme
-
-`helm template` komutuna çevresel değişkenler (environment variables) ve parametreler verebilirsiniz. Bu, chart'ları belirli bir ortam için (örneğin `production` ya da `development`) özelleştirmenize olanak tanır.
-
-#### Komut Satırında Parametre Geçme:
+bash
 ```bash
 helm template release-name ./chart-directory --set env=production --output-dir ./output-directory
 ```
 
-Bu komut, `env` değişkenini `production` olarak ayarlar ve manifest dosyalarını bu çevreye göre render eder.
-
-#### Değer Dosyası ile Parametre Geçme:
+Değer dosyasıyla kullanımı:
 ```bash
 helm template release-name ./chart-directory --values ./values.yaml --output-dir ./output-directory
 ```
-
-Bu komut, `values.yaml` dosyasındaki değerleri kullanarak chart'ı render eder.
-
-### OCI Tabanlı Chart'ları Kullanma
-
-Helm, Docker Registry gibi **OCI (Open Container Initiative)** tabanlı container registry'lerinden chart indirip kullanmanızı sağlar. Bu özelliği kullanarak, Docker Hub'daki chart'ları aşağıdaki gibi alabilirsiniz.
-
-#### Helm Chart'ı OCI'den İndirme:
-```bash
-helm chart pull oci://registry-1.docker.io/bitnamicharts/nginx
-```
-
-Bu komut, Docker Hub'dan Nginx chart'ını indirir.
-
-#### Chart'ı Export Etme:
-```bash
-helm chart export oci://registry-1.docker.io/bitnamicharts/nginx --destination ./my-nginx-chart
-```
-
-Bu komut, indirilen chart'ı yerel bir dizine çıkarır.
-
-### Helm Chart Deposu Kurulumu ve Kullanımı
-
-Helm chart’larını depolardan alıp kullanmak oldukça kolaydır. Örneğin, **Bitnami** chart deposunu kullanarak Nginx chart’ını nasıl yükleyeceğimizi görelim:
-
-#### Bitnami Chart Deposu Ekleme:
-```bash
-helm repo add bitnami https://charts.bitnami.com/bitnami
-```
-
-Bu komut, Bitnami chart deposunu Helm'e ekler.
-
-#### Depodaki Chart’ları Güncelleme:
-```bash
-helm repo update
-```
-
-#### Nginx Chart’ını Localde Render Etme:
-```bash
-helm template my-release bitnami/nginx --output-dir ./nginx-manifests
-```
-
-Bu komut, Nginx chart'ını render eder ve çıktı dosyalarını `./nginx-manifests` klasörüne kaydeder.
-
-### Çıktıyı Tek Bir Dosyaya Kaydetme
-
-Render edilen şablonları tek bir YAML dosyasına kaydetmek için PowerShell veya Bash'de `>` operatörünü kullanabilirsiniz. Örneğin:
-
-```bash
-helm template my-release ./my-nginx-chart --namespace my-namespace > a.yaml
-```
-
-Bu komut, `my-namespace` adlı bir namespace içinde çalışacak şekilde Nginx chart'ını render eder ve çıktıyı `a.yaml` dosyasına kaydeder. Bu dosyayı daha sonra `kubectl apply -f a.yaml` komutuyla Kubernetes'e uygulayabilirsiniz.
-
-### Sonuç
-
-Helm, Kubernetes uygulamalarını şablonlayarak dağıtmak için güçlü bir araçtır. Ancak, chart'ları doğrudan Kubernetes'e yüklemek bazı riskler barındırdığı için önce localde render edip manifest dosyalarını gözden geçirmek her zaman daha güvenlidir. Bu sayede, olası yanlış yapılandırmaları fark edebilir ve daha güvenli bir uygulama süreci sağlayabilirsiniz.
+Bu komutlar, chart'ı farklı çevrelerde (örn. prod, dev) çalışacak şekilde özelleştirmeni sağlar.
 
 Detaylı bilgi için Helm’in [resmi dokümantasyonuna](https://helm.sh/docs/) göz atabilirsiniz.
