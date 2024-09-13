@@ -36,20 +36,20 @@ Bu komut, chart'ın tüm Kubernetes manifest dosyalarını localde render eder v
 Çevresel Değerler (Environment Variables) ve Parametreler:
 helm template komutuna --set ya da --values parametreleri ile çevresel değişkenler (environment variables) geçebilirsin. Örneğin, bir değer dosyası kullanarak ya da doğrudan komut satırında parametre verebilirsin.
 
-Çevresel değişkenlerle kullanımı:
+### Çevresel değişkenlerle kullanımı:
 
 bash
 ```bash
 helm template release-name ./chart-directory --set env=production --output-dir ./output-directory
 ```
 
-Değer dosyasıyla kullanımı:
+### Değer dosyasıyla kullanımı:
 ```bash
 helm template release-name ./chart-directory --values ./values.yaml --output-dir ./output-directory
 ```
 Bu komutlar, chart'ı farklı çevrelerde (örn. prod, dev) çalışacak şekilde özelleştirmeni sağlar.
 
-Çıktıyı Tek Bir Dosyaya Kaydetme
+### Çıktıyı Tek Bir Dosyaya Kaydetme
 Render edilen şablonları tek bir YAML dosyasına kaydetmek için PowerShell veya Bash’de > operatörünü kullanabilirsiniz. Örneğin:
 ```bash
 helm template my-release ./my-nginx-chart --namespace my-namespace > a.yaml
