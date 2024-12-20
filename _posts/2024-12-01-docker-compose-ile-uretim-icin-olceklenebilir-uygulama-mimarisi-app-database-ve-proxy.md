@@ -4,6 +4,9 @@ title: "Dockerize Edilmiş Mimari: App, Database, Proxy"
 categories: Docker
 ---
 
+
+![image](/assets/img/image.png)
+
 Bu mimari, bir web uygulaması (app), bir veri tabanı (db) ve bir ters proxy (nginx) içeren üç ana Docker container'ı kapsar. Bu çözüm Docker-Compose kullanılarak çalıştırılır ve üretim ortamında güvenilir bir yapı sunar.
 
 ---
