@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes ile MariaDB MaxScale Cluster Kurulumu"
 date: 2025-05-30
-categories: [kubernetes, mariadb, maxscale, veritabanı]
+categories: kubernetes, mariadb, maxscale, veritabanı
 author: fmarslan.com
 ---
 
