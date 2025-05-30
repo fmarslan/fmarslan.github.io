@@ -1,9 +1,7 @@
 ---
-layout: home
-title: Resume
+layout: page
 permalink: /cv/
 ---
-# Fatih Mehmet Arslan
 
 **Email:** [contact@fmarslan.com](mailto:contact@fmarslan.com)  
 **Website:** [https://fmarslan.com](https://fmarslan.com)
