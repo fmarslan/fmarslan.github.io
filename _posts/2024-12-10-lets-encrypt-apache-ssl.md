@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Let's Encrypt ile Apache için SSL Sertifikası"
-categories: SSL,Apache
+categories: SSL Apache
 ---
 <img src="/assets/img/apache-lets-encrypt.webp" alt="cover" style="max-width: 50%; max-height:20%">
 
