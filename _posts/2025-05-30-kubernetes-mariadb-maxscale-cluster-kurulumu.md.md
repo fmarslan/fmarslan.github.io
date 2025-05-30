@@ -160,9 +160,3 @@ Cluster kurulumunun ardından şu adımlarla test edebilirsiniz:
 ## Sonuç
 
 Bu içerikte Kubernetes üzerinde bir MariaDB + MaxScale cluster kurulumu için temel yapı taşlarını ve örnek YAML bölümlerini inceledik. Bu kurulum ile yüksek erişilebilirlik ve yük dengeleme sağlanabilir. Her bir yapılandırma ortamınıza göre özelleştirilebilir.
-
-
----
-
-Eğer istersen bu içeriği Markdown olarak `.md` dosyasına da dönüştürebilirim veya GitHub Pages'te yayına hazır hale getirmek için klasör yapısı önerisi sunabilirim.
-```
