@@ -5,8 +5,7 @@ date: 2025-05-30
 categories: kubernetes, mariadb, maxscale, veritabanı
 author: fmarslan.com
 ---
-
-![cover](/assets/img/mariadb-maxscale.png)
+<img src="/assets/img/mariadb-maxscale.png" alt="cover" style="max-width: 50%; max-height:20%">
 
 Kubernetes üzerinde yüksek erişilebilirlik sağlayan bir **MariaDB replikasyon kümesi** ve bu küme üzerine kurulu **MaxScale** ile bir **read-write split** proxy yapısı kurmak, kurumsal uygulamalar için oldukça işlevseldir. Bu rehberde, **Kubernetes YAML tanımlarını kullanarak** adım adım bir **MariaDB + MaxScale cluster** kurulumunu ele alacağız.
 
