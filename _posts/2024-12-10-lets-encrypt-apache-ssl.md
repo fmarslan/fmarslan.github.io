@@ -3,7 +3,7 @@ layout: post
 title: "Let's Encrypt ile Apache için SSL Sertifikası"
 categories: SSL,Apache
 ---
-<img src="/assets/img/apache-lets-encrypt.web" alt="cover" style="max-width: 50%; max-height:20%">
+<img src="/assets/img/apache-lets-encrypt.webp" alt="cover" style="max-width: 50%; max-height:20%">
 
 Bu rehber, Let's Encrypt kullanarak otomatik SSL sertifikası yenileyen bir Apache sunucusunu Docker ile nasıl hazırlayacağınızı gösterir. Örnekler gerçekçi bir senaryo üzerinden sunulmuştur.
 
