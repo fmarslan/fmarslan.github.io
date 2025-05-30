@@ -8,8 +8,6 @@ permalink: /cv/
 
 ---
 
-## 🧾 Profile
-
 Experienced software architect and technical leader with 14+ years of proven success in designing scalable systems, driving digital transformation, and leading development teams. Specialized in cloud-native solutions, Kubernetes infrastructure, microservices architecture, and AI-enhanced analytics.
 
 Enthusiastic about working in environments that foster collaboration, knowledge sharing, and continuous learning.
