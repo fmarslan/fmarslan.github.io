@@ -4,6 +4,7 @@ title: "Serverless Bir Mimari Hazırlarken Dikkat Etmeniz Gereken Önemli Noktal
 categories: javascript
 ---
 <img src="/assets/img/saas-faas.png" alt="cover" style="max-width: 50%; max-height:20%">
+
 *Görsel [Bing Görüntü Oluşturucu](https://www.bing.com/images/create) ile hazırlanmıştır*
 
 Mikro servisler, yazılım geliştirme dünyasında giderek daha fazla popülerlik kazanıyor. Büyük monolitik uygulamaların yerine, daha küçük ve bağımsız hizmetlerin bir araya getirildiği bu yaklaşım, geliştirme süreçlerini hızlandırabilir ve ölçeklenebilirliği artırabilir. Özellikle FaaS ile desteklendiğinde çok başarılı sonuçlara ulaşılabilir. Ancak, serverless mimarisi başarıyla uygulanırken dikkat edilmesi gereken bir dizi önemli nokta vardır. Bu blog yazısında, serverless mimarinizi hazırlarken dikkate almanız gereken temel konuları ele alacağız. Öncelikle serverless bir mimaride yaşayabileceğiniz potansiyel sorunları düşünecek olursak:
