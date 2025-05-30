@@ -8,84 +8,63 @@ permalink: /cv/
 
 ---
 
-## 🧾 Summary
+## 🧾 Profile
 
-I have been working in software development for over 14 years. In every project I have worked on, I focused on technology transformation, ensuring smooth transitions to new technologies and infrastructure. I have researched, planned, and implemented modern architectures that improve cost efficiency and performance.
+Experienced software architect and technical leader with 14+ years of proven success in designing scalable systems, driving digital transformation, and leading development teams. Specialized in cloud-native solutions, Kubernetes infrastructure, microservices architecture, and AI-enhanced analytics.
 
-I am not deeply specialized in a single field but rather have broad expertise across multiple technologies. I actively develop in many programming languages and have successfully built microservices and functional services. My experience includes cloud migration, Kubernetes infrastructure, and AI-powered analytics. I enjoy working with teams that value collaboration and knowledge sharing, and I am looking for opportunities where I can expand my network and exchange knowledge in a win-win environment.
-
----
-
-## 💻 Computer Skills
-
-### Languages
-- Java (Core & Spring)
-- C# (.Net Core & .Net Framework)
-- JavaScript (Angular)
-- Python
-- Ruby
-- Groovy
-- PHP
-
-### Databases
-- **Relational:** PostgreSQL, MySQL, MSSQL, Oracle, Sybase, SQLite  
-- **Big Data:** Cosmos DB, MongoDB, Cassandra
-
-### Infrastructure & Cloud
-- Kubernetes
-- Microservices
-- FaaS
-- SaaS
-- Containerization (Docker)
-
-### Search & Indexing
-- Solr
-- Elasticsearch
-- OpenSearch
-- Cognitive Search
+Enthusiastic about working in environments that foster collaboration, knowledge sharing, and continuous learning.
 
 ---
 
-## 💼 Experience
+## 💻 Technical Skills
 
-### Solution Architect & Technical Lead – Modulairy (Netherlands)  
-**09.2022 – Present**
-- Designed, implemented, and managed Kubernetes infrastructure.
-- Led cloud migration projects, helping businesses move their technical infrastructure to the cloud.
-- Developed and deployed software updates needed for seamless cloud integration.
-- Provided AI-powered analytics and automation for retail businesses (both physical and online).
-- Built services that simplify digital transformation for customers.
-- Gained expertise in FaaS, Kubernetes, and Azure Cloud solutions.
+- **Languages:** Java (Spring), C# (.NET Core), Python, JavaScript (Angular), Ruby, Groovy, PHP  
+- **Databases:** PostgreSQL, MySQL, MSSQL, Oracle, MongoDB, Cassandra, Cosmos DB  
+- **Cloud & Infrastructure:** Azure, Kubernetes, Docker, Serverless (FaaS), SaaS Architecture  
+- **DevOps & CI/CD:** Git, CI Pipelines, Monitoring, Automation Tools  
+- **Search & Indexing:** Elasticsearch, Solr, OpenSearch, Azure Cognitive Search  
 
-### Software Architect / Technical Leader – Mantis  
-**10.01.2019 – 09.2022**
-- Led software projects as an architect and technical leader.
-- Migrated legacy systems to modern microservices-based architectures (SaaS and FaaS).
-- Developed 10 new modular products, making them adaptable for third-party integration.
-- Managed Kubernetes deployment, full CI automation, and system monitoring.
-- Scaled system usage from 300 to 20K+ concurrent users without increasing hardware costs.
+---
 
-### Senior Software Engineer – Comodo  
-**27.08.2018 – 01.01.2019**
-- Designed a microservices architecture with Spring Boot, Hibernate, PostgreSQL, reducing code redundancy by 40%.
-- Led development and maintenance of core software solutions.
+## 💼 Professional Experience
 
-### Senior Software Engineer – VHS Electronics  
-**01.07.2017 – 26.08.2018**
-- Built a SCADA/IoT software architecture using .NET Core, PostgreSQL, Node.js, MongoDB.
-- Developed big data analytics, real-time monitoring, and reporting modules.
+### 🔹 Solution Architect & Technical Lead – Modulairy, Netherlands  
+**Sep 2022 – Present (Remote)**  
+- Designed and deployed Kubernetes-based infrastructure with automated scaling and monitoring.  
+- Led cloud migration efforts, improving performance and reducing costs.  
+- Delivered AI-powered analytics systems for physical and digital retail channels.  
+- Developed reusable microservices enabling clients to accelerate digital transformation.
 
-### Team Lead / Senior Software Engineer / Software Engineer – AGMLAB  
-**05.09.2011 – 27.05.2017**
-- Developed government projects (GIS, ERP, Mobile Apps) using Java, C#, JavaScript.
-- Set up continuous integration tools and managed system maintenance.
+### 🔹 Software Architect / Technical Lead – Mantis  
+**Jan 2019 – Sep 2022**  
+- Migrated legacy monolith systems to scalable, modular SaaS and FaaS architecture.  
+- Developed 10+ modular, integration-ready products.  
+- Implemented CI/CD pipelines and containerized deployments with Kubernetes.  
+- Scaled platform from 300 to 20,000+ concurrent users without increasing infrastructure costs.
+
+### 🔹 Senior Software Engineer / Scrum Master – Comodo  
+**Aug 2018 – Jan 2019**  
+- Architected microservices using Spring Boot and PostgreSQL.  
+- Improved code reusability by 40% and streamlined development workflows.
+
+### 🔹 Senior Software Engineer – VHS Electronics  
+**Jul 2017 – Aug 2018**  
+- Built SCADA/IoT architecture with .NET Core, Node.js, and MongoDB.  
+- Developed real-time data pipelines for industrial analytics.
+
+### 🔹 Team Lead / Software Engineer – AGMLAB  
+**Sep 2011 – May 2017**  
+- Delivered national-scale GIS and ERP solutions for government agencies.  
+- Led teams in developing mobile and web applications.  
+- Introduced continuous integration and process automation tools.
 
 ---
 
 ## 🎓 Education
 
-- **Karabuk University** – Computer Engineering  
-  *10/2017 – 06/2018*
+- **Karabuk University** – M.Sc. Computer Engineering (2017 – 2018)  
+- **Gazi University** – B.Sc. Computer Technical Education (2006 – 2011)
 
-- **Gazi University** – Computer Technical Teaching  
-  *09/2006 – 09/2011*
+---
+
+_Last updated: May 2025_
