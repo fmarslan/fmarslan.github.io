@@ -187,6 +187,9 @@ body{
             border:none;
             background:transparent;
             color: #ffffff;
+            &.highlighter-rouge{
+                color:#b40c0c;
+            }
         }
         pre{
             &:not(.highlight){
