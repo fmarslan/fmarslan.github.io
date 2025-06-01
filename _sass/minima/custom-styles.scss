@@ -424,6 +424,28 @@ body{
   .vg    { color: #EEFFFF } /* Name.Variable.Global */
   .vi    { color: #EEFFFF } /* Name.Variable.Instance */
   .il    { color: #F78C6C } /* Literal.Number.Integer.Long */
+        .c      { color: #a0cfcf; font-style: italic; }
+.cp     { color: #a0cfcf; font-style: italic; }
+.cs     { color: #a0cfcf; font-style: italic; font-weight: bold; }
+.ge     { font-style: italic; }
+.gh     { color: #d0f0f0; }
+.gp     { color: #b0e0e0; }
+.gr     { color: #ff8080; }
+.gt     { color: #ff8080; }
+.gu     { color: #cceeee; }
+.kc     { color: #89DDFF; font-weight: bold; }
+.kd     { color: #89DDFF; font-weight: bold; }
+.kp     { color: #89DDFF; font-weight: bold; }
+.kr     { color: #89DDFF; font-weight: bold; }
+.n      { color: #eeeeee; }
+.nb     { color: #89DDFF; font-weight: bold; }
+.ni     { color: #80ffd1; }
+.nn     { color: #80ffd1; }
+.ss     { color: #82eaff; }
+.w      { color: #eeeeee; }
+.lineno { color: #a0cfcf; font-style: italic; }
+.gl     { color: #a0cfcf; font-style: italic; }
+.hll    { background-color: #444c00; }
         }
 }
 @media only screen and (max-width: 768px) {
