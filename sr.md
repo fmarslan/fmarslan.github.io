@@ -4,6 +4,7 @@ layout: default
 title: Search Result
 permalink: /search
 robots: noindex	
+sitemap: false
 
 ---
 
