@@ -446,6 +446,11 @@ body{
 .lineno { color: #a0cfcf; font-style: italic; }
 .gl     { color: #a0cfcf; font-style: italic; }
 .hll    { background-color: #444c00; }
+         .o,
+  .ow {
+    color: #82eaff;
+    font-weight: bold;
+  }
         }
 }
 @media only screen and (max-width: 768px) {
