@@ -1,12 +1,11 @@
 ---
-
 title: "Apache NiFi ile Veri Akışı Otomasyonu"
 layout: post
 date: 2025-08-05
 categories: \[bigdata, apache, nifi]
 tags: \[nifi, dataflow, apache, iot, kafka, postgres]
 summary: "Apache NiFi ile görsel veri akışı yönetimi, düşük kodlu dönüşüm ve aktarım işlemleri üzerine profesyonel bir inceleme"
---------------------------------------------------------------------------------------------------------------------------------
+---
 
 <img src="/assets/img/596f2bf2-a150-4f92-9693-e34f771adcd9.png" alt="cover" style="max-width: 50%; max-height:20%">
 
