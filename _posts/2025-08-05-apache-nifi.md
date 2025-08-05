@@ -78,7 +78,9 @@ Bu yazıda örnek senaryo olarak IoT verileri ele alınmıştır; ancak Apache N
 
 ### 🧠 Tasarımda Dikkat Edilmesi Gereken Noktalar
 
-* **NiFi bir *flow orchestration* aracıdır, iş mantığı (logic) motoru değildir.** Karmaşık koşullar ve dönüşümler için NiFi üzerinde çok katmanlı, dallanmış yapılar kurmak sistemi yönetilemez hale getirebilir.
+* Karmaşık koşullar ve dönüşümler için NiFi üzerinde çok katmanlı, dallanmış yapılar kurmak sistemi yönetilemez hale getirebilir.
+  
+* **NiFi bir *flow orchestration* aracıdır, iş mantığı (logic) motoru değildir.** 
 
 * **Ağır ve karmaşık logic'ler**, mümkünse ayrı mikroservisler olarak ele alınmalı ve NiFi’den dış servis çağrısı ile entegre edilmelidir (`InvokeHTTP`, `ExecuteScript`, `ExecuteStreamCommand` gibi işlemcilerle).
 
