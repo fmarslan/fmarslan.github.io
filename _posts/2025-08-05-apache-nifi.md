@@ -110,3 +110,5 @@ Bu yazıda örnek senaryo olarak IoT verileri ele alınmıştır; ancak Apache N
 ## ✨ Sonuç
 
 NiFi, IOT gibi sistemlerde; veri kaynaklarından gelen yapısız verileri şematik, izlenebilir ve güvenli hale getirerek ölçeklenebilir bir veri pipeline'ı sunar. Kod yazmadan, karmaşık veri operasyonlarını sadeleştirmek için birebirdir.
+
+[[https://nifi.apache.org/]](https://nifi.apache.org/)
