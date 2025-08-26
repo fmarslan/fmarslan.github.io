@@ -4,7 +4,8 @@ title: " Kubernetes Üzerinde cert-manager Kurulumu (Adım Adım Rehber)"
 categories: kubernetes
 ---
 
-## Giriş
+<img src="/assets/img/cert-manager.png" alt="cover" style="max-width: 50%; max-height:10%">
+
 
 Modern uygulamalarda **TLS sertifikalarının yönetimi** manuel olarak zahmetli ve hataya açık bir süreçtir. Kubernetes ekosisteminde bu işi otomatikleştiren en popüler çözüm: **cert-manager**. Amacımız, Kubernetes üzerinde çalışan uygulamalar için TLS sertifikalarını otomatik üretmek, yenilemek ve güvenle yönetmek.
 
