@@ -26,6 +26,13 @@ Enthusiastic about working in environments that foster collaboration, knowledge 
 
 ## 💼 Professional Experience
 
+### 🔹 Solution Architect & Technical Lead – Eaglessoft, Netherlands  
+**Jul 2025 – Present (Remote)**  
+- Designed and led a multi-tenant, event-driven architecture using Kafka, Redis, and PostgreSQL with secure tenant isolation.
+- Architected a microservice-based document pipeline (Collector, Prepare, Sender) for validation, transformation, and compliant delivery.
+- Defined unified API and messaging standards (wrappers, approval flows, error handling) to streamline integrations.
+- Drove cloud-native adoption with Docker/Kubernetes, S3, and observability stack ensuring GDPR compliance and high availability.
+
 ### 🔹 Solution Architect & Technical Lead – Modulairy, Netherlands  
 **Sep 2022 – Present (Remote)**  
 - Designed and deployed Kubernetes-based infrastructure with automated scaling and monitoring.  
