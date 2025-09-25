@@ -26,7 +26,7 @@ Enthusiastic about working in environments that foster collaboration, knowledge 
 
 ## 💼 Professional Experience
 
-### 🔹 Solution Architect & Technical Lead – Eaglessoft, Netherlands  
+### 🔹 Solution Architect & Technical Lead – Eaglessoft, Belgium  
 **Jul 2025 – Present (Remote)**  
 - Designed and led a multi-tenant, event-driven architecture using Kafka, Redis, and PostgreSQL with secure tenant isolation.
 - Architected a microservice-based document pipeline (Collector, Prepare, Sender) for validation, transformation, and compliant delivery.
