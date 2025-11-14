@@ -2,6 +2,7 @@
 layout: post
 title: "CAP Yaklaşımı ve Event-Driven Tasarım: Modern Sistemlerin Görünmeyen Omurgası"
 categories: CAP,Event-Driven
+mermaid: true
 ---
 
 <img src="/assets/img/5198cfa0-de03-4bb5-b637-e100abef9ab1.png" alt="cover" style="max-width: 50%; max-height:10%">
@@ -278,3 +279,7 @@ Cevabınız, mimarinizi şekillendirecektir.
 * [Arslan, F. M.: *“Serverless Bir Mimari Hazırlarken Dikkat Edilmesi Gereken Önemli Noktalar”*, Ekim 2023.](https://fmarslan.com/javascript/2023/10/20/serverless-tasar%C4%B1mlarda-dikkat-edilmesi-gereken-hususlar.html)
 * [Brewer, Eric: CAP Theorem publications](https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/brewer-cap.pdf)
 * Dağıtık sistemler ve event-driven mimari üzerine çeşitli teknik kaynaklar
+
+  <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+</script>
