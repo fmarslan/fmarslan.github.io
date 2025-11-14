@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Entegrasyon Mimarilerinde Yanlış Bilinen Doğrular"
-categories: Entegrasyon,Architecture
+categories: [Entegrasyon, Architecture]
 mermaid: true
 ---
 

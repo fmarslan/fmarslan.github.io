@@ -1,0 +1,119 @@
+/*
+ * Custom theme stylesheet for FMArslan Jekyll site.
+ *
+ * Defines a color palette based on the primary teal (#012c32) and complementary
+ * warm accents. Variables are declared for both light and dark themes. To
+ * switch themes, the JavaScript toggle adds or removes a `data-theme="dark"`
+ * attribute on the <html> element. All colors derive from CSS variables so
+ * nothing else needs to change when the theme toggles.
+ */
+
+/* Base variables for the light theme */
+:root {
+  /* Primary brand color: deep teal */
+  --color-primary: #012c32;
+  /* Accent color: terracotta red for highlights and buttons */
+  --color-accent: #a63d40;
+  /* Secondary accent: muted rose for subtle highlights */
+  --color-secondary: #d58d8d;
+  /* Backgrounds and surfaces */
+  --color-bg: #f5f9f9;
+  --color-surface: #ffffff;
+  /* Text colors */
+  --color-text: #012c32;
+  --color-muted: #445c60;
+  /* Border color */
+  --color-border: #e0eaea;
+}
+
+/* Dark theme overrides: activated when [data-theme="dark"] is present on <html> */
+[data-theme='dark'] {
+  --color-primary: #01343a;       /* slightly lighter teal for better contrast */
+  --color-accent: #d58d8d;       /* swap accent to muted rose in dark mode */
+  --color-secondary: #a63d40;    /* terracotta becomes secondary accent */
+  --color-bg: #001417;           /* very dark teal for backgrounds */
+  --color-surface: #01222a;      /* darker surface panels */
+  --color-text: #f4f4f4;         /* light text on dark backgrounds */
+  --color-muted: #7c9ba0;        /* muted text on dark backgrounds */
+  --color-border: #02323d;       /* subtle borders in dark mode */
+}
+
+/* Apply the variables to page elements */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Header styling */
+.site-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-bottom: 2px solid var(--color-accent);
+}
+.site-header .site-title {
+  color: #ffffff;
+  font-weight: bold;
+}
+.site-header a.site-title:hover {
+  color: var(--color-secondary);
+}
+
+/* Navigation menu */
+.site-nav .nav-item {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+.site-nav .nav-item:hover {
+  color: var(--color-secondary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: auto;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+.theme-toggle:hover {
+  color: var(--color-secondary);
+}
+
+/* Posts list styling */
+.post-list li {
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+.post-meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* Footer styling */
+.site-footer {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-top: 2px solid var(--color-accent);
+  padding: 2rem 0;
+}
+.site-footer a {
+  color: var(--color-secondary);
+}
+.site-footer a:hover {
+  color: var(--color-accent);
+}

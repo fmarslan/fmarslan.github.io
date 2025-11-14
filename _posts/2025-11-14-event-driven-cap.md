@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CAP Yaklaşımı ve Event-Driven Tasarım: Modern Sistemlerin Görünmeyen Omurgası"
-categories: CAP,Event-Driven
+categories: [CAP, Event-Driven]
 mermaid: true
 ---
 

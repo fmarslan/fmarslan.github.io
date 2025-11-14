@@ -1,9 +1,11 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-{% if page.mermaid %}
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script> 
-  document.addEventListener("DOMContentLoaded", function () {
-    mermaid.initialize({ startOnLoad: true });
-  });
-</script>
-{% endif %}
+<!-- Custom head file for FMArslan site -->
+<!-- This file overrides the default Minima include to inject additional CSS and JS for the theme switcher. -->
+
+{%- comment -%}
+Include custom CSS and JavaScript necessary for the dark/light theme switcher.  
+The CSS defines color variables and styling rules for both light and dark themes, while the
+JavaScript handles toggling between themes and persisting the user's preference in localStorage.
+{%- endcomment -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/theme-custom.css' | relative_url }}">
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>

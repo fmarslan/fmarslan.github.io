@@ -1,15 +1,32 @@
-<header class="site-header">
-
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-    <div class="search-box">
-      <form action="/search" method="get">
-        <input type="text" id="q" name="q" autocomplete="off" placeholder="Search"/>
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+<header class="global-header">
+  <div class="global-header__inner">
+    <a class="brand" rel="author" href="{{ '/' | relative_url }}">
+      <span class="brand-badge">FMA</span>
+      <span class="brand-meta">
+        <span class="brand-name">{{ site.author.name | default: site.title }}</span>
+        <span class="brand-role">Solution Architect</span>
+      </span>
+    </a>
+    <div class="nav-wrapper">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Toggle site navigation</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="site-navigation" class="nav-links" aria-label="Primary">
+        {%- assign current_path = page.url | default: '/' -%}
+        {%- for link in site.navigation -%}
+          {%- assign link_url = link.url | relative_url -%}
+          {%- assign is_active = false -%}
+          {%- if current_path == link.url or current_path == link_url -%}
+            {%- assign is_active = true -%}
+          {%- endif -%}
+          <a class="nav-link{% if is_active %} is-active{% endif %}" href="{{ link_url }}">{{ link.title }}</a>
+        {%- endfor -%}
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a class="btn btn-secondary" href="mailto:{{ site.author.email }}">Let’s talk</a>
     </div>
   </div>
 </header>

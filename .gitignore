@@ -1,0 +1,17 @@
+# Build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Dependencies
+vendor/
+node_modules/
+vendor/bundle/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

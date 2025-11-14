@@ -2,23 +2,17 @@
 layout: base
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-<div class="identity" >
-  <div class="picture">
-  </div>  
-  <h2 class="name">Fatih Mehmet ARSLAN</h2>
-  <h4 class="title">Solution Architect & Software Engineer</h4>
-  <div class="social-links">
-      {%- include social.html -%}
-  </div>
-</div>
-<div class="content">
-
-  {{ content }}
-  
-</div>
+<div class="page-shell">
+  <section class="page-hero">
+    {%- if page.eyebrow -%}
+      <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+    {%- endif -%}
+    <h1>{{ page.title }}</h1>
+    {%- if page.description -%}
+      <p>{{ page.description }}</p>
+    {%- endif -%}
+  </section>
+  <section class="page-content">
+    {{ content }}
+  </section>
 </div>

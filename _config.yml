@@ -1,31 +1,60 @@
-exclude: ['posts']
 url: https://fmarslan.com
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-remote-theme
- - jekyll-sitemap
- - jekyll-paginate
-
-remote_theme: jekyll/minima
-
-#theme: minima
 locale: "en-US"
 title: "F.M. Arslan"
+description: >
+  I'm a solution architect & software engineer.
+
 author:
   name: Fatih Mehmet ARSLAN
   email: contact@fmarslan.com
   type: person
-  
-description: >
-  I'm a solution architect & software enginer.  
 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title:output_ext
 paginate: 20
+paginate_path: /blog/:num
 show_excerpts: true
 google_analytics: G-ZPHHT8GE5Z
-permalink: /:categories/:year/:month/:day/:title:output_ext
-paginate_path: /blog/:num
 
-minima:
-  skin: classic
-  date_format: "%b %-d, %Y"
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: Resume
+    url: /cv/
+  - title: Search
+    url: /search
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - _site

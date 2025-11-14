@@ -1,25 +1,32 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        {%- if site.author %}
-          <div class="contact-list">
-            {% if site.author.name -%}
-              <span class="p-name">{{ site.author.name | escape }}</span>
-            {% endif -%}
-            {% if site.author.email -%}
-              <span class="p-email"><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
-            {%- endif %}
-          </div>
-        {%- endif %}
-      </div>
+<footer class="global-footer">
+  <div class="global-footer__inner">
+    <div class="footer-meta">
+      <p class="pill">Architecting human-centric systems</p>
+      <h4>{{ site.author.name | default: site.title }}</h4>
+      <p>{{ site.description }}</p>
+      <a class="btn btn-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    </div>
+    <div>
+      <h4>Navigate</h4>
+      <ul class="footer-nav">
+        {%- for link in site.navigation -%}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul class="footer-nav">
+        <li><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></li>
+        <li><a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      {% include social.html %}
     </div>
   </div>
-  <div class="credits">
-          <ul>
-            <li><a href="https://pages.github.com/">Github Pages</a></li>
-            <li><a href="https://jekyllrb.com/">Jekyll</a></li>
-          </ul>
-        </div>
+  <div class="footer-bottom">
+    © {{ site.author.name | default: site.title }} · {{ site.time | date: "%Y" }}. Crafted with Jekyll.
+  </div>
 </footer>

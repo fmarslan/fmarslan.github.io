@@ -2,67 +2,151 @@
 layout: base
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+<div class="page-shell">
+  {%- if page.hero -%}
+  <section class="hero">
+    <div class="hero-content">
+      {%- if page.hero.eyebrow -%}
+        <p class="hero-eyebrow">{{ page.hero.eyebrow }}</p>
+      {%- endif -%}
+      <h1>{{ page.hero.title | default: page.title }}</h1>
+      {%- if page.hero.description -%}
+        <p>{{ page.hero.description }}</p>
+      {%- endif -%}
+      {%- if page.hero.actions -%}
+      <div class="hero-actions">
+        {%- for action in page.hero.actions -%}
+          {%- assign href = action.url -%}
+          {%- unless action.url contains 'http' or action.url contains 'mailto:' -%}
+            {%- assign href = action.url | relative_url -%}
+          {%- endunless -%}
+          <a class="btn btn-{{ action.style | default: 'primary' }}" href="{{ href }}">
+            {{ action.label }}
+            {%- if action.icon -%}<i class="{{ action.icon }}"></i>{%- endif -%}
+          </a>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+      <div class="hero-social">
+        <span class="eyebrow">Elsewhere</span>
+        {% include social.html %}
+      </div>
+      {%- if page.metrics -%}
+      <ul class="hero-meta">
+        {%- for metric in page.metrics -%}
+        <li>
+          <span class="value">{{ metric.value }}</span>
+          <span class="label">{{ metric.label }}</span>
+        </li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+    {%- if page.hero.image -%}
+    <div class="hero-media">
+      <img src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.image_alt | default: site.author.name }}">
+    </div>
+    {%- endif -%}
+  </section>
   {%- endif -%}
 
-<div class="identity" >
-  <div class="picture">
-  </div>  
-  <h2 class="name">
-    Fatih Mehmet ARSLAN
-    <a href="https://fmarslan.com/cv/" target="_blank" style="font-size: 0.6em;margin-left: 1em;float: inline-end;color: wheat;margin-top: .5em;">📄CV</a>
-  </h2>
-  <h4 class="title">Solution Architect & Software Engineer</h4>
-  <div class="social-links">
-      {%- include social.html -%}
-  </div>
-</div>
-<div class="content">
-
-  {{ content }}
-  
-  <div class="posts">
-  {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in paginator.posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}            
-            <i class="icon">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
-            </i>
-          </a>
-        </h3>
-      </li>
-      {%- endfor -%}
-    </ul>
-  
-
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
+  {%- if page.focus -%}
+  <section>
+    <div class="section-heading">
+      {%- if page.focus.eyebrow -%}<p class="eyebrow">{{ page.focus.eyebrow }}</p>{%- endif -%}
+      <h2>{{ page.focus.title }}</h2>
+      {%- if page.focus.description -%}<p>{{ page.focus.description }}</p>{%- endif -%}
     </div>
-</div>
+    <div class="card-grid">
+      {%- for item in page.focus.items -%}
+      <article class="card">
+        {%- if item.icon -%}
+        <span class="card-icon"><i class="{{ item.icon }}"></i></span>
+        {%- endif -%}
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.copy }}</p>
+        {%- if item.tags -%}
+        <p class="pill">{{ item.tags }}</p>
+        {%- endif -%}
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  {%- if page.highlights -%}
+  <section>
+    <div class="section-heading">
+      {%- if page.highlights.eyebrow -%}<p class="eyebrow">{{ page.highlights.eyebrow }}</p>{%- endif -%}
+      <h2>{{ page.highlights.title }}</h2>
+      {%- if page.highlights.description -%}<p>{{ page.highlights.description }}</p>{%- endif -%}
+    </div>
+    <div class="highlights">
+      {%- for item in page.highlights.items -%}
+      <article class="highlight-card">
+        <span>{{ item.label }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.copy }}</p>
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  <section>
+    <div class="section-heading">
+      <p class="eyebrow">{{ page.blog_section.eyebrow | default: "Latest writing" }}</p>
+      <h2>{{ page.blog_section.title | default: "Notes from the field" }}</h2>
+      <p>{{ page.blog_section.description | default: "I share architecture lessons, platform insights, and delivery notes every week." }}</p>
+    </div>
+    {%- if paginator -%}
+      {%- assign posts = paginator.posts -%}
+    {%- else -%}
+      {%- assign posts = site.posts -%}
+    {%- endif -%}
+    {%- assign post_limit = page.blog_section.limit | default: 6 -%}
+    <div class="post-grid">
+      {%- for post in posts limit: post_limit -%}
+      <article class="post-card">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <a class="read-more" href="{{ post.url | relative_url }}">Read article →</a>
+      </article>
+      {%- endfor -%}
+    </div>
+    {%- if paginator and paginator.total_pages > 1 -%}
+    <div class="post-list-pagination">
+      {%- if paginator.previous_page -%}
+        <a href="{{ paginator.previous_page_path | relative_url }}">← Newer posts</a>
+      {%- else -%}
+        <span>You're on the latest page</span>
+      {%- endif -%}
+      <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {%- if paginator.next_page -%}
+        <a href="{{ paginator.next_page_path | relative_url }}">Older posts →</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  </section>
+
+  {%- if page.contact -%}
+  <section>
+    <div class="contact-panel">
+      <div>
+        <h3>{{ page.contact.title }}</h3>
+        <p>{{ page.contact.description }}</p>
+      </div>
+      <div class="hero-actions">
+        {%- for action in page.contact.actions -%}
+          {%- assign href = action.url -%}
+          {%- unless href contains 'http' or href contains 'mailto:' -%}
+            {%- assign href = href | relative_url -%}
+          {%- endunless -%}
+          <a class="btn btn-{{ action.style | default: 'primary' }}" href="{{ href }}">{{ action.label }}</a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
 </div>
