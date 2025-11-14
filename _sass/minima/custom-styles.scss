@@ -23,8 +23,8 @@ body{
         div.picture{
             background-color:mix($mixColor,$primaryColor,70);
             border-radius: 100%;
-            width: 15em;
-            height: 15em;
+            width: 9em;
+            height: 9em;
             border: 9px solid #012c32;
             padding: .3em;
             display: block;
@@ -35,23 +35,26 @@ body{
             background-position-x: 1%;
             background-position-y: 50%;
             position: static;
+            margin-left: -6em;
+            margin-top: .7em;
             &:before{
                 content: " ";
                 position: absolute;
                 background-color: $primaryColor;
                 width: 100%;
-                height: 8em;
+                height: 12em;
                 left: 0px;
-                margin-top: 4em;
+                margin-top: 0em;
                 z-index: -1;
                 background-image: url(/assets/svg/background.svg);
                 background-repeat: no-repeat;
                 background-position-x: 0;
                 background-position-y: -19em;
-                background-size: auto;
+                background-size: 57%;
                 background-attachment: fixed;
                 background-blend-mode: unset;
                 box-shadow: inset 0px -13px 17px -20px $mixColor;
+                top: 3em;
             }
             &:after{
                 content:"";
@@ -64,12 +67,12 @@ body{
         }
         h4.title{
             color: $mixColor;
-            margin-left: 1em;
-            margin-top: -1em;
+            margin-top: 8em;
+            margin-left: -18.4em;
         }
         .social-links{
             float: right;
-            margin-top: 0em;
+            margin-top: 9em;
            .social-media-list{
                 margin-right:0px;
                 border:none;
@@ -180,6 +183,7 @@ body{
         text-align: justify;
     }
     .page-content{
+        padding: 0px;
         pre, code{
             border:none;
             background:transparent;
