@@ -280,6 +280,3 @@ Cevabınız, mimarinizi şekillendirecektir.
 * [Brewer, Eric: CAP Theorem publications](https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/brewer-cap.pdf)
 * Dağıtık sistemler ve event-driven mimari üzerine çeşitli teknik kaynaklar
 
-  <script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
