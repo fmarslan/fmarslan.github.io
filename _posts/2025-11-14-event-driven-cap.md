@@ -29,12 +29,12 @@ Tek makine üzerinde çalışan monolitik mimarilerden dağıtık ekosisteme ge�
 
 Aşağıdaki şema bu gerçeği özetler:
 
-```mermaid
+<div class="mermaid">
 graph TD
     A[Dağıtık Sistem] --> B(C: Tutarlılık)
     A --> C(A: Erişilebilirlik)
     A --> D(P: Bölünme Toleransı)
-```
+</div>
 ---
 
 ## 2. CAP Teoremi (Consistency – Availability – Partition Tolerance)
@@ -88,7 +88,7 @@ Aşağıdaki tablo bunu özetler:
 
 ## 5. CAP’e Göre Sistem Tipleri
 
-```mermaid
+<div class="mermaid">
     graph LR
     CP[CP Sistemleri] --- C1(Tutarlı)
     CP --- C2(Bölünme Toleranslı)
@@ -96,7 +96,7 @@ Aşağıdaki tablo bunu özetler:
     AP[AP Sistemleri] --- A1(Erişilebilir)
     AP --- A2(Bölünme Toleranslı)
     AP -.->|Feda: Anlık Tutarlılık| AX
-```
+</div>
 
 ### **CP Sistemleri**
 
@@ -125,7 +125,7 @@ Bu nedenle modern mimaride **asenkron – loosely coupled – message-driven** y
 
 Aşağıdaki şema basit bir event akışını anlatır:
 
-```mermaid
+<div class="mermaid">
 sequenceDiagram
     participant A as Sipariş Servisi
     participant B as Ödeme Servisi
@@ -135,7 +135,7 @@ sequenceDiagram
     Broker->>B: OrderCreated
     B->>Broker: event: PaymentCompleted
     Broker->>C: PaymentCompleted
-```
+</div>
 
 ---
 
@@ -194,7 +194,7 @@ Yeni bir servis eklemek çoğu zaman sadece bir “event listener” oluşturmak
 
 ## 10. Akış Diyagramı: Event-Driven Bir Sistemin Çalışma Şekli
 
-```mermaid
+<div class="mermaid">
 flowchart LR
     A[Producer Service] -->|Event gönderir| K((Event Bus))
     B[Worker Service] -->|Event tüketir| K
@@ -202,7 +202,7 @@ flowchart LR
     D[Analytics Service] -->|Event tüketir| K
 
     K --> E[(Event Store)]
-```
+</div>
 
 ---
 
