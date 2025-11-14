@@ -29,18 +29,15 @@ Gerçek şu ki:
 ### REST ile kırılgan bir yapı
 
 <div class="mermaid">
-sequenceDiagram
-    participant A as Servis A
-    participant B as Servis B
-    participant C as Servis C
-
-```
-A->>B: İstek
-B->>C: İstek
-C--xB: Hata / Timeout
-B--xA: Bekleme / Hata
-```
-
+    sequenceDiagram
+        participant A as Servis A
+        participant B as Servis B
+        participant C as Servis C
+    
+        A->>B: İstek
+        B->>C: İstek
+        C--xB: Hata / Timeout
+        B--xA: Bekleme / Hata
 </div>
 
 Doğru yaklaşım:
