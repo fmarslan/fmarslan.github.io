@@ -15,7 +15,7 @@ body{
                 margin:0px;
             }
     div.identity{
-        height:20em;
+        height: 13em;
         *{
             float:left;
             display:block;
@@ -184,6 +184,9 @@ body{
     }
     .page-content{
         padding: 0px;
+        .wrapper{
+            max-width: 1000px;
+        }
         pre, code{
             border:none;
             background:transparent;
