@@ -683,6 +683,7 @@ section {
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-border);
+  overflow: hidden;
 }
 
 .post-body h2,
@@ -691,10 +692,81 @@ section {
 }
 
 .post-body pre {
-  padding: 1rem;
+  position: relative;
+  padding: 1.25rem 1rem 1rem;
   background: var(--color-surface-muted);
   border-radius: var(--radius-md);
   overflow: auto;
+  border: 1px solid var(--color-border);
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.post-body pre:hover .code-copy-btn,
+.post-body pre:focus-within .code-copy-btn {
+  opacity: 1;
+}
+
+.code-copy-btn.is-copied {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.post-body img {
+  max-width: min(100%, 760px);
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+  margin: 1.5rem auto;
+  box-shadow: var(--shadow-border);
+}
+
+.post-body img.image-inline {
+  max-width: 320px;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.post-body img.image-block {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-body figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.post-body figure img {
+  margin: 0 auto 0.75rem;
+}
+
+.post-body figure figcaption {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.post-body::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .tag-list {
@@ -795,6 +867,12 @@ section {
     flex-direction: column;
     text-align: center;
     align-items: center;
+  }
+
+  .post-body img.image-inline {
+    float: none;
+    margin: 1.5rem auto;
+    max-width: min(100%, 420px);
   }
 
   .nav-links {
