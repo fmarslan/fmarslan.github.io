@@ -22,7 +22,7 @@ layout: base
           {%- endunless -%}
           <a class="btn btn-{{ action.style | default: 'primary' }}" href="{{ href }}">
             {{ action.label }}
-            {%- if action.icon -%}<i class="{{ action.icon }}"></i>{%- endif -%}
+            {%- if action.icon -%}<span class="btn-icon" aria-hidden="true">{{ action.icon }}</span>{%- endif -%}
           </a>
         {%- endfor -%}
       </div>
@@ -61,7 +61,7 @@ layout: base
       {%- for item in page.focus.items -%}
       <article class="card">
         {%- if item.icon -%}
-        <span class="card-icon"><i class="{{ item.icon }}"></i></span>
+        <span class="card-icon" aria-hidden="true">{{ item.icon }}</span>
         {%- endif -%}
         <h3>{{ item.title }}</h3>
         <p>{{ item.copy }}</p>

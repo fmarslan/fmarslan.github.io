@@ -148,6 +148,10 @@ section {
   gap: 0.5rem;
 }
 
+.btn-icon {
+  font-size: 1.1rem;
+}
+
 .btn:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
@@ -279,6 +283,10 @@ section {
   justify-content: center;
 }
 
+.nav-toggle svg rect {
+  fill: var(--color-text);
+}
+
 .theme-toggle {
   border: none;
   background: var(--color-surface-muted);
@@ -291,6 +299,10 @@ section {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
 }
 
 .theme-toggle:hover {
@@ -387,6 +399,12 @@ section {
   color: var(--color-accent);
   border-color: var(--color-accent);
   transform: translateY(-2px);
+}
+
+.svg-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .hero-meta {

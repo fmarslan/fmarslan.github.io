@@ -7,31 +7,31 @@ description: The story behind my work, the principles I stand by, and how I help
 
 <div class="bio-grid">
   <div>
-    <h2>Why I build</h2>
-    <p>I wrote my first lines of code in a small Anatolian workshop where hardware repairs shared the same desk with Pascal books. That curiosity grew into a 14+ year career leading teams across Europe, building products for governments, fintechs, health orgs, and retail innovators.</p>
-    <p>I thrive in ambiguous spaces: turning napkin sketches into platform strategies, aligning executives with engineering reality, and translating complex stacks into stories everyone understands.</p>
+    <h2>Hello there 👋</h2>
+    <p>I’m Fatih. The photo on the homepage shows me exactly how I work—backpack on, smiling, ready to head out for a hike and then come back to sketch architecture diagrams. I started by fixing PCs in a small neighborhood shop and now collaborate with European companies that value thoughtful engineering.</p>
+    <p>For 14+ years I’ve been designing platforms, integrations, and developer workflows. I never stopped writing code and genuinely enjoy pairing with teammates. What partners remember is a calm engineer who keeps promises and makes complex topics approachable.</p>
   </div>
   <div>
-    <h2>Principles I keep close</h2>
+    <h2>How I like to work</h2>
     <ul>
-      <li>Design for change — architectures should invite iteration, not resist it.</li>
-      <li>Measure narrative as well as metrics — clarity keeps squads moving.</li>
-      <li>Automate empathy — observability, docs, and tooling exist to serve people.</li>
+      <li>I translate plans into plain language—if there’s no diagram, I’ll draw one.</li>
+      <li>Feedback is honest and kind; team culture matters as much as delivery.</li>
+      <li>I’m comfortable with distributed European teams and adapting to new cultures.</li>
     </ul>
   </div>
 </div>
 
 <div class="card-grid" style="margin-top:2rem;">
   <article class="card">
-    <h3>Leadership style</h3>
-    <p>Servant-leadership mindset with high standards. I stay close to the code, but closer to the humans writing it.</p>
+    <h3>Interests</h3>
+    <p>Kubernetes, event-driven design, data platforms, and small automations that save engineers time.</p>
   </article>
   <article class="card">
-    <h3>Active explorations</h3>
-    <p>LLM-assisted developer experience, vector search for regulated industries, and adaptive governance for AI programs.</p>
+    <h3>Outside of work</h3>
+    <p>Long walks, photography, and discovering new coffee spots. Fresh air helps me return to the desk with clear ideas.</p>
   </article>
   <article class="card">
     <h3>Let’s collaborate</h3>
-    <p>Fractional architecture leadership, platform strategy sprints, or embedded advisory for scaling teams.</p>
+    <p>I’m open to hybrid or remote projects. If you need a candid architectural review, help moving from MVP to scale, or simply a steady teammate, drop me a message.</p>
   </article>
 </div>

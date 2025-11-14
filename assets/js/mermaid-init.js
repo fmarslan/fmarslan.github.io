@@ -38,23 +38,22 @@
     const targets = document.querySelectorAll(".mermaid");
     if (!targets.length) return;
 
+    targets.forEach((node) => {
+      const definition = node.dataset.mermaid || node.textContent.trim();
+      node.textContent = definition;
+      node.removeAttribute("data-processed");
+    });
+
     window.mermaid.initialize({
       startOnLoad: false,
       theme,
     });
 
-    targets.forEach((node, index) => {
-      const definition = node.dataset.mermaid;
-      const uniqueId = `mermaid-graph-${index}-${Date.now()}`;
-
-      try {
-        window.mermaid.render(uniqueId, definition, (svgCode) => {
-          node.innerHTML = svgCode;
-        });
-      } catch (error) {
-        console.error("Mermaid render error", error);
-      }
-    });
+    try {
+      window.mermaid.run({ nodes: targets });
+    } catch (error) {
+      console.error("Mermaid render error", error);
+    }
   };
 
   const loadMermaid = () =>

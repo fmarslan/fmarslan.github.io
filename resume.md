@@ -2,7 +2,7 @@
 layout: page
 title: Resume
 eyebrow: Profile
-description: Solution architecture, platform strategy, and technical leadership experience shaped across Europe and MENA.
+description: Solution architect looking for friendly teams that value clear thinking and consistent delivery.
 permalink: /cv/
 ---
 
@@ -11,9 +11,9 @@ permalink: /cv/
 
 ---
 
-Experienced software architect and technical leader with 14+ years of proven success in designing scalable systems, driving digital transformation, and leading development teams. Specialized in cloud‑native solutions, Kubernetes infrastructure, microservices architecture, and AI‑enhanced analytics.
+I’m a software engineer who enjoys translating messy technical problems into testable architectures. After 14+ years across Türkiye, the Benelux region, and remote European teams, I’m now looking for hybrid or fully remote opportunities where I can stay close to the code and the people writing it.
 
-Enthusiastic about working in environments that foster collaboration, knowledge sharing, and continuous learning.
+Cloud-native platforms, Kubernetes, event-driven systems, and data-heavy workloads are my daily routine. Beyond tooling, I’m known for patient mentoring, honest documentation, and keeping projects grounded in reality.
 
 ---
 
@@ -31,8 +31,8 @@ Enthusiastic about working in environments that foster collaboration, knowledge 
 
 ### 🔹 Solution Architect &amp; Technical Lead – Eaglessoft, Belgium  
 **Jul 2025 – Present (Remote)**  
-- Designed and led a multi‑tenant, event‑driven architecture using Kafka, Redis, and PostgreSQL with secure tenant isolation.  
-- Architected a microservice‑based document pipeline (Collector, Prepare, Sender) for validation, transformation, and compliant delivery.  
+- Designed a multi‑tenant integration hub that ingests documents from partners and delivers them to PEPPOL, national e‑invoicing portals, and custom platforms with validation and signing.  
+- Built a microservice‑based document pipeline (Collector, Prepare, Sender) handling transformation, enrichment, and compliance checks.  
 - Defined unified API and messaging standards (wrappers, approval flows, error handling) to streamline integrations.  
 - Drove cloud‑native adoption with Docker/Kubernetes, S3, and observability stack ensuring GDPR compliance and high availability.
 
@@ -40,7 +40,7 @@ Enthusiastic about working in environments that foster collaboration, knowledge 
 **Sep 2022 – Present (Remote)**  
 - Designed and deployed Kubernetes‑based infrastructure with automated scaling and monitoring.  
 - Led cloud migration efforts, improving performance and reducing costs.  
-- Delivered AI‑powered analytics systems for physical and digital retail channels.  
+- Built data products that combine ERP and e‑commerce streams with AI forecasting so merchandisers can adapt faster.  
 - Developed reusable microservices enabling clients to accelerate digital transformation.
 
 ### 🔹 Software Architect / Technical Lead – Mantis  
@@ -48,7 +48,7 @@ Enthusiastic about working in environments that foster collaboration, knowledge 
 - Migrated legacy monolith systems to scalable, modular SaaS and FaaS architecture.  
 - Developed 10+ modular, integration‑ready products.  
 - Implemented CI/CD pipelines and containerized deployments with Kubernetes.  
-- Scaled platform from 300 to 20,000+ concurrent users without increasing infrastructure costs.
+- Helped product teams enter new markets while keeping performance steady for 20,000+ concurrent users.
 
 ### 🔹 Senior Software Engineer / Scrum Master – Comodo  
 **Aug 2018 – Jan 2019**  

@@ -9,21 +9,22 @@
  */
 
 (() => {
-  function applyTheme(theme) {
+  function updateToggleIcon(theme) {
     const htmlEl = document.documentElement;
     const toggleBtn = document.getElementById('theme-toggle');
+    const iconSpan = toggleBtn ? toggleBtn.querySelector('.theme-toggle__icon') : null;
 
     if (theme === 'dark') {
       htmlEl.setAttribute('data-theme', 'dark');
-      if (toggleBtn) {
-        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-      }
+      if (iconSpan) iconSpan.textContent = '☀';
     } else {
       htmlEl.removeAttribute('data-theme');
-      if (toggleBtn) {
-        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      }
+      if (iconSpan) iconSpan.textContent = '☾';
     }
+  }
+
+  function applyTheme(theme) {
+    updateToggleIcon(theme);
   }
 
   const stored = localStorage.getItem('theme');
@@ -52,7 +53,7 @@
       toggleBtn.addEventListener('click', () => {
         currentTheme = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
         localStorage.setItem('theme', currentTheme);
-        applyTheme(currentTheme);
+        updateToggleIcon(currentTheme);
         notifyThemeChange(currentTheme);
       });
     }

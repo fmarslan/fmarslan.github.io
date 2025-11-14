@@ -3,66 +3,66 @@ layout: home
 title: "Fatih Mehmet Arslan"
 permalink: /
 hero:
-  eyebrow: Modern architecture playbook
-  title: Building resilient, human-centered platforms for 2025 and beyond.
-  description: I lead architecture and engineering teams across Europe to design AI-ready, data-driven platforms that stay flexible as organizations scale. Cloud, Kubernetes, and automation are the baseline—strategy, storytelling, and outcomes are the edge.
+  eyebrow: Solution architect & software engineer
+  title: I design dependable platforms with a calm, human touch.
+  description: Hi, I’m Fatih—an engineer who helps product teams simplify architecture, mentor developers, and keep delivery grounded in reality. I still ship code, still draw diagrams, and still believe kindness belongs in every project.
   image: /assets/fmarslan.png
   image_alt: Fatih Mehmet Arslan portrait
   actions:
     - label: Download CV
       url: /cv/
       style: primary
-      icon: fa-regular fa-file-lines
+      icon: "📄"
     - label: Book a call
       url: mailto:contact@fmarslan.com
       style: secondary
-      icon: fa-regular fa-paper-plane
+      icon: "✉️"
     - label: Read the blog
       url: /blog/
       style: secondary
-      icon: fa-solid fa-book-open
+      icon: "📚"
 metrics:
   - value: "14+"
-    label: Years enabling SaaS, GovTech, and retail teams
+    label: Years solving tricky platform problems
   - value: "45+"
     label: Delivered platforms and large-scale migrations
   - value: "9"
     label: Distributed teams guided across countries
 focus:
-  eyebrow: Core Focus
+  eyebrow: How I help
   title: Architecture, delivery, and enablement
-  description: Blending deep technical rigor with hands-on leadership to keep initiatives shipping on time—without compromising resilience.
+  description: I’m the person who joins your whiteboard session, translates the chaos into a plan, and sticks around until that plan runs in production.
   items:
     - title: Solution architecture
-      copy: Platform roadmaps, system decomposition, and high-scale reference architectures designed with future change in mind.
-      icon: fa-solid fa-diagram-project
+      copy: Sketching roadmaps, decomposing monoliths, and shaping APIs so teams can ship without drama.
+      icon: "🧭"
       tags: Cloud & hybrid
     - title: Modern engineering
-      copy: Kubernetes, service mesh, IaC, and DevSecOps stacks tuned for cost, compliance, and observability.
-      icon: fa-solid fa-server
+      copy: Kubernetes, IaC, and observability stacks tuned for lean teams who still need enterprise-grade reliability.
+      icon: "⚙️"
       tags: Platform & delivery
     - title: AI & data foundations
-      copy: Event streams, vector search, and ML-enriched workflows that connect intelligence to user experience.
-      icon: fa-solid fa-wave-square
+      copy: Event streams, search, and light-weight ML features that add intelligence without overpromising.
+      icon: "🧠"
       tags: Intelligence
     - title: Leadership & mentoring
-      copy: Partnering with executives and squads to align roadmaps, unblock delivery, and nurture engineering culture.
-      icon: fa-solid fa-person-running
+      copy: Partnering with founders and squads to align priorities, unblock delivery, and keep morale high.
+      icon: "🤝"
       tags: Enablement
 highlights:
-  eyebrow: Impact snaps
+  eyebrow: Project memories
   title: Work that shaped my perspective
-  description: Select stories from the last few years that pushed teams and products forward.
+  description: A handful of collaborations that taught me patience, clarity, and the value of well-tested adapters.
   items:
     - label: 2025 · Belgium
       title: Document intelligence platform @ Eaglessoft
-      copy: Designed a multi-tenant, event-driven network of collectors and policy engines, aligning legal, product, and infra teams around a single integration contract.
+      copy: Led a multi-tenant integration hub that receives documents from diverse sources and delivers them to PEPPOL, country e-invoicing portals, and secure partners with proper validation.
     - label: 2024 · Netherlands
       title: Retail analytics platform @ Modulairy
-      copy: Built Kubernetes-native infrastructure with AI-assisted forecasting, reducing deployment lead time from weeks to hours.
+      copy: Combined e-commerce and ERP data with AI-driven forecasting, giving retailers a single, modern stack for planning and experimentation.
     - label: 2022 · Türkiye
       title: SaaS modernization @ Mantis
-      copy: Migrated legacy suites into modular SaaS/FaaS products, securing 20k+ concurrent users without infra cost spikes.
+      copy: Guided the shift from large monoliths toward modular SaaS and FaaS services, helping teams scale without losing reliability.
 blog_section:
   eyebrow: Latest writing
   title: Field notes & working logs
@@ -70,7 +70,7 @@ blog_section:
   limit: 6
 contact:
   title: Have a challenge worth exploring?
-  description: I reserve time weekly for advising product/engineering leaders. Happy to dive into platform roadmaps, GTM readiness, or architecture reviews.
+  description: I keep a few hours free each week to chat with teams about roadmaps, audits, or simply to share lessons learned over coffee.
   actions:
     - label: Email me
       url: mailto:contact@fmarslan.com

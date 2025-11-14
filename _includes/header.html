@@ -10,7 +10,11 @@
     <div class="nav-wrapper">
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-navigation">
         <span class="sr-only">Toggle site navigation</span>
-        <i class="fa-solid fa-bars"></i>
+        <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">
+          <rect width="20" height="2" y="0" rx="1"></rect>
+          <rect width="20" height="2" y="6" rx="1"></rect>
+          <rect width="20" height="2" y="12" rx="1"></rect>
+        </svg>
       </button>
       <nav id="site-navigation" class="nav-links" aria-label="Primary">
         {%- assign current_path = page.url | default: '/' -%}
@@ -24,7 +28,7 @@
         {%- endfor -%}
       </nav>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
-        <i class="fa-solid fa-moon"></i>
+        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
       </button>
       <a class="btn btn-secondary" href="mailto:{{ site.author.email }}">Let’s talk</a>
     </div>
