@@ -28,12 +28,12 @@ Tek makine üzerinde çalışan monolitik mimarilerden dağıtık ekosisteme ge�
 
 Aşağıdaki şema bu gerçeği özetler:
 
-```mermaid
+<pre class="mermaid">
 graph TD
     A[Dağıtık Sistem] --> B(C: Tutarlılık)
     A --> C(A: Erişilebilirlik)
     A --> D(P: Bölünme Toleransı)
-```
+</pre>
 
 ---
 
@@ -79,26 +79,24 @@ Sistem tasarlanırken değil, **bölünme anında hangi özelliği koruduğu** �
 
 Aşağıdaki tablo bunu özetler:
 
-```markdown
 | Tip | Sağladığı | Feda Ettiği | Kullanım Alanı |
 |-----|-----------|--------------|----------------|
 | CP  | Tutarlılık + Bölünme | Erişilebilirlik | Bankacılık, lider seçimli sistemler |
 | AP  | Erişilebilirlik + Bölünme | Tutarlılık | Event-driven, log sistemleri, IoT |
-```
 
 ---
 
 ## 5. CAP’e Göre Sistem Tipleri
 
-```mermaid
-graph LR
+<pre class="mermaid">
+    graph LR
     CP[CP Sistemleri] --- C1(Tutarlı)
     CP --- C2(Bölünme Toleranslı)
     CP -.->|Feda: Erişilebilirlik| CX
     AP[AP Sistemleri] --- A1(Erişilebilir)
     AP --- A2(Bölünme Toleranslı)
     AP -.->|Feda: Anlık Tutarlılık| AX
-```
+</pre>
 
 ### **CP Sistemleri**
 
@@ -127,7 +125,7 @@ Bu nedenle modern mimaride **asenkron – loosely coupled – message-driven** y
 
 Aşağıdaki şema basit bir event akışını anlatır:
 
-```mermaid
+<pre class="mermaid">
 sequenceDiagram
     participant A as Sipariş Servisi
     participant B as Ödeme Servisi
@@ -137,7 +135,7 @@ sequenceDiagram
     Broker->>B: OrderCreated
     B->>Broker: event: PaymentCompleted
     Broker->>C: PaymentCompleted
-```
+</pre>
 
 ---
 
@@ -160,14 +158,13 @@ Bu, zayıflık değil → **tasarım tercihi**dir.
 
 ## 8. CAP Odaklı Mimari Seçim Örnekleri
 
-```markdown
+
 | Senaryo | Tercih | Sebep |
 |---------|--------|--------|
 | Gerçek zamanlı para transferi | CP | Tutarsızlık kabul edilemez |
 | Log işleme, bildirim, workflow | AP | Tutarlılık gecikmeli olabilir |
 | IoT sensör verisi toplama | AP | Cevap sürekliliği daha önemli |
 | Config yönetimi | CP | Tüm node’lar aynı config'i görmeli |
-```
 
 ---
 
@@ -197,7 +194,7 @@ Yeni bir servis eklemek çoğu zaman sadece bir “event listener” oluşturmak
 
 ## 10. Akış Diyagramı: Event-Driven Bir Sistemin Çalışma Şekli
 
-```mermaid
+<pre class="mermaid">
 flowchart LR
     A[Producer Service] -->|Event gönderir| K((Event Bus))
     B[Worker Service] -->|Event tüketir| K
@@ -205,7 +202,7 @@ flowchart LR
     D[Analytics Service] -->|Event tüketir| K
 
     K --> E[(Event Store)]
-```
+</pre>
 
 ---
 
