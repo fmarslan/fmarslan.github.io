@@ -21,7 +21,24 @@
     href="{{ '/feed.xml' | relative_url }}">
   <link rel="sitemap" type="application/xml" title="{{ site.title | escape }} sitemap"
     href="{{ '/sitemap.xml' | relative_url }}">
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}" />
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- assign author_name = site.author.name | default: site.title -%}
+  {%- assign author_role = site.author.job_title | default: page.hero.eyebrow | default: "Solution Architect & Software Engineer" -%}
+  {%- assign share_image = page.hero.image | default: page.image | default: site.share_image | default: '/android-chrome-512x512.png' -%}
+  {%- unless share_image contains 'http' -%}
+    {%- assign share_image = share_image | relative_url | absolute_url -%}
+  {%- endunless -%}
+  <meta property="og:site_name" content="{{ page_title | escape }}">
+  <meta property="og:title" content="{{ author_name | escape }}">
+  <meta property="og:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
+  <meta property="og:image" content="{{ share_image }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ author_name | escape }}">
+  <meta name="twitter:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
+  <meta name="twitter:image" content="{{ share_image }}">
   {% if site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>

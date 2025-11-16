@@ -19,6 +19,9 @@ author:
   name: Fatih Mehmet ARSLAN
   email: contact@fmarslan.com
   type: person
+  job_title: Solution Architect & Software Engineer
+
+share_image: /android-chrome-512x512.png
 
 plugins:
   - jekyll-feed
