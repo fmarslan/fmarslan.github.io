@@ -5,12 +5,47 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {%- if page.title -%}
-  <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
-  {%- else -%}
-  <title>{{ site.title | escape }}</title>
+  {%- assign site_name = site.title | default: site.author.name | default: "Website" -%}
+  {%- assign page_title = page.title | default: site_name -%}
+  {%- assign full_title = page_title -%}
+  {%- if page_title != site_name -%}
+  {%- assign full_title = page_title | append: " · " | append: site_name -%}
   {%- endif -%}
-  {%- seo -%}
+  {%- assign raw_description = page.hero.seo_description | default: page.seo_description | default: page.description |
+  default: site.description | default: "Notes on software architecture, cloud platforms, and delivery." -%}
+  {%- assign page_description = raw_description | strip_html | strip_newlines | replace: " ", " " | strip -%}
+  {%- assign author_name = site.author.name | default: site_name -%}
+  {%- assign author_role = site.author.job_title | default: page.hero.eyebrow | default: "Solution Architect & Software
+  Engineer" -%}
+  {%- assign share_image = page.hero.image | default: page.image | default: site.share_image | default:
+  '/android-chrome-512x512.png' -%}
+  {%- unless share_image contains 'http' -%}
+  {%- assign share_image = share_image | relative_url | absolute_url -%}
+  {%- endunless -%}
+  {%- assign canonical_url = page.url | relative_url | absolute_url -%}
+  {%- assign locale_code = page.lang | default: site.locale | default: 'en-US' -%}
+  {%- assign og_locale = locale_code | replace: '-', '_' -%}
+  <title>{{ full_title | escape }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="author" content="{{ author_name | escape }}">
+  <meta name="generator" content="Jekyll">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ site_name | escape }}">
+  <meta property="og:title" content="{{ author_name | escape }}">
+  <meta property="og:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
+  {%- assign og_type_value = 'website' -%}
+  {%- if page.layout == 'post' -%}
+  {%- assign og_type_value = 'article' -%}
+  {%- endif -%}
+  <meta property="og:image" content="{{ share_image }}">
+  <meta property="og:type" content="{{ og_type_value }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ author_name | escape }}">
+  <meta name="twitter:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
+  <meta name="twitter:image" content="{{ share_image }}">
+  <meta name="twitter:url" content="{{ canonical_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -23,22 +58,6 @@
     href="{{ '/sitemap.xml' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
   <link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}" />
-  {%- assign page_title = page.title | default: site.title -%}
-  {%- assign author_name = site.author.name | default: site.title -%}
-  {%- assign author_role = site.author.job_title | default: page.hero.eyebrow | default: "Solution Architect & Software Engineer" -%}
-  {%- assign share_image = page.hero.image | default: page.image | default: site.share_image | default: '/android-chrome-512x512.png' -%}
-  {%- unless share_image contains 'http' -%}
-    {%- assign share_image = share_image | relative_url | absolute_url -%}
-  {%- endunless -%}
-  <meta property="og:site_name" content="{{ page_title | escape }}">
-  <meta property="og:title" content="{{ author_name | escape }}">
-  <meta property="og:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
-  <meta property="og:image" content="{{ share_image }}">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ author_name | escape }}">
-  <meta name="twitter:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
-  <meta name="twitter:image" content="{{ share_image }}">
   {% if site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -51,26 +70,48 @@
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/mermaid-init.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/post-enhancements.js' | relative_url }}" defer></script>
+  {%- assign same_as_links = site.social.links | default: site.author.same_as -%}
+  {%- assign structured_type = 'Person' -%}
+  {%- if page.layout == 'post' -%}
+    {%- assign structured_type = 'Article' -%}
+  {%- endif -%}
   <script type="application/ld+json">
+    {%- if structured_type == 'Article' -%}
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ page_title | escape }}",
+      "description": "{{ page_description | escape }}",
+      "image": ["{{ share_image }}"],
+      "author": {
+        "@type": "Person",
+        "name": "{{ author_name | escape }}"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ author_name | escape }}"
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema | default: site.time | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | default: site.time | date_to_xmlschema }}",
+      "url": "{{ canonical_url }}"
+    }
+    {%- else -%}
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Fatih Mehmet Arslan",
-      "url": "{{ site.url | append: '/' }}",
-      "image": "{{ site.url | append: '/assets/fmarslan.png' }}",
-      "jobTitle": "Solution Architect & Software Engineer",
-      "description": "I design dependable platforms.",
+      "name": "{{ author_name | escape }}",
+      "jobTitle": "{{ author_role | escape }}",
+      "description": "{{ page_description | escape }}",
+      "url": "{{ canonical_url }}",
+      "image": "{{ share_image }}",
       "sameAs": [
-        "https://www.linkedin.com/in/fmarslan",
-        "https://github.com/fmarslan",
-        "https://fmarslan.medium.com"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "FM Arslan Consulting"
-      }
+        {%- if same_as_links and same_as_links.size > 0 -%}
+          {{ same_as_links | join: '","' | prepend: '"' | append: '"' }}
+        {%- endif -%}
+      ]
     }
-    </script>
+    {%- endif -%}
+  </script>
 </head>
 
 <body>

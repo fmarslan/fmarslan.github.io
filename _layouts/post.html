@@ -5,16 +5,16 @@ layout: base
 <div class="page-shell">
   <header class="post-hero">
     {%- if page.categories and page.categories != empty -%}
-      <p class="pill">{{ page.categories | join: " · " }}</p>
+    <p class="pill">{{ page.categories | join: " · " }}</p>
     {%- endif -%}
     <h1>{{ page.title }}</h1>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
     {%- if page.tags and page.tags != empty -%}
-      <ul class="tag-list">
-        {%- for tag in page.tags -%}
-          <li>{{ tag }}</li>
-        {%- endfor -%}
-      </ul>
+    <ul class="tag-list">
+      {%- for tag in page.tags -%}
+      <li>{{ tag }}</li>
+      {%- endfor -%}
+    </ul>
     {%- endif -%}
   </header>
   <article class="post-body">
@@ -23,14 +23,14 @@ layout: base
   <nav class="post-nav">
     <div>
       {%- if page.previous -%}
-        <span class="pill">Previous</span>
-        <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+      <span class="pill">Previous</span>
+      <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
       {%- endif -%}
     </div>
     <div>
       {%- if page.next -%}
-        <span class="pill">Next</span>
-        <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+      <span class="pill">Next</span>
+      <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
       {%- endif -%}
     </div>
   </nav>
