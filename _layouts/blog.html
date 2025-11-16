@@ -11,6 +11,11 @@ layout: base
     {%- if page.description -%}
       <p>{{ page.description }}</p>
     {%- endif -%}
+    <form class="inline-search" action="{{ '/search' | relative_url }}" method="get">
+      <label class="sr-only" for="blog-search">Search posts</label>
+      <input type="search" id="blog-search" name="q" placeholder="Search articles..." required>
+      <button type="submit">Search</button>
+    </form>
   </section>
   <section class="page-content">
     <div class="post-grid">
