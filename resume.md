@@ -2,7 +2,7 @@
 layout: page
 title: Resume
 eyebrow: Profile
-description: Solution architect focused on designing resilient systems and clear team processes.
+description: Solution architect focused on resilient systems, integration work, and steady collaboration.
 permalink: /cv/
 ---
 
@@ -11,9 +11,9 @@ permalink: /cv/
 
 ---
 
-I’m a software engineer who enjoys translating messy technical problems into testable architectures. After 14+ years across Türkiye, the Benelux region, and remote European teams, I balance hands-on engineering with mentoring and product shaping so teams can ship ideas with confidence.
+I’m a software engineer who enjoys turning messy problem statements into architectures that people can actually build. Over the past 14+ years I’ve moved between Türkiye, the Benelux region, and distributed teams, staying close to both the code and the conversations that guide it.
 
-Cloud-native platforms, Kubernetes, event-driven systems, and data-heavy workloads are my daily routine. Beyond tooling, I’m known for patient mentoring, honest documentation, and keeping projects grounded in reality.
+Most weeks you’ll find me shaping solution architecture, integrating data pipelines, or tuning Kubernetes and cloud resources. The tools change, but the habits stay the same: write things down, share context, and keep the system honest once it reaches production.
 
 ---
 

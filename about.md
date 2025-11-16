@@ -2,21 +2,21 @@
 layout: page
 title: About
 permalink: /about/
-description: The story behind my work, the principles I stand by, and how I help teams turn ideas into trusted software.
+description: A plain-spoken look at how I approach software architecture, collaboration, and the work that keeps me curious.
 ---
 
 <div class="bio-grid">
   <div>
     <h2>Hello there 👋</h2>
-    <p>I’m Fatih. The photo on the homepage is me on a day off, backpack over the shoulder and notebook in hand. That’s more or less how I work too: curious, relaxed, and always ready to draw a quick sketch when words aren’t enough. I started by repairing old PCs for neighbours, and that practical habit slowly turned into a career that now stretches across Europe.</p>
-    <p>These days I focus on platform design, integration work, and keeping developer workflows tidy. Fourteen-plus years in the field taught me that good architecture is equal parts empathy and engineering. I still code, still pair with teammates, and I try to keep the temperature low even when pressure is high.</p>
+    <p>I’m Fatih. I grew up fixing neighbours’ PCs, carried that curiosity into public-sector projects, and now support teams across Türkiye, the Benelux, and the wider EU. My approach stays the same: stay calm, map the system, and sketch until everyone understands the moving parts.</p>
+    <p>These days I focus on solution architecture, integration design, and the DevOps practices that stop releases from becoming fire drills. Fourteen-plus years in the field reminded me that durable platforms come from listening, writing things down, and staying close to production when it matters most.</p>
   </div>
   <div>
     <h2>How I like to work</h2>
     <ul>
-      <li>I use plain language and lightweight diagrams so everyone stays on the same page.</li>
-      <li>I offer feedback the way I’d like to receive it: honest, calm, and useful.</li>
-      <li>I’m comfortable switching between time zones and cultures; EU-wide collaboration keeps me sharp.</li>
+      <li>I use plain language, lightweight diagrams, and source-controlled docs so ideas survive beyond the meeting.</li>
+      <li>I give feedback the way I’d like to receive it: specific, steady, and focused on making the code or system better.</li>
+      <li>I’m comfortable switching between tech stacks and time zones; mixed teams have been my norm for years.</li>
     </ul>
   </div>
 </div>
@@ -24,14 +24,14 @@ description: The story behind my work, the principles I stand by, and how I help
 <div class="card-grid" style="margin-top:2rem;">
   <article class="card">
     <h3>Interests</h3>
-    <p>Kubernetes, event-driven design, data platforms, and tiny automations that save teams a few minutes each day.</p>
+    <p>Kubernetes, event-driven design, data platforms, and the small automations that save people a few minutes every day.</p>
   </article>
   <article class="card">
     <h3>Outside of work</h3>
-    <p>Long walks, photography, and hunting for a decent flat white. Fresh air keeps my head clear for the next workshop.</p>
+    <p>Long walks, photography, and hunting for a good espresso. Fresh air keeps my head clear for the next workshop.</p>
   </article>
   <article class="card">
     <h3>Let’s collaborate</h3>
-    <p>I’m open to hybrid or remote roles around Europe. If you need a thoughtful review, help steadying a roadmap, or simply someone who stays until the job is done, feel free to reach out.</p>
+    <p>I’m open to hybrid or remote roles across Europe. If you need a thoughtful review, help steadying an integration roadmap, or simply a partner who stays until the job is done, feel free to reach out.</p>
   </article>
 </div>

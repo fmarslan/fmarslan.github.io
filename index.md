@@ -6,10 +6,10 @@ hero:
   eyebrow: Solution architect & software engineer
   title: I build practical, reliable platforms.
   description: |
-    Hi, I’m Fatih. For more than 14 years I’ve been helping product teams untangle their systems,
-    clean up messy architectures, and get real features out the door without wearing everyone down.
-    I still jump into the code when it’s needed, still sketch things on paper when the screen is too much,
-    and I’ve learned that being clear and decent with people usually makes everything work smoother.
+    Hi, I’m Fatih. I’ve spent the past 14+ years shaping solution architecture, cloud platforms,
+    and integrations so product teams can keep shipping without drama. I still dive into the code,
+    still draw workflows on real paper when screens get crowded, and I’ve learned that steady delivery
+    starts with plain language and honest expectations.
   seo_description: |
     Fatih Mehmet Arslan is a solution architect and software engineer working in cloud,
     integration, and event-driven platforms. Known for steady delivery, clear communication,
@@ -30,37 +30,35 @@ focus:
   eyebrow: How I help
   title: Architecture, delivery, and enablement
   description: |
-    I’m usually the one who joins a messy whiteboard session, listens first,
-    and then slowly turns the scattered ideas into something teams can actually build.
-    And I try to stay involved long enough to see it run in production—because the real problems
-    always show up there.
+    I start by listening, map what’s really happening in the stack, and turn those notes into plans
+    that engineers, ops, and product folks can live with. I stay close to delivery until the platform
+    is running in production, because the truth always shows up there.
   items:
     - title: Solution architecture
       copy: |
-        Making sense of systems, defining boundaries, breaking up monoliths when it really helps,
-        and designing APIs that teams don’t argue about every week.
+        Making sense of brownfield systems, defining service boundaries, breaking up monoliths
+        when it helps, and keeping APIs predictable so teams stop arguing about them.
       icon: "🧭"
       tags: Cloud & hybrid
 
     - title: Modern engineering
       copy: |
-        Kubernetes, IaC, observability stacks—mostly the boring but important things
-        that help small teams stay stable without turning into an ops department.
+        Kubernetes, infrastructure as code, observability stacks—mostly the boring but important
+        things that keep cloud-native platforms stable without turning your engineers into full-time ops.
       icon: "⚙️"
       tags: Platform & delivery
 
     - title: AI & data foundations
       copy: |
-        Event streams, search tooling, and lightweight ML work.
-        Not hype—just enough intelligence to be useful without making promises nobody can keep.
+        Event streams, search tooling, and lightweight ML pipelines. Useful intelligence,
+        grounded in real data, no hype needed.
       icon: "🧠"
       tags: Intelligence
 
     - title: Leadership & mentoring
       copy: |
-        Working with founders and teams to keep priorities clear,
-        solve the small roadblocks before they grow,
-        and help people feel confident in what they’re building.
+        Working with founders and teams to keep priorities clear, remove the small roadblocks
+        before they grow, and share enough context that everyone knows why the work matters.
       icon: "🤝"
       tags: Enablement
 
@@ -68,33 +66,33 @@ highlights:
   eyebrow: Project memories
   title: Work that shaped my perspective
   description: |
-    A few projects that taught me patience, clearer thinking,
-    and the value of simple, well-tested tools—even when the environment is anything but simple.
+    A few projects that reminded me why clear interfaces, dependable data pipelines,
+    and honest communication matter more than slogans.
   items:
     - label: 2025 · Belgium
       title: Document intelligence platform @ Eaglessoft
       copy: |
-        Led a multi-tenant integration hub that handled documents from all kinds of systems
-        and pushed them through validation, PEPPOL, country gateways, and various partners.
-        It reminded me how much calm you gain from predictable workflows.
+        Led a multi-tenant integration hub that ingested documents from ERPs, SaaS tools,
+        and partner APIs, then routed them through validation, PEPPOL, national gateways,
+        and auditors. Predictable workflows turned chaos into calm.
 
     - label: 2024 · Netherlands
       title: Retail analytics platform @ Modulairy
       copy: |
-        Brought ERP and e-commerce data together with forecasting features.
-        For the first time, retailers had one place where everything made sense.
+        Pulled ERP and e-commerce data into a single analytics platform with forecasting
+        and alerting. Retailers finally had one dashboard that matched what the stores felt.
 
     - label: 2022 · Türkiye
       title: SaaS modernization @ Mantis
       copy: |
-        Helped teams move away from oversized monoliths toward smaller SaaS and FaaS components.
-        Releases became lighter, and reliability stopped being a coin toss.
+        Helped teams move oversized monoliths into modular SaaS and FaaS components.
+        Releases got lighter, on-call rotations calmed down, and customers noticed.
 
 blog_section:
   eyebrow: Latest writing
   title: Field notes & working logs
   description: |
-    Notes on architecture choices, product thinking, and the experiments I usually run
+    Notes on architecture choices, integration patterns, and the experiments I run
     between client work.
   limit: 8
 
