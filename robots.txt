@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fmarslan.com/sitemap.xml
