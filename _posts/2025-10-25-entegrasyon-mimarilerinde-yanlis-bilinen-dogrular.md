@@ -5,57 +5,56 @@ categories: [Entegrasyon, Architecture]
 mermaid: true
 ---
 
+Dağıtık sistemlerin büyümesiyle birlikte entegrasyon, sadece "veriyi taşımak" olarak görülen eski anlamının çok ötesine geçti. Bugün finans, sağlık, kamu ve e-ticaret gibi hemen her sektörde mimarinin en kritik parçalarından biri. Buna rağmen, pratikte sıkça karşımıza çıkan bazı yanlış kabuller hâlâ ekiplerin teknik kararlarını olumsuz etkiliyor.
 
-Dağıtık sistemlerin büyümesiyle birlikte entegrasyon mimarisi artık sadece “veriyi bir yerden bir yere taşımak” değil; sağlıktan finansa, e-ticaretten kamu projelerine kadar her alanda kritik bir disiplin hâline geldi.
-Ancak hâlâ bazı yanlış bilinen doğrular mimari kararları zehirliyor.
+Bu yazı, entegrasyon mimarisinde doğru sanılan ama aslında ciddi mimari borçlara yol açan bu yanlış inanışları netleştirmek için hazırlandı.
 
-Bu yazıda, entegrasyon mimarisinde sıkça rastlanan ama aslında yanlış olan inançların üstünü açıyoruz.
 
----
 
 <img src="/assets/img/7fbabe90-a44c-4ae1-868d-7f31948feaee.png" alt="cover" style="max-width: 50%; max-height:10%">
 
+## **1. "REST varken mesaj kuyruğuna ne gerek var?"**
 
-## **1. “REST varken mesaj kuyruğuna ne gerek var?”**
+REST birçok ekip tarafından varsayılan iletişim modeli olarak görülüyor. Fakat gerçek şudur:
 
-Birçok ekip hâlâ “REST her şeyi çözer” yanılgısıyla hareket ediyor.
+* REST tamamen **senkron** bir yapıya dayanır.
+* Yük arttığında çağrılar zincirleme gecikmeye sebep olur.
+* Tek bir servisin yanıt vermemesi tüm akışı bloke eder.
 
-Gerçek şu ki:
-
-* REST **senkron** bir iletişim modelidir.
-* Yük altında **çöker**, çağrı zincirleri **domino etkisi** yaratır.
-* Bir servisin erişilemez olması tüm sistemi **kilitler**.
-
-### REST ile kırılgan bir yapı
+### REST ile kırılgan yapı
 
 <div class="mermaid">
-    sequenceDiagram
-        participant A as Servis A
-        participant B as Servis B
-        participant C as Servis C
-    
-        A->>B: İstek
-        B->>C: İstek
-        C--xB: Hata / Timeout
-        B--xA: Bekleme / Hata
+sequenceDiagram
+    participant A as Servis A
+    participant B as Servis B
+    participant C as Servis C
+
+```
+A->>B: İstek
+B->>C: İstek
+C--xB: Timeout / Hata
+B--xA: Gecikme / Hata
+```
+
 </div>
 
-Doğru yaklaşım:
-REST → **kısa işlemler**, **doğrudan cevap gerektiren** aksiyonlar için.
-Event → **uzun süreçler**, **yüksek hacim**, **bağımlılığı azaltmak** için.
+Doğru kullanım yaklaşımı:
 
----
+* REST → hızlı cevap gerektiren kısa işlemler
+* Event → uzun süreçler, yüksek hacim, sistem bağımlılığını azaltma
 
-## **2. “Senkron daha hızlıdır, asenkron yavaştır.”**
 
-Bu da yanlış bilinen doğrulardan biridir.
 
-Asenkron sistemler **zaman olarak değil, bağımlılık olarak** ayrıştırılır.
+## **2. "Senkron daha hızlıdır, asenkron yavaştır."**
 
-Senkron sistem: “Ben işimi senin bitirmene göre yaparım.”
-Asenkron sistem: “Sen işini yap, ben event’i işleyince ilerlerim.”
+Yaygın bir yanılgıdır.
 
-Sonuç: **yük artınca senkron çöker, asenkron ölçeklenir.**
+Asenkron mimari hızdan değil, **bağımlılıkları gevşetmekten** kazanır.
+
+* Senkron: "Sen bitir, ben öyle devam edeyim."
+* Asenkron: "Event gelsin, ben ilerlerim."
+
+Sonuç: Yük arttığında senkron yapı kırılır; asenkron rahatça ölçeklenir.
 
 <div class="mermaid">
 flowchart LR
@@ -65,84 +64,87 @@ flowchart LR
     B --> E[Worker 3]
 </div>
 
----
 
-## **3. “Event çok gelirse performans düşer.”**
 
-Yanlış.
-Doğru yapıda event artışı = daha fazla worker = daha yüksek throughput.
+## **3. "Event çok gelirse performans düşer."**
 
-* ❌ “Event fazlaysa sistem yavaşlar.”
-* ✔ “Event fazlaysa işleyen servisler ölçeklenir.”
+Doğru tasarlanmış bir mimaride bunun tam tersi olur.
 
----
+Event sayısı arttıkça worker kapasitesi artırılır ve sistem çok daha yüksek throughput üretir.
 
-## **4. “ETL ile entegrasyon yapmak modern mimari için yeterlidir.”**
+* ❌ "Event fazlaysa sistem yavaşlar."
+* ✔ "Event fazlaysa sistem genişler."
 
-ETL, modern entegrasyonun yalnızca **küçük bir parçasıdır**.
 
-Bugünün entegrasyon ihtiyaçlarında:
 
-* gerçek zamanlı veri
-* çift yönlü senkron/asenkron iletişim
-* mapping & validation
-* routing
-* digital signing
+## **4. "ETL modern entegrasyon için yeterlidir."**
+
+ETL önemli bir araçtır ancak entegrasyonun yalnızca küçük bir parçasını temsil eder.
+
+Gerçek dünya entegrasyonlarında şunlar vardır:
+
+* gerçek zamanlı işleme
+
+* çift yönlü iletişim (senkron / asenkron)
+
+* mapping ve validasyon
+
+* yönlendirme (routing)
+
+* dijital imzalama
+
 * idempotency
-* DLQ + retry yönetimi
-* workflow orchestration
 
-gibi karmaşık süreçler vardır.
+* retry & DLQ yönetimi
 
-ETL → sadece veri taşır
-Modern entegrasyon → süreç yürütür.
+* workflow orkestrasyonu
 
----
+* ETL → veri taşır
 
-## **5. “Tek bir canonical format her şeyi çözer.”**
+* Modern entegrasyon → süreci yönetir
 
-Canonical model değerlidir fakat evrensel bir ilaç değildir.
 
-* Her müşteri farklı format ister
-* Her ülkenin kuralı farklıdır
-* Bazı akışlarda XML, bazısında JSON gerekir
-* Dış sistemler canonical formatı tanımaz
 
-Doğru yaklaşım:
+## **5. "Tek bir canonical format tüm problemleri çözer."**
 
-* Canonical → **iç operasyon formatı**
-* Mapping → **dış dünya ile konuşma katmanı**
+Canonical model değerlidir ancak evrensel çözüm değildir.
 
----
+* Her müşterinin ihtiyaçları farklıdır.
+* Ülkelerin mevzuatları değişir.
+* Bazı akışlar XML isterken bazıları JSON gerektirir.
+* Dış sistemler canonical dili bilmez.
 
-## **6. “Bütünleşik bir süreçte tutarlılık şarttır.”**
+Doğru model:
 
-Bu yanlış ve pahalı bir beklentidir.
+* Canonical → içeride ortak dil
+* Mapping → dış dünya ile iletişim
 
-**Her adımın aynı anda tutarlı olması gerekmiyor.**
 
-Örnekler:
 
-* E-mail bildiriminin gecikmesi sorun değildir
-* Logların 1–2 saniye sonra indekslenmesi normaldir
-* Stok güncellemesi birkaç yüz ms gecikebilir
+## **6. "Tüm süreçlerde tam tutarlılık zorunludur."**
 
-Bu nedenle **eventual consistency** modern entegrasyonların temel modelidir.
+Bu hem gereksiz hem maliyetli bir beklentidir.
 
----
+Birçok adımın anlık tutarlılığa ihtiyacı yoktur:
 
-## **7. “DLQ sadece hata kuyruğu, olmasa da olur.”**
+* E-mail bildirimi gecikebilir.
+* Log’ların birkaç saniye gecikmesi doğaldır.
+* Stok güncellemesi milisaniyelik farklara toleranslıdır.
 
-DLQ bir hata kutusu değil, **sigorta sistemidir**.
+Bu yüzden modern entegrasyonlarda **eventual consistency** temel ilkedir.
+
+
+
+## **7. "DLQ olmasa da olur, sadece hata kuyruğu."**
+
+DLQ basit bir hata kutusu değildir; sistemin korunma katmanıdır.
 
 DLQ yoksa:
 
-* Hatalı event akışları kuyruğu bozar
-* Sonsuz retry döngüsü sistemi çökertir
-* Eventler kaybolur
-* Veri bütünlüğü bozulur
-
-Doğru mimari:
+* hatalı event akışı tıkar,
+* sonsuz retry döngüsü oluşabilir,
+* eventler kaybolabilir,
+* veri tutarlılığı bozulur.
 
 <div class="mermaid">
 flowchart LR
@@ -151,93 +153,73 @@ flowchart LR
     C --> D[Alert + Review]
 </div>
 
----
 
-## **8. “Mapping motoruna gerek yok, kodda çeviririz.”**
 
-Bu yaklaşım başlangıçta kolay görünür ancak:
+## **8. "Mapping motoruna gerek yok, kod içinde çeviririz."**
 
-* format değişince kod kırılır
-* müşteri spesifik istekleri yönetmek zorlaşır
-* ülke/entegrasyon kuralları değişir
-* test maliyeti katlanır
-* teknik borç büyür
+Başlangıçta pratik görünse de uzun vadede ciddi teknik borç oluşturur.
 
-Mapping **bağımsız bir katman** olmalıdır.
+* Format değiştikçe kod kırılır.
+* Müşteri talepleri yönetilemez.
+* Ülke kuralları değiştikçe bakım maliyeti yükselir.
+* Test yükü katlanır.
 
----
+Mapping bağımsız bir katman olmalıdır.
 
-## **9. “Webhook kullanmadan sadece polling yapmak daha güvenlidir.”**
 
-Polling:
 
-* maliyetlidir
-* gecikmelidir
-* gereksiz yük oluşturur
+## **9. "Webhook yerine sadece polling kullanmak daha güvenlidir."**
 
-Webhook:
+Polling yüksek maliyetli ve gecikmeye açıktır.
 
-* hafif
-* anlık
-* olay odaklı
+Webhook ise hafif, anlık ve olay odaklıdır.
 
-Doğru strateji çoğu zaman hibrittir:
+En sağlıklı model genelde hibrittir:
 
-* Webhook → *tetikleyici*
-* Polling → *garanti mekanizması*
+* Webhook → tetikleyici
+* Polling → güvence
 
----
 
-## **10. “Entegrasyon sistemi bir kez çalışırsa tamamdır.”**
 
-Gerçek entegrasyon sistemi:
+## **10. "Entegrasyon sistemi bir kez çalıştı mı biter."**
 
-* izlenebilir
-* yeniden çalıştırılabilir (replay)
-* version’lanabilir
-* izleme/durum takibi yapılabilir
-* operasyona açık (debug-friendly) olmalıdır
+Sağlam bir entegrasyon mimarisi:
 
-Çalışmak → başlangıç
-Sürdürülebilir çalışmak → mimari disiplin
+* izlenebilir olmalı,
+* tekrar çalıştırılabilir (replay),
+* versiyonlanabilir,
+* durum takibi yapılabilir,
+* operasyona açık ve debug edilebilir olmalıdır.
 
----
+Bir kere çalışması yeterli değildir; sürdürülebilir olması asıl başarıdır.
 
-## **11. “Event yaparsak her şey çözülür.”**
 
-Event-driven mimari sihirli değnek değildir.
 
-Dikkat edilmezse:
+## **11. "Event yaparsak her şeyi çözeriz."**
 
-* event storming
-* sonsuz döngüler
-* duplicated event
-* ordering sorunları
-* correlation ID eksikliği
-* idempotency problemleri
+Event-driven mimari güçlüdür ama sihirli değnek değildir.
 
-oluşur.
+İyi tasarlanmamışsa:
 
-Event → araçtır, amaç değil.
+* event storming,
+* duplicate event,
+* döngüsel akışlar,
+* sıralama problemleri,
+* correlation eksikliği,
+* idempotency hataları
 
----
+kaçınılmaz olur.
+
+Event bir araçtır; mimarinin kendisi değil.
+
+
 
 # **Sonuç: Entegrasyon Bir Aktarım Değil, Bir Disiplindir**
 
-Entegrasyon, 2025’in yazılım dünyasında en kritik mimari tasarım alanlarından biridir.
+2025 dünyasında entegrasyon, yazılım ekiplerinin en stratejik karar alanlarından biri haline geldi.
 
-Doğru entegrasyon:
+Doğru entegrasyon; iletişim modelleri, tutarlılık stratejisi, event yaklaşımı, mapping/validation katmanları, retry-DLQ politikaları, gözlemlenebilirlik ve genişleyebilir süreç tasarımıyla inşa edilir.
 
-* doğru iletişim modeli
-* doğru tutarlılık beklentisi
-* event bazlı düşünme
-* mapping/validation katmanları
-* retry & dlq
-* observability
-* genişletilebilir süreçler
+En büyük risk ise şudur:
 
-ile inşa edilir.
-
-En büyük risk şudur:
-
-> **“Doğru bildiğini sandığın bir yanlış, yıllarca mimari borca dönüşebilir.”**
+> **“Doğru sandığın bir yanlış, yıllarca mimari borca dönüşebilir.”**

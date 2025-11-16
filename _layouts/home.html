@@ -28,7 +28,6 @@ layout: base
       </div>
       {%- endif -%}
       <div class="hero-social">
-        <span class="eyebrow">Elsewhere</span>
         {% include social.html %}
       </div>
       {%- if page.metrics -%}
@@ -98,6 +97,11 @@ layout: base
       <p class="eyebrow">{{ page.blog_section.eyebrow | default: "Latest writing" }}</p>
       <h2>{{ page.blog_section.title | default: "Notes from the field" }}</h2>
       <p>{{ page.blog_section.description | default: "I share architecture lessons, platform insights, and delivery notes every week." }}</p>
+      <form class="inline-search" action="{{ '/search' | relative_url }}" method="get">
+        <label class="sr-only" for="homepage-search">Search posts</label>
+        <input type="search" id="homepage-search" name="q" placeholder="Search my notes..." required>
+        <button type="submit">Search</button>
+      </form>
     </div>
     {%- if paginator -%}
       {%- assign posts = paginator.posts -%}

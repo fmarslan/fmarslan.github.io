@@ -4,37 +4,42 @@ title: "Dockerize Edilmiş Mimari: App, Database, Proxy"
 categories: Docker
 ---
 
+Bu mimari, bir web uygulaması (app), bir veritabanı (db) ve bir ters proxy (nginx) gibi üç temel bileşenden oluşan kompakt bir Docker-Compose yapısıdır. Hem geliştirme hem de üretim ortamları için sade, yönetilebilir ve genişletilebilir bir altyapı sunar.
+
 <img src="/assets/img/image.png" alt="cover" style="max-width: 50%; max-height:20%">
 
-Bu mimari, bir web uygulaması (app), bir veri tabanı (db) ve bir ters proxy (nginx) içeren üç ana Docker container'ı kapsar. Bu çözüm Docker-Compose kullanılarak çalıştırılır ve üretim ortamında güvenilir bir yapı sunar.
 
----
 
-### 1. **Mimari Tasarım**
+## 1. **Mimari Tasarım**
 
-**Bileşenler:**
-1. **App Container**  
-   - Uygulama Node.js, Python veya başka bir framework kullanabilir.  
-   - Bu container yalnızca iş mantığını işler.
-   - Uygulama, ortam değişkenlerini kullanarak dinamik yapılandırılır.
+Bu yapı üç ana container etrafında şekillenir:
 
-2. **Database Container**  
-   - PostgreSQL veya MySQL gibi bir RDBMS kullanılır.  
-   - Veriler `volumes` kullanılarak kalıcı hale getirilir.  
-   - Gerekli yapılandırmalar için şifreler ve bağlantı bilgileri şifreli bir ortam değişkeni dosyasından (`.env`) okunur.
+### **1. App Container**
 
-3. **Proxy Container (nginx)**  
-   - Reverse Proxy görevi görür.  
-   - Trafiği uygulamaya yönlendirir ve SSL sertifikası ile HTTPS desteği sağlar.  
-   - Yük dengeleme desteği sunabilir.
+* Node.js, Python veya istediğiniz başka bir runtime üzerinde çalışabilir.
+* Uygulamanın tüm iş mantığını üstlenir.
+* Yapılandırma değerlerini environment değişkenleri üzerinden alır.
 
-**İletişim:**
-- App, Database'e sadece dahili Docker ağı (`bridge network`) üzerinden erişir.
-- Proxy, dış dünyadan gelen istekleri alır ve App container'ına yönlendirir.
+### **2. Database Container**
 
----
+* PostgreSQL / MySQL gibi klasik bir RDBMS kullanılabilir.
+* `volumes` sayesinde veriler kalıcı hale getirilir.
+* Şifre ve bağlantı bilgileri `.env` dosyasından okunur.
 
-### 2. **Dosya Yapısı**
+### **3. Proxy Container (nginx)**
+
+* Reverse proxy görevi görür.
+* Dış dünyadan gelen tüm trafiği App container'ına yönlendirir.
+* HTTPS desteği ve istek yönlendirme kuralları burada yönetilir.
+
+### **İletişim Modeli**
+
+* App → DB erişimi **sadece dahili Docker ağı** üzerinden yapılır.
+* Proxy → App yönlendirmesi üzerinden dış trafik kontrol edilir.
+
+
+
+## 2. **Dosya Yapısı**
 
 ```plaintext
 project/
@@ -51,11 +56,9 @@ project/
 └── README.md
 ```
 
----
 
-### 3. **Docker-Compose Yapılandırması**
 
-**docker-compose.yml**
+## 3. **Docker-Compose Yapılandırması**
 
 ```yaml
 version: '3.9'
@@ -105,11 +108,9 @@ networks:
   frontend:
 ```
 
----
 
-### 4. **App Dockerfile**
 
-**app/Dockerfile**
+## 4. **App Dockerfile**
 
 ```dockerfile
 FROM node:16-alpine
@@ -120,11 +121,9 @@ COPY . .
 CMD ["npm", "start"]
 ```
 
----
 
-### 5. **Nginx Konfigürasyonu**
 
-**nginx/nginx.conf**
+## 5. **Nginx Yapılandırması**
 
 ```nginx
 server {
@@ -139,54 +138,61 @@ server {
 }
 ```
 
----
 
-### 6. **Üretim Ortamı İçin Öneriler**
 
-**1. Güvenlik:**
-- Ortam değişkenlerini `.env` dosyasında şifreli tutun.
-- Veritabanı için kullanıcı izinlerini kısıtlayın.
-- `nginx` üzerinden HTTPS sertifikası sağlayın. (Let's Encrypt kullanılabilir.)
+## 6. **Üretim Ortamı İçin Öneriler**
 
-**2. Performans:**
-- Uygulama container'ını ölçeklenebilir hale getirin (`docker-compose scale` veya `replicas` ile).
-- Yük dengeleme için nginx'i yapılandırın.
-- Veritabanı performansı için `connection pool` kullanın.
+### **Güvenlik**
 
-**3. Kalıcılık:**
-- Veritabanı ve loglar için `volumes` kullanın.
-- Yedekleme mekanizmalarını yapılandırın.
+* .env dosyasında hassas bilgileri şifreli tutun.
+* DB kullanıcı izinlerini minimum seviyede tanımlayın.
+* HTTPS için nginx + Let's Encrypt yapısını ekleyin.
 
-**4. İzleme ve Loglama:**
-- Loglar için bir merkezi sistem kullanın (ör. ELK Stack, Prometheus).
-- Container'ların durumunu izlemek için araçlar (ör. Docker Healthchecks) ekleyin.
+### **Performans**
 
-**5. Yedeklilik:**
-- App ve DB container'larını birden fazla node'a dağıtmak için Docker Swarm veya Kubernetes kullanın.
+* App container'ını çoğaltarak ölçeklendirin.
+* Nginx üzerinde basit load balancer kuralları tanımlayın.
+* DB bağlantıları için `connection pooling` kullanın.
 
----
+### **Kalıcılık**
 
-### 7. **Başlatma ve Test**
+* Veriler ve loglar için `volumes` zorunlu olmalı.
+* Otomatik yedekleme mekanizmaları ekleyin.
 
-1. **Ortam Değişkenlerini Ayarlayın:**
-   - `.env` dosyasını oluşturun:
-     ```
-     DB_USER=myuser
-     DB_PASSWORD=mypassword
-     DB_NAME=mydatabase
-     ```
+### **İzleme ve Loglama**
 
-2. **Docker-Compose ile Çalıştırın:**
-   ```bash
-   docker-compose up --build
-   ```
+* ELK, Loki veya Prometheus gibi merkezi izleme araçları kullanın.
+* Healthcheck ekleyerek container durumunu kontrol edin.
 
-3. **Test:**
-   - Uygulama: `http://localhost:5000`
-   - Proxy: `http://localhost`
+### **Yedeklilik**
 
----
+* Daha geniş yapılar için Docker Swarm veya Kubernetes’e geçiş düşünün.
 
-### 8. **Sonuç**
 
-Bu yapı, hem geliştirme hem de üretim ortamlarında kullanılabilir. Üretim için dikkat edilmesi gerekenler arasında güvenlik, performans, kalıcılık ve izleme gelir. Docker Compose ile kolayca ölçeklenebilir ve yönetilebilir bir yapı sağlanır.
+
+## 7. **Başlatma ve Test**
+
+### **.env dosyasını oluşturun**
+
+```env
+DB_USER=myuser
+DB_PASSWORD=mypassword
+DB_NAME=mydatabase
+```
+
+### **Yapıyı başlatın**
+
+```bash
+docker-compose up --build
+```
+
+### **Test**
+
+* App: `http://localhost:5000`
+* Proxy: `http://localhost`
+
+
+
+## 8. **Sonuç**
+
+Bu mimari, hem geliştirme hem de canlı ortamlar için stabil ve kolay yönetilebilir bir Docker altyapısı sağlar. Üretim tarafında güvenlik, izleme, yedeklilik ve performans ayarları eklendiğinde oldukça sağlam bir temel oluşur.

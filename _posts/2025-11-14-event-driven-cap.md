@@ -5,29 +5,27 @@ categories: [CAP, Event-Driven]
 mermaid: true
 ---
 
+Dağıtık sistemler hızla büyürken, uygulamaların tek bir makinede çalıştığı dönem çok geride kaldı. Artık yüzlerce bileşenin eşzamanlı çalıştığı, farklı bölgelerde dağılmış, hata toleransının yüksek olması beklenen yapılarla uğraşıyoruz. Bu dönüşüm, beraberinde temel bir soruyu getiriyor:
+
+> **“Tutarlılık mı daha önemli, erişilebilirlik mi, yoksa kesinti anında bile çalışabilirlik mi?”**
+
+Bu soruya akademik cevap → **CAP Teoremi**
+Pratik karşılığı → **Event-Driven Tasarım**
+
 <img src="/assets/img/5198cfa0-de03-4bb5-b637-e100abef9ab1.png" alt="cover" style="max-width: 50%; max-height:10%">
 
-Dağıtık sistemler dünyası hızla büyüyor. Uygulamalar artık tek bir sunucudan ibaret değil; onlarca, yüzlerce bağımsız bileşenden oluşan karmaşık yapılara dönüştü.
 
-Bu yeni mimari evrende kritik bir soru ortaya çıkıyor:
-
-> **“Tutarlılık mı daha önemli, erişilebilirlik mi, yoksa her koşulda çalışabilirlik mi?”**
-
-Bu sorunun cevabı → **CAP Teoremi**
-Bu cevabın pratik karşılığı → **Event-Driven Tasarım**
-
----
 ## 1. Dağıtık Sistemlerde Büyük Resim
 
-Modern uygulamalar:
+Modern sistemler:
 
-* yüksek hacimli istekleri karşılamak zorunda,
-* olası hata/bölünme senaryolarında ayakta kalmak zorunda,
-* coğrafi olarak dağılmış ortamda veri bütünlüğünü korumak zorunda.
+* yüksek trafik altında ayakta kalmak,
+* bölünme (partition) senaryolarında çalışmaya devam etmek,
+* veriyi mümkün olduğunca tutarlı şekilde sunmak
 
-Tek makine üzerinde çalışan monolitik mimarilerden dağıtık ekosisteme geçince, sistemlerin davranışlarını yöneten **temel prensiplerden biri CAP teoremidir**.
+zorundadır.
 
-Aşağıdaki şema bu gerçeği özetler:
+Monolitik yapılardan dağıtık sistemlere geçildiğinde, sistemi yönlendiren ilkelerden biri **CAP Teoremidir**.
 
 <div class="mermaid">
 graph TD
@@ -35,7 +33,7 @@ graph TD
     A --> C(A: Erişilebilirlik)
     A --> D(P: Bölünme Toleransı)
 </div>
----
+
 
 ## 2. CAP Teoremi (Consistency – Availability – Partition Tolerance)
 
@@ -43,87 +41,83 @@ graph TD
 
 CAP Teoremi, bir dağıtık sistemin **aynı anda C + A + P üçlüsünü tam olarak sağlayamayacağını** söyler.
 
-Bir ağ bölünmesi yaşandığında sistem şu kararı vermek zorundadır:
+Bir ağ bölünmesi yaşandığında sistem şu tercihle karşı karşıya kalır:
 
-* **C (Consistency)** → Tutarlılık
-* **A (Availability)** → Erişilebilirlik
-* **P (Partition Tolerance)** → Bölünme toleransı
+* **C (Consistency)** → Verinin her yerde güncel olması
+* **A (Availability)** → Sistemin her isteğe yanıt verebilmesi
+* **P (Partition Tolerance)** → Ağ bölünmelerinde bile çalışmaya devam etmesi
 
-> Bölünme kaçınılmaz olduğundan, sistem genellikle **C mi A mı öncelenecek** kararını verir.
+> Bölünme kaçınılmaz olduğundan, asıl seçim **C mi A mı öne çıkacak?** sorusudur.
 
----
+
 
 ## 3. CAP Kavramları Basitçe
 
 ### **Consistency (Tutarlılık)**
 
-Her okuma en güncel veriyi döner.
-“Bankadaki para her şubede aynı görünmeli.”
+Tüm istemciler aynı veriyi görür. Örneğin: "Bankadaki bakiyenin tüm şubelerde aynı görünmesi."
 
 ### **Availability (Erişilebilirlik)**
 
-Sistem her isteğe bir cevap verir — hata bile olsa.
-“Sistem cevap veriyorsa ayaktadır.”
+Sistem her isteğe yanıt verir – bu yanıt hata da olabilir.
 
 ### **Partition Tolerance (Bölünme Toleransı)**
 
-Ağ kesintileri yaşansa bile sistem çalışmaya devam eder.
+Ağ kopsa bile sistemin işlemeye devam etmesidir.
 
----
 
-## 4. “Üçünden İkisi” Mitinin Gerçek Yüzü
 
-CAP, bir seçim menüsü değil; **bir reaksiyon modelidir**.
+## 4. “Üçünden İkisi” Yanılgısının Gerçeği
 
-Sistem tasarlanırken değil, **bölünme anında hangi özelliği koruduğu** önemlidir.
+CAP, bir menüden iki seçenek seçmek değildir; **bölünme yaşandığında verilen tepkidir**.
 
-Aşağıdaki tablo bunu özetler:
+Aşağıdaki tablo bu davranışı özetler:
 
-| Tip | Sağladığı | Feda Ettiği | Kullanım Alanı |
-|-----|-----------|--------------|----------------|
-| CP  | Tutarlılık + Bölünme | Erişilebilirlik | Bankacılık, lider seçimli sistemler |
-| AP  | Erişilebilirlik + Bölünme | Tutarlılık | Event-driven, log sistemleri, IoT |
+| Tip | Sağladığı                 | Feda Ettiği     | Kullanım Alanı                     |
+|  | - |  | - |
+| CP  | Tutarlılık + Bölünme      | Erişilebilirlik | Bankacılık, lider seçim sistemleri |
+| AP  | Erişilebilirlik + Bölünme | Tutarlılık      | Event-driven, log işleme, IoT      |
 
----
+
 
 ## 5. CAP’e Göre Sistem Tipleri
 
 <div class="mermaid">
     graph LR
-    CP[CP Sistemleri] --- C1(Tutarlı)
-    CP --- C2(Bölünme Toleranslı)
+    CP[CP Sistemleri]  C1(Tutarlı)
+    CP  C2(Bölünme Toleranslı)
     CP -.->|Feda: Erişilebilirlik| CX
-    AP[AP Sistemleri] --- A1(Erişilebilir)
-    AP --- A2(Bölünme Toleranslı)
+    AP[AP Sistemleri]  A1(Erişilebilir)
+    AP  A2(Bölünme Toleranslı)
     AP -.->|Feda: Anlık Tutarlılık| AX
 </div>
 
 ### **CP Sistemleri**
 
-* Her zaman doğru veri gösterir
-* Ama bölünme anında bazı istekleri reddedebilir
-  Örnek: Dağıtık Config Store (Zookeeper, Etcd)
+* Her zaman doğru veri üretir.
+* Bölünme anında bazı istekler reddedilebilir.
+  Örnek: Zookeeper, Etcd.
 
 ### **AP Sistemleri**
 
-* Her durumda cevap verir
-* Verinin tutarlılığı *gecikmeli* olabilir
-  Örnek: Event-driven pipeline, IoT veri toplayıcılar, log sistemleri
+* Her durumda yanıt verir.
+* Tutarlılık **gecikmeli** sağlanır.
+  Örnek: IoT veri toplayıcıları, log sistemleri, event-driven pipeline.
 
----
+
 
 ## 6. Event-Driven Mimarinin Doğuşu
 
-Senkron REST çağrılarının yarattığı problemler:
+Senkron REST çağrılarının tipik sorunları:
 
 * yüksek gecikme,
-* servis bağımlılıkları,
+* zincirleme bağımlılıklar,
 * tek hata noktasının tüm sistemi etkilemesi,
-* ölçeklenebilirliğin zorlaşması.
+* ölçeklemenin zorlaşması.
 
-Bu nedenle modern mimaride **asenkron – loosely coupled – message-driven** yaklaşım tercih edilir.
+Bu nedenle modern yapılar **asenkron – loosely coupled – message-driven** kurgulara yönelir.
 
-Aşağıdaki şema basit bir event akışını anlatır:
+Aşağıdaki sequence diyagramı örnek bir süreci anlatır:
 
 <div class="mermaid">
 sequenceDiagram
@@ -131,68 +125,65 @@ sequenceDiagram
     participant B as Ödeme Servisi
     participant C as Fatura Servisi
 
-    A->>Broker: event: OrderCreated
-    Broker->>B: OrderCreated
-    B->>Broker: event: PaymentCompleted
-    Broker->>C: PaymentCompleted
+A->>Broker: event: OrderCreated
+Broker->>B: OrderCreated
+B->>Broker: event: PaymentCompleted
+Broker->>C: PaymentCompleted
+
 </div>
 
----
+
 
 ## 7. Event-Driven = Doğal Bir AP Yaklaşımı
 
-Olay tabanlı mimariler **gereksiz bekleme yapmaz**, herkes kendi işini yapar.
+Event-driven mimari bekleme gerektirmez; herkes işini bağımsız yürütür.
 
 Bu nedenle:
 
 * **Erişilebilirlik yüksektir (A)**
-* **Ağ bölünmelerinden korkmaz (P)**
-* Tutarlılık ise **eventual consistency** şeklindedir.
+* **Ağ bölünmelerine toleranslıdır (P)**
+* Tutarlılık ise çoğu zaman **eventual consistency** şeklindedir
 
-Bu, zayıflık değil → **tasarım tercihi**dir.
+> 500 ms gecikmiş stok güncellemesi genellikle kritik değildir; ancak erişilebilirlik çoğu sistem için hayati önem taşır.
 
-> 500 ms gecikmeli güncellenmiş bir stok bilgisi, bir e-ticaret platformu için genelde felaket değildir.
-> Ama yüksek hacimli taleplerde erişilebilirlik kritik önem taşır.
 
----
 
 ## 8. CAP Odaklı Mimari Seçim Örnekleri
 
+| Senaryo              | Tercih | Sebep                              |
+| -- |  | - |
+| Para transferi       | CP     | Tutarsızlık kabul edilemez         |
+| Log işleme, bildirim | AP     | Tutarlılık gecikmeli olabilir      |
+| IoT veri toplama     | AP     | Sürekli cevap vermek daha önemli   |
+| Config yönetimi      | CP     | Tüm node'lar aynı config'i görmeli |
 
-| Senaryo | Tercih | Sebep |
-|---------|--------|--------|
-| Gerçek zamanlı para transferi | CP | Tutarsızlık kabul edilemez |
-| Log işleme, bildirim, workflow | AP | Tutarlılık gecikmeli olabilir |
-| IoT sensör verisi toplama | AP | Cevap sürekliliği daha önemli |
-| Config yönetimi | CP | Tüm node’lar aynı config'i görmeli |
 
----
 
 ## 9. Event-Driven Mimarinin Teknik Avantajları
 
 ### ✔ Ölçeklenebilirlik
 
-Her servis kendi başına büyüyebilir.
+Her servis kendi yüküne göre büyüyebilir.
 
 ### ✔ Dayanıklılık
 
-Bir servis düştüğünde bile event kuyruğu ayakta kalır.
+Bir servis durduğunda bile kuyruğun ayakta kalması işlem sürekliliğini korur.
 
 ### ✔ Performans
 
-İstekler gecikmez; kuyruk sistemleri yükü dengeler.
+İstekler bloklanmaz; mesajlaşma sistemi yükü dengeler.
 
 ### ✔ Gevşek Bağlılık
 
-Servisler arası bağımlılığı minimuma indirir.
+Servis bağımlılıklarını minimuma indirir.
 
 ### ✔ Genişletilebilirlik
 
-Yeni bir servis eklemek çoğu zaman sadece bir “event listener” oluşturmaktır.
+Yeni bir servis eklemek çoğu zaman yalnızca bir “event listener” yazmak demektir.
 
----
 
-## 10. Akış Diyagramı: Event-Driven Bir Sistemin Çalışma Şekli
+
+## 10. Diyagram: Event-Driven Sistemin Akışı
 
 <div class="mermaid">
 flowchart LR
@@ -201,23 +192,24 @@ flowchart LR
     C[Notification Service] -->|Event tüketir| K
     D[Analytics Service] -->|Event tüketir| K
 
-    K --> E[(Event Store)]
+K --> E[(Event Store)]
+
 </div>
 
----
+
 
 ## 11. Dikkat Edilmesi Gerekenler
 
-Event-driven mimari güçlüdür ancak **dikkat edilmezse kaosa dönüşebilir**:
+Event-driven mimari güçlüdür ancak kötü tasarlanırsa karmaşaya dönüşebilir:
 
-* Event sınırlarının iyi belirlenmesi
-* **İdempotent tüketiciler** (event birkaç kez gelse bile aynı sonucu üretir)
-* Retry + DLQ tasarımı
-* Versioning (event şemasının değişmesi)
+* Event sınırlarının doğru belirlenmesi
+* **İdempotent tüketiciler** (bir event tekrar gelse bile sonuç aynı olmalı)
+* Retry + DLQ kurgusu
+* Event versiyonlama
 * Correlation ID ile uçtan uca izleme
-* Çok fazla event üretmemek (event storming)
+* Gereksiz event üretmekten kaçınma (event storming)
 
-### Örnek: Event İdempotency Mantığı
+### Örnek: İdempotency Kontrolü
 
 ```pseudo
 if event.id in processed_events:
@@ -227,55 +219,52 @@ else:
     save(event.id)
 ```
 
----
 
-## 12. Serverless bağlamında CAP + Event-Driven
 
-Serverless mimaride (AWS Lambda, Azure Functions):
+## 12. Serverless Bağlamında CAP + Event-Driven
 
-* timeout,
-* cold start,
-* event ordering,
+Serverless sistemlerde (AWS Lambda, Azure Functions) ayrıca şunlar dikkate alınmalıdır:
+
+* timeout
+* cold start
+* ordering
 * retry politikaları
-  gibi ek kurallar işin içine girer.
 
 Bu nedenle:
 
-* iyi tasarlanmış input / output
-* izlenebilirlik
-* merkezi loglama
-* dağıtık trace
-  hayati önem taşır.
+* tutarlı input/output kuralları,
+* merkezi loglama,
+* dağıtık izleme,
+* ölçülebilirlik
 
----
+büyük önem taşır.
+
+
 
 ## 13. Sonuç
 
-CAP teoremi bize şunu söyler:
+CAP Teoremi bize şunu hatırlatır:
 
-> **Bir dağıtık sistemde tutarlılık ile erişilebilirlik arasında her zaman bir gerilim vardır.**
+> **Dağıtık sistemlerde tutarlılık ve erişilebilirlik arasında her zaman bir denge vardır.**
 
-Event-driven tasarım ise:
+Event-driven mimari ise:
 
-> **Bu gerilimi AP yönünde çözerek ölçeklenebilir, dayanıklı mimariler kurulmasını sağlar.**
+> **Bu dengeyi AP yönünde çözerek güçlü, esnek ve ölçeklenebilir yapılar kurmayı sağlar.**
 
-Modern sistemlerin büyük çoğunluğu şu üçlünün kombinasyonunu kullanır:
+Modern mimarilerin çoğu şu üç prensibi bir arada kullanır:
 
 * **AP yaklaşımı**
 * **Eventual Consistency**
 * **Event-Driven Architecture**
 
-Siz de yeni bir sistem tasarlarken şu soruyu sorun:
+Yeni bir sistem tasarlarken kendinize şu soruyu sorun:
 
-> “Bu senaryoda tutarlılık mı daha kritik, erişilebilirlik mi?”
+> "Bu senaryoda asıl kritik olan nedir: Tutarlılık mı, erişilebilirlik mi?"
 
-Cevabınız, mimarinizi şekillendirecektir.
+Bu soru, doğru mimariyi seçmenizi sağlar.
 
----
+
 
 ## Kaynaklar
 
-* [Arslan, F. M.: *“Serverless Bir Mimari Hazırlarken Dikkat Edilmesi Gereken Önemli Noktalar”*, Ekim 2023.](https://fmarslan.com/javascript/2023/10/20/serverless-tasar%C4%B1mlarda-dikkat-edilmesi-gereken-hususlar.html)
-* [Brewer, Eric: CAP Theorem publications](https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/brewer-cap.pdf)
-* Dağıtık sistemler ve event-driven mimari üzerine çeşitli teknik kaynaklar
-
+* Arslan, F. M.: *“Serverless Bir Mimari Hazırlarken Dikkat Edilmesi Gereken Önemli Noktalar”*, Ekim 202

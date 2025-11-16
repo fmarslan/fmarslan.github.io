@@ -3,6 +3,17 @@ locale: "en-US"
 title: "F.M. Arslan"
 description: >
   I'm a solution architect & software engineer.
+keywords:
+  - Fatih Mehmet Arslan
+  - solution architect
+  - software engineer
+  - cloud architecture
+social:
+  name: "Fatih Mehmet Arslan"
+  links:
+    - https://www.linkedin.com/in/fmarslan
+    - https://github.com/fmarslan
+    - https://fmarslan.medium.com
 
 author:
   name: Fatih Mehmet ARSLAN
@@ -51,8 +62,6 @@ navigation:
     url: /about/
   - title: Resume
     url: /cv/
-  - title: Search
-    url: /search
 
 exclude:
   - vendor

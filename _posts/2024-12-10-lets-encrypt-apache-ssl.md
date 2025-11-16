@@ -1,50 +1,50 @@
 ---
 layout: post
 title: "Let's Encrypt ile Apache için SSL Sertifikası"
-categories: SSL Apache
+categories: [SSL, Apache]
 ---
+
+Bu rehber, **Docker ortamında çalışan bir Apache sunucusu için Let's Encrypt kullanarak otomatik SSL sertifikası alma ve yenileme** sürecini adım adım anlatır. Yapı tamamen pratik, gerçekçi bir senaryo üzerinden hazırlanmıştır.
+
 <img src="/assets/img/apache-lets-encrypt.webp" alt="cover" style="max-width: 50%; max-height:20%">
 
-Bu rehber, Let's Encrypt kullanarak otomatik SSL sertifikası yenileyen bir Apache sunucusunu Docker ile nasıl hazırlayacağınızı gösterir. Örnekler gerçekçi bir senaryo üzerinden sunulmuştur.
 
----
 
-#### 1. Proje Dizini Oluşturma
+## 1. Proje Dizininin Hazırlanması
 
-Önce bir klasör oluşturup içine gerekli dosyaları ekleyelim:
+Çalışma klasörünü oluşturalım:
 
 ```bash
 mkdir apache-ssl
 cd apache-ssl
 ```
 
----
 
-#### 2. Dockerfile Hazırlama
 
-Apache'yi çalıştıracak bir `Dockerfile` oluşturun:
+## 2. Dockerfile Oluşturma
+
+Apache sunucusunu yapılandırmak için basit bir Dockerfile yeterlidir.
 
 ```dockerfile
 FROM httpd:2.4
 
-# Gerekli dizinleri oluştur
+# Gerekli dizinler
 RUN mkdir -p /etc/letsencrypt/live /var/www/html
 
-# Apache yapılandırmasını ekle
+# Apache yapılandırması
 COPY ./apache.conf /usr/local/apache2/conf/httpd.conf
 ```
 
----
 
-#### 3. Apache Ayarları
 
-`apache.conf` dosyasını oluşturun ve sertifikalarla çalışacak şekilde ayarlayın:
+## 3. Apache Yapılandırması
+
+SSL ve ACME doğrulama dizinleri için gerekli ayarları `apache.conf` içine ekleyin:
 
 ```apache
 <VirtualHost *:80>
     ServerName fmarslan.com
     ServerAlias www.fmarslan.com
-
     DocumentRoot /var/www/html
 
     <Location "/.well-known/acme-challenge/">
@@ -66,13 +66,13 @@ COPY ./apache.conf /usr/local/apache2/conf/httpd.conf
 </VirtualHost>
 ```
 
-Alan adını kendi sitenize göre güncellemeyi unutmayın.
+**Not:** Domain adlarını kendi sitenize göre değiştirmelisiniz.
 
----
 
-#### 4. Docker Compose Dosyası
 
-Hem Apache’yi hem de Certbot’u yönetecek bir `docker-compose.yml` dosyası hazırlayın:
+## 4. Docker Compose: Apache + Certbot
+
+Apache ve Certbot'un birlikte çalıştığı örnek yapı:
 
 ```yaml
 version: '3.7'
@@ -107,17 +107,15 @@ services:
       done'
 ```
 
-**Not:** Yukarıdaki `while` döngüsü yalnızca test ortamı içindir. Gerçek kullanım için daha sağlam yöntemler tercih edilmelidir. Örneğin:
+Bu loop yalnızca demo amaçlıdır. Gerçek ortamda **cron tabanlı yenileme** daha uygundur:
 
 ```bash
 0 0 * * * docker run --rm -v $(pwd)/certs:/etc/letsencrypt -v $(pwd)/html:/var/www/html certbot/certbot renew
 ```
 
----
 
-#### 5. Gerekli Klasörler
 
-HTML içerikleri ve sertifikalar için dizinler oluşturun:
+## 5. Gerekli Klasörlerin Oluşturulması
 
 ```bash
 mkdir html
@@ -125,46 +123,50 @@ echo "<h1>SSL Test Sayfası</h1>" > html/index.html
 mkdir certs
 ```
 
----
 
-#### 6. Sunucuyu Çalıştırma
 
-Konteynerleri başlatmak için aşağıdaki komutu çalıştırın:
+## 6. Sunucuyu Başlatma
 
 ```bash
 docker-compose up -d
 ```
 
----
 
-#### 7. DNS Ayarları
 
-Alan adınızı doğru IP’ye yönlendirdiğinizden emin olun. Örnek DNS kayıtları:
+## 7. DNS Ayarlarını Doğru Yönlendirme
 
-- `fmarslan.com` → Sunucu IP adresiniz
-- `www.fmarslan.com` → Sunucu IP adresiniz
+Alan adı IP yönlendirmeleri:
 
----
+* `fmarslan.com` → Sunucunun IP adresi
+* `www.fmarslan.com` → Sunucunun IP adresi
 
-#### 8. Sorun Giderme
+DNS propagasyonu gerçekleşmeden sertifika üretimi başarısız olur.
 
-Bir sorun çıkarsa loglara bakarak kontrol edin:
+
+
+## 8. Log ve Sorun Giderme
 
 ```bash
 docker logs certbot
 docker logs apache-server
 ```
 
----
+Sertifika hataları genellikle:
 
-#### 9. Sertifikaların Yenilenmesi
+* DNS yönlendirmesi,
+* `.well-known` erişimi,
+* Firewall port engellerinden kaynaklanır.
 
-Certbot, sertifikaları yeniledikçe Apache bunu otomatik olarak kullanır. Eğer manuel bir çözüm tercih ederseniz, yenileme sonrası Apache’yi yeniden başlatmanız gerekebilir:
+
+
+## 9. Sertifikaların Yenilenmesi
+
+Certbot yenileme yaptığında Apache doğrudan yeni sertifikayı kullanır. Gerekirse Apache’yi yeniden yükleyebilirsiniz:
 
 ```bash
 docker exec apache-server apachectl graceful
 ```
 
----
 
-Bu yapılandırma ile otomatik sertifika yenilemeyi çalışır hale getirmiş olacaksınız. Test ortamı ve gerçek projeler için uygundur.
+
+Bu yapı ile **Docker üzerinde Apache + Let’s Encrypt otomatik sertifika yönetimi** sorunsuz bir şekilde çalışacaktır. Hem test hem de canlı ortamlar için uyarlanabilir yapıdadır.

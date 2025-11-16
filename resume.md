@@ -2,7 +2,7 @@
 layout: page
 title: Resume
 eyebrow: Profile
-description: Solution architect looking for friendly teams that value clear thinking and consistent delivery.
+description: Solution architect focused on designing resilient systems and clear team processes.
 permalink: /cv/
 ---
 
@@ -11,7 +11,7 @@ permalink: /cv/
 
 ---
 
-I’m a software engineer who enjoys translating messy technical problems into testable architectures. After 14+ years across Türkiye, the Benelux region, and remote European teams, I’m now looking for hybrid or fully remote opportunities where I can stay close to the code and the people writing it.
+I’m a software engineer who enjoys translating messy technical problems into testable architectures. After 14+ years across Türkiye, the Benelux region, and remote European teams, I balance hands-on engineering with mentoring and product shaping so teams can ship ideas with confidence.
 
 Cloud-native platforms, Kubernetes, event-driven systems, and data-heavy workloads are my daily routine. Beyond tooling, I’m known for patient mentoring, honest documentation, and keeping projects grounded in reality.
 

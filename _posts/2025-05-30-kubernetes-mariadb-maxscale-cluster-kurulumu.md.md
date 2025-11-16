@@ -2,32 +2,36 @@
 layout: post
 title: "Kubernetes ile MariaDB MaxScale Cluster Kurulumu"
 date: 2025-05-30
-categories: kubernetes mariadb maxscale veritabanı
+categories: [kubernetes, mariadb, maxscale, veritabanı]
 author: fmarslan.com
 ---
+
+Kubernetes üzerinde yüksek erişilebilir, ölçeklenebilir ve merkezi yönetilebilir bir **MariaDB kümesi** oluşturmak, özellikle kurumsal uygulamalarda önemli bir gereksinim. Bu rehberde; **MariaDB replikasyon kümesi** ve üzerinde çalışan **MaxScale read/write split proxy** yapısını adım adım nasıl kurabileceğinizi sade ve uygulanabilir bir şekilde özetledim.
+
 <img src="/assets/img/mariadb-maxscale.png" alt="cover" style="max-width: 50%; max-height:20%">
 
-Kubernetes üzerinde yüksek erişilebilirlik sağlayan bir **MariaDB replikasyon kümesi** ve bu küme üzerine kurulu **MaxScale** ile bir **read-write split** proxy yapısı kurmak, kurumsal uygulamalar için oldukça işlevseldir. Bu rehberde, **Kubernetes YAML tanımlarını kullanarak** adım adım bir **MariaDB + MaxScale cluster** kurulumunu ele alacağız.
 
-> Bu döküman [fmarslan.com](https://fmarslan.com) tarafından sağlanmıştır. Tüm içerikler açık kaynak altyapılar kullanılarak örneklenmiştir.
-
----
 
 ## 1. Ön Hazırlık
 
-### Gerekli Kaynaklar:
-- Kubernetes (v1.21+)
-- Bir Container Registry (örneğin Docker Hub veya özel bir ACR/ECR)
-- Helm veya `kubectl` CLI
+### Gereksinimler
 
----
+* Kubernetes v1.21+
+* Docker Hub veya özel registry
+* Helm veya `kubectl`
+* Depolama sağlayıcısı (PVC için)
 
-## 2. ConfigMap'ler ile Başlayın
+Bu kurulum tamamen YAML tanımlarıyla yapılabilir; ek bir operator veya CRD gerektirmez.
 
-YAML yapılandırmaları içerisinde birçok davranış `ConfigMap`'ler üzerinden yönetilir. Bu dosyada, MariaDB için `liveness.sh`, `readiness.sh`, `primary.cnf`, `replica.cnf`, `primary.sql` ve `secondary.sql` gibi dosyalar barındırılır.
+
+
+## 2. ConfigMap: Kümenin Beyni
+
+MariaDB kümesindeki davranışların çoğu `ConfigMap` içinde tanımlanır. Burada hem primary hem de replica nodelar için yapılandırma dosyaları ve init scriptler tutulur.
+
+Örnek ConfigMap:
 
 ```yaml
-# Kubernetes ConfigMap - Örnek parçalar
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -37,25 +41,32 @@ data:
     [mariadb]
     log-bin
     report_host=mariadb-0.mariadb-headless.default.svc
-  ...
-````
+  replica.cnf: |
+    [mariadb]
+    read_only=ON
+  primary.sql: |
+    CREATE USER ...;
+  secondary.sql: |
+    CHANGE MASTER TO ...;
+```
 
-Her pod (örneğin `mariadb-0`, `mariadb-1`) kendi rolüne göre (`primary` veya `replica`) farklı `.cnf` ve `.sql` dosyaları ile başlatılır.
+Her pod, kendi sırasına göre (`ordinal` değeri) primary veya replica olarak başlatılır.
 
----
 
-## 3. MariaDB StatefulSet
 
-MariaDB, **StatefulSet** ile deploy edilmelidir çünkü her instance'ın kalıcı bir kimliği (hostname, PVC) olmalıdır.
+## 3. MariaDB StatefulSet: Kalıcılık + Kimlik
 
-### Öne Çıkanlar:
+MariaDB, verisini korumak ve node kimliğini sabit tutmak için mutlaka **StatefulSet** ile deploy edilmelidir.
 
-* `initContainers` kullanılarak her pod başlatılmadan önce uygun ayar dosyaları (`primary.cnf`, `replica.cnf`) ve SQL scriptleri (`primary.sql`, `secondary.sql`) yerleştirilir.
-* Persistent Volume Claim (`volumeClaimTemplates`) ile veri kalıcılığı sağlanır.
-* `hostnames` sayesinde Master–Replica ayrımı yapılır.
+Öne çıkan noktalar:
+
+* `volumeClaimTemplates` ile kalıcı disk kullanılır.
+* `initContainers` sayesinde primary/replica ayrımı yapılır.
+* Pod adından (`mariadb-0`) rol belirlenir.
+
+Temel StatefulSet tanımı:
 
 ```yaml
-# Kubernetes StatefulSet - Başlangıç kısmı
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -66,23 +77,23 @@ spec:
   podManagementPolicy: Parallel
 ```
 
-Her pod’un davranışı, `initContainer` içinde `bash` script ile tanımlanmıştır. Örneğin:
+InitContainer örneği:
 
 ```bash
 if [[ $ordinal -eq 0 ]]; then
-  cp /mnt/config-map/primary.cnf ...
-  sed -e ... /mnt/config-map/primary.sql > /docker-entrypoint-initdb.d/primary.sql
+  cp /mnt/config-map/primary.cnf /etc/mysql/conf.d/
+  cp /mnt/config-map/primary.sql /docker-entrypoint-initdb.d/
 else
-  cp /mnt/config-map/replica.cnf ...
-  sed -e ... /mnt/config-map/secondary.sql > /docker-entrypoint-initdb.d/secondary.sql
+  cp /mnt/config-map/replica.cnf /etc/mysql/conf.d/
+  cp /mnt/config-map/secondary.sql /docker-entrypoint-initdb.d/
 fi
 ```
 
----
 
-## 4. Secrets – Güvenlik
 
-MariaDB kullanıcı bilgileri, replication şifreleri ve admin parolaları **Kubernetes Secret** objelerinde tutulur. Bu sayede pod içinde doğrudan kullanılabilir:
+## 4. Secrets: Kullanıcı ve Replikasyon Şifreleri
+
+MariaDB erişim bilgileri ve replication kullanıcıları mutlaka `Secret` içinde saklanmalıdır.
 
 ```yaml
 apiVersion: v1
@@ -91,23 +102,24 @@ metadata:
   name: mariadb-secret
 type: Opaque
 data:
-  MARIADB_ROOT_PASSWORD: <base64-secret>
-  MARIADB_REPLICATION_USER: <base64-user>
-  MARIADB_REPLICATION_PASSWORD: <base64-password>
+  MARIADB_ROOT_PASSWORD: <base64>
+  MARIADB_REPLICATION_USER: <base64>
+  MARIADB_REPLICATION_PASSWORD: <base64>
 ```
 
----
+Bu değerler pod içine environment variable olarak geçer.
 
-## 5. MaxScale Deployment
 
-MaxScale, MariaDB podlarının üzerinde bir katman olarak çalışır ve gelen istekleri yönlendirir.
 
-### MaxScale’in işlevi:
+## 5. MaxScale Deployment: Read/Write Split Proxy
 
-* Primary node’a write istekleri gönderir.
-* Replica node’lara read isteklerini dağıtır.
-* Arızalı bir node tespit edildiğinde devre dışı bırakır (auto\_failover).
-* Read/write ayrımını `readwritesplit` servisi ile yönetir.
+MaxScale, cluster’ın önünde durarak sorguları doğru node’a yönlendirir:
+
+* **Write → Primary**
+* **Read → Replicas**
+* Node erişilemezse otomatik devre dışı bırakır
+
+Deployment örneği:
 
 ```yaml
 apiVersion: apps/v1
@@ -127,7 +139,7 @@ spec:
           subPath: maxscale.cnf
 ```
 
-ConfigMap içindeki `maxscale.cnf` dosyasında `SplitterService`, `Monitor`, ve `Listeners` tanımlıdır:
+MaxScale konfigürasyonu (ConfigMap):
 
 ```ini
 [SplitterService]
@@ -138,24 +150,43 @@ user=maxscale
 password=maxscale_secret
 ```
 
----
 
-## 6. Giriş ve Test
 
-Cluster kurulumunun ardından şu adımlarla test edebilirsiniz:
+## 6. Test ve Doğrulama
 
-1. MaxScale GUI’sine bağlanın: `http://<NodeIP>:8989`
+Kurulum tamamlandıktan sonra:
 
-2. MariaDB istemcisi ile bağlantı kurun:
+### 1) MaxScale arayüzüne bağlanın
 
-   ```bash
-   mysql -h <maxscale-service> -P 3306 -u admin -p
-   ```
+```
+http://<NodeIP>:8989
+```
 
-3. `SELECT @@hostname;` komutu ile işlemin hangi node üzerinden geçtiğini gözlemleyin.
+### 2) MariaDB bağlantısı yapın
 
----
+```bash
+mysql -h <maxscale-service> -P 3306 -u admin -p
+```
+
+### 3) Query hangi node’dan geçti?
+
+```sql
+SELECT @@hostname;
+```
+
+Replica değişimlerini buradan takip edebilirsiniz.
+
+
 
 ## Sonuç
 
-Bu içerikte Kubernetes üzerinde bir MariaDB + MaxScale cluster kurulumu için temel yapı taşlarını ve örnek YAML bölümlerini inceledik. Bu kurulum ile yüksek erişilebilirlik ve yük dengeleme sağlanabilir. Her bir yapılandırma ortamınıza göre özelleştirilebilir.
+Bu rehberde, Kubernetes üzerinde çalışan bir **MariaDB + MaxScale cluster** için temel yapı taşlarını ele aldık. Bu mimari sayesinde:
+
+* Yüksek erişilebilirlik
+* Read/write ayrımı
+* Otomatik failover
+* Kalıcı veri yönetimi
+
+gibi özelliklere kolayca ulaşabilirsiniz.
+
+YAML dosyalarını kendi ortamınıza göre özelleştirerek kurumsal ölçekte kullanılabilir bir veritabanı altyapısı oluşturabilirsiniz.

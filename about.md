@@ -8,15 +8,15 @@ description: The story behind my work, the principles I stand by, and how I help
 <div class="bio-grid">
   <div>
     <h2>Hello there 👋</h2>
-    <p>I’m Fatih. The photo on the homepage shows me exactly how I work—backpack on, smiling, ready to head out for a hike and then come back to sketch architecture diagrams. I started by fixing PCs in a small neighborhood shop and now collaborate with European companies that value thoughtful engineering.</p>
-    <p>For 14+ years I’ve been designing platforms, integrations, and developer workflows. I never stopped writing code and genuinely enjoy pairing with teammates. What partners remember is a calm engineer who keeps promises and makes complex topics approachable.</p>
+    <p>I’m Fatih. The photo on the homepage is me on a day off, backpack over the shoulder and notebook in hand. That’s more or less how I work too: curious, relaxed, and always ready to draw a quick sketch when words aren’t enough. I started by repairing old PCs for neighbours, and that practical habit slowly turned into a career that now stretches across Europe.</p>
+    <p>These days I focus on platform design, integration work, and keeping developer workflows tidy. Fourteen-plus years in the field taught me that good architecture is equal parts empathy and engineering. I still code, still pair with teammates, and I try to keep the temperature low even when pressure is high.</p>
   </div>
   <div>
     <h2>How I like to work</h2>
     <ul>
-      <li>I translate plans into plain language—if there’s no diagram, I’ll draw one.</li>
-      <li>Feedback is honest and kind; team culture matters as much as delivery.</li>
-      <li>I’m comfortable with distributed European teams and adapting to new cultures.</li>
+      <li>I use plain language and lightweight diagrams so everyone stays on the same page.</li>
+      <li>I offer feedback the way I’d like to receive it: honest, calm, and useful.</li>
+      <li>I’m comfortable switching between time zones and cultures; EU-wide collaboration keeps me sharp.</li>
     </ul>
   </div>
 </div>
@@ -24,14 +24,14 @@ description: The story behind my work, the principles I stand by, and how I help
 <div class="card-grid" style="margin-top:2rem;">
   <article class="card">
     <h3>Interests</h3>
-    <p>Kubernetes, event-driven design, data platforms, and small automations that save engineers time.</p>
+    <p>Kubernetes, event-driven design, data platforms, and tiny automations that save teams a few minutes each day.</p>
   </article>
   <article class="card">
     <h3>Outside of work</h3>
-    <p>Long walks, photography, and discovering new coffee spots. Fresh air helps me return to the desk with clear ideas.</p>
+    <p>Long walks, photography, and hunting for a decent flat white. Fresh air keeps my head clear for the next workshop.</p>
   </article>
   <article class="card">
     <h3>Let’s collaborate</h3>
-    <p>I’m open to hybrid or remote projects. If you need a candid architectural review, help moving from MVP to scale, or simply a steady teammate, drop me a message.</p>
+    <p>I’m open to hybrid or remote roles around Europe. If you need a thoughtful review, help steadying a roadmap, or simply someone who stays until the job is done, feel free to reach out.</p>
   </article>
 </div>

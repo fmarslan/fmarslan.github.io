@@ -4,8 +4,16 @@ title: "Fatih Mehmet Arslan"
 permalink: /
 hero:
   eyebrow: Solution architect & software engineer
-  title: I design dependable platforms with a calm, human touch.
-  description: Hi, I’m Fatih—an engineer who helps product teams simplify architecture, mentor developers, and keep delivery grounded in reality. I still ship code, still draw diagrams, and still believe kindness belongs in every project.
+  title: I build practical, reliable platforms.
+  description: |
+    Hi, I’m Fatih. For more than 14 years I’ve been helping product teams untangle their systems,
+    clean up messy architectures, and get real features out the door without wearing everyone down.
+    I still jump into the code when it’s needed, still sketch things on paper when the screen is too much,
+    and I’ve learned that being clear and decent with people usually makes everything work smoother.
+  seo_description: |
+    Fatih Mehmet Arslan is a solution architect and software engineer working in cloud,
+    integration, and event-driven platforms. Known for steady delivery, clear communication,
+    and hands-on problem solving across Europe.
   image: /assets/fmarslan.png
   image_alt: Fatih Mehmet Arslan portrait
   actions:
@@ -13,64 +21,88 @@ hero:
       url: /cv/
       style: primary
       icon: "📄"
-    - label: Book a call
-      url: mailto:contact@fmarslan.com
-      style: secondary
-      icon: "✉️"
     - label: Read the blog
       url: /blog/
       style: secondary
       icon: "📚"
-metrics:
-  - value: "14+"
-    label: Years solving tricky platform problems
-  - value: "45+"
-    label: Delivered platforms and large-scale migrations
-  - value: "9"
-    label: Distributed teams guided across countries
+
 focus:
   eyebrow: How I help
   title: Architecture, delivery, and enablement
-  description: I’m the person who joins your whiteboard session, translates the chaos into a plan, and sticks around until that plan runs in production.
+  description: |
+    I’m usually the one who joins a messy whiteboard session, listens first,
+    and then slowly turns the scattered ideas into something teams can actually build.
+    And I try to stay involved long enough to see it run in production—because the real problems
+    always show up there.
   items:
     - title: Solution architecture
-      copy: Sketching roadmaps, decomposing monoliths, and shaping APIs so teams can ship without drama.
+      copy: |
+        Making sense of systems, defining boundaries, breaking up monoliths when it really helps,
+        and designing APIs that teams don’t argue about every week.
       icon: "🧭"
       tags: Cloud & hybrid
+
     - title: Modern engineering
-      copy: Kubernetes, IaC, and observability stacks tuned for lean teams who still need enterprise-grade reliability.
+      copy: |
+        Kubernetes, IaC, observability stacks—mostly the boring but important things
+        that help small teams stay stable without turning into an ops department.
       icon: "⚙️"
       tags: Platform & delivery
+
     - title: AI & data foundations
-      copy: Event streams, search, and light-weight ML features that add intelligence without overpromising.
+      copy: |
+        Event streams, search tooling, and lightweight ML work.
+        Not hype—just enough intelligence to be useful without making promises nobody can keep.
       icon: "🧠"
       tags: Intelligence
+
     - title: Leadership & mentoring
-      copy: Partnering with founders and squads to align priorities, unblock delivery, and keep morale high.
+      copy: |
+        Working with founders and teams to keep priorities clear,
+        solve the small roadblocks before they grow,
+        and help people feel confident in what they’re building.
       icon: "🤝"
       tags: Enablement
+
 highlights:
   eyebrow: Project memories
   title: Work that shaped my perspective
-  description: A handful of collaborations that taught me patience, clarity, and the value of well-tested adapters.
+  description: |
+    A few projects that taught me patience, clearer thinking,
+    and the value of simple, well-tested tools—even when the environment is anything but simple.
   items:
     - label: 2025 · Belgium
       title: Document intelligence platform @ Eaglessoft
-      copy: Led a multi-tenant integration hub that receives documents from diverse sources and delivers them to PEPPOL, country e-invoicing portals, and secure partners with proper validation.
+      copy: |
+        Led a multi-tenant integration hub that handled documents from all kinds of systems
+        and pushed them through validation, PEPPOL, country gateways, and various partners.
+        It reminded me how much calm you gain from predictable workflows.
+
     - label: 2024 · Netherlands
       title: Retail analytics platform @ Modulairy
-      copy: Combined e-commerce and ERP data with AI-driven forecasting, giving retailers a single, modern stack for planning and experimentation.
+      copy: |
+        Brought ERP and e-commerce data together with forecasting features.
+        For the first time, retailers had one place where everything made sense.
+
     - label: 2022 · Türkiye
       title: SaaS modernization @ Mantis
-      copy: Guided the shift from large monoliths toward modular SaaS and FaaS services, helping teams scale without losing reliability.
+      copy: |
+        Helped teams move away from oversized monoliths toward smaller SaaS and FaaS components.
+        Releases became lighter, and reliability stopped being a coin toss.
+
 blog_section:
   eyebrow: Latest writing
   title: Field notes & working logs
-  description: Essays on architecture trade-offs, product thinking, and the experiments I run between engagements.
-  limit: 6
+  description: |
+    Notes on architecture choices, product thinking, and the experiments I usually run
+    between client work.
+  limit: 8
+
 contact:
   title: Have a challenge worth exploring?
-  description: I keep a few hours free each week to chat with teams about roadmaps, audits, or simply to share lessons learned over coffee.
+  description: |
+    I keep a bit of time open each week for conversations about roadmaps, architecture reviews,
+    or simply sharing lessons over coffee. If you think I can help, just reach out.
   actions:
     - label: Email me
       url: mailto:contact@fmarslan.com

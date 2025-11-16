@@ -1,0 +1,35 @@
+{
+  "name": "Jekyll Blog Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // Container içindeki çalışma klasörü
+  "workspaceFolder": "/workspaces/personel-website",
+
+  // WSL içindeki gerçek klasörü buraya mount ediyoruz
+  "workspaceMount": "source=/work/personel-website,target=/workspaces/personel-website,type=bind",
+
+  "forwardPorts": [4000],
+
+  "postCreateCommand": "bundle install",
+
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true
+  },
+
+  // vendor/bundle'ı host klasörüne değil docker volume'a yaz (daha hızlı)
+  "mounts": [
+    "source=jekyll_bundle_cache,target=/workspaces/personel-website/vendor/bundle,type=volume"
+  ],
+
+  "remoteUser": "vscode",
+
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll dev server",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

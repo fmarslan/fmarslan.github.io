@@ -2,43 +2,53 @@
 title: "Apache NiFi ile Veri Akışı Otomasyonu"
 layout: post
 date: 2025-08-05
-categories: apache
-tags: nifi,dataflow,apache,iot,kafka,postgres
+categories: [apache, nifi]
+tags: [nifi, dataflow, apache, iot, kafka, postgres]
 summary: "Apache NiFi ile görsel veri akışı yönetimi, düşük kodlu dönüşüm ve aktarım işlemleri üzerine profesyonel bir inceleme"
 ---
 
+Apache NiFi, farklı kaynaklardan gelen verilerin otomatik olarak toplanması, dönüştürülmesi ve hedef sistemlere aktarılması için geliştirilmiş güçlü bir **veri akışı otomasyon platformudur**. Görsel tasarım arayüzü sayesinde karmaşık veri hatlarını kod yazmadan oluşturmayı mümkün kılar.
+
 <img src="/assets/img/596f2bf2-a150-4f92-9693-e34f771adcd9.png" alt="cover" style="max-width: 50%; max-height:20%">
 
-## 🔍 Apache NiFi Nedir?
 
-Apache NiFi, veri kaynaklarından gelen farklı formatlardaki verilerin otomatik olarak işlenmesi, dönüştürülmesi ve hedef sistemlere aktarılmasını sağlayan bir veri akış yönetimi platformudur.
 
-* Veri kaynaklarından alma (Kafka, HTTP, FTP, vs.)
-* Dönüştürme (JSON to CSV, veri temizleme, zenginleştirme)
+## 🔍 NiFi Nedir ve Neden Kullanılır?
+
+NiFi aşağıdaki işlemleri uçtan uca yönetebilmesiyle öne çıkar:
+
+* Farklı veri kaynaklarından okuma (Kafka, HTTP, FTP vb.)
+* Veri dönüştürme (temizleme, zenginleştirme, format değişimi)
 * Yönlendirme ve hedefe aktarım (S3, PostgreSQL, API, MinIO)
 * Gerçek zamanlı izleme (Provenance, Bulletin Board)
 
-## 📊 NiFi Ne İşe Yarar?
+Dağınık veri kaynaklarının toplandığı yapılarda; tutarsız formatlarla uğraşan, izlenebilirlik isteyen ekipler için NiFi büyük kolaylık sağlar.
 
-Veri mimarilerinde en çok rastlanan sorunlar:
+
+
+## 📊 NiFi'nin Sağladığı Çözüm
+
+Tipik veri mimarisi sorunları:
 
 * Kaynakların dağınık olması
-* Veri şekillerinin tutarsız olması
-* Güvenli, izlenebilir, şematik veri işleme zorluğu
+* Veri formatlarının tutarsızlığı
+* Şeffaf ve güvenli bir veri hattı kurma zorluğu
 
-NiFi, tüm bu sorunları **görsel akış bazlı, sürükle-bırak yapıyla** çözer.
+NiFi, bu sorunlara **görsel sürükle-bırak tabanlı akış modeliyle** çözüm getirir.
 
-## 🚀 Senaryo: IoT Veri Hatlarının Otomasyonu
 
-### Amaç:
 
-IoT cihazlarından gelen JSON verileri Kafka ile NiFi'ye aktarılıyor. Bu veriler şu adımlardan geçerek PostgreSQL'e yazılıyor:
+## 🚀 Örnek Senaryo: IoT Veri Hatlarının Otomasyonu
 
-1. `ConsumeKafkaRecord_2_0`: JSON mesajların alınması
-2. `UpdateRecord`: `data` alanındaki key'lerin düzleştirilmesi
-3. `ExecuteScript`: SHA256 ile imzalama ve trace güncellemesi
-4. `PutS3Object`: MinIO'ya dosya kaydı
-5. `PutDatabaseRecord`: PostgreSQL'e yazım
+IoT cihazlarından gelen JSON mesajları önce Kafka’ya, ardından NiFi’ye ulaşır. NiFi bu verileri işleyerek PostgreSQL’e kaydeder.
+
+### Akış Adımları:
+
+1. **ConsumeKafkaRecord_2_0** → JSON mesajların alınması
+2. **UpdateRecord** → `data` içindeki alanların düzleştirilmesi
+3. **ExecuteScript** → SHA256 imzalama ve trace zenginleştirmesi
+4. **PutS3Object** → MinIO’ya dosya kaydı
+5. **PutDatabaseRecord** → PostgreSQL’e yazım
 
 ### Docker Compose Örneği
 
@@ -64,53 +74,57 @@ nifi:
     - ./nifi_conf:/opt/nifi/nifi-current/conf
   hostname: nifi.fmarslan.com
 ```
+
+
+
 ## 📈 Performans ve Güvenlik
 
-* `EncryptContent` ile hassas veriler şifrelenebilir
-* `Provenance` ile kim, ne zaman, ne yaptı izlenebilir
-* `Site-to-Site` kullanılacaksa TLS zorunlu yapılmalı
-* `FlowFile` queue'ları sınırlandırılmalı (max size, count)
+NiFi'nin güçlü yönleri aynı zamanda dikkatli yönetilmesi gereken alanlardır.
+
+* **EncryptContent** ile hassas veriler şifrelenebilir
+* **Provenance** tüm işlemlerin kim tarafından ne zaman yapıldığını kaydeder
+* **Site-to-Site** kullanımında TLS zorunlu olmalıdır
+* FlowFile kuyrukları için **backpressure limitleri** mutlaka ayarlanmalıdır
 
 
-## ⚠️ Ek Notlar ve Deneyim Bazlı Uyarılar
 
-Bu yazıda örnek senaryo olarak IoT verileri ele alınmıştır; ancak Apache NiFi yalnızca IoT için değil, pek çok farklı sektörde ve senaryoda (web log analizi, ETL süreçleri, veri senkronizasyonu, API gateway arası veri akışı vb.) başarıyla kullanılabilir. Buradaki örnek, NiFi’nin yeteneklerini somutlaştırmak amacıyla seçilmiştir.
+## ⚠️ Deneyim Bazlı Uyarılar
 
-### 🧠 Tasarımda Dikkat Edilmesi Gereken Noktalar
+NiFi IoT senaryolarında sık kullanılsa da; ETL, veri senkronizasyonu, API-to-API akışları ve log işleme gibi çok farklı alanlarda da etkilidir.
 
-* Karmaşık koşullar ve dönüşümler için NiFi üzerinde çok katmanlı, dallanmış yapılar kurmak sistemi yönetilemez hale getirebilir.
-  
-* **NiFi bir *flow orchestration* aracıdır, iş mantığı (logic) motoru değildir.** 
+### 🧠 Tasarım Prensipleri
 
-* **Ağır ve karmaşık logic'ler**, mümkünse ayrı mikroservisler olarak ele alınmalı ve NiFi’den dış servis çağrısı ile entegre edilmelidir (`InvokeHTTP`, `ExecuteScript`, `ExecuteStreamCommand` gibi işlemcilerle).
+* Çok dallanan karmaşık akışlar yönetimi zorlaştırır.
+* **NiFi bir orchestration aracıdır; iş mantığı motoru değildir.**
+* Ağır işlem ve karmaşık hesaplamalar ayrı mikroservislerde yapılmalı, NiFi bu servislerle iletişim kurmalıdır.
+* Üretim ortamlarında mutlaka şu başlıklar düşünülmelidir:
 
-* **Tüm veri trafiği NiFi üzerinden aktığı için**, özellikle prod ortamda:
-
-  * Backpressure yapılandırmaları
-  * Provenance verilerinin rotasyonu
-  * Disk, CPU, bellek limitleri
-  * Cluster kurulumu (yük dengeleme, failover)
-
-  gibi başlıklarda ciddi konfigürasyon yapılmalıdır. Aksi takdirde veri kaybı yaşanabilir veya sistem darboğaza girebilir.
+  * Backpressure yapılandırması
+  * Provenance rotasyonu
+  * CPU, RAM limitleri
+  * Cluster yapısı (load balancing, failover)
 
 ### 🧪 Performans Notu
 
-* NiFi, **Java tabanlı** bir sistemdir ve JVM üzerinde çalışır. Bu, özellikle yoğun yük altındaki sistemlerde **bellek kullanımı açısından dikkatli olunması** gerektiği anlamına gelir. Akış içinde tutulan veri boyutu ve sayısı artırıldıkça bellek tüketimi dramatik şekilde artabilir.
+NiFi Java tabanlıdır ve JVM üzerinde çalışır. Bu nedenle büyük veri akışlarında bellek kullanımı hızla yükselebilir.
 
-  > 💡 Tavsiye: FlowFile içeriğini mümkün olduğunca kısa tutun, büyük verileri işlemci içinde değil, referansla taşıyın (örneğin MinIO gibi harici objelere yönlendirin).
+> 💡 **Tavsiye:** FlowFile içeriğini mümkün olduğunca küçük tutun. Büyük verileri işlemciler arasında taşımak yerine MinIO gibi harici depolara yönlendirin.
+
+
 
 ## 🤖 Alternatifler
 
-| Araç       | Lisans     | Not                           |
-| ---------- | ---------- | ----------------------------- |
-| NiFi       | Apache 2.0 | Görsel ve akış bazlı tasarım  |
-| Talend     | Ticari     | Enterprise ETL                |
-| StreamSets | Freemium   | UI odaklı veri hattı yönetimi |
-| Airbyte    | MIT        | Modern, connector tabanlı     |
+| Araç       | Lisans     | Not                                 |
+| - | - | -- |
+| NiFi       | Apache 2.0 | Görsel, sürükle-bırak akış tasarımı |
+| Talend     | Ticari     | Enterprise ETL                      |
+| StreamSets | Freemium   | UI odaklı veri hattı yönetimi       |
+| Airbyte    | MIT        | Modern, connector tabanlı           |
+
 
 
 ## ✨ Sonuç
 
-NiFi, IOT gibi sistemlerde; veri kaynaklarından gelen yapısız verileri şematik, izlenebilir ve güvenli hale getirerek ölçeklenebilir bir veri pipeline'ı sunar. Kod yazmadan, karmaşık veri operasyonlarını sadeleştirmek için birebirdir.
+NiFi, IoT gibi hızlı veri üreten sistemlerde; veriyi şematik hale getirmek, izlenebilir yapmak ve güvenli şekilde işleyip yönlendirmek için ideal bir çözüm sunar. Kod yazmadan güçlü veri hatları oluşturmak isteyen ekipler için oldukça etkili bir araçtır.
 
 [https://nifi.apache.org/](https://nifi.apache.org/)

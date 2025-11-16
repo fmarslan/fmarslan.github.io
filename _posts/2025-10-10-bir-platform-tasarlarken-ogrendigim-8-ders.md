@@ -5,168 +5,150 @@ categories: Architecture
 mermaid: true
 ---
 
-Bir platformu sıfırdan kurmak, insana hem teknik hem zihinsel olarak çok şey öğretiyor.
-Aşağıdaki maddeler, bu süreçte gerçekten yaşayarak öğrendiğim en değerli dersler oldu.
+Bir platformu sıfırdan tasarlamak, insana sadece teknik değil, düşünsel anlamda da çok şey öğretiyor. Aşağıdaki maddeler, bu süreç boyunca gerçekten yaşayarak edindiğim ve bugün hâlâ işimi şekillendiren en değerli dersler.
 
 <img src="/assets/img/sdasvfdw.png" alt="cover" style="max-width: 50%; max-height:10%">
 
 
----
 
-## **1. En Başta Sorulması Gereken Soru: Aslında Ne Yapmaya Çalışıyoruz?**
+## **1. En Baştaki Soru: Aslında Ne Yapmaya Çalışıyoruz?**
 
-Her projede yaptığım ilk hata şu olmuş:
+Geçmişte yaptığım en büyük hatalardan biri, projeye **teknolojiyi seçerek** başlamak olmuştu. Oysa önce yanıtlanması gereken sorular çok daha basitmiş:
 
-> “Teknolojiyi seçip işe girişmek.”
+* Bu sistemde tutarlılık ne kadar kritik?
+* Erişilebilirlik hangi seviyede olmalı?
+* Hangi adımlarda gecikme tolere edilebilir?
+* Hangi alanlar anlık doğru veri gerektiriyor?
 
-Meğer önce sormam gereken şey çok basitmiş:
+Bu sorular netleştiğinde teknoloji kararı da, mimari şekli de kendiliğinden ortaya çıkıyor.
 
-* Bu sistemde tutarlılık mı önemli?
-* Yoksa erişilebilirlik mi?
-* Hangi noktada ne kadar gecikme tolere edilebilir?
-* Hangi bölüm kesin doğru veri istemeli?
 
-Bu soruları netleştirince mimari zaten kendiliğinden şekilleniyor.
 
----
+## **2. Kod Yazmaya Değil, Alanları Ayırmaya Başlamak Gerek**
 
-## **2. Kod Yazmaya Değil, Alanları Ayırmaya Başlamak Lazım**
+Başlarda doğrudan kod yazmaya odaklanıyordum. Zamanla anladım ki esas mesele kod değil, **anlamı doğru bölmek**.
 
-Eskiden direkt kod yazmaya başlıyordum.
-Sonra fark ettim ki asıl iş kod değil, **anlamı bölmek**.
+Platformu anlamlı parçalara böldüğünde:
 
-Platformu küçük anlamlı parçalara böldüğünde:
+* ekip rahatça paralel çalışıyor,
+* karmaşıklık azalıyor,
+* sorumluluk sınırları netleşiyor.
 
-* her şey daha anlaşılır oluyor
-* ekip paralel çalışabiliyor
-* karmaşıklık azalıyor
+Önce şunu çözmek gerekiyor: “Hangi iş, hangi alana ait?”
 
-Yani önce “hangi iş hangi alana ait?” sorusunu çözmek lazım.
 
----
 
-## **3. Asenkron Akış, Gerçek Performansın Temeli**
+## **3. Asenkron Akış Gerçek Performansın Temeli**
 
-Senkron çağrılar (REST gibi) yük arttıkça kırılgan oluyor.
-Bir servis takılıyor → hepsi tıkanıyor.
+Senkron çağrılar (örneğin REST), trafik arttığında kırılgan bir hale geliyor. Bir servis geciktiğinde tüm zincir bundan etkileniyor.
 
-Asenkron yapıda ise işler şöyle ilerliyor:
+Asenkron yapıda ise akış çok daha sağlıklı işliyor:
 
-* servis çalışır
-* event üretir
-* diğer servisler uygun olduğunda o event’i işler
+* servis görevini tamamlar,
+* bir event üretir,
+* diğer servisler uygun olduğunda o event’i işler.
 
-Bu yapı hem daha hızlı hem daha dayanıklı.
+Bu model hem hızlı hem dayanıklı bir yapı sunuyor.
 
----
+
 
 ## **4. Hataları Gizlemek Değil, Yönetmek Gerek**
 
-Eskiden hataları azaltmaya değil, görünmez kılmaya çalışıyordum.
-Büyük hata.
+Bir dönem hataların görünmemesini “başarı” sanıyordum. Yanılmışım.
 
-Gerçek şu:
+> Saklanan her hata, günün birinde daha büyük bir şekilde geri dönüyor.
 
-> “Sistemde sakladığın her hata, daha sonra patlayıp seni uğraştırıyor.”
+Bu yüzden sağlam bir mimaride üç temel yapı şart:
 
-O yüzden 3 şey şart:
+* **idempotency:** aynı event tekrar gelse de sonuç değişmemeli
+* **retry:** geçici sorunlar mutlaka tekrar denenmeli
+* **DLQ:** çözülemeyen event’ler ayrı bir kuyruğa alınmalı
 
-* **idempotency:** aynı event iki kez gelse bile sorun olmamalı
-* **retry:** geçici hataları tekrar denemek lazım
-* **DLQ:** düzelmeyenleri özel bir kuyruğa ayırmak zorunlu
+Hata gizlenmez; **yönetilir, izlenir, sınıflandırılır.**
 
-Hata saklanmaz; **takip edilir ve yönetilir.**
 
----
 
-## **5. Kuralları Koda Gömersen, Her Değişiklik İşkenceye Dönüşür**
+## **5. Kuralları Koda Gömersen, Her Değişiklik Bir İşkenceye Döner**
 
-Platformu geliştirdikçe şunu fark ettim:
+Platform büyüdükçe gördüm ki:
 
-* müşteri kuralları değişiyor
-* ülke kuralları değişiyor
-* formatlar değişiyor
-* workflow değişiyor
+* müşteri kuralları değişiyor,
+* ülke kuralları değişiyor,
+* formatlar değişiyor,
+* süreçler evriliyor.
 
-Ama bunlar **kod içinde gömülü** olunca:
+Bu kurallar koda gömülü olduğunda:
 
-* her değişiklik → yeni deploy
-* her varyasyon → karmaşa
-* her müşteri → özel case
-* süreçler -> kırılgan
+* her değişiklik deploy gerektiriyor,
+* varyasyonlar artıyor,
+* süreçler kırılganlaşıyor.
 
-Doğru olan şu:
+Doğru yaklaşım basit:
 
-> “Kural = config, davranış = kod.”
+> **“Kural config’te, davranış kodda olmalı.”**
 
-Böyle olunca platform daha esnek, daha yönetilebilir oluyor.
+Böyle olunca platform esnekleşiyor ve yönetmesi çok daha kolay oluyor.
 
----
+
 
 ## **6. Her Şeyi Sıfırdan Yazmak Kahramanlık Değil, Teknik Borç**
 
-Zamanla fark ettim ki:
+Başlarda “en iyisini ben yazarım” yaklaşımındaydım. Sonra fark ettim ki:
 
-* her problemi kendim çözemem
-* çözersem de sürdürülebilir olmaz
-* bazı araçlar zaten yılların emeği
+* her problemi kendin çözemezsin,
+* çözsen bile sürdürülebilir olmaz,
+* zaten mükemmel çözümler yıllardır var.
 
-O yüzden şöyle düşünmeye başladım:
+Doğru soru şuymuş:
 
-> “Bu sorunu çözmek için zaten var olan en iyi araç hangisi?”
+> “Bu sorunu çözmek için en iyi açık kaynak veya yerleşik araç hangisi?”
 
-Kafka’yı, Redis’i, Postgres’i, S3’ü, XSLT’yi, NATS’i, OpenSearch’ü…
-Her birinin güçlü bir alanı var.
+Kafka, Redis, Postgres, S3, NATS, XSLT, OpenSearch… Her biri bir alanın uzmanı. Doğru aracı seçmek, platformu hem sağlamlaştırıyor hem hız kazandırıyor.
 
-Ecosystem’i kullanmak hız kazandırıyor, kaliteyi artırıyor.
 
----
 
-## **7. Ekip Ne Yapabiliyor? Bu Soru Mimari Kadar Önemli**
+## **7. Ekip Ne Yapabiliyor? Mimari Karar Kadar Önemli**
 
-En mükemmel mimari, ekibin taşıyabildiği mimaridir.
+Mükemmel mimari, ancak ekibin taşıyabildiği mimaridir.
 
-Bu yüzden artık şunlara daha çok bakıyorum:
+Bu nedenle artık şunlara daha çok dikkat ediyorum:
 
 * ekip hangi dili iyi biliyor?
-* hangi araçlar onlar için daha doğal?
-* destek verebilecek bilgi birikimi var mı?
-* öğrenme eğrisi ne kadar?
+* hangi araçlarla daha rahat çalışıyorlar?
+* bilgi birikimleri sürdürülebilir mi?
+* öğrenme eğrisi ne kadar yüksek?
 
-Mimarinin sürdürülebilir olmasını sağlayan şey ekip uyumu.
+Teknik seçim kadar ekip uyumu da platformun uzun ömürlü olmasını sağlıyor.
 
----
 
-## **8. Bir Aracı Eleştirmek Kolay, Ama Onun Kültürünü Öğrenmek Daha Değerli**
 
-Her aracın bir çalışma tarzı, bir felsefesi var.
+## **8. Bir Aracı Eleştirmek Kolay; Onun Kültürünü Anlamak Değerli**
 
-Kafka’yı RabbitMQ gibi, Redis’i Postgres gibi kullanmaya kalkarsan sorun yaşarsın.
+Her aracın bir çalışma kültürü, bir dünya görüşü var.
 
-O yüzden:
+Kafka’yı RabbitMQ gibi, Redis’i Postgres gibi kullanmaya kalkarsanız doğal olarak sorun yaşarsınız.
 
-> “Araç neden böyle tasarlanmış?”
-> “Hangi problem için yapılmış?”
-> “Hangi durumda doğru, hangi durumda yanlış?”
+O yüzden artık önce şunu soruyorum:
 
-bunları bilmek çok önemli.
+* “Bu araç neden böyle çalışıyor?”
+* “Hangi problemi çözmek için tasarlanmış?”
+* “Hangi durumda uygun, hangi durumda değil?”
 
-Araçları anlamadan eleştirmek, kötü bir mimari seçim yapmanın en hızlı yolu.
+Bir aracı anlamadan eleştirmek, yanlış mimari kararların en hızlı yoludur.
 
----
+
 
 # **Sonuç**
 
-Bu süreçte şu 8 şeyin çok değerli olduğunu öğrendim:
+Bu süreç bana sekiz önemli gerçeği öğretti:
 
-* Önce doğru soruyu sor
-* İş alanlarını ayır
-* Asenkron akışla düşün
-* Hataları saklama, yönet
-* Kuralları koddan çıkar
-* Ekosistemi kullan, her şeyi yazmaya çalışma
-* Ekibin gücünü dikkate al
-* Kullandığın aracın kültürünü öğren
+* Önce doğru soruyu sor,
+* İş alanlarını netleştir,
+* Asenkron düşün,
+* Hataları yönet,
+* Kuralları koddan çıkar,
+* Ekosistemi kullan,
+* Ekibe göre tasarla,
+* Kullandığın aracın kültürünü öğren.
 
-Platform tasarlamak aslında teknoloji seçmek değil;
-**doğru kararları zamanında verebilme yeteneğini geliştirmek.**
+Platform tasarlamak; teknoloji seçmekten çok, **doğru kararları doğru zamanda verebilmek** demek.
