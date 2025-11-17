@@ -50,11 +50,13 @@ defaults:
       type: "posts"
     values:
       layout: post
+      lang: tr-TR
   - scope:
       path: ""
       type: "pages"
     values:
       layout: page
+      lang: en-US
 
 navigation:
   - title: Home

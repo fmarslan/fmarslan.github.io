@@ -5,6 +5,10 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {%- assign is_post_layout = false -%}
+  {%- if page.layout == 'post' -%}
+    {%- assign is_post_layout = true -%}
+  {%- endif -%}
   {%- assign site_name = site.title | default: site.author.name | default: "Website" -%}
   {%- assign page_title = page.title | default: site_name -%}
   {%- assign full_title = page_title -%}
@@ -13,6 +17,11 @@
   {%- endif -%}
   {%- assign raw_description = page.hero.seo_description | default: page.seo_description | default: page.description |
   default: site.description | default: "Notes on software architecture, cloud platforms, and delivery." -%}
+  {%- if is_post_layout -%}
+    {%- assign post_excerpt = page.excerpt | default: page.content -%}
+    {%- assign raw_description = post_excerpt | strip_html | strip_newlines | replace: "  ", " " | strip |
+    truncate: 160, "" -%}
+  {%- endif -%}
   {%- assign page_description = raw_description | strip_html | strip_newlines | replace: " ", " " | strip -%}
   {%- assign author_name = site.author.name | default: site_name -%}
   {%- assign author_role = site.author.job_title | default: page.hero.eyebrow | default: "Solution Architect & Software
@@ -25,9 +34,23 @@
   {%- assign canonical_url = page.url | relative_url | absolute_url -%}
   {%- assign locale_code = page.lang | default: site.locale | default: 'en-US' -%}
   {%- assign og_locale = locale_code | replace: '-', '_' -%}
+  {%- assign keywords = nil -%}
+  {%- if page.keywords and page.keywords != empty -%}
+    {%- assign keywords = page.keywords -%}
+  {%- elsif is_post_layout and page.tags and page.tags != empty -%}
+    {%- assign keywords = page.tags -%}
+  {%- elsif is_post_layout and page.categories and page.categories != empty -%}
+    {%- assign keywords = page.categories -%}
+  {%- elsif site.keywords and site.keywords != empty -%}
+    {%- assign keywords = site.keywords -%}
+  {%- endif -%}
   <title>{{ full_title | escape }}</title>
   <meta name="description" content="{{ page_description | escape }}">
   <meta name="author" content="{{ author_name | escape }}">
+  {%- if keywords and keywords != empty -%}
+  <meta name="keywords"
+    content="{{ keywords | join: ', ' | replace: '  ', ' ' | strip | slice: 0, 200 | escape }}">
+  {%- endif -%}
   <meta name="generator" content="Jekyll">
   <link rel="canonical" href="{{ canonical_url }}">
   <meta property="og:locale" content="{{ og_locale }}">
