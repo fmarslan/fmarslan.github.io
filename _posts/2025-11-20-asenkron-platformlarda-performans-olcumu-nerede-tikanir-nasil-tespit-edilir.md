@@ -11,7 +11,6 @@ tags:
   - devops
 ---
 
-<img src="/assets/img/modern-bulut-mimarisi-cover.png" alt="Asenkron platform kapak görseli" width="500">
 
 ## Asenkron Platformlarda Performans Ölçümü: Nerede Tıkanır, Nasıl Tespit Edilir?
 
@@ -22,7 +21,9 @@ Bu yazıda asenkron bir platformda performansın gerçekten **nerede kaybolduğu
 **hangi noktalarda boğaz oluştuğunu**,
 **hangi metrikleri takip etmek gerektiğini** en sade hâliyle anlatıyorum.
 
----
+
+<img src="/assets/img/22c51fd6-862b-4813-8877-1c5ce692ab76.png" alt="Modern bulut mimarisi kapak görseli" height="300">
+
 
 ## 1. Asenkron Sistemlerde Performans Neden Farklı Ölçülür?
 
@@ -58,8 +59,6 @@ Performansı belirleyen şey:
 
 Yani “istek süresi” değil, **akışın tamamı** önemli.
 
----
-
 ## 2. Performansı Etkileyen 6 Kritik Alan
 
 Asenkron bir platformdaki tıkanmalar genelde 6 ana yerde olur:
@@ -89,8 +88,6 @@ Disk, network, DNS lookup, TLS handshake…
 Hatalı scale-up → tıkanıklık  
 Aşırı scale-up → maliyet
 
----
-
 ## 3. Nerede Tıkandığını Tespit Etmek için Altın Gösterge: Queue Lag
 
 “Queue Lag” şu demektir:
@@ -118,8 +115,6 @@ Lag = 10+ saniye → dikkat
 Lag = 1+ dakika → tıkanıklık  
 Lag = 10+ dakika → yangın var
 
----
-
 ## 4. “Worker Throughput” En Kritik Metriktir
 
 Worker’ın saniyede işlediği mesaj sayısıdır.
@@ -140,8 +135,6 @@ Throughput düşüyorsa:
 
 Bu metrik, nereden başlaman gerektiğini söyler.
 
----
-
 ## 5. Tıkanıklık Analizi Nasıl Yapılır?
 
 Bunu bir yol haritasıyla çok net anlayabiliriz:
@@ -158,8 +151,6 @@ flowchart TD
 </div>
 
 Bu diagram sıkışıklığı çözmek için doğrudan yol gösterir.
-
----
 
 ## 6. Asenkron Sistemde Ölçülmesi Gereken Metrikler Listesi
 
@@ -199,8 +190,6 @@ Bu diagram sıkışıklığı çözmek için doğrudan yol gösterir.
 
 Asenkron mimaride “sadece CPU ve RAM’e bakmak” hiçbir şeyi çözmez.
 
----
-
 ## 7. Performans Optimizasyonu İçin 7 Pratik Yöntem
 
 ### 1) Batch tüketimini etkinleştir
@@ -231,8 +220,6 @@ Retry yapabilmek için.
 
 Flow’un en sık çalışan bölümünü optimize etmek → en büyük kazanım.
 
----
-
 ## 8. Asenkron Sistemlerde Performansı Boğan 5 Gizli Sorun
 
 Bu sorunlar genelde gözden kaçar:
@@ -257,8 +244,6 @@ I/O yoğunluğu sistemin kalbini yavaşlatır.
 
 Asenkron sistemin içinde küçük bir senkron darboğaz bile tüm akışı öldürür.
 
----
-
 ## 9. Performans Ölçümünde En Büyük Tuzak: Yanlış Noktaya Bakmak
 
 Asenkron yapılarda geliştiriciler çoğunlukla:
@@ -279,8 +264,6 @@ Asıl sorun şunlardır:
 * küçük batch
 
 Yani problem **kodda değil — akış zincirindedir.**
-
----
 
 ## 10. Sonuç: Asenkron Performans, Parçaların Değil Akışın Performansıdır
 
