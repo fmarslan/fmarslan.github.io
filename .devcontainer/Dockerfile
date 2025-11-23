@@ -1,14 +1,18 @@
 # Ruby + dev tools içeren hazır devcontainer imajı
 FROM mcr.microsoft.com/devcontainers/ruby:3.2
 
-# Jekyll için gerekli gem'ler (bundler genelde var ama garanti olsun)
-RUN gem install bundler jekyll
-# RUN bundle config set --local path '/workspaces/personel-website/vendor/bundle'
+# Çalışma klasörü (projenin kendisi)
+WORKDIR /workspaces/personel-website
 
-ENV BUNDLE_PATH=/workspaces/personel-website/vendor/bundle
+# Bundler / Jekyll / Ruby LSP kur
+# GEM_HOME ve BUNDLE_PATH bu proje klasörünün altına alınacak
 ENV GEM_HOME=/workspaces/personel-website/vendor/bundle
+ENV BUNDLE_PATH=/workspaces/personel-website/vendor/bundle
+# Gem binary'lerini PATH'e ekle (ruby-lsp burada olacak)
+ENV PATH="$GEM_HOME/bin:$PATH"
 
-# Çalışma klasörü
-WORKDIR /workspaces
+# Gerekli gem'ler: bundler, jekyll, ruby-lsp
+RUN gem install bundler jekyll ruby-lsp
 
-# Locale / tz vs. istersen buraya ek ayar koyabilirsin
+# İstersen ileride bundle config ile de aynı path'i garanti altına alabilirsin:
+# RUN bundle config set --local path 'vendor/bundle'
