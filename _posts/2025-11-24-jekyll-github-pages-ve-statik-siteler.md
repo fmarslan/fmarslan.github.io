@@ -140,6 +140,7 @@ Kısaca kendimden bahsettiğim bir alan burası olabilir.
 
 `_layouts/default.html` dosyasını açın ve şuna benzer sade bir HTML iskeleti oluşturun:
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html lang="tr">
@@ -166,6 +167,7 @@ Kısaca kendimden bahsettiğim bir alan burası olabilir.
   </body>
 </html>
 ```
+{% endraw %}
 
 Ve `_config.yml` dosyasına:
 
