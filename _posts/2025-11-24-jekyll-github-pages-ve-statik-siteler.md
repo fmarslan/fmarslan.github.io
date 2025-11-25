@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll, GitHub Pages ve Statik Siteler: Basit Bir Siteyi Sıfırdan Yayına Almak"
 date: 2025-11-24 21:00:00 +0200
 description: Statik site oluşturucuların (özellikle Jekyll) ne olduğunu, GitHub Pages üzerinde nasıl yayın yapabileceğinizi ve alternatif barındırma çözümlerini adım adım anlatan pratik bir rehber.
-image: /assets/img/jekyll-github-pages-cover.png
+image: /assets/img/717eb0e5-78ae-4359-a524-a7a1df7ac11b.png
 tags:
   - jekyll
   - github-pages
@@ -67,6 +67,8 @@ Jekyll:
 - Tek komutla yeni bir site oluşturabilir, build alabilir, yerelde bir development sunucusu çalıştırabilirsiniz.
 
 Jekyll’in en güzel yanlarından biri, **“dosya tabanlı CMS”** gibi davranması: _posts klasörü, sayfalar, layout’lar vs. hepsi birer dosya. Veritabanı yok, admin panel yok; sadece Git ve dosyalar.
+
+![Jekyll + GitHub Pages kapak görseli](/assets/img/717eb0e5-78ae-4359-a524-a7a1df7ac11b.png)
 
 ---
 
