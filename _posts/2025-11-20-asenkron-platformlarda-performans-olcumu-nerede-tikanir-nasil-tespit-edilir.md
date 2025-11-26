@@ -3,7 +3,7 @@ layout: post
 title: "Asenkron Platformlarda Performans Ölçümü: Nerede Tıkanır, Nasıl Tespit Edilir?"
 date: 2025-11-19 10:00:00 +0300
 description: Asenkron platformlarda performansın nerede kaybolduğunu anlamak için hangi metrikleri izlemek gerekir?
-image: /assets/img/modern-bulut-mimarisi-cover.png
+image: /assets/img/22c51fd6-862b-4813-8877-1c5ce692ab76.png
 tags:
   - architecture
   - asynchronous
