@@ -143,7 +143,7 @@ k8s/
 * Teknik tasarımı ve mimariyi belirler.
 * Servis sınırlarını, entegrasyon modellerini ve veri akışını tanımlar.
 * Teknik issue’ların nasıl yapılacağını genel hatlarıyla çizer.
-* Gerektiğinde code review süreçlerine katılır (zorunlu değildir).
+* Gerektiğinde code review süreçlerine katılır.
 * Versioning, release ve teknik kalite standartlarını oluşturur.
 
 ### DevOps / Platform Engineer
@@ -499,7 +499,7 @@ spec:
 ### C.1. Uçtan Uca Versiyon & Release Akışı
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Developer<br/>feature branch] --> B[CI: Build & Unit Test]
     B --> C{Static Analysis?}
     C -->|Opsiyonel| D[Sonar / statik analiz]
@@ -534,27 +534,4 @@ flowchart TB
     E --> H[Dev'te hızlı feedback]
     F --> I[Test/Staging'te tam senaryo testleri]
     G --> J[Prod'da kontrollü release]
-```
-
-
-
-### C.3. Hata / Fix Akışı (Release Sonrası)
-
-```mermaid
-flowchart TD
-    A[Prod/Test'te bug tespit] --> B[Issue aç]
-    B --> C{Kritiklik?}
-    C -->|Kritik| D[hotfix branch aç]
-    C -->|Normal| E[feature veya mevcut branch üzerinde fix]
-    D --> F[Fix geliştir]
-    E --> F
-    F --> G[CI: test + build + opsiyonel analiz]
-    G --> H[New image push<br/>new version+commit tag]
-    H --> I[Deploy to Dev/Test]
-    I --> J[Regression & bug doğrulama]
-    J --> K{Çözüldü mü?}
-    K -->|Hayır| B
-    K -->|Evet| L[Prod release adayı]
-    L --> M[Manual Prod onayı]
-    M --> N[Prod deploy + monitoring]
 ```
