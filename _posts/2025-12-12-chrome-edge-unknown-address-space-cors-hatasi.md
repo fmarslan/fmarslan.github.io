@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Chrome / Edge’de 'unknown address space' CORS hatası: ne oldu, neyi koruyor, nasıl çözülür?"
+title: "Chrome / Edge’de 'unknown address space' CORS hatası: neyi koruyor, nasıl çözülür?"
 date: 2025-12-12 09:00:00 +0300
 description: Chrome 142+ ile birlikte ortaya çıkan 'unknown address space' CORS hatasının arkasındaki Private Network Access modelini, nedenlerini ve pratik çözüm yollarını anlatan deneyim odaklı bir yazı.
 image: /assets/img/7f100c91-2ecb-40ad-b64e-e54e08778f34.png
