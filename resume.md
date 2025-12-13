@@ -29,21 +29,22 @@ Most weeks you’ll find me shaping solution architecture, integrating data pipe
 
 ## 💼 Professional Experience
 
-### 🔹 Solution Architect &amp; Technical Lead – Eaglessoft, Belgium  
+### 🔹 Solution Architect &amp; Technical Lead – [Eaglessoft](https://eaglessoft.com/), Belgium  
 **Jul 2025 – Present (Remote)**  
 - Designed a multi‑tenant integration hub that ingests documents from partners and delivers them to PEPPOL, national e‑invoicing portals, and custom platforms with validation and signing.  
 - Built a microservice‑based document pipeline (Collector, Prepare, Sender) handling transformation, enrichment, and compliance checks.  
 - Defined unified API and messaging standards (wrappers, approval flows, error handling) to streamline integrations.  
 - Drove cloud‑native adoption with Docker/Kubernetes, S3, and observability stack ensuring GDPR compliance and high availability.
 
-### 🔹 Solution Architect &amp; Technical Lead – Modulairy, Netherlands  
-**Sep 2022 – Present (Remote)**  
-- Designed and deployed Kubernetes‑based infrastructure with automated scaling and monitoring.  
+### 🔹 Solution Architect &amp; Technical Lead – [Modulairy](https://modulairy.com/), Netherlands  
+**Sep 2022 – Present (Remote)**  
+- Designed and deployed Kubernetes-based infrastructure with automated scaling and monitoring.  
 - Led cloud migration efforts, improving performance and reducing costs.  
-- Built data products that combine ERP and e‑commerce streams with AI forecasting so merchandisers can adapt faster.  
+- Built data products that combine ERP and e-commerce streams with AI forecasting so merchandisers can adapt faster.  
 - Developed reusable microservices enabling clients to accelerate digital transformation.
+- Launched [posqo](https://posqo.app/), an omnichannel POS operations portal that reuses the platform's integration, observability, and AI forecasting layers.
 
-### 🔹 Software Architect / Technical Lead – Mantis  
+### 🔹 Software Architect / Technical Lead – [Mantis](https://mantis.com.tr/)  
 **Jan 2019 – Sep 2022**  
 - Migrated legacy monolith systems to scalable, modular SaaS and FaaS architecture.  
 - Developed 10+ modular, integration‑ready products.  
@@ -75,4 +76,4 @@ Most weeks you’ll find me shaping solution architecture, integrating data pipe
 
 ---
 
-_Last updated: May 2025_
+_Last updated: Sep 2025_
