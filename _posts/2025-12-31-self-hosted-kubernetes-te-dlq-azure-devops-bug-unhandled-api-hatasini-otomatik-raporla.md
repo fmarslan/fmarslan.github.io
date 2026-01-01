@@ -24,16 +24,16 @@ Bu yazıdaki örneklerde asıl mesele “DLQ” kelimesi değil; **poison/error 
 ## 1) Topoloji
 
 <div class="mermaid">
-flowchart LR
+flowchart TB
     C[Client] --> I[Ingress]
-    I --> A[Orders API (.NET)]
+    I --> A[Orders API .NET]
     A -->|500 + traceId| C
 
-    A -->|Unhandled Exception| Q[RabbitMQ dlq.api-errors]
-    Q --> D[dlq-consumer (Python)]
+    A -->|Unhandled Exception| Q[RabbitMQdlq.api-errors]
+    Q --> D[dlq-consumer Python ]
     D --> B[Azure DevOps Bug]
 
-    B --- R[Bug Content: Repro payload curl command Full JSON Build / Image / Git SHA]
+    B --- R[Bug Content:• Repro payload• curl command• Full JSON• Build / Image / Git SHA]
 
 </div>
 
