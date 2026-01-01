@@ -33,7 +33,7 @@ flowchart LR
     Q --> D[dlq-consumer<br/>(Python)]
     D --> B[Azure DevOps Bug]
 
-    B --- R[Bug Content:<br/>• Repro payload<br/>• curl command<br/>• Full JSON<br/>• Build / Image / Git SHA]
+    B --- R[Bug Content: Repro payload curl command Full JSON Build / Image / Git SHA]
 
 </div>
 
