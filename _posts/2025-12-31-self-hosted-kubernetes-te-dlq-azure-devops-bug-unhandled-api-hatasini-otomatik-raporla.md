@@ -29,8 +29,8 @@ flowchart LR
     I --> A[Orders API (.NET)]
     A -->|500 + traceId| C
 
-    A -->|Unhandled Exception| Q[RabbitMQ<br/>dlq.api-errors]
-    Q --> D[dlq-consumer<br/>(Python)]
+    A -->|Unhandled Exception| Q[RabbitMQ dlq.api-errors]
+    Q --> D[dlq-consumer (Python)]
     D --> B[Azure DevOps Bug]
 
     B --- R[Bug Content: Repro payload curl command Full JSON Build / Image / Git SHA]
