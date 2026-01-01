@@ -23,19 +23,19 @@ Bu yazıdaki örneklerde asıl mesele “DLQ” kelimesi değil; **poison/error 
 
 ## 1) Topoloji
 
-```
+<div class="mermaid">
+flowchart LR
+    C[Client] --> I[Ingress]
+    I --> A[Orders API (.NET)]
+    A -->|500 + traceId| C
 
-Client -> Ingress -> Orders API (.NET)
-(500 + traceId)
-|
-v
-RabbitMQ queue: dlq.api-errors
-|
-v
-dlq-consumer (Python) -> Azure DevOps Bug
-(Bug description: repro + curl + JSON + build fingerprint)
+    A -->|Unhandled Exception| Q[RabbitMQ<br/>dlq.api-errors]
+    Q --> D[dlq-consumer<br/>(Python)]
+    D --> B[Azure DevOps Bug]
 
-````
+    B --- R[Bug Content:<br/>• Repro payload<br/>• curl command<br/>• Full JSON<br/>• Build / Image / Git SHA]
+
+</div>
 
 
 
