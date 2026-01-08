@@ -26,7 +26,7 @@ Gerçek hayat ise nadiren böyle çalışır. Sistemler büyür, ekipler genişl
 Bu yazı, “dokümantasyonu boşver” diyen bir yazı değil.  
 Ama “dokümantasyonu kanun kitabı sanma” diyen bir yazı.
 
----
+
 
 ## Doküman Rehberdir, Sınır Çizgisi Değil
 
@@ -40,7 +40,7 @@ Doküman “buradan başla” der.
 Mühendislik tam olarak bu noktada başlar:  
 Ürünün **ne olduğu**ndan çok, **hangi yeteneklere sahip olduğu**na bakmaya başladığında.
 
----
+
 
 ## Kong’u Edge Diye Anlatıyorlardı, Ben İçeride Kullandım
 
@@ -77,7 +77,7 @@ Bu noktada fark ettiğim şey şuydu:
 Hayal gücü dediğimiz şey rastgelelik değil.  
 Doğru soruyu sorma cesareti.
 
----
+
 
 ## Hayal Gücü = Rastgelelik Değil, Yeteneği Yeniden Konumlandırmak
 
@@ -92,7 +92,7 @@ Bu bakış açısına geçtiğinde ürün, “kullanım klavuzu olan bir şey”
 
 Ama bunun bir bedeli var.
 
----
+
 
 ## Doküman Yetmediğinde Kod Okumayı Kabul Etmek
 
@@ -108,7 +108,7 @@ Bu yola girince şunu da kabul ediyorsun:
 Riskli mi? Evet.  
 Ama ilerleme dediğimiz şey zaten biraz risklidir.
 
----
+
 
 ## Her Şeyi Ben Yazayım mı?
 
@@ -138,7 +138,7 @@ Bu da genelde şuna dönüşür:
 Ve en kötüsü:  
 **Sistem büyüdükçe yavaşlayan ekip.**
 
----
+
 
 ## Asıl Soru: “Bu Problem Gerçekten Bana mı Ait?”
 
@@ -154,7 +154,7 @@ Bu alanlarda “kendim yazarım” demek, çoğu zaman **ürünün ana problemin
 Kullanıcı senin logging altyapını değil,  
 **işinin çalışmasını** önemsiyor.
 
----
+
 
 ## Araç Seçimi = Mimari Karar
 
@@ -177,7 +177,7 @@ Doğru araç ise:
 Kritik çizgi şurası:  
 **Araç, problemi çözmeli; yeni problem üretmemeli.**
 
----
+
 
 ## “En İyi Araç” Yok, “Bu Problem İçin Uygun Araç” Var
 
@@ -201,7 +201,7 @@ Benim yaklaşımım zamanla şuna evrildi:
 Bazen en “havalı” çözüm değil,  
 **en sıkıcı çözüm** en doğru olan oluyor.
 
----
+
 
 ## Araç Kültürünü Tanımadan Araç Eleştirilmez
 
@@ -218,7 +218,7 @@ Gerçek şu:
 
 Bu yüzden dokümantasyon kadar, **ekip gerçeği** de önemlidir.
 
----
+
 
 ## Ampul Sadece Ampul Olsaydı…
 
@@ -226,7 +226,7 @@ Eğer ampul sadece “ışık veren bir şey” olarak kalsaydı ve kimse çık�
 
 Teknoloji, çoğu zaman kullanım kılavuzunun biraz dışına taşan insanların eseridir.
 
----
+
 
 ## Sonuç: Mühendislik Ego Değil, Sorumluluk İşidir
 
