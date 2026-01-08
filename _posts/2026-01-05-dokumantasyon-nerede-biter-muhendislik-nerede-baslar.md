@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dokümantasyon Nerede Biter, Mühendislik Nerede Başlar?"
-date: 2026-01-08 09:00:00 +0300
+date: 2026-01-05 09:00:00 +0300
 description: Dokümana bakıp “doğru kullanım”la mı ilerliyoruz, yoksa aracın yeteneklerini zorlayıp yeni kullanım alanları mı açıyoruz? Kong örneği üzerinden sahadan bir anlatı.
 tags: [engineering, documentation, kong, architecture, devops, mindset]
 image: /assets/img/dokumantasyon-muhendislik.png
