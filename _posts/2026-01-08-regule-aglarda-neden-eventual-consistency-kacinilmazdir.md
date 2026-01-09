@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Regüle Ağlarda Neden Eventual Consistency Kaçınılmazdır?"
-date: 2025-11-30 09:00:00 +0300
+date: 2026-01-08 09:00:00 +0300
 description: Regüle ağlarda entegrasyon geliştirirken neden anlık tutarlılık yerine zamanla oluşan doğruluğun hedeflendiğini, teknik ve operasyonel gerçekler üzerinden ele alıyorum.
 image: /assets/img/regulated-networks-eventual-consistency.png
 tags:
