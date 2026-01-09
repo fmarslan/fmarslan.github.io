@@ -35,6 +35,7 @@ Most weeks you’ll find me shaping solution architecture, integrating data pipe
 - Built a microservice‑based document pipeline (Collector, Prepare, Sender) handling transformation, enrichment, and compliance checks.  
 - Defined unified API and messaging standards (wrappers, approval flows, error handling) to streamline integrations.  
 - Drove cloud‑native adoption with Docker/Kubernetes, S3, and observability stack ensuring GDPR compliance and high availability.
+- Eaglessoft Publications: [https://eaglessoft.com/author/fatihmehmet/](https://eaglessoft.com/author/fatihmehmet/)
 
 ### 🔹 Solution Architect &amp; Technical Lead – [Modulairy](https://modulairy.com/), Netherlands  
 **Sep 2022 – Present (Remote)**  
