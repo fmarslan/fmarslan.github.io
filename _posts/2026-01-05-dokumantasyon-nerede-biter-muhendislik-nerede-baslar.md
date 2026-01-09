@@ -87,7 +87,7 @@ Eğer ilk ampul sadece “ışık veren şey” olarak kalsaydı ve kimse çık�
 
 Bazen bir şeyin değerini artıran şey, onu “tasarlandığı amaç” içinde daha iyi kullanmak değil; **o amacın dışına taşıyabilmek**.
 
-## Kapanış: biz mi aracı kullanıyoruz, araç mı bizi?
+## biz mi aracı kullanıyoruz, araç mı bizi?
 
 Benim kafamdaki çizgi şu:
 
