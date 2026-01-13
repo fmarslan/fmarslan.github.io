@@ -19,8 +19,7 @@ Bunlar danışman sunumlarını doldurmak için ortaya çıkmadı.
 Hepsi tek bir gerçeğin sonucu:
 **İş, insanlara bağımlı kaldığı sürece ölçeklenemez.**
 
-![Dijitalleşme Bir Proje Değil, Bir Depremdir](/assets/img/13431c72-3ebd-447b-aab9-6836653d12da.png)
-/workspaces/personel-website/assets/img/1c8df5c1-0eba-48ae-8bea-a0c895ae5407.png
+![Dijitalleşme Bir Proje Değil, Bir Depremdir](/assets/img/1c8df5c1-0eba-48ae-8bea-a0c895ae5407.png)
 
 Bu gerçek anlaşılmadan yapılan her dijitalleşme hamlesi; ister yazılım alımı olsun, ister ürünleşme, ister CRM/ERP geçişi…
 işleri kolaylaştırmaz.
