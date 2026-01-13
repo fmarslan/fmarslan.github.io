@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dijitalleşme Bir Proje Değil, Bir Depremdir"
-date: 2026-01-13 09:30:00 +0300
+date: 2026-01-12 09:30:00 +0300
 description: Dijitalleşme projeleri neden çoğu zaman işleri kolaylaştırmak yerine daha karmaşık ve kontrolsüz hale getirir? Süreç ve kalite yoksa dijital dönüşüm nasıl bir enkaza dönüşür.
 image: /assets/img/1c8df5c1-0eba-48ae-8bea-a0c895ae5407.png
 tags:
