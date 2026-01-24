@@ -21,14 +21,6 @@ Tıpkı bir dönem her margarinin “Sana yağı” diye anılması gibi.
 
 ![Docker Öldü mü? Hayır. Sadece “Sana Yağı” Oldu.](/assets/img/242c6430-9d74-463e-993d-6fb7d47266e9.png)
 
-Bu yazıda şunları yapacağım:
-
-- Docker’ın ne olduğunu değil, **ne olmadığını** anlatacağım  
-- Asıl teknolojinin nerede durduğunu netleştireceğim  
-- “Docker neden ölü sanılıyor?” algısının kaynağını göstereceğim  
-- Bugün nasıl düşünmemiz gerektiğini özetleyeceğim  
-
----
 
 ## Docker Neydi, Ne Oldu?
 
@@ -45,7 +37,6 @@ Sonuç şu oldu:
 
 Bu noktadan sonra Docker, bir teknolojiden çok **bir marka** haline geldi.
 
----
 
 ## Asıl Teknoloji Ne?
 
@@ -68,7 +59,6 @@ Yani container:
 
 Docker ise bu yaklaşımı paketleyen ilk büyük ekosistemdi.
 
----
 
 ## “Docker Öldü” Algısı Nereden Çıktı?
 
@@ -91,7 +81,6 @@ kullanıyor.
 
 **Docker Engine gitti, container kaldı.**
 
----
 
 ### 2. Docker Desktop ve lisans gerçeği
 
@@ -104,8 +93,6 @@ Kurumsal dünyada şu başlıklar daha görünür hale geldi:
 
 Bu da alternatif araçların önünü açtı.
 
----
-
 ### 3. Ekosistem olgunlaştı
 
 Başta her şey Docker’dı:
@@ -116,8 +103,6 @@ Başta her şey Docker’dı:
 - Orchestration  
 
 Bugün ise her parça kendi alanında uzmanlaştı.
-
----
 
 ## Yeni Düzen Nasıl Çalışıyor?
 
@@ -148,8 +133,6 @@ Bugün daha doğru ifade şu:
 > “Docker kullanıyoruz” değil  
 > **“OCI uyumlu container image üretiyoruz.”**
 
----
-
 ## Podman Bu Hikâyede Nereye Oturuyor?
 
 Podman devrim yapmadı, **boşluğu doldurdu**:
@@ -163,8 +146,6 @@ Bu yüzden Podman:
 
 - Docker’ın rakibi değil  
 - Docker sonrası dönemin doğal aracı  
-
----
 
 ## Zihinsel Modeli Değiştirme Zamanı
 
@@ -188,9 +169,6 @@ Tıpkı:
 
 gibi.
 
----
-
-## Kapanış
 
 Bugün bir sistem tasarlarken sormamız gereken soru şu:
 
