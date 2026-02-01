@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI Gerçeğiyle Yüzleşmek: Müşteri mi, Operatör mü?"
-date: 2026-01-31 09:00:00 +0300
+date: 2026-01-30 09:00:00 +0300
 description: Yapay zekâyı yüceltmeden ya da küçümsemeden; AI’nin ne olduğu, neden ciddiye alınması gerektiği ve tüketici olmaktan operatörlüğe geçmenin önemi üzerine bir değerlendirme.
 image: /assets/img/02bb2a47-c4ed-4c80-8ff0-d1e460a468ff.png
 tags:
