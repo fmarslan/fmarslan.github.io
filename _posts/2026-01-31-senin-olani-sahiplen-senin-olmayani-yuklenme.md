@@ -15,9 +15,6 @@ tags:
 ---
 
 
-
-# Senin Olanı Sahiplen, Senin Olmayanı Yüklenme
-
 Çevremde insanlarla konuştuğumda son dönemde dikkatimi çeken ortak bir nokta var.
 Daha önce yeni mezun arkadaşlara yönelik farklı yazılar yazmıştım; orada daha çok CV, teknik yeterlilik, sektör gerçekleri gibi konulara girmiştim. Bu yazıda ise biraz daha geriye çekilip, daha temel bir yerden bakmak istiyorum.
 
