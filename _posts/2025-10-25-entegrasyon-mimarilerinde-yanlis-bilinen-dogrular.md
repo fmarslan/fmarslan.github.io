@@ -28,13 +28,10 @@ sequenceDiagram
     participant A as Servis A
     participant B as Servis B
     participant C as Servis C
-
-```
-A->>B: İstek
-B->>C: İstek
-C--xB: Timeout / Hata
-B--xA: Gecikme / Hata
-```
+    A->>B: İstek
+    B->>C: İstek
+    C--xB: Timeout / Hata
+    B--xA: Gecikme / Hata
 
 </div>
 
