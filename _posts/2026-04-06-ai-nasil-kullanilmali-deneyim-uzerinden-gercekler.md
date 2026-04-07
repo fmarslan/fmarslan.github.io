@@ -164,5 +164,4 @@ Masada değilsen:
 
 ## Referans
 
-Bu yazıyı tamamlayan önceki düşünce yazım:  
-https://fmarslan.com/2026/01/30/ai-gercegiyle-yuzlesmek-musteri-mi-operator-mu.html
+Bu yazıyı tamamlayan önceki düşünce yazım:  [Müşteri mi Operatör mü](https://fmarslan.com/2026/01/30/ai-gercegiyle-yuzlesmek-musteri-mi-operator-mu.html)
