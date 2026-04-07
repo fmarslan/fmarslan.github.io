@@ -14,7 +14,7 @@ Bugün AI genelde 3 amaçla kullanılıyor:
 2. Research  
 3. Eğlence  
 
-![AI Nasıl Kullanılmalı? Deneyim Üzerinden Gerçekler?](/assets/img/Kontrol%20sende%20mi%2C%20AI’da%20mı_.png)
+![AI Nasıl Kullanılmamalı? Deneyim Üzerinden Gerçekler?](/assets/img/403d882b-7907-47f5-9d06-098b3c873539.png)
 
 ## 1. Kod Yazma
 
