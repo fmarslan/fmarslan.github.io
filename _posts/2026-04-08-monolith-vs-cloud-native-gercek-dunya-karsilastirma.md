@@ -6,7 +6,7 @@ description: "Cloud-native yaklaşım, platform governance ve monolit mimariler 
 tags: [cloud-native, platform-engineering, microservices, monolith, architecture]
 ---
 
-Son yıllarda yazılım dünyasında en çok konuşulan kavramlardan biri cloud-native yaklaşım oldu. Kubernetes, microservices ve containerization artık birçok sistemin temelini oluşturuyor. Ancak bu dönüşümle birlikte basit bir soru daha karmaşık hale geldi:
+Hayatımızdaki kavramlardan bir diğeri cloud-native yaklaşım. Kubernetes, microservices ve containerization artık birçok sistemin temelini oluşturuyor. Ancak bu kavramla birlikte basit bir soru daha karmaşık hale geliyor:
 
 ![Cloud-Native ve Monolit? Deneyim Üzerinden Gerçekler?](/assets/img/31579b3a-c863-48da-937e-ba17cce39009.png)
 
