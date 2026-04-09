@@ -3,6 +3,7 @@ layout: post
 title: "Cloud-Native ve Monolit"
 date: 2026-04-08
 description: "Cloud-native yaklaşım, platform governance ve monolit mimariler arasındaki gerçek trade-off'lar"
+image: /assets/img/31579b3a-c863-48da-937e-ba17cce39009.png
 tags: [cloud-native, platform-engineering, microservices, monolith, architecture]
 ---
 
