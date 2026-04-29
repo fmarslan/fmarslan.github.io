@@ -164,6 +164,6 @@ Asıl farkı yaratan da bu.
 
 ## Referanslar
 
-* [https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data)
-* [https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)
+* [https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/overview](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/overview)
+* [https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/reducing-scope-of-impact-with-cell-based-architecture.html](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/reducing-scope-of-impact-with-cell-based-architecture.html)
 * [https://architectelevator.com/cloud/hybrid-cloud](https://architectelevator.com/cloud/hybrid-cloud)
