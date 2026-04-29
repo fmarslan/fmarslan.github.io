@@ -6,9 +6,7 @@ image: /assets/images/sovereign-cell-architecture-cover.jpg
 tags: [architecture, distributed-systems, compliance, saas, cloud]
 ---
 
-# Sovereign Cell Architecture: Regülasyon Odaklı Sistem Tasarımı
-
-## Bu konuya teknik bir problem gibi bakmak en baştan yanlış bir çerçeve çizmek olur
+Bu konuya teknik bir problem gibi bakmak en baştan yanlış bir çerçeve çizmek olur
 
 Kısa bir hikâye ile başlayayım.
 
