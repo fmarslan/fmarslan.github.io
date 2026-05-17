@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Yeni Bir Zekâ Katmanının Başlangıcındayız"
-date: 2026-05-17 19:00:00 +0300
+date: 2026-05-16 19:00:00 +0300
 description: "AI, FlyWire, BrainNet, Neuralink ve yeni nesil zeka sistemleri üzerine bir düşünce yazısı."
 image: /assets/images/posts/ee03c2f2-9c67-4873-9774-ffe63459eff4.png
 tags:
