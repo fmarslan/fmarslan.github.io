@@ -1,0 +1,33 @@
+FROM mcr.microsoft.com/devcontainers/ruby:3.0-3.3-bookworm@sha256:da8850f5cfabbb92a86cded7f16b2b2125de7f0de21ab69f1360b319337ed43f
+
+ARG DEV_UID=1000
+ARG DEV_GID=1000
+
+USER root
+
+RUN set -eux; \
+    current_group="$(getent group "${DEV_GID}" | cut -d: -f1 || true)"; \
+    if getent group dev >/dev/null; then \
+      test "$(getent group dev | cut -d: -f3)" = "${DEV_GID}"; \
+    elif [ -n "${current_group}" ]; then \
+      groupmod -n dev "${current_group}"; \
+    else \
+      groupadd --gid "${DEV_GID}" dev; \
+    fi; \
+    current_user="$(getent passwd "${DEV_UID}" | cut -d: -f1 || true)"; \
+    if id dev >/dev/null 2>&1; then \
+      test "$(id -u dev)" = "${DEV_UID}"; \
+    elif [ -n "${current_user}" ]; then \
+      usermod --login dev --home /home/dev --move-home "${current_user}"; \
+    else \
+      useradd --uid "${DEV_UID}" --gid "${DEV_GID}" --create-home --home-dir /home/dev --shell /bin/bash dev; \
+    fi; \
+    usermod --gid "${DEV_GID}" dev; \
+    mkdir -p /home/dev/.codex /home/dev/.bundle /home/dev/.cache /home/dev/.config; \
+    chown -R "${DEV_UID}:${DEV_GID}" /home/dev; \
+    gem install bundler -v 2.7.2 --no-document
+
+ENV BUNDLE_PATH=/home/dev/.bundle/vendor
+ENV PATH=/home/dev/.bundle/vendor/ruby/3.3.0/bin:${PATH}
+
+USER dev
