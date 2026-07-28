@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<div class="page-shell">
+<div class="page-shell{% if page.page_class %} {{ page.page_class }}{% endif %}">
   <section class="page-hero">
     {%- if page.eyebrow -%}
       <p class="hero-eyebrow">{{ page.eyebrow }}</p>

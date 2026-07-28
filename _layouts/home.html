@@ -3,6 +3,8 @@ layout: base
 ---
 
 <div class="page-shell">
+  {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
+  {%- assign t = site.data.i18n[language_code] | default: site.data.i18n.tr -%}
   {%- if page.hero -%}
   <section class="hero">
     <div class="hero-content">
@@ -43,7 +45,13 @@ layout: base
     </div>
     {%- if page.hero.image -%}
     <div class="hero-media">
-      <img src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.image_alt | default: site.author.name }}">
+      <img
+        src="{{ page.hero.image | relative_url }}"
+        alt="{{ page.hero.image_alt | default: site.author.name }}"
+        width="700"
+        height="1600"
+        fetchpriority="high"
+        decoding="async">
     </div>
     {%- endif -%}
   </section>
@@ -94,13 +102,13 @@ layout: base
 
   <section>
     <div class="section-heading">
-      <p class="eyebrow">{{ page.blog_section.eyebrow | default: "Latest writing" }}</p>
-      <h2>{{ page.blog_section.title | default: "Notes from the field" }}</h2>
-      <p>{{ page.blog_section.description | default: "I share architecture lessons, platform insights, and delivery notes every week." }}</p>
+      <p class="eyebrow">{{ page.blog_section.eyebrow | default: t.latest_writing }}</p>
+      <h2>{{ page.blog_section.title | default: t.field_notes }}</h2>
+      <p>{{ page.blog_section.description | default: t.writing_description }}</p>
       <form class="inline-search" action="{{ '/search' | relative_url }}" method="get">
-        <label class="sr-only" for="homepage-search">Search posts</label>
-        <input type="search" id="homepage-search" name="q" placeholder="Search my notes..." required>
-        <button type="submit">Search</button>
+        <label class="sr-only" for="homepage-search">{{ t.search_label }}</label>
+        <input type="search" id="homepage-search" name="q" placeholder="{{ t.search_placeholder }}" required>
+        <button type="submit">{{ t.search_button }}</button>
       </form>
     </div>
     {%- if paginator -%}
@@ -110,13 +118,18 @@ layout: base
     {%- endif -%}
     {%- assign post_limit = page.blog_section.limit | default: 6 -%}
     <div class="post-grid">
-      {%- for post in posts limit: post_limit -%}
+      {%- assign visible_posts = 0 -%}
+      {%- for post in posts -%}
+      {%- assign post_language = post.lang | default: 'tr-TR' | split: '-' | first -%}
+      {%- if post_language == language_code and visible_posts < post_limit -%}
       <article class="post-card">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: t.date_format }}</time>
         <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-        <a class="read-more" href="{{ post.url | relative_url }}">Read article →</a>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+        <a class="read-more" href="{{ post.url | relative_url }}">{{ t.read_article }}</a>
       </article>
+      {%- assign visible_posts = visible_posts | plus: 1 -%}
+      {%- endif -%}
       {%- endfor -%}
     </div>
     {%- if paginator and paginator.total_pages > 1 -%}

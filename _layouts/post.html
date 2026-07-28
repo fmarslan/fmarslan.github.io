@@ -2,35 +2,71 @@
 layout: base
 ---
 
-<div class="page-shell">
-  <header class="post-hero">
-    {%- if page.categories and page.categories != empty -%}
-    <p class="pill">{{ page.categories | join: " · " }}</p>
+<div class="page-shell post-page">
+  {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
+  {%- assign t = site.data.i18n[language_code] | default: site.data.i18n.tr -%}
+  {%- assign word_count = content | number_of_words -%}
+  {%- assign reading_time = word_count | divided_by: 200 | plus: 1 -%}
+  <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="post-hero">
+      {%- if page.categories and page.categories != empty -%}
+      <p class="post-kicker">{{ page.categories | join: " · " }}</p>
+      {%- endif -%}
+      <h1 itemprop="headline">{{ page.title }}</h1>
+      {%- if page.description -%}
+      <p class="post-deck" itemprop="description">{{ page.description }}</p>
+      {%- endif -%}
+    </header>
+    {%- if page.image -%}
+    <figure class="post-cover">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+    </figure>
     {%- endif -%}
-    <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-    {%- if page.tags and page.tags != empty -%}
-    <ul class="tag-list">
-      {%- for tag in page.tags -%}
-      <li>{{ tag }}</li>
-      {%- endfor -%}
-    </ul>
-    {%- endif -%}
-  </header>
-  <article class="post-body">
-    {{ content }}
+    <div class="post-body" itemprop="articleBody">
+      {{ content }}
+    </div>
+    <footer class="post-footer-meta">
+      <div class="post-byline">
+        <span itemprop="author">{{ site.author.name }}</span>
+        <span aria-hidden="true">·</span>
+        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: t.date_format }}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ reading_time }} {% if language_code == 'tr' %}dk okuma{% else %}min read{% endif %}</span>
+      </div>
+      {%- if page.tags and page.tags != empty -%}
+      <ul class="tag-list" aria-label="Tags">
+        {%- for tag in page.tags -%}
+        <li>{{ tag }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </footer>
   </article>
-  <nav class="post-nav">
+  <nav class="post-nav" aria-label="{% if language_code == 'tr' %}Yazı navigasyonu{% else %}Article navigation{% endif %}">
     <div>
-      {%- if page.previous -%}
-      <span class="pill">Previous</span>
-      <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+      {%- assign previous_post = nil -%}
+      {%- for candidate in site.posts -%}
+        {%- assign candidate_language = candidate.lang | default: 'tr-TR' | split: '-' | first -%}
+        {%- if candidate.date < page.date and candidate_language == language_code and previous_post == nil -%}
+          {%- assign previous_post = candidate -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if previous_post -%}
+      <span class="post-nav__label">{{ t.previous }}</span>
+      <a href="{{ previous_post.url | relative_url }}">{{ previous_post.title }}</a>
       {%- endif -%}
     </div>
     <div>
-      {%- if page.next -%}
-      <span class="pill">Next</span>
-      <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+      {%- assign next_post = nil -%}
+      {%- for candidate in site.posts reversed -%}
+        {%- assign candidate_language = candidate.lang | default: 'tr-TR' | split: '-' | first -%}
+        {%- if candidate.date > page.date and candidate_language == language_code and next_post == nil -%}
+          {%- assign next_post = candidate -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if next_post -%}
+      <span class="post-nav__label">{{ t.next }}</span>
+      <a href="{{ next_post.url | relative_url }}">{{ next_post.title }}</a>
       {%- endif -%}
     </div>
   </nav>

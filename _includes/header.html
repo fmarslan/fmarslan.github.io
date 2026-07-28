@@ -1,24 +1,32 @@
 <header class="global-header">
+  {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
+  {%- assign t = site.data.i18n[language_code] | default: site.data.i18n.tr -%}
+  {%- assign navigation = site.navigation_tr -%}
+  {%- assign home_url = '/' -%}
+  {%- if language_code == 'en' -%}
+    {%- assign navigation = site.navigation_en -%}
+    {%- assign home_url = '/en/' -%}
+  {%- endif -%}
   <div class="global-header__inner">
-    <a class="brand" rel="author" href="{{ '/' | relative_url }}">
+    <a class="brand" rel="author" href="{{ home_url | relative_url }}">
       <span class="brand-badge">FMA</span>
       <span class="brand-meta">
         <span class="brand-name">{{ site.author.name | default: site.title }}</span>
-        <span class="brand-role">Solution Architect</span>
+        <span class="brand-role">{{ t.role }}</span>
       </span>
     </a>
     <div class="nav-wrapper">
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-navigation">
-        <span class="sr-only">Toggle site navigation</span>
+        <span class="sr-only">{{ t.nav_toggle }}</span>
         <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">
           <rect width="20" height="2" y="0" rx="1"></rect>
           <rect width="20" height="2" y="6" rx="1"></rect>
           <rect width="20" height="2" y="12" rx="1"></rect>
         </svg>
       </button>
-      <nav id="site-navigation" class="nav-links" aria-label="Primary">
+      <nav id="site-navigation" class="nav-links" aria-label="{{ t.nav_label }}">
         {%- assign current_path = page.url | default: '/' -%}
-        {%- for link in site.navigation -%}
+        {%- for link in navigation -%}
           {%- assign link_url = link.url | relative_url -%}
           {%- assign is_active = false -%}
           {%- if current_path == link.url or current_path == link_url -%}
@@ -27,10 +35,10 @@
           <a class="nav-link{% if is_active %} is-active{% endif %}" href="{{ link_url }}">{{ link.title }}</a>
         {%- endfor -%}
       </nav>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <button id="theme-toggle" class="theme-toggle" aria-label="{{ t.theme_toggle }}">
         <span class="theme-toggle__icon" aria-hidden="true">☾</span>
       </button>
-      <a class="btn btn-secondary" href="mailto:{{ site.author.email }}">Let’s talk</a>
+      <a class="btn btn-secondary" href="mailto:{{ site.author.email }}">{{ t.contact }}</a>
     </div>
   </div>
 </header>

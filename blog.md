@@ -1,7 +1,10 @@
 ---
 layout: blog
-title: Writing & Field Notes
+title: Yazılar ve Teknik Notlar
 eyebrow: Blog
-description: Deep dives into platform strategy, cloud architecture, delivery leadership, and the tools I experiment with between engagements.
+description: Platform stratejisi, bulut mimarisi, yazılım geliştirme ve kullandığım araçlar üzerine teknik yazılar.
 permalink: /blog/
+lang: tr-TR
+alternate_url: /en/blog/
+default_url: /blog/
 ---
