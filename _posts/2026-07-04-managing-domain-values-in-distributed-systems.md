@@ -5,7 +5,6 @@ date: 2026-07-04
 description: "The benefits and limits of enums, strings, registries, and contracts for managing domain codes in microservice and FaaS architectures."
 image: /assets/img/managing-domain-values-cover.png
 tags: [microservices, faas, domain-driven-design, event-driven-architecture, cloud-native]
-published: false
 ---
 
 ![Domain values moving between services in a distributed system](/assets/img/managing-domain-values-cover.png)
