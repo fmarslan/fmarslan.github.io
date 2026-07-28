@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Blog Post"
+  short_description: "Make fmarslan.com articles publication-ready"
+  default_prompt: "Use $prepare-blog-post to make this fmarslan.com article publication-ready."
