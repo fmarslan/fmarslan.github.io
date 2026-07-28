@@ -6,6 +6,8 @@ description: .NET Web API unhandled exception → DLQ queue, DLQ consumer → Az
 tags: [kubernetes, dotnet, dlq, rabbitmq, azure-devops, observability]
 image: /assets/img/dlq2azuredevops.png
 
+lang: tr-TR
+translation_key: "self-hosted-kubernetes-te-dlq-azure-devops-bug-unhandled-api-hatasini-otomatik-raporla-31be1883"
 ---
 
 Bazen “500 oldu geçti” değil; **500 olduysa** bunun _kanıtı_, _repro’su_ ve _versiyon bilgisi_ tek yerde olmalı.
@@ -18,8 +20,6 @@ Benim hedefim şu:
 - Bug içine **repro paketi** koyar: developer bu içerikle lokalde **aynı hatayı** tetikleyebilsin
 
 Bu yazıdaki örneklerde asıl mesele “DLQ” kelimesi değil; **poison/error event’in bir kuyruğa düşmesi** ve **otomatik issue** açılması.
-
-![Test-Centric Development kapak görseli](/assets/img/dlq2azuredevops.png)
 
 ## 1) Topoloji
 
@@ -36,8 +36,6 @@ flowchart TB
     B --- R[Bug Content:• Repro payload• curl command• Full JSON• Build / Image / Git SHA]
 
 </div>
-
-
 
 ## 2) Bug içine koyacağımız “Repro Paketi”
 
@@ -62,8 +60,6 @@ Developer’ın işine yarayan veri şunlar:
 Bu paketi “tek JSON” olarak bug’a gömeceğiz.
 
 > Uyarı: Authorization/Cookie gibi şeyleri _bilerek_ koymuyoruz. PII/secrets sızdırmak istemiyorum. Ama tenantId gibi “repro için gerekli” alanları koyuyorum.
-
-
 
 ## 3) .NET Web API: Unhandled exception → DLQ queue
 
@@ -280,8 +276,6 @@ app.MapControllers();
 app.Run();
 ```
 
-
-
 ## 4) Test endpoint: bilinçli hata üret (demo için)
 
 ```csharp
@@ -297,8 +291,6 @@ public class TestController : ControllerBase
     }
 }
 ```
-
-
 
 ## 5) DLQ Consumer: Self-hosted K8s’te çalışır, Bug açar
 
@@ -436,8 +428,6 @@ if __name__ == "__main__":
     main()
 ```
 
-
-
 ## 6) Kubernetes manifest örnekleri
 
 ### 6.1 Orders API Deployment (downward API ile fingerprint)
@@ -522,8 +512,6 @@ spec:
               key: pat
 ```
 
-
-
 ## 7) Lokalde “aynı hatayı” simüle etme
 
 Bug açıldığında description içinde zaten şunlar var:
@@ -540,8 +528,6 @@ Developer’ın yaptığı pratik:
 
 Bu kadar.
 
-
-
 ## 8) Sahadan eleştiri: bu sistem nerede patlar?
 
 Bunu yazmadan olmaz:
@@ -557,8 +543,6 @@ Bunu yazmadan olmaz:
   * Çözüm: “signature” bazlı aggregation (aynı stack+route için tek bug, içine occurrence count/comment).
 
 Ben olsam prod’a çıkmadan önce bu üçüne bir “minimum” çözüm koyarım, yoksa sistem kendi kendini DDoS eder.
-
-
 
 ## 9) Son söz
 

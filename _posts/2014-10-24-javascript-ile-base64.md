@@ -2,6 +2,9 @@
 layout: post
 title: "javascript ile base64"
 categories: javascript
+lang: tr-TR
+description: "javascript ile base64 konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "javascript-ile-base64-7a64b70e"
 ---
 
 Sayfanızda bulunan resim üzerine tıklayınca resim değiştirip yeni resmi ajax ile sunucuya kaydetmek isterseniz aşağıdaki kod işinizi görecektir.

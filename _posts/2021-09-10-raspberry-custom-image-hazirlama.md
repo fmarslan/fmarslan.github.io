@@ -2,6 +2,9 @@
 layout: post
 title: "Raspberry pi Özelleştirilmiş Image Hazırlama"
 categories: raspberry
+lang: tr-TR
+description: "Raspberry pi Özelleştirilmiş Image Hazırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "raspberry-custom-image-hazirlama-5ca7180d"
 ---
 
 Bazen yaptığımız yazılımlarda veya başka bir sebepten işletim sistemi kurulum imagelarının içerisine müdahale ederek bazı ayarların yapılı gelmesi veya uygulamaların kurulu hazır bir şekilde gelmesini isteyebiliriz. Bu durumda izlememiz gereken adımları bu yazı da raspberry için anlatacağım bir çok linux image içinde aynı veya benzer yöntemler geçerli olacaktır. İşlemler için linux işletim sistemi kullanacağız.

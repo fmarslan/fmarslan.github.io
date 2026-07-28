@@ -2,6 +2,9 @@
 layout: post
 title: Solr Collection Oluşturma/Güncelleme
 categories: solr
+lang: tr-TR
+description: "Solr Collection Oluşturma/Güncelleme konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "solr-collection-olusturma-guncelleme-d637175b"
 ---
 
 Elastic Search lisans değiştirdikten sonra yoğun bi şekilde solr kullanmaya başladığımız şu günlerde genelde solr Collection yükleme işlemi yapıyoruz. ve her defasında gidip bunun komutu neydi diye aramak yerine şuraya not alayım dursun dedim belki başka ihtiyacı olanlarda olur faydası olur.

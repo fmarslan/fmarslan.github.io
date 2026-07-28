@@ -5,6 +5,8 @@ date: 2026-07-04
 description: "The benefits and limits of enums, strings, registries, and contracts for managing domain codes in microservice and FaaS architectures."
 image: /assets/img/managing-domain-values-cover.png
 tags: [microservices, faas, domain-driven-design, event-driven-architecture, cloud-native]
+lang: en-US
+translation_key: "managing-domain-values-in-distributed-systems-06790761"
 ---
 
 > Separating services is easy. The hard part is making sure that different services understand the same business concept correctly.
@@ -12,9 +14,6 @@ tags: [microservices, faas, domain-driven-design, event-driven-architecture, clo
 Microservices, FaaS, serverless, and event-driven architectures help us build small and independent components. Each component can focus on one task. A service can work within the boundaries and integration contracts of a bounded context. It can use a different programming language and receive data through Kafka, HTTP, a queue, or a database.
 
 This freedom is useful. However, as the system grows, a less visible dependency appears: the **shared business language**.
-
-![Domain values moving between services in a distributed system](/assets/img/managing-domain-values-cover.png)
-
 
 For example, one system may represent an order status as `A`, another as `X`, and an integration contract as `1`. The systems must agree on the meaning at the integration boundary. This does not mean that every service must use the same domain model. The problem is also larger than choosing between an `enum` and a `string`. It includes ownership, change management, compatibility, and error detection.
 

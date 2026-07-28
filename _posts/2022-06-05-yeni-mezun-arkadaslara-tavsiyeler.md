@@ -2,6 +2,9 @@
 layout: post
 title: "Yeni mezun ve öğrenci arkadaşlara 10+ yıllık deneyimlerim sonucu bazı tavsiyeler"
 categories: Kariyer
+lang: tr-TR
+description: "Yeni mezun ve öğrenci arkadaşlara 10+ yıllık deneyimlerim sonucu bazı tavsiyeler konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "yeni-mezun-arkadaslara-tavsiyeler-b8f74dde"
 ---
 
 **Ön Hatırlatma:** Bu yazıda eleştiriler mevcuttur bu eleştirilerde mutlaka istisnalar vardır burada istisnaları değil genel yaklaşımları değerlendiriyoruz/eleştiriyoruz. Tavsiyeler yazılım sektörü özelinde olmakla birlikte diğer sektörlerde yaklaşık aynı durumlardan dolayı sorun yaşamaktadır.

@@ -4,13 +4,13 @@ title: "Kubernetes ile MariaDB MaxScale Cluster Kurulumu"
 date: 2025-05-30
 categories: [kubernetes, mariadb, maxscale, veritabanı]
 author: fmarslan.com
+lang: tr-TR
+description: "Kubernetes ile MariaDB MaxScale Cluster Kurulumu konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "kubernetes-mariadb-maxscale-cluster-kurulumu-708f93ef"
+image: "/assets/img/mariadb-maxscale.png"
 ---
 
 Kubernetes üzerinde yüksek erişilebilir, ölçeklenebilir ve merkezi yönetilebilir bir **MariaDB kümesi** oluşturmak, özellikle kurumsal uygulamalarda önemli bir gereksinim. Bu rehberde; **MariaDB replikasyon kümesi** ve üzerinde çalışan **MaxScale read/write split proxy** yapısını adım adım nasıl kurabileceğinizi sade ve uygulanabilir bir şekilde özetledim.
-
-<img src="/assets/img/mariadb-maxscale.png" alt="cover" style="max-width: 50%; max-height:20%">
-
-
 
 ## 1. Ön Hazırlık
 
@@ -22,8 +22,6 @@ Kubernetes üzerinde yüksek erişilebilir, ölçeklenebilir ve merkezi yönetil
 * Depolama sağlayıcısı (PVC için)
 
 Bu kurulum tamamen YAML tanımlarıyla yapılabilir; ek bir operator veya CRD gerektirmez.
-
-
 
 ## 2. ConfigMap: Kümenin Beyni
 
@@ -51,8 +49,6 @@ data:
 ```
 
 Her pod, kendi sırasına göre (`ordinal` değeri) primary veya replica olarak başlatılır.
-
-
 
 ## 3. MariaDB StatefulSet: Kalıcılık + Kimlik
 
@@ -89,8 +85,6 @@ else
 fi
 ```
 
-
-
 ## 4. Secrets: Kullanıcı ve Replikasyon Şifreleri
 
 MariaDB erişim bilgileri ve replication kullanıcıları mutlaka `Secret` içinde saklanmalıdır.
@@ -108,8 +102,6 @@ data:
 ```
 
 Bu değerler pod içine environment variable olarak geçer.
-
-
 
 ## 5. MaxScale Deployment: Read/Write Split Proxy
 
@@ -150,8 +142,6 @@ user=maxscale
 password=maxscale_secret
 ```
 
-
-
 ## 6. Test ve Doğrulama
 
 Kurulum tamamlandıktan sonra:
@@ -175,8 +165,6 @@ SELECT @@hostname;
 ```
 
 Replica değişimlerini buradan takip edebilirsiniz.
-
-
 
 ## Sonuç
 

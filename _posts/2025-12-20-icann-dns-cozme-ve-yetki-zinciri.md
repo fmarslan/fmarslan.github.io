@@ -12,11 +12,11 @@ tags:
   - resolver
 categories:
   - networking
+lang: tr-TR
+translation_key: "icann-dns-cozme-ve-yetki-zinciri-611d640b"
 ---
 
 DNS hakkında konuşurken çoğu anlatım root–TLD–authoritative sıralamasıyla başlar. Ben tersinden gideyim: **Bir domain'i çözmek = IP'yi bilmek** demek ama bunu yapan tek bir otorite yok. DNS kasıtlı olarak parçalı bir yapı ve tepesinde ICANN var.
-
-![DNS hiyerarşisi kapağı](/assets/img/icann-dns-kapak.png)
 
 ## ICANN ne yapar, ne yapmaz?
 

@@ -10,6 +10,8 @@ tags:
   - static-site
   - jamstack
   - devops
+lang: tr-TR
+translation_key: "jekyll-github-pages-ve-statik-siteler-a82073a2"
 ---
 
 Son yıllarda **WordPress gibi dinamik sistemler** yerini yavaş yavaş daha sade, daha hızlı ve daha bakımı kolay yapılara bırakmaya başladı: **statik site oluşturucularına**.
@@ -67,8 +69,6 @@ Jekyll:
 - Tek komutla yeni bir site oluşturabilir, build alabilir, yerelde bir development sunucusu çalıştırabilirsiniz.
 
 Jekyll’in en güzel yanlarından biri, **“dosya tabanlı CMS”** gibi davranması: _posts klasörü, sayfalar, layout’lar vs. hepsi birer dosya. Veritabanı yok, admin panel yok; sadece Git ve dosyalar.
-
-![Jekyll + GitHub Pages kapak görseli](/assets/img/717eb0e5-78ae-4359-a524-a7a1df7ac11b.png)
 
 ---
 

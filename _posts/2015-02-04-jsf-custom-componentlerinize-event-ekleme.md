@@ -2,7 +2,11 @@
 layout: post
 title: "JSF Custom componentlerinize event ekleme"
 categories: JSF
+lang: tr-TR
+description: "JSF Custom componentlerinize event ekleme konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-custom-componentlerinize-event-ekleme-3c214cd9"
 ---
+
 Eski yazılarımda custom control  örnekleri vermiştim control hazırladık fakat custom bir event tanımlamak istiyoruz bunun için öncelik hazırladığımız kontrol içerisinde event propertisini string tipinde tanımlayınız.
 
 ```java

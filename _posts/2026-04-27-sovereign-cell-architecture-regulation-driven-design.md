@@ -2,8 +2,11 @@
 layout: post
 title: "Sovereign Cell Architecture: Regülasyon Odaklı Sistem Tasarımı"
 date: 2026-04-27
-image: /assets/images/sovereign-cell-architecture-cover.jpg
+image: /assets/img/b792ab8e-af1d-4c65-a787-c4d73c41d6d3.png
 tags: [architecture, distributed-systems, compliance, saas, cloud]
+lang: tr-TR
+description: "Sovereign Cell Architecture: Regülasyon Odaklı Sistem Tasarımı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "sovereign-cell-architecture-regulation-driven-design-f18f8e92"
 ---
 
 Bu konuya teknik bir problem gibi bakmak en baştan yanlış bir çerçeve çizmek olur
@@ -13,8 +16,6 @@ Kısa bir hikâye ile başlayayım.
 Avrupa’da faaliyet gösteren bir SaaS şirketi, yıllarca “multi-region” olduğunu söyleyerek büyüyor. Her şey yolunda gibi: sistem çalışıyor, müşteri geliyor, ürün büyüyor.
 
 Ta ki bir gün audit gelene kadar.
-
-![Sovereign Cell Architecture: Regülasyon Odaklı Sistem Tasarımı.](/assets/img/b792ab8e-af1d-4c65-a787-c4d73c41d6d3.png)
 
 > Almanya’daki müşterinin verisi gerçekten Almanya’da mı?
 

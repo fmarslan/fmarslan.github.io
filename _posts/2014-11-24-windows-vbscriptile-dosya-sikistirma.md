@@ -2,7 +2,11 @@
 layout: post
 title: "Windows VBScript ile dosya sıkıştırma"
 categories: VBScript
+lang: tr-TR
+description: "Windows VBScript ile dosya sıkıştırma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "windows-vbscriptile-dosya-sikistirma-db1c6b49"
 ---
+
 VBScript ile dosya sıkıştırma yapmak için aşağıdaki kod işinizi görebilir
 ```vb
 InputFolder = "D:\temp"

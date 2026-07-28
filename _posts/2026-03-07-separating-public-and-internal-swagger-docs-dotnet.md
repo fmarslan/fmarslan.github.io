@@ -5,6 +5,8 @@ author: FMArslan
 categories: [software, dotnet, api]
 tags: [dotnet, swagger, api, architecture]
 description: "How to publish separate Swagger documentation for public and internal APIs in a single .NET service."
+lang: en-US
+translation_key: "separating-public-and-internal-swagger-docs-dotnet-4fab5cf0"
 ---
 
 # Separating Public and Internal API Documentation in .NET

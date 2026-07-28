@@ -2,6 +2,9 @@
 title: "Ubuntu Core ilk Kullanıcı oluşturma"
 layout: post
 categories: ubuntu
+lang: tr-TR
+description: "Ubuntu Core ilk Kullanıcı oluşturma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "ubuntu-core-ilk-kullanici-olusturma-f9cca2e9"
 ---
 
 1. https://login.ubuntu.com/ adresinde hesap oluşturalım

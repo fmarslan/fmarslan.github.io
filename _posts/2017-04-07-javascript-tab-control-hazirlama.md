@@ -2,7 +2,11 @@
 layout: post
 title: "Javascript tab control hazırlama"
 categories: javascript
+lang: tr-TR
+description: "Javascript tab control hazırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "javascript-tab-control-hazirlama-47bc220c"
 ---
+
 Zaman zaman basit anlık çözümler için javascript ile component hazırlama ihtiyacı duyabiliriz yine böyle bir durumda ihtiyaç duyduğum tab control için hazırladığım scripti sizler ile paylaşmak istedim. Umarım birilerinin işine yarar
 
 component Javascript class olarak hazırlanmıştır ve çok basit tutulmuştur isteğinize göre geliştirebilirsiniz. Css içeriğini paylaşmadım kendinize göre csslerini yazabilirsiniz.

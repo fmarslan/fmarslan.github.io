@@ -2,6 +2,9 @@
 layout: post
 title: Elastik search için cli üzerinden rest api ile sorgu
 category: tools
+lang: tr-TR
+description: "Elastik search için cli üzerinden rest api ile sorgu konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "elastik-search-rest-api-ile-cli-uzerinden-sorgu-ebb2b238"
 ---
 
 *Zaman içinde güncellenebilir*

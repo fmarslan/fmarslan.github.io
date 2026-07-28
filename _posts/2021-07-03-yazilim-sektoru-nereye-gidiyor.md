@@ -2,11 +2,13 @@
 layout: post
 title: "Yazılım Sektörü Nereye Gidiyor ?"
 categories: yazilim
+lang: tr-TR
+description: "Yazılım Sektörü Nereye Gidiyor ? konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "yazilim-sektoru-nereye-gidiyor-2ab4f563"
+image: "https://fmarslan.com/assets/img/coding-man.jpg"
 ---
 
 Bu yazımda yazılım sektörü ile alakalı naçizane kendi düşüncelerimi paylaşmak istedim farklı görüşü düşüncesi olan kişiler olabilir paylaşırlar ise onlardan da faydalanmak isterim. 
-
-![Code-Man](https://fmarslan.com/assets/img/coding-man.jpg)
 
 Bence önce geçmişe gidip yaşananları edinilen tecrübeleri gözlemlemekte yarar var. Bu kapsamda 2000 başlarına gidersek **ASP**, **PHP**, **JSP** gibi Front-End ile Back-End tarafının birlikte geliştirildiği doğrudan sunucuda html render işlemlerinin yapıldığı yaklaşımlar vardı, Bu yaklaşımlar da büyük projeler yapıldı mesela **PHP** için WordPress buna güzel bir örnek bence, çünkü hala beğeneni veya beğenmeyeni tarafından iyisiyle kötüsüyle kullanılıyor. Her ne kadar **PHP** için aynı şey çok geçerli olmasada **JSP**, **ASP** artık öldü bayağı da zaman geçti üzerinden. Bu yaklaşımlarda Back-End Front-End iç içe geliştirilir genellikle full stack developer denilen JavaScript, CSS'ten tutun Back-End tarafına tum teknolojilere hakim developer ihtiyacı oluşurdu,  bu da development işini bayağı zorlaştırıyordu çünkü birincisi developerların tüm aşamaları bilmesi lazım ki optimum çözümler üretilebilen uygulamalar ortaya çıksın, bu şekilde bir insandan herşeyi bilmesini beklemekte pek mümkün olmuyordu çünkü herkesin ilgisi, bilgisi farklı noktalarda olduğundan yine yapay bir Front-End Back-End ayrımı yapılmaya çalışılıyordu. Ayrıca burada yaşanan büyük projelerde yönetim zorluklarını development yükünü azaltabilmek için **JSF**, **ASP Web Form** gibi Front-End tarafının otomatik oluşturulmaya çalışıldığı sadece Back-End yazarak belki birazda html bilerek Javascript CSS ile fazla uğraşmadan yapılan geliştirmelerin olduğu bir dönem başladı bu dönemde Front-end te ki CSS, Javascript yükünü development üzerinden almak ve OOP ile yönetimi daha kolay hale getirmek amaçlanmış ve başarılmıştır. Fakat bi sorun beraberinde geldi, bu yaklaşımda arayüz tarafında ciddi kısıtlamalar yaşanmaya başlandı, en ufak işlemler icin bile yorucu yöntemlere ihtiyaç vardı bunu en iyi çözen frameworkler başarılı oldu. Bir diğer olay da sunucu üzerinde render işlemlerinin yapılması ve OOP yaklaşımları ciddi kaynak tüketimlerini beraberinde getirdi bu da tabiki maliyet demek bundan dolayı yeni yöntemlere dönük arayışlar başladı. Mesela bu dönemin ilerleyen zamanlarında çıkan **GWT** bence bunu amaçladı ama çok karmaşıktı **VAADIN** ile de bunu kolaylaştırma hedeflendi  fakat bu da kısıtlamaları daha da derinleştirdi. **MVC** yaklaşımı da bunun üzerine oluştuğu kanaatindeyim ki ben **MVC** ye geçince en çok mutlu olduğum nokta daha az sunucu kaynağı ve daha esnek bir development sağlamış, bunu sağlarken Proje yönetimini kolaylaştıran OOP den taviz verilmemiş olmasıydı.  Bu dönemde Front-End için de birçok işlemi kolaylaştırmak adına **jQuery** gibi javascript frameworkler ortalıkta yayılmaya başladı, güzelde is yaptılar. Bunlar sayesinde çok hızlı Front-end geliştirmeleri yapılabiliyordu. 
 
@@ -32,7 +34,6 @@ Tarih dersimizi bitirip günümüze geldiğimize göre şöyle bi araştıracak 
 - Uygulama içerisinde dil bağımlılığı ortadan kalktı öyle ki kaydetme servisi **C#** ile yazılırken okuma servisi **Golang** ile, Güncelleme servisi **Python** ile yazılabilir
 - Bakım maliyetleri düşmeye başladı.
 - Çözüm değil “Ürün” kavramına daha kolay ulaşılabilmesi sağlandı.
-
 
 Tüm bunlar şuan için aklıma gelenler bunları geçmişle birlikte okuduğumuzda nereye gidiyoruz diye düşünürsek benim düşüncelerime göre;
 

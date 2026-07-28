@@ -9,6 +9,8 @@ tags:
   - decision-making
   - microservices
   - system-design
+lang: tr-TR
+translation_key: "dogru-teknoloji-secimi-af936406"
 ---
 
 Teknoloji seçimi dendiğinde akla hep aynı sorular geliyor:
@@ -32,7 +34,6 @@ Unutmamak gerekiyor:
 > Rotası belli olan gemi ise hangi rüzgâr gelirse gelsin yelkenlerini doldurur.**
 
 Aynı prensip teknoloji seçimleri için de geçerli.
-
 
 ## 1. Önce Araç Değil, İhtiyaç: Gerçekten Ne Yapmak İstiyoruz?
 
@@ -59,12 +60,6 @@ Doğru başlangıç şu sorulardır:
 Bu sorular olmadan teknoloji seçmek şöyle bir şey:
 
 > **Nereye gideceğini bilmeden ayakkabı almaya benzer.**
-
-<figure>
-  <img src="/assets/img/tech-selection-compass.png" alt="Teknoloji seçimi pusulası" loading="lazy">
-  <figcaption>Her teknoloji sorusu kendi pusulasına sahip; önemli olan doğru rüzgârı bağlamla yakalamak.</figcaption>
-</figure>
-
 ## 2. Kafka mı RabbitMQ mu? _Aslında Aynı Kategori Değiller_
 
 Kafka ve RabbitMQ aynı işi çözmüyor. Kesiştikleri alan var ama doğaları bambaşka.
@@ -94,7 +89,6 @@ flowchart LR
     Rabbit --> D[Görev Tamamlama]
 </div>
 
-
 ## 3. C# mı Java mı Python mı? _Hiçbiri En İyisi Değil_
 
 Diller belirli problemler için mükemmel, diğer problemler için vasat olabilir.
@@ -118,7 +112,6 @@ Diller belirli problemler için mükemmel, diğer problemler için vasat olabili
 Doğru soru:
 
 > **“Bizim ekip hangi teknolojiyle daha üretken olur?”**
-
 
 ## 4. Bu Sadece Kafka–RabbitMQ veya C#–Java Meselesi Değil
 

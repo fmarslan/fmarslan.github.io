@@ -3,19 +3,18 @@ layout: post
 title: "Her Şeyi Ben Yazayım mı? Harici Araçlardan Doğru Şekilde Faydalanma Üzerine"
 date: 2026-01-07 10:30:00 +0300
 description: Bir sistemi geliştirirken her problemi kendimiz çözmeye çalışmanın neden sürdürülemez olduğunu ve doğru araçları doğru yerde kullanmanın mimariye nasıl güç kattığını anlatıyorum.
-image: /assets/img/tooling-ecosystem.png
+image: /assets/img/harici-araclardan-dogru-sekilde-faydalanma.png
 tags:
   - engineering-culture
   - system-design
   - architecture
   - tooling
+lang: tr-TR
+translation_key: "harici-araclardan-dogru-sekilde-faydalanma-1cea0118"
 ---
 
 Bir sistemi geliştirirken en erken fark ettiğim ama en geç kabullendiğim şey şu oldu:  
 **Her şeyi kendin yazmaya çalışmak güç değil, yük.**
-
-![Her Şeyi Ben Yazayım mı? Harici Araçlardan Doğru Şekilde Faydalanma Üzerine](/assets/img/harici-araclardan-dogru-sekilde-faydalanma.png)
-
 
 Başta çok cazip geliyor.  
 “Bu kütüphane tam istediğim gibi değil.”  
@@ -28,8 +27,6 @@ Ama sistem büyüdükçe, ekip genişledikçe ve iş gerçek dünyaya çarptık�
 
 Bu yazı, harici araçlardan neden kaçmamak gerektiğini değil;  
 **nasıl ve ne zaman faydalanmak gerektiğini** anlatıyor.
-
-
 
 ## Her Şeyi Kendin Yazma Refleksi Nereden Geliyor?
 
@@ -52,8 +49,6 @@ Ama bu refleks uzun vadede şuna dönüşüyor:
 
 Ve en kötüsü:  
 **Sistem geliştikçe yavaşlayan ekip.**
-
-
 
 ## Asıl Soru Şu: “Bu Problem Gerçekten Bana mı Ait?”
 
@@ -78,8 +73,6 @@ Bu alanlarda “kendim yazarım” demek,
 Çünkü kullanıcı senin logging altyapını değil,  
 **işinin çalışmasını** önemsiyor.
 
-
-
 ## Araç Seçimi = Mimari Karar
 
 Bir harici aracı projeye almak, sadece teknik değil **mimari bir karardır**.
@@ -99,8 +92,6 @@ Doğru araç ise:
 
 Buradaki kritik nokta şu:  
 **Araç, problemi çözmeli; yeni problem üretmemeli.**
-
-
 
 ## “En İyi Araç” Yok, “Bu Problem İçin Uygun Araç” Var
 
@@ -125,8 +116,6 @@ Benim yaklaşımım zamanla şuna evrildi:
 Bazen en “havalı” çözüm değil,  
 **en sıkıcı çözüm** en doğru olan oluyor.
 
-
-
 ## Araçtan Korkmamak, Ekosistemi Renklendirmek
 
 Bir dönem şunu fark ettim:  
@@ -145,8 +134,6 @@ Aksine, **odaklanmanı sağlar.**
 Odak şu olmalı:
 
 > “Benim gerçekten katma değer ürettiğim yer neresi?”
-
-
 
 ## Ekip Gerçeği: Araç Kültürünü Tanımadan Karar Vermek Hata
 
@@ -167,8 +154,6 @@ Burada önemli olan şu:
 Bu yüzden bir aracı seçerken sadece teknik dokümana değil,  
 **ekibin gerçek yetkinliğine** bakmak gerekiyor.
 
-
-
 ## Maksimum Fayda = Mevcut Yapıyla Barışmak
 
 Bir sistemi geliştirirken her şeyi baştan yıkıp yeniden yapmak cazip gelebilir.  
@@ -186,8 +171,6 @@ Bu şu anlama geliyor:
 - “Bu yapıdan nasıl daha iyi sonuç çıkarırım?” diye düşün  
 
 Bu yaklaşım hem sistemi hem ekibi büyütüyor.
-
-
 
 ## Sonuç: Mühendislik Ego Değil, Seçim İşidir
 

@@ -3,15 +3,15 @@ layout: post
 title: "Entegrasyon Mimarilerinde Yanlış Bilinen Doğrular"
 categories: [Entegrasyon, Architecture]
 mermaid: true
+lang: tr-TR
+description: "Entegrasyon Mimarilerinde Yanlış Bilinen Doğrular konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "entegrasyon-mimarilerinde-yanlis-bilinen-dogrular-a106b2a2"
+image: "/assets/img/7fbabe90-a44c-4ae1-868d-7f31948feaee.png"
 ---
 
 Dağıtık sistemlerin büyümesiyle birlikte entegrasyon, sadece "veriyi taşımak" olarak görülen eski anlamının çok ötesine geçti. Bugün finans, sağlık, kamu ve e-ticaret gibi hemen her sektörde mimarinin en kritik parçalarından biri. Buna rağmen, pratikte sıkça karşımıza çıkan bazı yanlış kabuller hâlâ ekiplerin teknik kararlarını olumsuz etkiliyor.
 
 Bu yazı, entegrasyon mimarisinde doğru sanılan ama aslında ciddi mimari borçlara yol açan bu yanlış inanışları netleştirmek için hazırlandı.
-
-
-
-<img src="/assets/img/7fbabe90-a44c-4ae1-868d-7f31948feaee.png" alt="cover" style="max-width: 50%; max-height:10%">
 
 ## **1. "REST varken mesaj kuyruğuna ne gerek var?"**
 
@@ -40,8 +40,6 @@ Doğru kullanım yaklaşımı:
 * REST → hızlı cevap gerektiren kısa işlemler
 * Event → uzun süreçler, yüksek hacim, sistem bağımlılığını azaltma
 
-
-
 ## **2. "Senkron daha hızlıdır, asenkron yavaştır."**
 
 Yaygın bir yanılgıdır.
@@ -61,8 +59,6 @@ flowchart LR
     B --> E[Worker 3]
 </div>
 
-
-
 ## **3. "Event çok gelirse performans düşer."**
 
 Doğru tasarlanmış bir mimaride bunun tam tersi olur.
@@ -71,8 +67,6 @@ Event sayısı arttıkça worker kapasitesi artırılır ve sistem çok daha yü
 
 * ❌ "Event fazlaysa sistem yavaşlar."
 * ✔ "Event fazlaysa sistem genişler."
-
-
 
 ## **4. "ETL modern entegrasyon için yeterlidir."**
 
@@ -100,8 +94,6 @@ Gerçek dünya entegrasyonlarında şunlar vardır:
 
 * Modern entegrasyon → süreci yönetir
 
-
-
 ## **5. "Tek bir canonical format tüm problemleri çözer."**
 
 Canonical model değerlidir ancak evrensel çözüm değildir.
@@ -116,8 +108,6 @@ Doğru model:
 * Canonical → içeride ortak dil
 * Mapping → dış dünya ile iletişim
 
-
-
 ## **6. "Tüm süreçlerde tam tutarlılık zorunludur."**
 
 Bu hem gereksiz hem maliyetli bir beklentidir.
@@ -129,8 +119,6 @@ Birçok adımın anlık tutarlılığa ihtiyacı yoktur:
 * Stok güncellemesi milisaniyelik farklara toleranslıdır.
 
 Bu yüzden modern entegrasyonlarda **eventual consistency** temel ilkedir.
-
-
 
 ## **7. "DLQ olmasa da olur, sadece hata kuyruğu."**
 
@@ -150,8 +138,6 @@ flowchart LR
     C --> D[Alert + Review]
 </div>
 
-
-
 ## **8. "Mapping motoruna gerek yok, kod içinde çeviririz."**
 
 Başlangıçta pratik görünse de uzun vadede ciddi teknik borç oluşturur.
@@ -162,8 +148,6 @@ Başlangıçta pratik görünse de uzun vadede ciddi teknik borç oluşturur.
 * Test yükü katlanır.
 
 Mapping bağımsız bir katman olmalıdır.
-
-
 
 ## **9. "Webhook yerine sadece polling kullanmak daha güvenlidir."**
 
@@ -176,8 +160,6 @@ En sağlıklı model genelde hibrittir:
 * Webhook → tetikleyici
 * Polling → güvence
 
-
-
 ## **10. "Entegrasyon sistemi bir kez çalıştı mı biter."**
 
 Sağlam bir entegrasyon mimarisi:
@@ -189,8 +171,6 @@ Sağlam bir entegrasyon mimarisi:
 * operasyona açık ve debug edilebilir olmalıdır.
 
 Bir kere çalışması yeterli değildir; sürdürülebilir olması asıl başarıdır.
-
-
 
 ## **11. "Event yaparsak her şeyi çözeriz."**
 
@@ -208,8 +188,6 @@ Event-driven mimari güçlüdür ama sihirli değnek değildir.
 kaçınılmaz olur.
 
 Event bir araçtır; mimarinin kendisi değil.
-
-
 
 # **Sonuç: Entegrasyon Bir Aktarım Değil, Bir Disiplindir**
 

@@ -2,6 +2,9 @@
 title: Telegram Bot oluşturma ve Kullanma
 type: post
 category: bot
+lang: tr-TR
+description: "Telegram Bot oluşturma ve Kullanma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "telegram-bot-olusturma-ve-kullanma-822f6d90"
 ---
 
 Merhaba bugün notlarımıza telegram da bot oluşturmayı ekleyelim

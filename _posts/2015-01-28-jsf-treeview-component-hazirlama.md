@@ -2,7 +2,11 @@
 layout: post
 title: "JSF treeview component hazırlama"
 categories: JSF
+lang: tr-TR
+description: "JSF treeview component hazırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-treeview-component-hazirlama-de889d68"
 ---
+
 Birgün gelirde sizinde benim gibi treeview ihtiyacınız olursa işte kodlar takıldığınız yerde ayrıca yardımcı olmaya çalışırım :)
 
 Bağımlılıklar : jQuery & Font Awesome

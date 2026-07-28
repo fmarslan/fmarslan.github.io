@@ -2,6 +2,9 @@
 layout: post
 title: "OpenVPN ve Easyrsa ile yeni sertifika oluşturma"
 categories: easyrsa
+lang: tr-TR
+description: "OpenVPN ve Easyrsa ile yeni sertifika oluşturma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "openvpn-ve-easyrsa-ile-yeni-sertifika-olusturma-17052b82"
 ---
 
 Lazım olduğunda hatırlamak adına küçük bi not ca dosyası hazır olmalı siteminiz kurulu olmalı

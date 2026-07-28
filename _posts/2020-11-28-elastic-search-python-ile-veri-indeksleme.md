@@ -2,6 +2,9 @@
 layout: post
 title: Elastic Search Python ile veri indexleme
 categories: elasticsearch
+lang: tr-TR
+description: "Elastic Search Python ile veri indexleme konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "elastic-search-python-ile-veri-indeksleme-e37ee539"
 ---
 
 Elimizdeki bir csvden verileri okuyarak elastic search indeksleme işlemini yapcağız. 

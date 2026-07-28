@@ -2,7 +2,7 @@
 layout: post
 title: "Dijitalleşme Bir Proje Değil, Bir Depremdir"
 date: 2026-01-12 09:30:00 +0300
-description: Dijitalleşme projeleri neden çoğu zaman işleri kolaylaştırmak yerine daha karmaşık ve kontrolsüz hale getirir? Süreç ve kalite yoksa dijital dönüşüm nasıl bir enkaza dönüşür.
+description: "Dijitalleşme projelerinin süreç ve kalite kültürü olmadan neden işleri kolaylaştırmak yerine daha karmaşık hale getirdiğini ele alan bir değerlendirme."
 image: /assets/img/1c8df5c1-0eba-48ae-8bea-a0c895ae5407.png
 tags:
   - dijitallesme
@@ -10,6 +10,8 @@ tags:
   - surec-yonetimi
   - kurumsallasma
   - degisim-yonetimi
+lang: tr-TR
+translation_key: "dijitallesme-sistemi-degil-kulturu-degistirir-4a6f6170"
 ---
 
 **Hazır değilseniz, sistem değil siz çöker­siniz.**
@@ -18,8 +20,6 @@ Kurumsallık, esneklik, izlenebilirlik, sürdürülebilirlik…
 Bunlar danışman sunumlarını doldurmak için ortaya çıkmadı.
 Hepsi tek bir gerçeğin sonucu:
 **İş, insanlara bağımlı kaldığı sürece ölçeklenemez.**
-
-![Dijitalleşme Bir Proje Değil, Bir Depremdir](/assets/img/1c8df5c1-0eba-48ae-8bea-a0c895ae5407.png)
 
 Bu gerçek anlaşılmadan yapılan her dijitalleşme hamlesi; ister yazılım alımı olsun, ister ürünleşme, ister CRM/ERP geçişi…
 işleri kolaylaştırmaz.

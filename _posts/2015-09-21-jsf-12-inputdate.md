@@ -2,7 +2,11 @@
 layout: post
 title: "JSF 1.2 InputDate"
 categories: JSF
+lang: tr-TR
+description: "JSF 1.2 InputDate konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-12-inputdate-61845e4c"
 ---
+
 inputdate ve render classları aşağıdadır sayfanıza xdsoft datetimepicker(jQuery) kütüphanesini eklemeniz gerekmektedir.
 
  Input Date

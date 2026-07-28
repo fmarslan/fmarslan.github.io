@@ -2,6 +2,9 @@
 title: Kubectl Komutları
 layout: post
 categories: kubernate
+lang: tr-TR
+description: "Kubectl Komutları konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "kubernete-kubectl-komutlari-43726dc0"
 ---
 
 Kubectl Config Bildirimi

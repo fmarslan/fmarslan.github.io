@@ -2,9 +2,12 @@
 layout: post
 title: Kubernete Üzerine Elastich Search + Kibana + ElasticHQ kurulumu
 categories: kubernete
+lang: tr-TR
+description: "Kubernete Üzerine Elastich Search + Kibana + ElasticHQ kurulumu konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "kubernete-uzerine-elastich-search-kibana-elastichhq-kurulumu-3f029fae"
 ---
 
- ***NOT:** Bu döküman yeniden anlatımdan ziyade özet bir şekilde çeviri gibidir, kaynaklar aşağıda paylaşılmıştır. Aynı zamanda örnek bir uygulamadır **bu yöntem iyi bir yöntem olarak tercih edilmeyebilir** kendi prod ihtiyaçlarınız için en uygun yöntemi belirlemelisiniz.*
+***NOT:** Bu döküman yeniden anlatımdan ziyade özet bir şekilde çeviri gibidir, kaynaklar aşağıda paylaşılmıştır. Aynı zamanda örnek bir uygulamadır **bu yöntem iyi bir yöntem olarak tercih edilmeyebilir** kendi prod ihtiyaçlarınız için en uygun yöntemi belirlemelisiniz.*
 
 Kurulumda versionlar arası değişim olmakla birlikte bu döküman 7.9.3 elastic search sürümü için hazırlandı. Çok fazla uygulamalar ve konfigurasyonlar hakkında genelde detay paylaşmıyorum detaylar için ilgili uygulamarın kendi dökümantasyonlarını takip edebilirsiniz.
 

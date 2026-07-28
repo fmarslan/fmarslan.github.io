@@ -2,15 +2,16 @@
 layout: post
 title: "Asenkron Platformlarda Performans Ölçümü: Nerede Tıkanır, Nasıl Tespit Edilir?"
 date: 2025-11-19 10:00:00 +0300
-description: Asenkron platformlarda performansın nerede kaybolduğunu anlamak için hangi metrikleri izlemek gerekir?
+description: "Asenkron platformlarda performansın nerede kaybolduğunu anlamak için hangi metriklerin izlenmesi gerektiğini açıklayan teknik bir rehber."
 image: /assets/img/22c51fd6-862b-4813-8877-1c5ce692ab76.png
 tags:
   - architecture
   - asynchronous
   - performance
   - devops
+lang: tr-TR
+translation_key: "asenkron-platformlarda-performans-olcumu-nerede-tikanir-nasil-tespit-edilir-9d34ba39"
 ---
-
 
 ## Asenkron Platformlarda Performans Ölçümü: Nerede Tıkanır, Nasıl Tespit Edilir?
 
@@ -20,10 +21,6 @@ Ama doğru ölçülmezse, nerede tıkandığını anlamak çok zorlaşır.
 Bu yazıda asenkron bir platformda performansın gerçekten **nerede kaybolduğunu**,
 **hangi noktalarda boğaz oluştuğunu**,
 **hangi metrikleri takip etmek gerektiğini** en sade hâliyle anlatıyorum.
-
-
-<img src="/assets/img/22c51fd6-862b-4813-8877-1c5ce692ab76.png" alt="Modern bulut mimarisi kapak görseli" height="300">
-
 
 ## 1. Asenkron Sistemlerde Performans Neden Farklı Ölçülür?
 

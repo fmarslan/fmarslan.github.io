@@ -2,6 +2,9 @@
 layout: post
 title: "JSF 1.2 Datatable ve Paginator kullanımı"
 categories: JSF
+lang: tr-TR
+description: "JSF 1.2 Datatable ve Paginator kullanımı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-12-datatable-ve-paginator-kullanimi-d7f5f197"
 ---
 
 JSF 1.2 de sayfalama özelliğiyle birlikte datatable kullanımı için aşağıdaki örnek işinize yarayabilir.

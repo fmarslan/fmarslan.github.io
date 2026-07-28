@@ -2,6 +2,9 @@
 layout: post
 title: "Cosmos DB'ye .NET 6 SDK ile Bağlanma ve Nested JSON Sorguları Oluşturma"
 categories: cosmos, net6
+lang: tr-TR
+description: "Cosmos DB'ye .NET 6 SDK ile Bağlanma ve Nested JSON Sorguları Oluşturma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "cosmos-db-net-connection-ve-nested-sorgular-15dd120a"
 ---
 
 Cosmos DB, Microsoft'un küresel ölçekte dağıtılmış bir NoSQL veritabanı hizmetidir. .NET 6 ile, Cosmos DB'ye kolayca bağlanabilir ve JSON dokümanları içinde derinlemesine sorgular oluşturabilirsiniz. Bu makalede, Cosmos DB'ye .NET 6 SDK kullanarak nasıl bağlanılacağınızı ve iç içe geçmiş JSON sorgularını nasıl oluşturacağınızı adım adım öğreneceksiniz.

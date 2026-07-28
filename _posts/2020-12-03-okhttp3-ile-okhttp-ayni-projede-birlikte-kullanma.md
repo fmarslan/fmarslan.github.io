@@ -2,12 +2,15 @@
 title: OkHttp3 ile Okhttp aynı projede birlikte kullanma
 layout: post
 category: java
+lang: tr-TR
+description: "OkHttp3 ile Okhttp aynı projede birlikte kullanma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "okhttp3-ile-okhttp-ayni-projede-birlikte-kullanma-1a38fc73"
+image: "http://fmarslan.com/assets/img/Screenshot%20from%202020-12-03%2014-43-04.png"
 ---
 
 Bazen javada uygulama geliştirirken kullandığımız kütüphaneler arasında uyumsuzluk yaşarız bir çok kişi bunula karşılaşmıştır. Burada bir örnek üzerinden genel olarak bu tip problemler nasıl çözülür onu yapacağız.
 
 Örneğimiz bir projede aşağıdaki gibi dependencylerimiz olsun bu iki dependency içinde okio kütüphanesinin versionları çakışıyor.
-
 
 ```xml
 ...
@@ -27,13 +30,8 @@ Bazen javada uygulama geliştirirken kullandığımız kütüphaneler arasında 
 ```
 resimde çakışan versionları görebilrisiniz.
 
-![Okio Version](http://fmarslan.com/assets/img/Screenshot%20from%202020-12-03%2014-43-04.png)
-
-
 *1. Adım* burada asıl çakışan okhttp ile okhttp3 olduğunu farketmişsinizdir bunların arasında log4j de olduğu gibi bir interface yok o yüzden mecbur uyumlu versionlarını bulmayı ümit edeceğiz :) Log4j ve log4j2 kütüphanelerini arada bir interface olduğu için sorunsuz bir birleri yerine kullanabiliyoruz.
 *2. Adım* [okhttp için buradan](https://mvnrepository.com/artifact/com.squareup.okhttp/okhttp) [okhttp3 için buradan](https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp) versionları kontrol ettiğimizde 2.7.5 ten sonra okhttp çıkmamış o yüzden orada hareket şansımız yok bu yüzden okhttp3 üzerinden gideceğiz. okhttp3 için geriye doğru geliyoruz verionlarda 4 major bir version olduğundan 3 e geçmeyi tavsiye etmem genelde sorun çıkar o yüzden *4.x.x* version grubundan en düşük *okio* versionunu bulmaya çalışıyoruz bunun için her bir versionun sayfasına girdiğimizde aşağıda bağımlıklık versionları yer alır oradan görebiliriz.
-
-![Bağımlılıklar](http://fmarslan.com/assets/img/Screenshot%20from%202020-12-03%2014-53-20.png)
 
 *3. Adım* olarak bu okio versionları arasındaki [change logları](https://square.github.io/okio/changelog/#version-222) izleyerek değpişkliklerden problem çıkarmayacak version bulmaya çalışıyoruz
 

@@ -9,6 +9,8 @@ tags:
   - release-management
   - devops
   - ci-cd
+lang: tr-TR
+translation_key: "kubernetes-uzerinde-versioning-ve-releasing-yonetimi-830fbe0e"
 ---
 
 # Kubernetes Üzerinde Versioning ve Releasing Yönetimi
@@ -18,8 +20,6 @@ tags:
 Bu yazı; kod geliştirme, versionlama, container build süreçleri ve Kubernetes üzerinde release yönetimi için sade bir yaklaşım sunar.  
 Buradaki adımlar ekip büyüklüğüne, kültüre, teknik ortama, ürüne veya regulasyonlara göre mutlaka **özelleştirilmeli**; katı kurallar değil, pratik bir başlangıç rehberi olarak görülmelidir.
 
-
-
 ## 1. Genel Prensipler
 
 - Git her zaman tek doğru kaynak (**Single Source of Truth**) olmalıdır.
@@ -27,8 +27,6 @@ Buradaki adımlar ekip büyüklüğüne, kültüre, teknik ortama, ürüne veya 
 - Container tag’leri **SemVer + build number / commit hash** modeli ile yönetilir.
 - Dev ve Test/Staging ortamlarında otomasyon yüksek tutulur, Prod ortamında ise her zaman manuel bir kontrol katmanı bulunur.
 - Küçük ekiplerde karmaşık araç setlerinden kaçınmak, süreçleri basit tutmak sürdürülebilirliği artırır.
-
-
 
 ## 2. Aşama 1 – Kod Release Süreci
 
@@ -56,8 +54,6 @@ Buradaki adımlar ekip büyüklüğüne, kültüre, teknik ortama, ürüne veya 
 8. `feature/*` → `dev` için Pull Request oluşturulur, code review sonrası merge edilir.
 9. Release kararı verildiğinde `dev` → `main` merge edilir ve tag oluşturulur:
    - `v1.3.0`
-
-
 
 ## 3. Aşama 2 – Version Release Süreci (Kubernetes)
 
@@ -89,8 +85,6 @@ flowchart TD
 
 Fix çıkan versiyon, ihtiyaç halinde ilgili diğer feature branch’lere de (örneğin `cherry-pick` ile) uygulanabilir.
 
-![Kubernetes release pipeline illustrasyonu](/assets/img/kubernetes-release-default.png)
-
 ### 3.3. Temiz Kurulum ve Upgrade Testleri
 
 * Yeni versiyon önce **temiz bir namespace** üzerinde sıfırdan kurulup test edilir.
@@ -104,8 +98,6 @@ Fix çıkan versiyon, ihtiyaç halinde ilgili diğer feature branch’lere de (�
 4. Onay sonrası deploy yapılır.
 5. Gerekli migration’lar uygulanır, health check ve smoke test’ler çalıştırılır.
 6. Release tamamlanır ve monitor edilir.
-
-
 
 ## 4. Konfigürasyon Yönetimi ve Kubernetes YAML Yapısı
 
@@ -127,8 +119,6 @@ k8s/
 * Ortam bazlı farklar `overlays/*` klasörlerinde yönetilir.
 * Staging ortamlarında süreçler tam otomatik olabilir.
 * Prod ortamında hiçbir şey tamamen otomatik uygulanmaz; mutlaka manuel bir gözden geçirme katmanı bulunur.
-
-
 
 ## 5. Ekip Rolleri ve Sorumluluklar
 
@@ -156,8 +146,6 @@ k8s/
 
 Bu roller ekip yeteneklerine göre birleştirilebilir veya ayrıştırılabilir. Küçük ekiplerde bazı roller aynı kişide bulunabilir; önemli olan sorumlulukların net olmasıdır.
 
-
-
 ## 6. Genel Özet
 
 * Kod, feature branch’lerde geliştirilir ve `dev` branch’ine PR ile alınır.
@@ -167,8 +155,6 @@ Bu roller ekip yeteneklerine göre birleştirilebilir veya ayrıştırılabilir.
 * Kustomize/saf YAML Git üzerinden versiyonlanır ve ortam bazlı yönetilir.
 * Release süreci her zaman temiz kurulum + upgrade testleriyle doğrulanır.
 * Tüm süreç, ekip kültürüne ve ortama göre sade ama esneyebilir şekilde tasarlanır.
-
-
 
 ## Ek A – Örnek CI/CD Pipeline Şablonu
 
@@ -275,8 +261,6 @@ pipeline {
 
 > `./gradlew` yerine kendi build komutlarını, `kustomize` yerine gerekiyorsa `kubectl kustomize` vb. komutları kullanabilirsin.
 
-
-
 ## Ek B – Örnek Kustomize Template Seti
 
 ### Dizim Yapısı
@@ -373,8 +357,6 @@ spec:
   type: ClusterIP
 ```
 
-
-
 ### 4. `overlays/dev/kustomization.yaml`
 
 ```yaml
@@ -407,8 +389,6 @@ data:
   SAMPLE_KEY: "dev-only-value"
 ```
 
-
-
 ### 6. `overlays/test/kustomization.yaml`
 
 ```yaml
@@ -429,8 +409,6 @@ configMapGenerator:
       - LOG_LEVEL=Info
       - FEATURE_FLAG_EXPERIMENTAL=false
 ```
-
-
 
 ### 7. `overlays/prod/kustomization.yaml`
 
@@ -492,8 +470,6 @@ spec:
           averageUtilization: 70
 ```
 
-
-
 ## Ek C – Akış Diyagramları (Mermaid)
 
 ### C.1. Uçtan Uca Versiyon & Release Akışı
@@ -516,8 +492,6 @@ flowchart TB
     L --> M[Deploy to Prod<br/>kustomize prod]
     M --> N[Monitoring & Smoke Tests]
 ```
-
-
 
 ### C.2. Config / YAML Promosyon Akışı
 

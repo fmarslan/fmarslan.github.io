@@ -2,6 +2,9 @@
 layout: post
 title: Kubernete Deployment Hazırlama
 categories: kubernete
+lang: tr-TR
+description: "Kubernete Deployment Hazırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "kubernete-deployment-nasil-yapilir-1109f56a"
 ---
 
 Kubernete ile deployment nasıl yapılır temel olarak bir uygulama yapacağız. İlk adım olarak öncelikle deploy edeceğimiz uygulamayı tanımak ve belkide hakim olmak yerine göre önem arzetmektedir, ben basit olması sebebiyle nginx tercih ettim sadece boş bir nginx server ayağa kaldıracağız uygulama eklemeyeceğiz belki daha sonra başka bir dökümanda deploy aşamasını yer verebilirim buyrun başlayalım.

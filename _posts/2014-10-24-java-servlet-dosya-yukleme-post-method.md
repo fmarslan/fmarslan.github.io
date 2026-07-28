@@ -2,6 +2,9 @@
 layout: post
 title: "Java Servlet dosya yükleme (POST Method)"
 categories: Java
+lang: tr-TR
+description: "Java Servlet dosya yükleme (POST Method) konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "java-servlet-dosya-yukleme-post-method-97c8bcc0"
 ---
 
 Javada servlet aracılığı ile dosya yükleme

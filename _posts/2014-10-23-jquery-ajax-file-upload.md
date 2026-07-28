@@ -2,6 +2,9 @@
 layout: post
 title: "JQuery Ajax File Upload"
 categories: javascript
+lang: tr-TR
+description: "JQuery Ajax File Upload konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jquery-ajax-file-upload-cf292745"
 ---
 
 Eğer birgün JQuery ajax ile dosya upload etmek isterseniz aşağıdaki gibi bir kodu input file nesnesinin change metodunda çalıştırarak yapabilirsiniz

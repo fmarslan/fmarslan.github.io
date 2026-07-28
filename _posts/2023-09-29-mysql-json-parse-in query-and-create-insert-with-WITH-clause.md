@@ -2,6 +2,9 @@
 layout: post
 title: "Query içinde mysql json parse işlemi ve WITH  ile create/insert komutu kullanımı"
 categories: mysql
+lang: tr-TR
+description: "Query içinde mysql json parse işlemi ve WITH  ile create/insert komutu kullanımı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "mysql-json-parse-in-query-and-create-insert-with-with-clause-f6bc6e08"
 ---
 
 aşağıdaki örnek query json parse işlemini yapmakta ve table oluşturup içerisine with ile oluşturulan sorgu sonucunu insert etmektedir.

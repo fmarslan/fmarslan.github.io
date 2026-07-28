@@ -10,13 +10,13 @@ tags:
   - third-party-cookies
   - privacy-sandbox
   - web
+lang: tr-TR
+translation_key: "chrome-third-party-cookie-privacy-sandbox-8dc85edf"
 ---
 
 Web uzun yıllar boyunca basit bir varsayımla yürüdü: Bir siteye girdiğinizde, sizi başka sitelerde tanıyabilen **third-party cookie**'ler sessizce devreye girerdi. Reklam, analitik ve ölçüm dünyasının büyük kısmı bu yapı üzerine kuruluydu.
 
 Artık bu model sürdürülebilir değil. Kullanıcı mahremiyeti, regülasyonlar (GDPR, ePrivacy) ve tarayıcıların yön değiştirmesiyle birlikte **takip mekanizması kökten değişiyor**. Google Chrome'un bu dönüşüme verdiği cevap ise **Privacy Sandbox**.
-
-![Privacy Sandbox görseli](/assets/img/9ee28aab-30b5-47d1-aca5-460f78acef4b.png)
 
 ---
 

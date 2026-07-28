@@ -2,6 +2,9 @@
 layout: post
 title: "JSF 1.2 için Input File Upload Component"
 categories: JSF
+lang: tr-TR
+description: "JSF 1.2 için Input File Upload Component konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-12-icin-input-file-upload-componenti-9d5bed8e"
 ---
 
 Malum kullanan varmıdır bilmiyorum ama JSF 1.2 de file upload yok bunu tolere edebilmek için ben yeniden bir inputFile componenti yazdım başkası ihtiyacı olan bir başkası uğraşmasın

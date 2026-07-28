@@ -2,13 +2,13 @@
 layout: post
 title: "Dockerize Edilmiş Mimari: App, Database, Proxy"
 categories: Docker
+lang: tr-TR
+description: "Dockerize Edilmiş Mimari: App, Database, Proxy konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "docker-compose-ile-uretim-icin-olceklenebilir-uygulama-mimarisi-app-database-ve-proxy-591e6099"
+image: "/assets/img/image.png"
 ---
 
 Bu mimari, bir web uygulaması (app), bir veritabanı (db) ve bir ters proxy (nginx) gibi üç temel bileşenden oluşan kompakt bir Docker-Compose yapısıdır. Hem geliştirme hem de üretim ortamları için sade, yönetilebilir ve genişletilebilir bir altyapı sunar.
-
-<img src="/assets/img/image.png" alt="cover" style="max-width: 50%; max-height:20%">
-
-
 
 ## 1. **Mimari Tasarım**
 
@@ -37,8 +37,6 @@ Bu yapı üç ana container etrafında şekillenir:
 * App → DB erişimi **sadece dahili Docker ağı** üzerinden yapılır.
 * Proxy → App yönlendirmesi üzerinden dış trafik kontrol edilir.
 
-
-
 ## 2. **Dosya Yapısı**
 
 ```plaintext
@@ -55,8 +53,6 @@ project/
 ├── .env
 └── README.md
 ```
-
-
 
 ## 3. **Docker-Compose Yapılandırması**
 
@@ -108,8 +104,6 @@ networks:
   frontend:
 ```
 
-
-
 ## 4. **App Dockerfile**
 
 ```dockerfile
@@ -120,8 +114,6 @@ RUN npm install
 COPY . .
 CMD ["npm", "start"]
 ```
-
-
 
 ## 5. **Nginx Yapılandırması**
 
@@ -137,8 +129,6 @@ server {
     }
 }
 ```
-
-
 
 ## 6. **Üretim Ortamı İçin Öneriler**
 
@@ -168,8 +158,6 @@ server {
 
 * Daha geniş yapılar için Docker Swarm veya Kubernetes’e geçiş düşünün.
 
-
-
 ## 7. **Başlatma ve Test**
 
 ### **.env dosyasını oluşturun**
@@ -190,8 +178,6 @@ docker-compose up --build
 
 * App: `http://localhost:5000`
 * Proxy: `http://localhost`
-
-
 
 ## 8. **Sonuç**
 

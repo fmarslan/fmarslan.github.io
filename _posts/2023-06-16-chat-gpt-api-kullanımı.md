@@ -2,6 +2,9 @@
 layout: post
 title: "Chat GPT Api kullanımı"
 categories: OpenAI GPT
+lang: tr-TR
+description: "Chat GPT Api kullanımı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "chat-gpt-api-kullanm-1cd910aa"
 ---
 
 ## ChatGPT API Uygulaması

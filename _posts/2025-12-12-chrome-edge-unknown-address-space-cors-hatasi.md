@@ -10,6 +10,8 @@ tags:
   - cors
   - security
   - private-network-access
+lang: tr-TR
+translation_key: "chrome-edge-unknown-address-space-cors-hatasi-76644ae1"
 ---
 
 Modern tarayıcıların güvenlik modeli artık sadece **origin** kavramıyla sınırlı değil.
@@ -34,8 +36,6 @@ Bu yazıda bu hatanın:
 * ve **nasıl kalıcı şekilde çözülebileceğini**
 
 toparlamaya çalıştım.
-
-![Local Network Access hata görseli](/assets/img/7f100c91-2ecb-40ad-b64e-e54e08778f34.png)
 
 ---
 

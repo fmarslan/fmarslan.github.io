@@ -2,10 +2,11 @@
 layout: post
 title: "Azure Functions Örneği"
 categories: azure
+lang: tr-TR
+description: "Azure Functions Örneği konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "azure-function-hazirlama-5e6d62e2"
+image: "https://github.com/fmarslan/fmarslan.github.io/assets/12278069/6f7fe91f-754c-45be-a9d1-827ad3a40d9a"
 ---
-
-![image](https://github.com/fmarslan/fmarslan.github.io/assets/12278069/6f7fe91f-754c-45be-a9d1-827ad3a40d9a)
-
 
 ## Azure Functions Nedir?
 

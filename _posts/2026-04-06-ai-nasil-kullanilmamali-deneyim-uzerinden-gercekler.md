@@ -3,8 +3,10 @@ layout: post
 title: "AI Nasıl Kullanılmamalı? Deneyim Üzerinden Gerçekler"
 date: 2026-04-07 14:00:00 +0300
 description: "AI kullanımı üzerine gerçek deneyimler: kod yazma, research ve riskler. Kontrol sende değilse AI seni yönetir."
-image: /assets/images/posts/ai-kullanimi.jpg
+image: /assets/img/403d882b-7907-47f5-9d06-098b3c873539.png
 tags: [ai, software, engineering, architecture, productivity]
+lang: tr-TR
+translation_key: "ai-nasil-kullanilmamali-deneyim-uzerinden-gercekler-557dd77d"
 ---
 
 AI kullanımı herkes için farklıdır. Bu yazı bir “doğru” anlatmaz; sadece benim gözlemlerimi ve yaşadıklarımı içerir.
@@ -13,8 +15,6 @@ Bugün AI genelde 3 amaçla kullanılıyor:
 1. Kod yazma  
 2. Research  
 3. Eğlence  
-
-![AI Nasıl Kullanılmamalı? Deneyim Üzerinden Gerçekler?](/assets/img/403d882b-7907-47f5-9d06-098b3c873539.png)
 
 ## 1. Kod Yazma
 
@@ -160,7 +160,6 @@ Eğer:
 Masada değilsen:
 
 > Oyunun parçası değilsin, kumarın içindesin.
-
 
 ## Referans
 

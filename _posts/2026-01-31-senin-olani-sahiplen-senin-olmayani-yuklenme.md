@@ -12,16 +12,15 @@ tags:
   - epiktetos
   - yapay-zeka
   - is-hayati
+lang: tr-TR
+translation_key: "senin-olani-sahiplen-senin-olmayani-yuklenme-3f260af1"
 ---
-
 
 Çevremde insanlarla konuştuğumda son dönemde dikkatimi çeken ortak bir nokta var.
 Daha önce yeni mezun arkadaşlara yönelik farklı yazılar yazmıştım; orada daha çok CV, teknik yeterlilik, sektör gerçekleri gibi konulara girmiştim. Bu yazıda ise biraz daha geriye çekilip, daha temel bir yerden bakmak istiyorum.
 
 Özellikle yeni mezun ya da kariyerinin başında olan arkadaşlarla sohbet ettiğimde konu çok hızlı bir şekilde aynı yerlere geliyor.
 Sohbetin başlığı değişiyor ama alt metni hep aynı kalıyor.
-
-![Senin Olanı Sahiplen, Senin Olmayanı Yüklenme.](/assets/img/8404d81f-465b-449a-a9a3-c4ab95e41276.png)
 
 Son zamanlarda konuşulan başlıklar genelde şunlar:
 

@@ -10,6 +10,8 @@ tags:
   - distributed-tracing
   - observability
   - system-design
+lang: tr-TR
+translation_key: "event-driven-mimaride-debug-neden-yetmez-b1b14ec9"
 ---
 
 Event-driven mimariye geçtiğim dönemde yaşadığım en belirgin duygu, akışın bütününü bir türlü görememekti.  
@@ -26,8 +28,6 @@ Tam bu karmaşanın içindeyken distributed tracing ile tanıştım.
 Trace ID’yi ekleyince, sistemde dolaşan her adım birbirine bağlanmaya başladı.  
 Ne zaman süre uzamış, hangi servis beklemiş, dış API ne kadar gecikmiş… hepsi ekranda görünür hâle geliyor.  
 Bir şeylerin “akış” olduğunu ilk kez o zaman net şekilde fark ettim.
-
-![Trace ekran görüntüsü](/assets/img/20b9c292-816b-43cc-a652-1de9cc4ca2f2.png)
 
 ---
 

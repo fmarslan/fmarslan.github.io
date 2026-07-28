@@ -11,11 +11,11 @@ tags:
   - dns
 categories:
   - networking
+lang: tr-TR
+translation_key: "peppol-aginin-dns-mantikla-calisma-prensibi-92c2fa1a"
 ---
 
 Peppol'u anlamaya çalışırken SML, SMP, Access Point, Participant ID gibi onlarca terim ezberlenmesi gereken karmaşık başlıklar gibi görünebilir. Oysa işin özü şu soruya dayanıyor: **“Bir elektronik belgeyi doğru kuruma, doğru teknik uç noktaya, güvenli şekilde nasıl ulaştırırım?”** Bu, internette yıllardır DNS'in çözdüğü problemin aynısı. Peppol mimarisi de DNS'ten öğrendiğimiz yetki devri ve çözümleme zincirini kurumlar ve e-belgeler için yeniden kuruyor.
-
-![Peppol ağının kapak görseli](/assets/img/peppol-network-cover.png)
 
 DNS'in nasıl katman katman çalıştığını merak edersen önce şu yazıya bakmanı öneririm: [ICANN, DNS Çözme Zinciri ve Yetki Haritası](/networking/2025/12/20/icann-dns-cozme-ve-yetki-zinciri.html). Buradaki anlatım, o zinciri bildiğin varsayımıyla ilerliyor.
 

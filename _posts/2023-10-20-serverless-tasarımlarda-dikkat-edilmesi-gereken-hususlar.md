@@ -2,8 +2,11 @@
 layout: post
 title: "Serverless Bir Mimari Hazırlarken Dikkat Etmeniz Gereken Önemli Noktalar"
 categories: javascript
+lang: tr-TR
+description: "Serverless Bir Mimari Hazırlarken Dikkat Etmeniz Gereken Önemli Noktalar konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "serverless-tasarmlarda-dikkat-edilmesi-gereken-hususlar-d8d46e21"
+image: "/assets/img/saas-faas.png"
 ---
-<img src="/assets/img/saas-faas.png" alt="cover" style="max-width: 50%; max-height:20%">
 
 *Görsel [Bing Görüntü Oluşturucu](https://www.bing.com/images/create) ile hazırlanmıştır*
 
@@ -19,7 +22,6 @@ Mikro servisler, yazılım geliştirme dünyasında giderek daha fazla popülerl
 - Kaynak tüketimini artırabilir.
 
 Bu sorunların genellikle hatalı tasarımlarda yüzleşeceğiniz sorunlardır. Bunları en aza indirmek veya yaşamamak için aşağıdaki başlıklara dikkat etmemiz gerekmektedir.
-
 
   1. İyi Bir Tasarım Yapın
   Mikro servislerinizi oluşturmadan önce iyi bir tasarım yapmak, başarılı bir uygulama geliştirmenin ilk adımıdır. Servislerinizin sınırları net olmalı, bağımsız çalışabilmeli ve gerektiğinde kolayca değiştirilebilmelidir. API tasarımı da büyük önem taşır; RESTful API'ler veya GraphQL gibi standartlara uymak, servislerinizin daha kolay anlaşılabilir ve kullanılabilir olmasını sağlar.

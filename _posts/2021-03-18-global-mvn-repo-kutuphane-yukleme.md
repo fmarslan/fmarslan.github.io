@@ -2,6 +2,9 @@
 layout: post
 title: "Global Maven Repository' e kendi kütüphanenizi nasıl yüklersiniz?"
 categories: maven
+lang: tr-TR
+description: "Global Maven Repository' e kendi kütüphanenizi nasıl yüklersiniz? konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "global-mvn-repo-kutuphane-yukleme-a3c805a6"
 ---
 
 İnsan benim gibi bazen hep tüketici konumda olmaktan sıkılıp birazda üretici olayım bende kendimce belki birşeyler katarım diye düşünebiliyor böyle bir durumda sürekli faydalandığımız open source dünyasına merhaba diyoruz. Bu yazıda open soruce nedir vs anlatmayacağım böyle bir yola girdik kütüphanemizi hazırladık github veya benzeri başka bir platformda kaynak kodları yayınladık ama isteyen kolay bi şekilde kullanamıyor global repoda yer almıyoruz bu durumda bizim senaryomuzda bi domain adresimiz var bunu packet name olarak kullanıyoruz ve global maven repoya bu package name ile bu group adı ile yüklemek istiyoruz.

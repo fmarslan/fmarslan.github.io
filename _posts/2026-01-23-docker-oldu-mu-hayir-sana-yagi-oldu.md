@@ -2,7 +2,7 @@
 layout: post
 title: "Docker Öldü mü? Hayır. Sadece “Sana Yağı” Oldu."
 date: 2026-01-23 09:00:00 +0300
-description: Docker gerçekten öldü mü, yoksa sadece container kavramının marka adı mı oldu? Değişen container ekosistemini ve bugünkü doğru zihinsel modeli ele alıyorum.
+description: "Docker'ın container kavramıyla nasıl özdeşleştiğini ve değişen container ekosisteminde doğru zihinsel modelin nasıl kurulacağını ele alan bir yazı."
 image: /assets/img/242c6430-9d74-463e-993d-6fb7d47266e9.png
 tags:
   - docker
@@ -10,6 +10,8 @@ tags:
   - kubernetes
   - devops
   - cloud-native
+lang: tr-TR
+translation_key: "docker-oldu-mu-hayir-sana-yagi-oldu-99f2c044"
 ---
 
 Son birkaç yıldır teknik sohbetlerde sık duyulan bir cümle var:  
@@ -18,9 +20,6 @@ Son birkaç yıldır teknik sohbetlerde sık duyulan bir cümle var:
 Bu cümle teknik olarak yanlış, zihinsel olarak ise çok şey anlatıyor.  
 Docker ölmedi; **Docker kelimesi, container kavramının yerine geçti.**  
 Tıpkı bir dönem her margarinin “Sana yağı” diye anılması gibi.
-
-![Docker Öldü mü? Hayır. Sadece “Sana Yağı” Oldu.](/assets/img/242c6430-9d74-463e-993d-6fb7d47266e9.png)
-
 
 ## Docker Neydi, Ne Oldu?
 
@@ -36,7 +35,6 @@ Sonuç şu oldu:
 > **Container = Docker**
 
 Bu noktadan sonra Docker, bir teknolojiden çok **bir marka** haline geldi.
-
 
 ## Asıl Teknoloji Ne?
 
@@ -59,7 +57,6 @@ Yani container:
 
 Docker ise bu yaklaşımı paketleyen ilk büyük ekosistemdi.
 
-
 ## “Docker Öldü” Algısı Nereden Çıktı?
 
 Bu algının birkaç net sebebi var.
@@ -80,7 +77,6 @@ Kubernetes bugün ağırlıklı olarak:
 kullanıyor.
 
 **Docker Engine gitti, container kaldı.**
-
 
 ### 2. Docker Desktop ve lisans gerçeği
 
@@ -168,7 +164,6 @@ Tıpkı:
 - “Selpak”ın kağıt mendil olması  
 
 gibi.
-
 
 Bugün bir sistem tasarlarken sormamız gereken soru şu:
 

@@ -2,7 +2,11 @@
 layout: post
 title: "Csharp XML Serialize Ederken XML İçeriğine Yorum Ekleme"
 categories: Csharp
+lang: tr-TR
+description: "Csharp XML Serialize Ederken XML İçeriğine Yorum Ekleme konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "csharp-xml-serialize-ederken-xml-icerigine-yorum-ekleme-b8caf72e"
 ---
+
 Sayfanıza time out için zaman sayacı koymak isteyenler aşağıdaki kodu düzenleyebilirler 
 
 

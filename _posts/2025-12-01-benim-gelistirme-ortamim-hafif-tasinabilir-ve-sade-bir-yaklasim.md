@@ -10,13 +10,13 @@ tags:
   - workflow
   - testing
   - vs-code
+lang: tr-TR
+translation_key: "benim-gelistirme-ortamim-hafif-tasinabilir-ve-sade-bir-yaklasim-8db243bd"
 ---
 
 Bir geliştirici olarak yıllar içinde fark ettim ki, benim için en iyi çalışma ortamı **hafif**, **parçalı**, **taşınabilir** ve **temiz** olan. Yerel makinemde dev ortamı kurup karmaşık bağımlılık yığınlarıyla boğuşmak istemiyorum. Bunun yerine, nerede olursam olayım aynı konforu sağlayan, sade ama güçlü bir ekosistem kurdum.
 
 Aşağıda kullandığım yaklaşımı ve neden bana bu kadar iyi geldiğini anlattım. Her şey çok doğal bir şekilde kendi yolunu bulmuş gibi; zorlamadan, gereksiz ağırlık olmadan, sade ama verimli bir düzen.
-
-![Devcontainer bağlantısı](/assets/img/connected-to-dev-container.png)
 
 ## Devcontainer: Olmazsa Olmazım
 

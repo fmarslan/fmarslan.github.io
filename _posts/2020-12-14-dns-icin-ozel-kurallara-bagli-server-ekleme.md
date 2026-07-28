@@ -2,6 +2,9 @@
 layout: post
 title: DNSleriniz İçin Koşullu Sunucu Yönlendirmesi
 category: DNS
+lang: tr-TR
+description: "DNSleriniz İçin Koşullu Sunucu Yönlendirmesi konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "dns-icin-ozel-kurallara-bagli-server-ekleme-148a4ae9"
 ---
 
 xx.fmarslan domain adreslerini çözebilmek için sadece bu dns sorgularını kendi sunucumuza yönlendirmek isteyebiliriz. Burada önemli nokta isme özel farklı dns sunucusuna yönlendirme işlemi yapmaktır. Bu işlemleri yaptığımızda ``mywebsite.fmarslan`` domaini kendi sunucumuzda ip adres yönlendirmesi yapılarak çözülecektir.

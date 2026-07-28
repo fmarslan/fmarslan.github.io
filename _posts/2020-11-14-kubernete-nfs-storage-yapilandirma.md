@@ -2,8 +2,10 @@
 title: Kubernete nfs storage yapılandirma
 layout: post
 category: kubernete
+lang: tr-TR
+description: "Kubernete nfs storage yapılandirma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "kubernete-nfs-storage-yapilandirma-37b3858a"
 ---
-
 
 Öncelikle elimize bir nfs sunucu olmalıdır eğer mevcutta bir nfs sunucunuz var ise bu kısım ile işiniz yok 
 

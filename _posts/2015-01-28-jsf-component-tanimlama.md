@@ -2,7 +2,11 @@
 layout: post
 title: "JSF component tanımlama"
 categories: JSF
+lang: tr-TR
+description: "JSF component tanımlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-component-tanimlama-bc7d5771"
 ---
+
 Mevcut bir komponentin kullanımı için nyapılması gereken tanımlamalar
 
 Web xml içerisine aşağıdaki şekilde tanımlamalar yapılmalıdır

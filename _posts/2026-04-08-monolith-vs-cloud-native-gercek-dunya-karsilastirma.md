@@ -5,12 +5,11 @@ date: 2026-04-08
 description: "Cloud-native yaklaşım, platform governance ve monolit mimariler arasındaki gerçek trade-off'lar"
 image: /assets/img/31579b3a-c863-48da-937e-ba17cce39009.png
 tags: [cloud-native, platform-engineering, microservices, monolith, architecture]
+lang: tr-TR
+translation_key: "monolith-vs-cloud-native-gercek-dunya-karsilastirma-8bbdee97"
 ---
 
 Hayatımızdaki kavramlardan bir diğeri cloud-native yaklaşım. Kubernetes, microservices ve containerization artık birçok sistemin temelini oluşturuyor. Ancak bu kavramla birlikte basit bir soru daha karmaşık hale geliyor:
-
-![Cloud-Native ve Monolit? Deneyim Üzerinden Gerçekler?](/assets/img/31579b3a-c863-48da-937e-ba17cce39009.png)
-
 
 **Monolit mi, dağıtık mimari mi?**
 

@@ -3,6 +3,10 @@ layout: post
 title: "CAP Yaklaşımı ve Event-Driven Tasarım: Modern Sistemlerin Görünmeyen Omurgası"
 categories: [CAP, Event-Driven]
 mermaid: true
+lang: tr-TR
+description: "CAP Yaklaşımı ve Event-Driven Tasarım: Modern Sistemlerin Görünmeyen Omurgası konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "event-driven-cap-1e1a8a92"
+image: "/assets/img/5198cfa0-de03-4bb5-b637-e100abef9ab1.png"
 ---
 
 Dağıtık sistemler hızla büyürken, uygulamaların tek bir makinede çalıştığı dönem çok geride kaldı. Artık yüzlerce bileşenin eşzamanlı çalıştığı, farklı bölgelerde dağılmış, hata toleransının yüksek olması beklenen yapılarla uğraşıyoruz. Bu dönüşüm, beraberinde temel bir soruyu getiriyor:
@@ -11,9 +15,6 @@ Dağıtık sistemler hızla büyürken, uygulamaların tek bir makinede çalış
 
 Bu soruya akademik cevap → **CAP Teoremi**
 Pratik karşılığı → **Event-Driven Tasarım**
-
-<img src="/assets/img/5198cfa0-de03-4bb5-b637-e100abef9ab1.png" alt="cover" style="max-width: 50%; max-height:10%">
-
 
 ## 1. Dağıtık Sistemlerde Büyük Resim
 
@@ -34,7 +35,6 @@ graph TD
     A --> D(P: Bölünme Toleransı)
 </div>
 
-
 ## 2. CAP Teoremi (Consistency – Availability – Partition Tolerance)
 
 ### 2.1 Tanım
@@ -48,8 +48,6 @@ Bir ağ bölünmesi yaşandığında sistem şu tercihle karşı karşıya kalı
 * **P (Partition Tolerance)** → Ağ bölünmelerinde bile çalışmaya devam etmesi
 
 > Bölünme kaçınılmaz olduğundan, asıl seçim **C mi A mı öne çıkacak?** sorusudur.
-
-
 
 ## 3. CAP Kavramları Basitçe
 
@@ -65,8 +63,6 @@ Sistem her isteğe yanıt verir – bu yanıt hata da olabilir.
 
 Ağ kopsa bile sistemin işlemeye devam etmesidir.
 
-
-
 ## 4. “Üçünden İkisi” Yanılgısının Gerçeği
 
 CAP, bir menüden iki seçenek seçmek değildir; **bölünme yaşandığında verilen tepkidir**.
@@ -77,8 +73,6 @@ Aşağıdaki tablo bu davranışı özetler:
 |  | - |  | - |
 | CP  | Tutarlılık + Bölünme      | Erişilebilirlik | Bankacılık, lider seçim sistemleri |
 | AP  | Erişilebilirlik + Bölünme | Tutarlılık      | Event-driven, log işleme, IoT      |
-
-
 
 ## 5. CAP’e Göre Sistem Tipleri
 
@@ -103,8 +97,6 @@ Aşağıdaki tablo bu davranışı özetler:
 * Her durumda yanıt verir.
 * Tutarlılık **gecikmeli** sağlanır.
   Örnek: IoT veri toplayıcıları, log sistemleri, event-driven pipeline.
-
-
 
 ## 6. Event-Driven Mimarinin Doğuşu
 
@@ -132,8 +124,6 @@ Broker->>C: PaymentCompleted
 
 </div>
 
-
-
 ## 7. Event-Driven = Doğal Bir AP Yaklaşımı
 
 Event-driven mimari bekleme gerektirmez; herkes işini bağımsız yürütür.
@@ -146,8 +136,6 @@ Bu nedenle:
 
 > 500 ms gecikmiş stok güncellemesi genellikle kritik değildir; ancak erişilebilirlik çoğu sistem için hayati önem taşır.
 
-
-
 ## 8. CAP Odaklı Mimari Seçim Örnekleri
 
 | Senaryo              | Tercih | Sebep                              |
@@ -156,8 +144,6 @@ Bu nedenle:
 | Log işleme, bildirim | AP     | Tutarlılık gecikmeli olabilir      |
 | IoT veri toplama     | AP     | Sürekli cevap vermek daha önemli   |
 | Config yönetimi      | CP     | Tüm node'lar aynı config'i görmeli |
-
-
 
 ## 9. Event-Driven Mimarinin Teknik Avantajları
 
@@ -181,8 +167,6 @@ Servis bağımlılıklarını minimuma indirir.
 
 Yeni bir servis eklemek çoğu zaman yalnızca bir “event listener” yazmak demektir.
 
-
-
 ## 10. Diyagram: Event-Driven Sistemin Akışı
 
 <div class="mermaid">
@@ -195,8 +179,6 @@ flowchart LR
 K --> E[(Event Store)]
 
 </div>
-
-
 
 ## 11. Dikkat Edilmesi Gerekenler
 
@@ -219,8 +201,6 @@ else:
     save(event.id)
 ```
 
-
-
 ## 12. Serverless Bağlamında CAP + Event-Driven
 
 Serverless sistemlerde (AWS Lambda, Azure Functions) ayrıca şunlar dikkate alınmalıdır:
@@ -238,8 +218,6 @@ Bu nedenle:
 * ölçülebilirlik
 
 büyük önem taşır.
-
-
 
 ## 13. Sonuç
 
@@ -262,8 +240,6 @@ Yeni bir sistem tasarlarken kendinize şu soruyu sorun:
 > "Bu senaryoda asıl kritik olan nedir: Tutarlılık mı, erişilebilirlik mi?"
 
 Bu soru, doğru mimariyi seçmenizi sağlar.
-
-
 
 ## Kaynaklar
 

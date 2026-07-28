@@ -9,6 +9,8 @@ tags:
   - software-engineering
   - architecture
   - productivity
+lang: tr-TR
+translation_key: "yapay-zeka-dusunmenin-yerini-alabilir-mi-2755d30d"
 ---
 
 Yapay zekâ araçları yazılım geliştirme süreçlerine ciddi bir hız ve kolaylık getiriyor. Kod üretmek, hataları düzeltmek veya teknik taslak oluşturmak artık dakikalar değil saniyeler içinde yapılabiliyor. Ne var ki bu parlak verimlilik, insan zihninin gözle görülmeyen ama kritik bir kaybına işaret ediyor: **düşünme sorumluluğunun devreden çıkması**. Bugün internette sıkça karşımıza çıkan “AI artık yazılımı baştan sona yazıyor”, “Hiç bilmeyen proje çıkarabiliyor”, “AI yüzünden yazılımcılar işsiz kalacak” tartışmaları da tam olarak bu kaygının yansıması.
@@ -24,8 +26,6 @@ Yapay zekâ doğru kullanıldığında geliştiricinin iş yükünü azaltan, i�
 ## Zihinsel Çöküş Gerçek
 
 Teknik risklerin ötesindeki daha derin problem ise insan zihninin zayıflamasıdır. MIT’nin EEG ölçümleri üzerine yaptığı araştırma, yapay zekâ yardımıyla metin üreten katılımcıların beyin aktivitesinin %55 oranında düştüğünü gösteriyor. Eleştirel düşünme refleksleri zayıflıyor, hafıza süreçleri bozuluyor, özgün içerik üretme kapasitesi yok oluyor ve insanlar her yeni görevde biraz daha tembelleşiyor. AI önerilerini sorgulamadan kabul eden geliştirici zamanla bağlam düşünemez hale geliyor; projedeki tasarımın neden öyle olduğunu açıklayamayan, kararların sonuçlarını öngöremeyen, uzun vadeli etkileri tartamayan bir profesyonel profili ortaya çıkıyor.
-
-![AI düşünce yükünü üstlenirken donup kalan geliştirici illüstrasyonu](/assets/img/8839b539-b011-4bc1-adff-8a69afb65f8c.png)
 
 ## Tahminle Gelen Monolitin Bedeli
 

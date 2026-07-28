@@ -2,6 +2,9 @@
 layout: post
 title: "Yararlı linux komutları"
 categories: linux
+lang: tr-TR
+description: "Yararlı linux komutları konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "yararli-linux-komutlari-1fd4901a"
 ---
 
 *Zaman içinde güncellenebilir*

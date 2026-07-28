@@ -8,14 +8,14 @@ tags:
   - architecture
   - domain-driven-design
   - strategy
+lang: tr-TR
+translation_key: "mimari-kararlar-degisen-context-ve-rotasi-belli-bir-platformun-gucu-3b85d21a"
 ---
 
 Bir platformu ayakta tutan şey çoğu zaman teknoloji değil; context’in kendisidir.
 Context netse mimari netleşir, belirsizse hiçbir zaman yerine oturmaz.
 Yıllar içerisinde fark ettiğim şey şu oldu: **Rotası olmayan gemiye hiçbir rüzgâr yardım etmez; rotası belli olan gemi ise rüzgârı arkasına aldığında durdurulamaz.**
 Mimari de aynen böyle çalışıyor.
-
-
 
 ## 1. Context Yoksa Mimarinin Yönü Yoktur
 
@@ -28,16 +28,12 @@ Mimari de aynen böyle çalışıyor.
 Sonuç olarak en iyi teknoloji bile rotasız gemi gibi sağa sola savruluyor.
 Mimari acıların çoğu aslında context belirsizliğinden kaynaklanıyor.
 
-
-
 ## 2. Context Değişince Mimari de Değişmek Zorunda
 
 Context zamanla büyür, şekil değiştirir, yeni veriler eklenir.
 Ama mimari çoğu zaman beton blokmuş gibi sabit tutulur.
 Halbuki domain esniyorsa, mimari de onunla birlikte yelkenlerini ayarlamak zorundadır.
 Rüzgâr yön değiştirince yelkenini çevirmeyen gemi devrilir; context değişimini reddeden mimari de aynı akıbeti yaşar.
-
-
 
 ## 3. Mimariyi Context’e Bağlamak = Yelkene Rota Vermek
 
@@ -49,16 +45,6 @@ Doğru yaklaşım:
 Bounded context tam da bunu sağlıyor.
 Context doğru çizilince servis sınırları, veri sahipliği ve sorumluluk paylaşımı kendiliğinden ortaya çıkıyor.
 Böylece platform, sağa sola çarpan tekne değil, rüzgârı fırsata çeviren gemi oluyor.
-
-
-
-<figure>
-  <img src="/assets/img/context-rotasi.png" alt="Rüzgârla hizalanan soyut gemi ve context çemberleri" loading="lazy">
-  <figcaption>Context’i doğru okuyunca mimari, rüzgârı arkasına alan gemi gibi kendi rotasını buluyor.</figcaption>
-</figure>
-
-
-
 ## 4. Yanlış Mimari = Yanlış Rota
 
 Yanlış mimarinin iki temel sebebi var:
@@ -67,8 +53,6 @@ Yanlış mimarinin iki temel sebebi var:
 
 Bu hatalar mikroservis karmaşası, kırılgan bağımlılıklar, tek context’e ait kodun başka context’ten çağrılması ve her değişikliğin tüm sistemi etkilemesiyle sonuçlanır.
 Bu, rotası yokken yelken şişirmeye çalışan gemiye benzer: hareket eder ama nereye gittiği belli değildir.
-
-
 
 ## 5. Mimarinin Gücü: Değişimi Karşılayabilmesi
 
@@ -86,8 +70,6 @@ flowchart LR
 
 Bu döngü sayesinde platform yıllar boyunca sağlıklı kalır.
 
-
-
 ## 6. Doğru Context = Doğru Yelken, Doğru Rota
 
 Context netse:
@@ -97,8 +79,6 @@ Context netse:
 * Domain büyüdükçe mimari kendini genişletir.
 
 Rotası belli olan gemi rüzgârı fırsata çevirir; rotası belirsiz olan gemi ise en güzel rüzgârda bile savrulur.
-
-
 
 ## 7. Sonuç: Mimari Bir Çizim Değil, Canlı Organizma
 

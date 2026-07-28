@@ -2,7 +2,11 @@
 layout: post
 title: "WKT bilgisinden Google Maps polygon oluşturma"
 categories: javascript
+lang: tr-TR
+description: "WKT bilgisinden Google Maps polygon oluşturma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "wkt-bilgisinden-google-maps-polygon-olusturma-342cae6f"
 ---
+
 Zaman zaman bir harita üzerinde polygon çizme ihtiyacımız olabilir yine böyle bir durumda elinizde ki veri WKT formatında ise ve herhangi bir layer kullanmıyorsanız aşağıdaki scripti kullanarak polygon WKT formatındaki veriden polygon çizebilirsiniz. Gerekli kütüphaneleri ve detaylı dökümantasyon bilgisini http://terraformer.io/ sitesinden alabilirsiniz.
 
 ```javascript

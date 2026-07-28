@@ -10,6 +10,8 @@ tags:
   - developer-experience
   - software-architecture
   - workflow
+lang: tr-TR
+translation_key: "test-centric-development-47760c19"
 ---
 
 _Test-first değil, test etrafında geliştirme_
@@ -19,13 +21,9 @@ Bu tembellik değil, gerçek hayat. Bir şey çalışmıyor, debug etmek istiyor
 Bir davranış kafanda net değil, “bir çalıştırayım” diyorsun.  
 Bu noktada test yazmak çoğu developer için refleks değil.
 
-![Test-Centric Development kapak görseli](/assets/img/test-centric-development.png)
-
 Genelde olan şey şu:  
 Uygulama ayağa kaldırılır, controller’dan istek atılır, log bakılır, tekrar denenir.  
 Asıl görmek istediğin kod, config ve environment gürültüsünün arasında kaybolur.
-
-
 
 ## Test-Centric yaklaşım ne yapıyor?
 
@@ -37,7 +35,6 @@ Sadece şunu söylüyor:
 > **Kodun ilk çalıştığı yer uygulama değil, test olsun.**
 
 IDE’de Run / Debug’a bastığında ayağa kalkan şey application değil, **test**.
-
 
 ## Günlük hayattan basit bir örnek
 
@@ -97,7 +94,6 @@ Ama sonuçta:
 
 Bu test mükemmel olmak zorunda değil.
 Ama en azından o kod için **smoke seviyesinde** bir güvence var artık.
-
 
 ## In-memory araçlar devreye girince
 

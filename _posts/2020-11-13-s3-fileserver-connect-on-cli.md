@@ -1,6 +1,9 @@
 ---
 title: S3 Server Kullanımı ve Bağlantı Sağlama
 category: tools
+lang: tr-TR
+description: "S3 Server Kullanımı ve Bağlantı Sağlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "s3-fileserver-connect-on-cli-cd748043"
 ---
 
 ### S3 Server Nasıl çalışır.

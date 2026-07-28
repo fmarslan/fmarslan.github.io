@@ -2,7 +2,11 @@
 layout: post
 title: "Jquery için extension method oluşturma"
 categories: javascript
+lang: tr-TR
+description: "Jquery için extension method oluşturma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jquery-icin-extension-method-olusturma-861114ff"
 ---
+
 jQuery için kendi özel methodlarınızı oluşturmak için aşağıdaki şekilde fonksiyon yazabilirsiniz
 
 ```javascript

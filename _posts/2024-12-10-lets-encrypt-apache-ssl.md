@@ -2,13 +2,13 @@
 layout: post
 title: "Let's Encrypt ile Apache için SSL Sertifikası"
 categories: [SSL, Apache]
+lang: tr-TR
+description: "Let's Encrypt ile Apache için SSL Sertifikası konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "lets-encrypt-apache-ssl-a6154cf2"
+image: "/assets/img/apache-lets-encrypt.webp"
 ---
 
 Bu rehber, **Docker ortamında çalışan bir Apache sunucusu için Let's Encrypt kullanarak otomatik SSL sertifikası alma ve yenileme** sürecini adım adım anlatır. Yapı tamamen pratik, gerçekçi bir senaryo üzerinden hazırlanmıştır.
-
-<img src="/assets/img/apache-lets-encrypt.webp" alt="cover" style="max-width: 50%; max-height:20%">
-
-
 
 ## 1. Proje Dizininin Hazırlanması
 
@@ -18,8 +18,6 @@ Bu rehber, **Docker ortamında çalışan bir Apache sunucusu için Let's Encryp
 mkdir apache-ssl
 cd apache-ssl
 ```
-
-
 
 ## 2. Dockerfile Oluşturma
 
@@ -34,8 +32,6 @@ RUN mkdir -p /etc/letsencrypt/live /var/www/html
 # Apache yapılandırması
 COPY ./apache.conf /usr/local/apache2/conf/httpd.conf
 ```
-
-
 
 ## 3. Apache Yapılandırması
 
@@ -67,8 +63,6 @@ SSL ve ACME doğrulama dizinleri için gerekli ayarları `apache.conf` içine ek
 ```
 
 **Not:** Domain adlarını kendi sitenize göre değiştirmelisiniz.
-
-
 
 ## 4. Docker Compose: Apache + Certbot
 
@@ -113,8 +107,6 @@ Bu loop yalnızca demo amaçlıdır. Gerçek ortamda **cron tabanlı yenileme** 
 0 0 * * * docker run --rm -v $(pwd)/certs:/etc/letsencrypt -v $(pwd)/html:/var/www/html certbot/certbot renew
 ```
 
-
-
 ## 5. Gerekli Klasörlerin Oluşturulması
 
 ```bash
@@ -123,15 +115,11 @@ echo "<h1>SSL Test Sayfası</h1>" > html/index.html
 mkdir certs
 ```
 
-
-
 ## 6. Sunucuyu Başlatma
 
 ```bash
 docker-compose up -d
 ```
-
-
 
 ## 7. DNS Ayarlarını Doğru Yönlendirme
 
@@ -141,8 +129,6 @@ Alan adı IP yönlendirmeleri:
 * `www.fmarslan.com` → Sunucunun IP adresi
 
 DNS propagasyonu gerçekleşmeden sertifika üretimi başarısız olur.
-
-
 
 ## 8. Log ve Sorun Giderme
 
@@ -157,8 +143,6 @@ Sertifika hataları genellikle:
 * `.well-known` erişimi,
 * Firewall port engellerinden kaynaklanır.
 
-
-
 ## 9. Sertifikaların Yenilenmesi
 
 Certbot yenileme yaptığında Apache doğrudan yeni sertifikayı kullanır. Gerekirse Apache’yi yeniden yükleyebilirsiniz:
@@ -166,7 +150,5 @@ Certbot yenileme yaptığında Apache doğrudan yeni sertifikayı kullanır. Ger
 ```bash
 docker exec apache-server apachectl graceful
 ```
-
-
 
 Bu yapı ile **Docker üzerinde Apache + Let’s Encrypt otomatik sertifika yönetimi** sorunsuz bir şekilde çalışacaktır. Hem test hem de canlı ortamlar için uyarlanabilir yapıdadır.

@@ -2,6 +2,9 @@
 layout: post
 title: "Azure Container App'e shared container bağlama"
 categories: azure
+lang: tr-TR
+description: "Azure Container App'e shared container bağlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "azure-container-app-shared-file-mount-534e7c57"
 ---
 
 - Storage ta File share oluştur.

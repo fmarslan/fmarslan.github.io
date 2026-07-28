@@ -2,16 +2,16 @@
 layout: post
 title: "Dokümantasyon Nerede Biter, Mühendislik Nerede Başlar?"
 date: 2026-01-05 09:00:00 +0300
-description: Dokümana bakıp “doğru kullanım”la mı ilerliyoruz, yoksa aracın yeteneklerini zorlayıp yeni kullanım alanları mı açıyoruz? Kong örneği üzerinden sahadan bir anlatı.
+description: "Dokümana bağlı kalmak ile aracın yeteneklerini keşfetmek arasındaki mühendislik kararını Kong örneği üzerinden ele alan bir değerlendirme."
 tags: [engineering, documentation, kong, architecture, devops, mindset]
-image: /assets/img/dokumantasyon-muhendislik.png
+image: /assets/img/258f48f7-8297-4ca3-b0c7-dda1df84b119.png
+lang: tr-TR
+translation_key: "dokumantasyon-nerede-biter-muhendislik-nerede-baslar-2b7d5ef9"
 ---
 
 Bazen bir kütüphane / ürün / servis kullanırken ilk refleks şu oluyor: dokümanı aç, örneği kopyala, “best practice” neyse onu uygula.
 
 Bu yanlış değil. Ama bir yerden sonra şunu fark ediyorsun: sadece dokümana bakarak ilerlersen, aslında sana sunulan potansiyelin yarısını hiç görmeden geçiyorsun.
-
-![Dokümantasyon Nerede Biter, Mühendislik Nerede Başlar?](/assets/img/258f48f7-8297-4ca3-b0c7-dda1df84b119.png)
 
 Çünkü dokümantasyon çoğu zaman şunu anlatır: **en yaygın senaryo**.  
 Gerçek hayat ise çoğu zaman “yaygın” değil. Dağınık. Kirli. Garip. Ve acil.

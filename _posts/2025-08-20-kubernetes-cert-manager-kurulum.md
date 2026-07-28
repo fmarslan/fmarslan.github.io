@@ -2,15 +2,15 @@
 layout: post
 title: "Kubernetes Üzerinde cert-manager Kurulumu (Adım Adım Rehber)"
 categories: kubernetes
+lang: tr-TR
+description: "Kubernetes Üzerinde cert-manager Kurulumu (Adım Adım Rehber) konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "kubernetes-cert-manager-kurulum-c1b2fc8c"
+image: "/assets/img/cert-manager.png"
 ---
 
 Kubernetes üzerinde çalışan uygulamalarda **TLS sertifikalarını manuel yönetmek**, hem zaman alan hem de hata yapmaya açık bir süreç. İşte tam bu noktada devreye giren cert-manager, sertifika üretme, yenileme ve doğrulama işlemlerini otomatikleştirerek platformu çok daha güvenli ve sürdürülebilir hale getiriyor.
 
 Aşağıdaki rehber, cert-manager kurulumunu baştan sona açık ve pratik bir şekilde anlatır.
-
-<img src="/assets/img/cert-manager.png" alt="cover" style="max-width: 50%; max-height:10%">
-
-
 
 ## Önkoşullar
 
@@ -22,8 +22,6 @@ Başlamadan önce ortamda aşağıdaki gereksinimlerin karşılanmış olması �
 * İnternet erişimi (Jetstack ve Let’s Encrypt için gerekli)
 * (Opsiyonel) NGINX Ingress Controller veya Gateway API
 
-
-
 ## Namespace Oluşturma
 
 ```bash
@@ -31,8 +29,6 @@ kubectl create namespace cert-manager
 ```
 
 Namespace zaten mevcutsa bu adım atlanabilir.
-
-
 
 ## Kurulum Yöntemleri
 
@@ -75,8 +71,6 @@ kubectl apply -f 01-secret.yaml
 kubectl apply -f 02-certmanager.yaml
 ```
 
-
-
 ## Kurulumu Doğrulama
 
 ```bash
@@ -94,8 +88,6 @@ Opsiyonel doğrulama:
 ```bash
 cmctl check api
 ```
-
-
 
 ## Let’s Encrypt ile ACME Yapılandırması
 
@@ -177,16 +169,12 @@ spec:
             ingressClassName: nginx
 ```
 
-
-
 ## En İyi Uygulamalar
 
 * Önce staging ortamında test edin
 * Cloudflare için **minimum yetkili token** oluşturun
 * `ClusterIssuer` yerine `Issuer` kullanarak kapsamı namespace’e özel yapabilirsiniz
 * Sertifika sürelerini Prometheus + Alertmanager ile takip edin
-
-
 
 ## Sorun Giderme
 
@@ -195,8 +183,6 @@ Sık karşılaşılan sorunlar ve kontroller:
 * **DNS-01:** Token yetkisi, zone seçimi, DNS propagasyonu
 * **HTTP-01:** `.well-known` yolu, ingressClassName, port yönlendirmeleri
 * `kubectl describe certificate <name>` ile hata analizi
-
-
 
 ## Kaldırma İşlemi
 
@@ -215,11 +201,7 @@ Helm üzerinden kurulum yaptıysanız:
 helm uninstall cert-manager -n cert-manager
 ```
 
-
-
 Kurulumu adım adım uygulayarak Kubernetes ortamınızda güvenilir ve otomatik bir TLS yönetimi sağlayabilirsiniz.
-
-
 
 **Kaynak:**
 

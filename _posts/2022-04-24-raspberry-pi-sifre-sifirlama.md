@@ -2,7 +2,11 @@
 layout: post
 title: "Raspberry pi Şifre Sıfırlama"
 categories: Raspberrypi
+lang: tr-TR
+description: "Raspberry pi Şifre Sıfırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "raspberry-pi-sifre-sifirlama-3637edfc"
 ---
+
 Eğer birgün raspberry pi şifresini unutur açamazsanız aşağıdaki şekilde şifreyi sıfırlayabilirsiniz
 
 **1:** Öncelikle sd kartı cihazdan çıkartıp bir bilgisayarda dosya görüntülemek için açın

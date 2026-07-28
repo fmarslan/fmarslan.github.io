@@ -9,11 +9,11 @@ tags:
   - cloud
   - devops
   - kubernetes
+lang: tr-TR
+translation_key: "modern-bulut-mimarisi-temel-kavramlar-d9083f75"
 ---
 
 Bulut tabanlı bir ürün kurarken aynı anda birçok kavram ve araçla uğraşmak gerekiyor. Üstelik tüm bunlar, ekipler arasında ortak bir dil gerektiriyor. Aşağıdaki liste, zaman içinde biriken bu kavramları daha düzenli ve tekrar kullanılabilir bir sözlüğe dönüştürmek için hazırladığım kısa notlardan oluşuyor.
-
-<img src="/assets/img/modern-bulut-mimarisi-cover.png" alt="Modern bulut mimarisi kapak görseli" width="500">
 
 ## Konteyner ve Kubernetes Temelleri
 
@@ -48,7 +48,6 @@ Bulut tabanlı bir ürün kurarken aynı anda birçok kavram ve araçla uğraşm
 * **NiFi Registry** → Flow versiyonlama sayesinde farklı ortamlar arasında tutarlılığı korur. Rollback ve promotion işlemleri CLI yerine görsel olarak yapılabilir.
 
 * **Serverless function steps** → Olayları stateless fonksiyonlara bölmek bağımsız ölçeklendirme ve hızlı deployment sağlar. Payload + context modeli fonksiyonlar arası gereksiz bağımlılığı azaltır.
-
 
 ## API Gateway ve TLS/Sertifika Yönetimi
 

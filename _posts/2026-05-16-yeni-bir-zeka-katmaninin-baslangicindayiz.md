@@ -3,7 +3,7 @@ layout: post
 title: "Yeni Bir Zekâ Katmanının Başlangıcındayız"
 date: 2026-05-16 19:00:00 +0300
 description: "AI, FlyWire, BrainNet, Neuralink ve yeni nesil zeka sistemleri üzerine bir düşünce yazısı."
-image: /assets/images/posts/ee03c2f2-9c67-4873-9774-ffe63459eff4.png
+image: /assets/img/ee03c2f2-9c67-4873-9774-ffe63459eff4.png
 tags:
   - artificial-intelligence
   - ai
@@ -16,16 +16,16 @@ tags:
   - security
   - connectome
   - philosophy
+lang: tr-TR
+translation_key: "yeni-bir-zeka-katmaninin-baslangicindayiz-5ecfc2e4"
 ---
+
 # Yeni Bir Zekâ Katmanının Başlangıcındayız.
 
 Bugün uzun zamandır duyduğum ve araştırma defterimde olan bir konuyu biraz daha araştırdım.
 
 İnanılmaz derecede büyük komplo senaryoları yazdım.
 Bu yazıyı da biraz onları sizinle paylaşmak için hazırlıyorum.
-
-![Yeni Bir Zekâ Katmanının Başlangıcındayız](/assets/img/ee03c2f2-9c67-4873-9774-ffe63459eff4.png)
-
 
 Özellikle aşağıdaki konuları daha önce hiç araştırmadıysanız mutlaka incelemenizi öneririm:
 

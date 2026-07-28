@@ -2,7 +2,11 @@
 layout: post
 title: "Timeout Javascript"
 categories: javascript
+lang: tr-TR
+description: "Timeout Javascript konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "timeout-javascript-51168349"
 ---
+
 Sayfanıza time out için zaman sayacı koymak isteyenler aşağıdaki kodu düzenleyebilirler 
 
 ```javascript

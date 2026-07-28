@@ -2,6 +2,9 @@
 title: Log4j2 ile Rabbit MQ ya log yazmak
 category: java
 layout: post
+lang: tr-TR
+description: "Log4j2 ile Rabbit MQ ya log yazmak konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "log4j2-ile-rabbit-mq-log-yazmak-ea5bad18"
 ---
 
 Log4j2 ile rabbit mqya log yazdırmak için basit bir kaç ayarı burada paylaşmaya çalışacağım

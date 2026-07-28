@@ -2,8 +2,10 @@
 layout: post
 title: "Image dosyası boyutlandırma"
 categories: SYS
+lang: tr-TR
+description: "Image dosyası boyutlandırma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "image-dosyas-boyutlandirma-52b3c4b3"
 ---
-
 
 Bazen elimizde bir image(.img gibi) dosyası olur bunun boyutunu artırmamız gerekebilir bu durumlarda aşağıdaki adımları takipe debiliriz bizim image dosyamız bir raspberry os image dosyası
 

@@ -2,6 +2,9 @@
 layout: post
 title: "Ubuntu Wifi Ayarları"
 categories: system
+lang: tr-TR
+description: "Ubuntu Wifi Ayarları konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "ubuntu-server-wifi-settings-595feb42"
 ---
 
 1. adım da mevcut network donanımını kontrol edelim ismini öğrenelim

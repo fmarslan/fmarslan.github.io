@@ -9,6 +9,8 @@ tags:
   - github
   - performance
   - frontend
+lang: tr-TR
+translation_key: "jsdelivr-ile-github-dosyalarini-cdn-uzerinden-sunmak-0e1ef7af"
 ---
 
 Public bir GitHub reposundaki tek bir dosyayı hızlı, güvenli ve cache problemi yaşamadan servis etmek istiyorsanız, çoğu senaryo için ekstra altyapıya gerek yok.

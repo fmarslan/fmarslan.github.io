@@ -2,6 +2,9 @@
 layout: post
 title: "CSharp Extensions metod hazırlama"
 categories: csharp
+lang: tr-TR
+description: "CSharp Extensions metod hazırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "csharp-extensions-metod-hazirlama-3063716e"
 ---
 
 C# ta bazen kod yazımını kolaylaştırmak için kendi class larınıza veya herhangi bir hazır olan veri tipine extension metod yazmak isteye bilirsiniz bunun için herhangi bir class içerisine aşağıdaki kodu kendinize göre düzenleyip yazarsanız  o classın ait olduğu namespace içerisinde veya o name space dahil edilmiş olan tüm classlarda kullanabilirsiniz. eklediğiniz classın ne olduğu önemli değil yine de tavsiyem bu tip metodlarınız aynı çatı altında toplamanızdır.

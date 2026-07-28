@@ -5,13 +5,13 @@ date: 2025-08-05
 categories: [apache, nifi]
 tags: [nifi, dataflow, apache, iot, kafka, postgres]
 summary: "Apache NiFi ile görsel veri akışı yönetimi, düşük kodlu dönüşüm ve aktarım işlemleri üzerine profesyonel bir inceleme"
+lang: tr-TR
+description: "Apache NiFi ile Veri Akışı Otomasyonu konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "apache-nifi-0d98300a"
+image: "/assets/img/596f2bf2-a150-4f92-9693-e34f771adcd9.png"
 ---
 
 Apache NiFi, farklı kaynaklardan gelen verilerin otomatik olarak toplanması, dönüştürülmesi ve hedef sistemlere aktarılması için geliştirilmiş güçlü bir **veri akışı otomasyon platformudur**. Görsel tasarım arayüzü sayesinde karmaşık veri hatlarını kod yazmadan oluşturmayı mümkün kılar.
-
-<img src="/assets/img/596f2bf2-a150-4f92-9693-e34f771adcd9.png" alt="cover" style="max-width: 50%; max-height:20%">
-
-
 
 ## 🔍 NiFi Nedir ve Neden Kullanılır?
 
@@ -24,8 +24,6 @@ NiFi aşağıdaki işlemleri uçtan uca yönetebilmesiyle öne çıkar:
 
 Dağınık veri kaynaklarının toplandığı yapılarda; tutarsız formatlarla uğraşan, izlenebilirlik isteyen ekipler için NiFi büyük kolaylık sağlar.
 
-
-
 ## 📊 NiFi'nin Sağladığı Çözüm
 
 Tipik veri mimarisi sorunları:
@@ -35,8 +33,6 @@ Tipik veri mimarisi sorunları:
 * Şeffaf ve güvenli bir veri hattı kurma zorluğu
 
 NiFi, bu sorunlara **görsel sürükle-bırak tabanlı akış modeliyle** çözüm getirir.
-
-
 
 ## 🚀 Örnek Senaryo: IoT Veri Hatlarının Otomasyonu
 
@@ -75,8 +71,6 @@ nifi:
   hostname: nifi.fmarslan.com
 ```
 
-
-
 ## 📈 Performans ve Güvenlik
 
 NiFi'nin güçlü yönleri aynı zamanda dikkatli yönetilmesi gereken alanlardır.
@@ -85,8 +79,6 @@ NiFi'nin güçlü yönleri aynı zamanda dikkatli yönetilmesi gereken alanlard�
 * **Provenance** tüm işlemlerin kim tarafından ne zaman yapıldığını kaydeder
 * **Site-to-Site** kullanımında TLS zorunlu olmalıdır
 * FlowFile kuyrukları için **backpressure limitleri** mutlaka ayarlanmalıdır
-
-
 
 ## ⚠️ Deneyim Bazlı Uyarılar
 
@@ -110,8 +102,6 @@ NiFi Java tabanlıdır ve JVM üzerinde çalışır. Bu nedenle büyük veri ak�
 
 > 💡 **Tavsiye:** FlowFile içeriğini mümkün olduğunca küçük tutun. Büyük verileri işlemciler arasında taşımak yerine MinIO gibi harici depolara yönlendirin.
 
-
-
 ## 🤖 Alternatifler
 
 | Araç       | Lisans     | Not                                 |
@@ -120,8 +110,6 @@ NiFi Java tabanlıdır ve JVM üzerinde çalışır. Bu nedenle büyük veri ak�
 | Talend     | Ticari     | Enterprise ETL                      |
 | StreamSets | Freemium   | UI odaklı veri hattı yönetimi       |
 | Airbyte    | MIT        | Modern, connector tabanlı           |
-
-
 
 ## ✨ Sonuç
 

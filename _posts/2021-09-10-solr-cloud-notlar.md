@@ -2,6 +2,9 @@
 title: "Solr Notlar"
 layout: post
 categories: solr
+lang: tr-TR
+description: "Solr Notlar konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "solr-cloud-notlar-3245e824"
 ---
 
 leader seçimi

@@ -2,7 +2,11 @@
 layout: post
 title: "Log4j Mail Özelleştirme"
 categories: java
+lang: tr-TR
+description: "Log4j Mail Özelleştirme konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "log4j-mail-ozellestirme-b37c20b9"
 ---
+
 log4j ile yazılan logları mail olarak göndermek için yapılandırdınız fakat gönderdiğiniz mailleri size özel biçimlendirmek istiyorsunuz onun için yapmanız gerekenler
 
 1. org.apache.log4j.net.SMTPAppender classını extend eden bir class hazırlayın

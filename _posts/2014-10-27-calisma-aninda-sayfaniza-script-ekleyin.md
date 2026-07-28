@@ -2,7 +2,11 @@
 layout: post
 title: "Çalışma anında sayfanıza script ekleyin"
 categories: javascript
+lang: tr-TR
+description: "Çalışma anında sayfanıza script ekleyin konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "calisma-aninda-sayfaniza-script-ekleyin-77153170"
 ---
+
 Client üzerinde çalışırken sayfanıza script ekleyebilmek için aşağıdaki fonksiyonu kullanabilirsiniz
 
 ```javascript

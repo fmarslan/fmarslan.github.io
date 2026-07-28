@@ -9,16 +9,13 @@ tags:
   - npm
   - supply-chain
   - devops
+lang: tr-TR
+translation_key: "npm-supply-chain-tehditleri-shai-hulud-ornegi-ve-modern-guvenlik-yaklasimi-e23d9772"
 ---
 
 Yazılım geliştirme süreçleri büyüdükçe, saldırganların odak noktası uygulamalardan geliştiricilerin bilgisayarlarına, CI/CD hatlarına ve bağımlılık zincirlerine kaymaya başladı. Bu yeni nesil tehditlerin en dikkat çekici örneklerinden biri de **Shai-Hulud** sınıfı supply-chain saldırıları.
 
 Bu yazıda saldırının temel prensiplerini, neden son derece tehlikeli olduğunu ve modern yazılım ekiplerinin bu tip risklere karşı uygulayabileceği pratik bir savunma yaklaşımını anlatıyorum. Ayrıca bu kapsamda kullanılan scriptler ve güvenlik otomasyon mekanizmaları da yazının sonunda örnek olarak paylaşılmıştır.
-
-
-![NPM Supply-Chain Tehditleri: Shai-Hulud Örneği ve Modern Güvenlik Yaklaşımı](/assets/img/npm-supply-chain-shai-hulud-cover.png)
-
-
 
 # 🎯 Shai-Hulud Saldırısı Nedir?
 
@@ -63,8 +60,6 @@ Bu bilgilerle saldırgan:
 
 Bu yüzden bu saldırı tek bir geliştiriciden tüm organizasyona yayılabilen büyük bir risktir.
 
-
-
 # ⚠️ Kritik Not: DevOps ve Sistem Yöneticilerinin Local Riskleri
 
 Gerçekte en büyük risklerden biri şudur:
@@ -91,13 +86,9 @@ açılmış olur.
 
 Bu nedenle supply-chain saldırılarına karşı alınan önlemler, özellikle **yüksek yetkili kullanıcıların local ortamlarını** da kapsamalıdır.
 
-
-
 # 🛡 Modern Supply-Chain Güvenlik Yaklaşımı
 
 Aşağıdaki yaklaşım, bu tip saldırılara karşı pratik ve sürdürülebilir bir koruma sağlar.
-
-
 
 ## **1) Lifecycle Script Taraması (install / postinstall analizi)**
 
@@ -197,8 +188,6 @@ async function main() {
 main();
 ```
 
-
-
 ## **2) CI’da Lifecycle Script’lerini Devre Dışı Bırakma**
 
 Her build şu şekilde çalıştırılır:
@@ -216,8 +205,6 @@ npm rebuild
 
 komutu kullanılabilir.
 
-
-
 ## **3) Otomatik Güvenlik Pipeline’ı (Audit + Secret Scan + Lifecycle Analizi)**
 
 Her dependency güncellemesinde ve her release’te:
@@ -229,8 +216,6 @@ Her dependency güncellemesinde ve her release’te:
 5. Kritik durumlarda CI/CD release’i engeller
 
 Bu mekanizma supply-chain saldırılarına karşı sürekli kontrol sağlar.
-
-
 
 ## **4) DevContainer İçinde Güvenli Geliştirme**
 
@@ -245,8 +230,6 @@ npm run scan:lifecycle
 gibi bir kural zorlanır.
 Local ortamda otomatik script çalışması engellenir.
 
-
-
 ## **5) Deterministik Kurulum (lockfile disiplini)**
 
 * Her zaman `package-lock.json` commitli
@@ -254,8 +237,6 @@ Local ortamda otomatik script çalışması engellenir.
 * Versiyon dalgalanması engelleniyor
 
 Bu yaklaşım supply-chain bulaşmalarının en yaygın vektörünü kapatır.
-
-
 
 # 🎯 Sonuç
 

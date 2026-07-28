@@ -2,8 +2,10 @@
 layout: post
 title: "javascript aç/kapa buton yapımı"
 categories: javascript
+lang: tr-TR
+description: "javascript aç/kapa buton yapımı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "javascript-ac-kapa-buton-yapimi-dbd0c543"
 ---
-
 
 web uygulamalarınızda aç/kapa buttonlara veya checkbox lara ihtiyaç duyabilirsiniz bu gibi durumlar için kullanabileceğiniz bir script
 

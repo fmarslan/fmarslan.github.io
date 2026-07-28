@@ -3,13 +3,15 @@ layout: post
 title: "Regüle Ağlarda Neden Eventual Consistency Kaçınılmazdır?"
 date: 2026-01-08 09:00:00 +0300
 description: Regüle ağlarda entegrasyon geliştirirken neden anlık tutarlılık yerine zamanla oluşan doğruluğun hedeflendiğini, teknik ve operasyonel gerçekler üzerinden ele alıyorum.
-image: /assets/img/regulated-networks-eventual-consistency.png
+image: /assets/img/13431c72-3ebd-447b-aab9-6836653d12da.png
 tags:
   - regulated-networks
   - integration
   - distributed-systems
   - event-driven
   - eventual-consistency
+lang: tr-TR
+translation_key: "regule-aglarda-neden-eventual-consistency-kacinilmazdir-8f22fe8d"
 ---
 
 Regüle ağlarla çalışan ekiplerin en sık yaşadığı hayal kırıklıklarından biri şudur:  
@@ -19,9 +21,6 @@ Bu durum genellikle bir sorun gibi algılanır.
 Oysa regüle ağlarda *eventual consistency* bir zafiyet değil, **bilinçli bir sonuçtur**.
 
 Bu yazı, regüle ağlarda neden anlık tutarlılığın değil, zamanla oluşan doğruluğun hedeflendiğini anlamaya odaklanıyor.
-
-![Regüle Ağlarda Neden Eventual Consistency Kaçınılmazdır?](/assets/img/13431c72-3ebd-447b-aab9-6836653d12da.png)
-
 
 ## Regüle Ağ Ne Demektir?
 
@@ -42,8 +41,6 @@ Yani regüle ≠ merkezi.
 
 Peppol gibi ağlar bu yapıya iyi bir örnektir,  
 ama bu yaklaşım yalnızca Peppol’a özgü değildir.
-
-
 
 ## Tek Bir “Doğru An” Yoktur
 
@@ -68,8 +65,6 @@ Dolayısıyla:
 
 Bu gerçek, *eventual consistency*’nin temelidir.
 
-
-
 ## Doğruluk Hızdan Daha Değerlidir
 
 Regüle ağların önceliği:
@@ -92,8 +87,6 @@ Bu yüzden regüle ağlarda sıkça şu model görülür:
 - sonra doğrulama
 
 Bu yaklaşım *eventual consistency* üretir ama sistemi ayakta tutar.
-
-
 
 ## Merkez “Nasıl”ı Zorlayamaz
 
@@ -121,8 +114,6 @@ Bu serbestlik:
 
 Ama kuralın **sonunda uygulanmasını** garanti eder.
 
-
-
 ## Hata Her Zaman Anında Yakalanamaz
 
 Regüle ağlarda bazı hatalar:
@@ -140,8 +131,6 @@ Bu yüzden sistemler:
 - sonucu sonradan düzeltir
 
 Bu yaklaşım da doğal olarak *eventual consistency* üretir.
-
-
 
 ## Güven, Anlık Tutarlılıktan Gelmez
 
@@ -167,8 +156,6 @@ Bir hata:
 
 Bu yapı *eventual consistency* ile uyumludur.
 
-
-
 ## Gerçek Dünya Zaten Eventual
 
 Aslında regüle ağlar,
@@ -183,8 +170,6 @@ hiçbiri “anında mutlak doğru” çalışmaz.
 
 Regüle ağlar bu gerçeği dijital sistemlere taşır.
 
-
-
 ## Mimari Sonuç
 
 Bu gerçekler kabul edildiğinde entegrasyon yaklaşımı da değişir.
@@ -198,8 +183,6 @@ Regüle ağlarda:
 
 *Eventual consistency* bu mimarinin yan ürünü değil,  
 **doğal sonucudur**.
-
-
 
 ## Sonuç
 

@@ -2,11 +2,13 @@
 title: Nedir Bu Mikroservis Akımı ?
 layout: post
 category: microservice
+lang: tr-TR
+description: "Nedir Bu Mikroservis Akımı ? konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "nedir-bu-mikroservis-akimi-fe23fb42"
+image: "https://fmarslan.com/assets/img/microservice.png"
 ---
 
 Çevrenizde hep duymuşsunuzdur “biz mikroservis mimarisinde proje geliştiriyoruz” cümlesini, tabiki herkeste mikroservis projeleri çok iyidir güzeldir şeklinde yorum yapar, fakat özellikle bazı projeleri incelediğimizde görüyoruz ki mikroservis dediğimiz şeyin bakımı ne kadar zor oluyor mesela bir serviste geliştirme yapılır tüm servisler bir anda deploy edilmek durumunda kalınır veya bir hata olduğunda arayıp bulmak insana aşırı yük getirir. Hatta version kontrolü vs dediğimiz zaman işin içinden hiç çıkılamaz duruma gelir. Peki mikroservis bu mudur ?
-
-![Mikroservis](https://fmarslan.com/assets/img/microservice.png)
 
 Öncelikle bir mikroservis nedir şöyle bi hatırlarsak çoğu insan aynı cümleyi kurar “uygulamanın küçük servisler halinde parçalanması”, buna “gateway içerir, bir message service içerir” vs gibi eklemeler yapanlarda olabilir. Bunun tanımını yapmayacağım bu konularda benden çok daha iyi anlatabilecek yazarlar veya dökümanlar bulabilirsiniz. Benim değineceğim nokta benim düşünceme göre burada yanlış bulduğum ve bu konularda daha dikkatli davranmamız gerektiğini düşündüğüm noktalar var bunlara kısaca değineceğim.
 

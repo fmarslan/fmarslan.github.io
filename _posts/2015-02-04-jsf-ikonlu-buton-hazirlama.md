@@ -2,7 +2,11 @@
 layout: post
 title: "JSF İkonlu Buton Hazırlama"
 categories: JSF
+lang: tr-TR
+description: "JSF İkonlu Buton Hazırlama konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "jsf-ikonlu-buton-hazirlama-f0446cae"
 ---
+
 Jsf framework kullanırken kullandığınız submit butonlar için ikon kullanmak istiyorsanız aşağıdaki gibi kendinize özgü bir button hazırlayabilirsiniz (budefa kodu fazla temizleyemedim anlaşılmayan yer olursa sorabilirsiniz) ikonlar fontawesome kütüphaesinden alınmaktadır
 
 bağımlılıklar

@@ -2,7 +2,11 @@
 layout: post
 title: "Dönen buton efekti"
 categories: javascript
+lang: tr-TR
+description: "Dönen buton efekti konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "donen-buton-efekti-dd40eafa"
 ---
+
 Mouse button üzerine gelince dönme efekti vermek için aşağıdaki kod işe yarayabilir
 
 ```javascript

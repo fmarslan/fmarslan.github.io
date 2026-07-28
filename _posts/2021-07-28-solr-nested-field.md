@@ -2,6 +2,9 @@
 layout: post
 title: "Solr Nested Field"
 categories: Solr
+lang: tr-TR
+description: "Solr Nested Field konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "solr-nested-field-d1828d04"
 ---
 
 Solrda nested field gibi güzel bir yetenek mevcut bu yetenekten faydalanmak için nasıl bir yapılandırma yapmamız gerekiyor kısaca değinecek olursak (bu anlatımlar 8.7 version için)

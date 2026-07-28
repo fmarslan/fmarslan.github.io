@@ -2,7 +2,11 @@
 layout: post
 title: "linux işletim sisteminde checkpoint ssl/vpn bağlantısı"
 categories: Linux
+lang: tr-TR
+description: "linux işletim sisteminde checkpoint ssl/vpn bağlantısı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "linux-isletim-sisteminde-checkpoint-ssl-vpn-baglantisi-5492a5cc"
 ---
+
 1. Adım aşağıdaki paketlerin kurulumu ve ek olarak güncel oracle JRE kurulumu sağlanmalıdır [(Kaynak)](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk65210)
 
 2. Adım checkpoint web panelinden paylaşılan SNX dosyasını indirim kurulumunu sağlayalım

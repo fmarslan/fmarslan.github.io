@@ -2,6 +2,10 @@
 title: Nodejs için kendi kütüphanenizi yayınlayın
 layout: post
 category: nodejs
+lang: tr-TR
+description: "Nodejs için kendi kütüphanenizi yayınlayın konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
+translation_key: "nodejs-kutuphanenizi-local-repoya-publish-etme-2bbc1409"
+image: "http://fmarslan.com/assets/img/aWryH.png"
 ---
 
 nodejs, npm ve ng kurulumu yapılmıştır diye varsayarak başlıyoruz bu süreçte angular kütüphanesi yayınlayacağız
@@ -23,8 +27,6 @@ ng build my-lib
 sonrasında kütüphanemiz hazırsa publish etme aşamasına geldik burada ben nexus repo kullanıyorum kendi repoma publish yapacağım
 
 Öncelikle nexus repomuzda realm tanımlarında npm bearer token realm ı aktif hale getirelim
-
-![nexus realm](http://fmarslan.com/assets/img/aWryH.png)
 
 kütüphanenin ```package.json``` dosyasına aşağıdaki gibi publish cofngi eklmeliyiz
 
@@ -48,4 +50,3 @@ npm publish
 ```
 
 kontrol ediyoruz yüklendiğini doğruluyoruz.
-![nexus repo](http://fmarslan.com/assets/img/Screenshot%20from%202020-12-08%2009-18-55.png)

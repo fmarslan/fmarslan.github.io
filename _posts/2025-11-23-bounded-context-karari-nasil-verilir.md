@@ -8,6 +8,8 @@ tags:
   - architecture
   - domain-driven-design
   - microservices
+lang: tr-TR
+translation_key: "bounded-context-karari-nasil-verilir-774244af"
 ---
 
 Yeni bir platform tasarlarken en sık aldığım soru şu oluyor: **“Bu servisi ayrı mı yapalım, yoksa mevcut servise mi ekleyelim?”**  
@@ -35,7 +37,6 @@ flowchart TD
 
 Yanlış context’e sıkışmış servisler hem kodu, hem operasyonu, hem ekibi aynı anda yoruyor.
 
-
 ## 2. "Bu Veri Hangi Anlamda Yaşıyor?" Sorusu Her Şeyi Aydınlatıyor
 
 Bounded context dediğimiz şey aslında çok basit bir sorunun cevabıdır:  
@@ -49,7 +50,6 @@ Aynı kavram üç farklı context’te üç farklı kimliğe bürünebiliyor:
 
 Bu yüzden tek bir “invoice servisi” genelde göründüğü kadar masum değil.
 
-
 ## 3. Servisi Bölmem Gerektiğini Bana Haber Veren İşaretler
 
 Aşağıdaki belirtiler ortaya çıkıyorsa, servis sınırını kaçırmışım demektir:
@@ -60,7 +60,6 @@ Aşağıdaki belirtiler ortaya çıkıyorsa, servis sınırını kaçırmışım
 4. Operasyon ekibi sürekli “Bu iş hangi serviste?” diye soruyorsa  
 
 Bu işaretler geldiğinde servisleri bıçak kesiği gibi ayırıyorum.
-
 
 ## 4. Servisi Bölmemen Gerektiğini Bağıran Durumlar
 
@@ -73,13 +72,6 @@ Aşağıdaki durumlarda servis tek parça bırakılmalıdır:
 - Parçalamak gereksiz yere ağ çağrısı, tracing ve gözlemleme maliyeti yaratıyorsa  
 
 Her bölme doğru değildir. Bazen birleşik yapı daha sağlıklıdır.
-
-<figure>
-  <img src="/assets/img/bounded-context-abstract.png" alt="Bounded context soyut kapak" loading="lazy">
-  <figcaption>Her renk farklı bir bounded context’i temsil ediyor. Renkler karışınca sorun başlıyor.</figcaption>
-</figure>
-
-
 ## 5. Gerçek Sahip Kim? (En Kritik Soru)
 
 Bir servisin sahibi başka bir servis değildir.  
@@ -109,7 +101,6 @@ flowchart LR
 Bu akışın adımları farklı context’lere aitse → parçalamak doğrudur.  
 Aynı anlam kümesine aitse → tek servis kalmalıdır.
 
-
 ## 7. "Ne Kadar Küçük?" Değil → "Ne Kadar Anlamlı?"
 
 Bu benim için dönüm noktası oldu.  
@@ -132,7 +123,6 @@ flowchart LR
 
 Yanlış yerden parçalamak, teknik borcun en hızlı yoludur.
 
-
 ## 8. Karar Vermeden Önce Kendime Sorduğum 6 Soru
 
 Bu sorular beni %90 doğru karara götürüyor:
@@ -147,7 +137,6 @@ Bu sorular beni %90 doğru karara götürüyor:
 Cevapların çoğu “evet” ise ayırıyorum.  
 Çoğu “hayır” ise tek servis olarak bırakıyorum.
 
-
 ## 9. Mikroservis Bir Çıktı, Bounded Context Bir Karardır
 
 Benim için işin özeti şu:
@@ -161,7 +150,6 @@ Yanlış olan: her fonksiyona bir servis açmak.
 Yanlış olan: tek servise bütün fonksiyonları doldurmak.
 
 Doğru olan: **domain’in doğal sınırlarını takip etmek.**
-
 
 ## 10. Parçalamak Cesaret, Birleştirmek Bilgelik
 
