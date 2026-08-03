@@ -1,0 +1,24 @@
+---
+layout: post
+title: "What is this Microservices Movement?"
+date: 2021-01-22
+description: "What is this Microservices Movement? A brief technical note outlining the basic approach and applicable steps on the topic."
+lang: en-US
+translation_key: "nedir-bu-mikroservis-akimi-fe23fb42"
+permalink: /en/2021/01/22/what-is-this-microservices-movement.html
+image: "https://fmarslan.com/assets/img/microservice.png"
+---
+
+You have always heard the sentence "We are developing projects in microservice architecture" around you, of course everyone comments on it as saying microservice projects are very good and nice, but especially when we examine some projects, we see how difficult it is to maintain what we call microservice, for example, when development is made in a service, all services have to be deployed at once, or when there is an error, it puts an excessive burden on people to search and find it. In fact, when we talk about version control etc., it becomes impossible to get out of the situation. So, is this a microservice?
+
+First of all, if we remember what a microservice is, most people make the same sentence: "breaking the application into small services", there may be some who add to this such as "it includes a gateway, a message service" etc. You can find authors or documents that can explain these issues much better than me, which I will not describe. The point I will touch upon is that, in my opinion, there are points that I find wrong here and that I think we need to be more careful about these issues. I will briefly touch on them.
+
+**First of all, not every project has to be a microservice.** Dragging the projects you have into an adventure, a dead end, or even worse than their current situation, just to be able to say that I have done a microservice project, will bring destruction instead of success.  Before deciding to make a project a microservice, it is necessary to consider the team competence. If your team is unable to handle this innovation and transformation or is inexperienced in these matters, a serious overtime and workload will be waiting for you, and even the mistakes you make will tie your hands in the future. For this reason, we need to create a good road map and application design.
+ 
+**The structure we call microservice does not necessarily have to include a message service or gateway.** Microservice is a concept, the general purpose of this concept is to divide large applications into smaller parts and make development, maintenance and updates easier. The tools mentioned, such as queue and kong, are auxiliary tools. If you do not need them, do not use them. Every tool you put into the ecosystem will return to you as a burden.
+
+**Services must be independent from each other.** If we cannot use independent technologies after determining our services, if we need to deploy them all at the same time during the deployment process, and if you continue to need to establish complex relationships between mutual services, there is a problem. For example, of course there is a solution, but the fact that there is a transaction between two services shows that we were not very successful. In a microservice project, I think success is how independently we can divide it. The purpose of Micro Service is to get rid of the burden of large projects and work with small projects. In other words, different teams that do not know each other should be able to carry out these projects independently, and there should be standard protocols in between. In this way, you can think of each service as a project, make independent project plans, and manage its processes separately.
+
+**You must have detailed monitoring interfaces.** Otherwise, when you encounter an error, you may need to tell fortunes to guess which service or stage the error is in :) Of course, you will need to collect as many metrics and logs as possible from the system to set up this monitoring system. When you start doing this, you will need to use many tools such as grafana, prometheus, solr (there was elasticsearch before, but it is no longer available due to licensing), etc. The services you write may already have them, but if not, actuator, prometheus client, log4j2, api-docs, etc. will be waiting for you in many libraries for your convenience.  Of course, do not forget that these tools have management etc., which will take you to the CAAS structure, and from there, maybe we can move on to Kubernetes etc. Again, the statement I mentioned above: *do not use a tool you do not need, think carefully.*
+
+To summarize briefly, if you are considering microservice, I would say that you should first analyze it well and decide accordingly. I'm not saying it's bad, it's good stuff, but it is necessary to proceed knowingly and with sure steps. If you just want to learn as an adventure, you can try SaaS or FaaS :).

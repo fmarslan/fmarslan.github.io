@@ -1,0 +1,23 @@
+services:
+  workspace:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Containerfile
+      args:
+        DEV_UID: "1000"
+        DEV_GID: "1000"
+    user: "1000:1000"
+    working_dir: /workspaces/fmarslan.com
+    volumes:
+      - ..:/workspaces/fmarslan.com
+      - bundle-cache:/home/dev/.bundle
+      - codex-home:/home/dev/.codex
+    ports:
+      - "127.0.0.1:4000:4000"
+      - "127.0.0.1:35729:35729"
+    command: sleep infinity
+    init: true
+
+volumes:
+  bundle-cache:
+  codex-home:

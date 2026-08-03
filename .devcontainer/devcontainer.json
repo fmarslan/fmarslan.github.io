@@ -1,35 +1,32 @@
 {
-  "name": "Jekyll Blog Dev",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-
-  // Container içindeki çalışma klasörü
-  "workspaceFolder": "/workspaces/personel-website",
-
-  // WSL içindeki gerçek klasörü buraya mount ediyoruz
-  "workspaceMount": "source=/work/personel-website,target=/workspaces/personel-website,type=bind",
-
-  "forwardPorts": [4000],
-
-  "postCreateCommand": "bundle install",
-
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "editor.formatOnSave": true
-  },
-
-  // vendor/bundle'ı host klasörüne değil docker volume'a yaz (daha hızlı)
-  "mounts": [
-    "source=jekyll_bundle_cache,target=/workspaces/personel-website/vendor/bundle,type=volume"
-  ],
-
-  "remoteUser": "vscode",
-
+  "name": "fmarslan.com Jekyll",
+  "dockerComposeFile": "compose.yaml",
+  "service": "workspace",
+  "workspaceFolder": "/workspaces/fmarslan.com",
+  "shutdownAction": "stopCompose",
+  "remoteUser": "dev",
+  "forwardPorts": [4000, 35729],
   "portsAttributes": {
     "4000": {
-      "label": "Jekyll dev server",
+      "label": "Jekyll development server",
       "onAutoForward": "openBrowser"
+    },
+    "35729": {
+      "label": "Jekyll LiveReload",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "bash -lc 'bundle config set --local path /home/dev/.bundle/vendor && bundle install && mkdir -p /home/dev/.codex/skills && if [ ! -e /home/dev/.codex/skills/fmarslan-ai-skills ]; then git clone https://github.com/fmarslan/ai-skills /home/dev/.codex/skills/fmarslan-ai-skills; elif [ -d /home/dev/.codex/skills/fmarslan-ai-skills/.git ]; then git -C /home/dev/.codex/skills/fmarslan-ai-skills pull --ff-only; else echo \"Skill path exists but is not a Git checkout; leaving it unchanged.\"; fi && test -w /home/dev/.codex || (echo \"ERROR: /home/dev/.codex is not writable. Recreate the codex-home Docker volume.\" && exit 1)'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "openai.chatgpt",
+        "shopify.ruby-lsp"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true
+      }
     }
   }
 }

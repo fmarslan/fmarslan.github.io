@@ -1,37 +1,40 @@
 ---
 layout: page
-title: About
+title: Hakkımda
 permalink: /about/
-description: A plain-spoken look at how I approach software architecture, collaboration, and the work that keeps me curious.
+description: Yazılım mühendisliği yolculuğum, üretime yakın çalışma biçimim ve teknik karar yaklaşımım.
+lang: tr-TR
+alternate_url: /en/about/
+default_url: /about/
 ---
 
 <div class="bio-grid">
   <div>
-    <h2>Hello there 👋</h2>
-    <p>I’m Fatih. I grew up fixing neighbours’ PCs, carried that curiosity into public-sector projects, and now support teams across Türkiye, the Benelux, and the wider EU. My approach stays the same: stay calm, map the system, and sketch until everyone understands the moving parts.</p>
-    <p>These days I focus on solution architecture, integration design, and the DevOps practices that stop releases from becoming fire drills. Fourteen-plus years in the field reminded me that durable platforms come from listening, writing things down, and staying close to production when it matters most.</p>
+    <h2>Yaptığım iş</h2>
+    <p>Yazılım kariyerime kamu projeleri, GIS ve e-devlet sistemleriyle başladım. Sonraki yıllarda enerji santrallerinden telemetri toplayan servisler, perakende ve ERP ürünleri, çok kiracılı SaaS platformları ve Avrupa'da Peppol üzerinden belge taşıyan regüle entegrasyonlar geliştirdim.</p>
+    <p>Bugün de kendimi yalnızca çözüm çizen biri olarak görmüyorum. Java veya .NET ile servis geliştiriyor, Kafka akışlarını ve veri modellerini inceliyor, kod incelemelerine giriyor ve gerektiğinde üretim sorununu ekiple birlikte takip ediyorum.</p>
   </div>
   <div>
-    <h2>How I like to work</h2>
+    <h2>Karar verirken</h2>
     <ul>
-      <li>I use plain language, lightweight diagrams, and source-controlled docs so ideas survive beyond the meeting.</li>
-      <li>I give feedback the way I’d like to receive it: specific, steady, and focused on making the code or system better.</li>
-      <li>I’m comfortable switching between tech stacks and time zones; mixed teams have been my norm for years.</li>
+      <li>Önce bağlamı ve gerçek darboğazı anlamaya çalışırım; monolit ya da mikroservis benim için başlı başına hedef değildir.</li>
+      <li>Servis sınırlarını, veri sahipliğini, hata senaryolarını ve verilen ödünleri yazılı hale getiririm.</li>
+      <li>AI ile üretilen kod dahil, üretime giren her satırın bir mühendis tarafından anlaşılması ve sahiplenilmesi gerektiğine inanırım.</li>
     </ul>
   </div>
 </div>
 
 <div class="card-grid" style="margin-top:2rem;">
   <article class="card">
-    <h3>Interests</h3>
-    <p>Kubernetes, event-driven design, data platforms, and the small automations that save people a few minutes every day.</p>
+    <h3>Üretime yakın kalmak</h3>
+    <p>Mimari bir kararın doğruluğunu yalnızca diyagramlar veya tasarım toplantıları belirlemez; gerçek trafik, ağ kesintileri, veri tutarsızlıkları ve denetim günleri sonucu ortaya çıkarır. Bu nedenle gözlemlenebilirlik, sorun giderme ve üretim geri bildirimlerini tasarım sürecinin devamı olarak görüyor; geliştirdiğim sistemlerin gerçek koşullardaki davranışını yakından takip ediyorum.</p>
   </article>
   <article class="card">
-    <h3>Outside of work</h3>
-    <p>Long walks, photography, and hunting for a good espresso. Fresh air keeps my head clear for the next workshop.</p>
+    <h3>AI ile çalışma biçimim</h3>
+    <p>AI’ı bir yardımcıdan çok, yönettiğim bir üretim katmanı olarak kullanıyorum. Ben problemi tanımlıyor, mimari kararları alıyor ve kalite sınırlarını belirliyorum; AI tekrar eden uygulama, analiz ve doğrulama işlerini yürütüyor. Böylece düşünme ve mühendislik muhakemesini insanda tutarken üretim kapasitesini AI ile ölçeklendiriyorum.</p>
   </article>
   <article class="card">
-    <h3>Let’s collaborate</h3>
-    <p>I’m open to hybrid or remote roles across Europe. If you need a thoughtful review, help steadying an integration roadmap, or simply a partner who stays until the job is done, feel free to reach out.</p>
+    <h3>Neden yazıyorum?</h3>
+    <p>Blogda “doğru teknoloji” listeleri sunmak yerine, teknik kararların alındığı bağlamı ve bu kararların üretimdeki sonuçlarını anlatıyorum. Egemen hücre mimarisi, monolit–cloud-native geçişleri, dağıtık sistemlerde domain değerleri ve gerçek hata senaryoları üzerinden; neyin çalıştığı kadar, neden çalıştığını veya nerede yetersiz kaldığını da görünür kılmaya çalışıyorum.</p>
   </article>
 </div>

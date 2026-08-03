@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "bundle exec jekyll build",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "bundle exec jekyll serve --host 0.0.0.0 --port 4000 --watch --force_polling --incremental --livereload",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "debug",
+      "type": "shell",
+      "command": "bundle exec jekyll serve --host 0.0.0.0 --port 4000 --watch --force_polling --incremental --trace",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

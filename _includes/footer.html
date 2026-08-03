@@ -1,32 +1,57 @@
 <footer class="global-footer">
+  {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
+  {%- assign t = site.data.i18n[language_code] | default: site.data.i18n.tr -%}
+  {%- assign navigation = site.navigation_tr -%}
+  {%- if language_code == 'en' -%}{%- assign navigation = site.navigation_en -%}{%- endif -%}
+  {%- assign footer_alternate_url = page.alternate_url -%}
+  {%- if footer_alternate_url == nil and page.translation_key -%}
+    {%- for candidate in site.posts -%}
+      {%- if candidate.translation_key == page.translation_key and candidate.lang != page.lang -%}
+        {%- assign footer_alternate_url = candidate.url -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
   <div class="global-footer__inner">
     <div class="footer-meta">
-      <p class="pill">Architecting dependable systems</p>
+      <p class="pill">{{ t.footer_tagline }}</p>
       <h4>{{ site.author.name | default: site.title }}</h4>
-      <p>{{ site.description }}</p>
+      <p>{{ t.site_description }}</p>
       <a class="btn btn-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
     </div>
     <div>
-      <h4>Navigate</h4>
+      <h4>{{ t.navigate }}</h4>
       <ul class="footer-nav">
-        {%- for link in site.navigation -%}
+        {%- for link in navigation -%}
           <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
         {%- endfor -%}
       </ul>
     </div>
     <div>
-      <h4>Resources</h4>
+      <h4>{{ t.resources }}</h4>
       <ul class="footer-nav">
         <li><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></li>
         <li><a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></li>
       </ul>
     </div>
     <div>
-      <h4>Connect</h4>
+      <h4>{{ t.connect }}</h4>
       {% include social.html %}
+      {%- if footer_alternate_url %}
+      <nav class="language-switcher" aria-label="{{ t.language_label }}">
+        {%- if language_code == 'en' %}
+          <span class="language-switcher__current" aria-current="page">English</span>
+          <span class="language-switcher__separator" aria-hidden="true">|</span>
+          <a href="{{ footer_alternate_url | relative_url }}" hreflang="tr">Türkçe</a>
+        {%- else %}
+          <a href="{{ footer_alternate_url | relative_url }}" hreflang="en">English</a>
+          <span class="language-switcher__separator" aria-hidden="true">|</span>
+          <span class="language-switcher__current" aria-current="page">Türkçe</span>
+        {%- endif %}
+      </nav>
+      {%- endif %}
     </div>
   </div>
   <div class="footer-bottom">
-    © {{ site.author.name | default: site.title }} · {{ site.time | date: "%Y" }}. Crafted with Jekyll & GitHub Pages.
+    © {{ site.author.name | default: site.title }} · {{ site.time | date: "%Y" }}. {{ t.crafted }}
   </div>
 </footer>

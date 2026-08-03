@@ -1,5 +1,13 @@
+{%- assign effective_alternate_url = page.alternate_url -%}
+{%- if effective_alternate_url == nil and page.translation_key -%}
+  {%- for candidate in site.posts -%}
+    {%- if candidate.translation_key == page.translation_key and candidate.lang != page.lang -%}
+      {%- assign effective_alternate_url = candidate.url -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.locale | default: 'en' | split: '-' | first }}">
+<html lang="{{ page.lang | default: site.locale | default: 'tr' | split: '-' | first }}"{% if effective_alternate_url %} data-alternate-url="{{ effective_alternate_url | relative_url }}"{% endif %}>
 
 <head>
   <meta charset="utf-8" />
@@ -17,7 +25,7 @@
   {%- endif -%}
   {%- assign raw_description = page.hero.seo_description | default: page.seo_description | default: page.description |
   default: site.description | default: "Notes on software architecture, cloud platforms, and delivery." -%}
-  {%- if is_post_layout -%}
+  {%- if is_post_layout and page.description == nil -%}
     {%- assign post_excerpt = page.excerpt | default: page.content -%}
     {%- assign raw_description = post_excerpt | strip_html | strip_newlines | replace: "  ", " " | strip |
     truncate: 160, "" -%}
@@ -53,11 +61,22 @@
   {%- endif -%}
   <meta name="generator" content="Jekyll">
   <link rel="canonical" href="{{ canonical_url }}">
+  {%- if effective_alternate_url -%}
+  {%- assign alternate_lang = 'en' -%}
+  {%- if locale_code contains 'en' -%}{%- assign alternate_lang = 'tr' -%}{%- endif -%}
+  {%- assign x_default_url = page.default_url | default: page.url -%}
+  {%- if locale_code contains 'en' and page.translation_key -%}
+    {%- assign x_default_url = effective_alternate_url -%}
+  {%- endif -%}
+  <link rel="alternate" hreflang="{{ locale_code | split: '-' | first }}" href="{{ canonical_url }}">
+  <link rel="alternate" hreflang="{{ alternate_lang }}" href="{{ effective_alternate_url | relative_url | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ x_default_url | relative_url | absolute_url }}">
+  {%- endif -%}
   <meta property="og:locale" content="{{ og_locale }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:site_name" content="{{ site_name | escape }}">
-  <meta property="og:title" content="{{ author_name | escape }}">
-  <meta property="og:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
   {%- assign og_type_value = 'website' -%}
   {%- if page.layout == 'post' -%}
   {%- assign og_type_value = 'article' -%}
@@ -65,8 +84,8 @@
   <meta property="og:image" content="{{ share_image }}">
   <meta property="og:type" content="{{ og_type_value }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ author_name | escape }}">
-  <meta name="twitter:description" content="{{ author_role | escape }} · {{ page_title | escape }}">
+  <meta name="twitter:title" content="{{ page_title | escape }}">
+  <meta name="twitter:description" content="{{ page_description | escape }}">
   <meta name="twitter:image" content="{{ share_image }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -91,6 +110,9 @@
   </script>
   {% endif %}
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+  {%- if effective_alternate_url %}
+  <script src="{{ '/assets/js/language-redirect.js' | relative_url }}"></script>
+  {%- endif %}
   <script src="{{ '/assets/js/mermaid-init.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/post-enhancements.js' | relative_url }}" defer></script>
   {%- assign same_as_links = site.social.links | default: site.author.same_as -%}

@@ -1,8 +1,8 @@
 url: https://fmarslan.com
-locale: "en-US"
+locale: "tr-TR"
 title: "F.M. Arslan"
 description: >
-  I'm a solution architect & software engineer.
+  Yazılım mimarisi, dağıtık sistemler, bulut platformları ve mühendislik üzerine teknik notlar.
 keywords:
   - Fatih Mehmet Arslan
   - solution architect
@@ -19,7 +19,7 @@ author:
   name: Fatih Mehmet ARSLAN
   email: contact@fmarslan.com
   type: person
-  job_title: Solution Architect & Software Engineer
+  job_title: Çözüm Mimarı ve Yazılım Mühendisi
 
 share_image: /android-chrome-512x512.png
 
@@ -28,6 +28,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-redirect-from
 
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title:output_ext
@@ -57,17 +58,27 @@ defaults:
       type: "pages"
     values:
       layout: page
-      lang: en-US
+      lang: tr-TR
 
-navigation:
-  - title: Home
+navigation_tr:
+  - title: Ana Sayfa
     url: /
   - title: Blog
     url: /blog/
-  - title: About
+  - title: Hakkımda
     url: /about/
-  - title: Resume
+  - title: Özgeçmiş
     url: /cv/
+
+navigation_en:
+  - title: Home
+    url: /en/
+  - title: Blog
+    url: /en/blog/
+  - title: About
+    url: /en/about/
+  - title: Resume
+    url: /en/cv/
 
 exclude:
   - vendor
@@ -75,3 +86,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - _site
+  - tmp

@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Conditional Server Forwarding for Your DNS"
+date: 2020-12-14
+description: "A brief technical note outlining the basic approach and actionable steps on Conditional Server Forwarding for Your DNS."
+lang: en-US
+translation_key: "dns-icin-ozel-kurallara-bagli-server-ekleme-148a4ae9"
+permalink: /en/2020/12/14/conditional-server-forwarding-for-your-dns.html
+---
+
+In order to resolve xx.fmarslan domain addresses, we may only want to direct these DNS queries to our own server. The important point here is to redirect to a different name-specific DNS server. When we do these operations, the '`mywebsite.fmarslan`' domain will be resolved by IP address forwarding on our own server.
+
+### Windows ([Detail](https://docs.microsoft.com/en-us/powershell/module/dnsclient/?view=win10-ps))
+
+PowerShell
+
+```sh
+# tanımlı kural listesini almak için 
+Get-DnsClientNrptRule
+
+# ekleme yapmak için
+Add-DnsClientNrptRule -Namespace ".fmarslan" -NameServers "10.8.0.1"
+
+#Silmek için Get ile önce sileceğimiz kuralın ismini buluyoruz sonra aşağıdaki komut ile siliyoruz
+Remove-DnsClientNrptRule -Name "{4A9B924F-A8AD-46EB-A4D3-5B4B0E8CB044}"
+
+```
+
+### Mac & Linux
+
+```sh
+sudo  echo 10.8.1.1 > /etc/resolver/.fmarslan
+```
+
+or
+
+
+```sh
+sudo vim /etc/systemd/resolved.conf
+
+# -----
+# [Resolve]
+# DNS=10.8.1.1
+# Domains=~fmarslan
+# -----
+
+
+```

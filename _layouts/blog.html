@@ -2,7 +2,9 @@
 layout: base
 ---
 
-<div class="page-shell">
+<div class="page-shell blog-page">
+  {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
+  {%- assign t = site.data.i18n[language_code] | default: site.data.i18n.tr -%}
   <section class="page-hero">
     {%- if page.eyebrow -%}
       <p class="hero-eyebrow">{{ page.eyebrow }}</p>
@@ -11,22 +13,51 @@ layout: base
     {%- if page.description -%}
       <p>{{ page.description }}</p>
     {%- endif -%}
-    <form class="inline-search" action="{{ '/search' | relative_url }}" method="get">
-      <label class="sr-only" for="blog-search">Search posts</label>
-      <input type="search" id="blog-search" name="q" placeholder="Search articles..." required>
-      <button type="submit">Search</button>
+    <form
+      class="inline-search"
+      data-blog-search
+      data-language="{{ language_code }}"
+      data-index="{{ '/search-index.json' | relative_url }}"
+      data-read-more="{{ t.read_article }}"
+      data-results="{{ t.search_results }}"
+      data-no-results="{{ t.search_no_results }}"
+      data-min-chars="{{ t.search_min_chars }}"
+      data-error="{{ t.search_error }}"
+      role="search">
+      <label class="sr-only" for="blog-search">{{ t.search_label }}</label>
+      <input type="search" id="blog-search" name="q" placeholder="{{ t.search_placeholder }}" required>
+      <button type="submit">{{ t.search_button }}</button>
     </form>
+    <p class="blog-search-status" data-blog-search-status role="status" aria-live="polite"></p>
   </section>
-  <section class="page-content">
-    <div class="post-grid">
+  <section class="page-content blog-list">
+    <div class="post-grid" data-blog-posts>
       {%- for post in site.posts -%}
+      {%- assign post_language = post.lang | default: 'tr-TR' | split: '-' | first -%}
+      {%- if post_language == language_code -%}
       <article class="post-card">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-        <a class="read-more" href="{{ post.url | relative_url }}">Read article →</a>
+        <div class="post-card__content">
+          <div class="post-card__meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: t.date_format }}</time>
+            {%- if post.categories and post.categories != empty -%}
+            <span aria-hidden="true">·</span>
+            <span>{{ post.categories | first }}</span>
+            {%- endif -%}
+          </div>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+          <a class="read-more" href="{{ post.url | relative_url }}">{{ t.read_article }}</a>
+        </div>
+        {%- assign list_image = post.image | default: post.hero.image -%}
+        {%- if list_image -%}
+        <a class="post-card__media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ list_image | relative_url }}" alt="" loading="lazy">
+        </a>
+        {%- endif -%}
       </article>
+      {%- endif -%}
       {%- endfor -%}
     </div>
   </section>
 </div>
+<script src="{{ '/assets/js/blog-search.js' | relative_url }}" defer></script>
