@@ -28,6 +28,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-redirect-from
 
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title:output_ext

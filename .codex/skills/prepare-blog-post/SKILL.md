@@ -1,11 +1,21 @@
 ---
 name: prepare-blog-post
-description: Prepare and enrich fmarslan.com Jekyll articles for publication. Use when the user says an article is mature, asks to make a post publication-ready, says "makaleyi yayına hazırla", requests final editorial polish, or wants the full article package including a simple cover, introduction, metadata, SEO/social preview, tags, diagrams, code examples, and release checks.
+description: Prepare and enrich bilingual fmarslan.com Jekyll articles for publication. Use when the user says an article is mature, asks to make a post publication-ready, says "makaleyi yayına hazırla", requests final editorial polish, or wants the full article package including Turkish/English routing, a simple cover, introduction, metadata, SEO/social preview, tags, diagrams, code examples, and release checks.
 ---
 
 # Prepare Blog Post
 
 Turn a mature draft into a complete fmarslan.com post. Work autonomously inside this repository and preserve the author's argument and voice.
+
+## Editorial objective
+
+Write each post to demonstrate the author's expertise and give curious readers a useful new way to see the problem, not to provide an exhaustive tutorial or implementation manual.
+
+- Show expertise through accurate distinctions, real constraints, trade-offs, hidden consequences, and questions that practitioners know to ask.
+- Explain enough for the argument to be credible and useful, but do not expand every adjacent topic, edge case, or implementation detail merely for completeness.
+- Leave readers with a clearer mental model and productive directions for further research. It is acceptable for implementation depth to remain outside the article when it is not necessary for the central claim.
+- Keep technical statements correct and qualify assumptions that would otherwise mislead. A deliberate scope boundary is acceptable; a false or overconfident simplification is not.
+- Do not turn the post into a sales pitch or add a consulting call to action unless the user asks. Let the quality of the framing and analysis establish authority naturally.
 
 ## Workflow
 
@@ -17,9 +27,45 @@ Turn a mature draft into a complete fmarslan.com post. Work autonomously inside 
 - Confirm the article language from its content. Use clear B2-C1 English for English posts and natural, direct Turkish for Turkish posts.
 - Treat “prepare for publication” as content preparation, not permission to commit, push, or deploy.
 
-### 2. Mature the content
+### 2. Create the bilingual article pair and route it explicitly
+
+For every new article, create or maintain both language versions unless the user explicitly requests a single-language draft.
+
+- Put Turkish posts only under `_posts/tr/`.
+- Put English posts only under `_posts/en/`.
+- Never create post files directly under `_posts/`.
+- Use the same date and the same stable, unique `translation_key` in both versions.
+- Write the English version in natural B2-C1 English. Preserve the author's argument and voice; do not produce a literal sentence-by-sentence translation.
+- Use a Turkish slug for the Turkish filename and permalink, and a natural English slug for the English filename and permalink.
+- Give every post an explicit `permalink`; never rely on folder-derived categories for URL generation.
+
+Use this structure for new posts:
+
+```text
+_posts/tr/YYYY-MM-DD-turkish-slug.md
+_posts/en/YYYY-MM-DD-english-slug.md
+```
+
+Use these canonical URLs:
+
+```text
+/tr/YYYY/MM/DD/turkish-slug.html
+/en/YYYY/MM/DD/english-slug.html
+```
+
+URL preservation rules:
+
+- Do not normalize or change a published legacy post's existing permalink. Old Turkish posts may intentionally omit `/tr/`.
+- Before moving or renaming an existing post, record its rendered URL and add that exact value as an explicit `permalink`.
+- Change a published canonical URL only when the user explicitly requests it. Preserve every old URL with `redirect_from` and confirm `jekyll-redirect-from` is enabled.
+- Keep redirect URLs out of sitemap and search results; only the canonical permalink should appear there.
+- In `{% post_url %}` references, include the language folder, for example `{% post_url tr/2026-08-01-example %}` or `{% post_url en/2026-08-01-example %}`.
+- Confirm `hreflang="tr"`, `hreflang="en"`, and `hreflang="x-default"` resolve through the shared `translation_key`; `x-default` must point to Turkish.
+
+### 3. Mature the content
 
 - Identify the central claim and make every section support it.
+- Decide what level of detail proves the central claim, and stop before the post becomes an encyclopedic reference or step-by-step implementation guide without a user request for that depth.
 - Remove repeated arguments, editorial notes, unsupported certainty, and unnecessary background.
 - Separate sourced facts from the author's inference.
 - Check cited sources directly when a claim depends on them.
@@ -37,7 +83,7 @@ Turn a mature draft into a complete fmarslan.com post. Work autonomously inside 
 - Preserve the author’s genuinely concise or emphatic lines when they are distinctive and earned by the argument; reduce patterns, not personality.
 - During the final edit, scan headings, paragraph openings, blockquotes, bold lines, and section endings for repeated rhetorical templates. Rewrite enough instances to prevent an AI-polished or LinkedIn-style cadence.
 
-### 3. Enrich technical explanation
+### 4. Enrich technical explanation
 
 Use only visuals that improve understanding:
 
@@ -48,17 +94,16 @@ Use only visuals that improve understanding:
 - Verify Mermaid fences and syntax against the repository's existing Mermaid support.
 - Do not add decorative diagrams or duplicate prose in visual form.
 
-### 4. Write the opening
+### 5. Write the opening
 
-The rendered post body must begin in this order:
+The Markdown body must begin in this order:
 
 1. A one- or two-sentence introduction that states the problem and gives the reader a reason to continue.
-2. The cover image with useful alt text.
-3. The article body.
+2. The article body.
 
-Do not start with the image. Do not repeat the front-matter description word for word in the introduction.
+Do not insert the cover image into the Markdown body. `_layouts/post.html` renders `page.image` once between the description and article body. Do not repeat the front-matter description word for word in the introduction.
 
-### 5. Create the cover
+### 6. Create the cover
 
 Generate one new landscape cover unless a suitable final cover already exists.
 
@@ -72,12 +117,12 @@ Cover rules:
 - Include no title, text, letters, numbers, logos, watermark, people, robots, brains, cloud icons, circuit boards, neon, gradients, glow, or 3D effects.
 - Avoid generic AI-generated aesthetics and excessive detail.
 - Save the final image under `assets/img/` with an English kebab-case filename.
-- Reference the same image from front matter and the article body.
+- Reference the image only through the front-matter `image` field. Do not add a Markdown or HTML image reference for the cover inside the article body.
 - Inspect the generated image before accepting it. Regenerate once when it violates the palette, simplicity, or no-text rules.
 
 Use the available image-generation skill/tool for raster cover creation and follow its save/validation workflow.
 
-### 6. Complete front matter
+### 7. Complete front matter
 
 Use this shape:
 
@@ -90,6 +135,8 @@ description: "One or two short sentences written for search and link previews."
 image: /assets/img/descriptive-cover-name.png
 tags: [three, to, six, focused-tags]
 lang: en-US
+translation_key: "stable-shared-key"
+permalink: /en/YYYY/MM/DD/english-slug.html
 published: false
 ---
 ```
@@ -99,13 +146,17 @@ Rules:
 - Keep `description` specific, useful, and normally 120-180 characters.
 - Make the description summarize the article's decision or trade-off, not the author biography.
 - Use `lang: en-US` for English and `lang: tr-TR` for Turkish.
+- Use `/en/YYYY/MM/DD/english-slug.html` for new English posts.
+- Use `/tr/YYYY/MM/DD/turkish-slug.html` for new Turkish posts.
+- Give both versions the same `translation_key`; never change it after publication.
 - Use three to six lowercase, focused tags.
 - Ensure the filename date and front-matter date match.
-- Use an English kebab-case slug unless the user requests otherwise.
+- Use a natural kebab-case slug in the post's own language; keep Turkish and English slugs distinct.
 - Keep `published: false` while preparing a draft. Remove it or set it to `true` only when the user explicitly asks to publish.
-- Do not add unsupported front-matter fields. The article's share image serves as its visual icon unless the layouts later add a dedicated icon field.
+- Keep the cover only in `image`; the post layout renders it and the base layout uses it for social previews.
+- Use `redirect_from` only to preserve an already published URL when its canonical permalink must change.
 
-### 7. Verify SEO and social preview metadata
+### 8. Verify SEO and social preview metadata
 
 Confirm `_layouts/base.html` produces per-article metadata:
 
@@ -125,21 +176,27 @@ Confirm `_layouts/base.html` produces per-article metadata:
 - Ensure Open Graph and Twitter titles use the article title, not the author name.
 - Ensure the share image becomes an absolute URL in rendered output.
 - Preserve author metadata separately through `meta name="author"` and Article JSON-LD.
+- Confirm each language version has a self-referencing canonical URL and reciprocal `hreflang` links.
+- Confirm Turkish is the `x-default` version.
 - If the layout is wrong, fix it once at the shared template instead of adding page-specific HTML.
 
-### 8. Final quality checks
+### 9. Final quality checks
 
 Verify all of the following:
 
 - Front matter is valid and complete.
+- The Turkish file is under `_posts/tr/`; the English file is under `_posts/en/`; no post is created directly under `_posts/`.
+- Both language versions share one `translation_key` and use explicit `/tr/` and `/en/` permalinks for new publications.
 - Filename, date, language, title, and slug agree.
-- The introduction appears before the cover.
-- The cover exists, renders, has alt text, and follows the two-or-three-color rule.
+- The introduction begins the Markdown body; the cover is not duplicated inside the body.
+- The metadata cover exists, renders once through the post layout, has useful fallback alt text, and follows the two-or-three-color rule.
 - Headings form a clear hierarchy and do not duplicate the layout's H1.
 - Tables render and contain aligned columns.
 - Code fences are balanced.
 - Mermaid blocks are balanced and supported by the site.
 - Links are valid and tracking parameters are removed.
+- Language switching, canonical, reciprocal hreflang, and `x-default` URLs are correct.
+- Sitemap, feed, and search index contain canonical URLs, not redirect aliases.
 - Examples do not contradict the prose.
 - Repeated transition formulas, consecutive slogan-like short sentences, and forced section-ending maxims have been reduced without flattening the author's voice.
 - Sentence and paragraph lengths vary according to meaning and do not follow a uniform short-form template.
