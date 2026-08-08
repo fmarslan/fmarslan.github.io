@@ -97,7 +97,7 @@ Installing the tools is the most visible and often the easiest part. The real wo
 
 ## How I applied the approach
 
-I gradually moved the Kubernetes clusters, Azure services, development work, technical documentation, social media processes, and blog operations that I manage—and that are authorized for AI use—into this model. Today I can send an instruction from my phone and have it executed through an authorized working environment even when I am away from my desk. It sounds a little like Jarvis from Iron Man, but the mechanism is not magic. It is standards, access, and documentation.
+I gradually moved the Kubernetes clusters, Azure services, development work, technical documentation, social media processes, and blog operations that I manage into this model, provided they are authorized for AI use. Today I can send an instruction from my phone and have it executed through an authorized working environment even when I am away from my desk. It sounds a little like Jarvis from Iron Man, but the mechanism is not magic. It is standards, access, and documentation.
 
 I follow roughly the same sequence for each kind of work:
 

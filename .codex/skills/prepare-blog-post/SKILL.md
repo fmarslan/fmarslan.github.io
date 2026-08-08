@@ -75,6 +75,7 @@ URL preservation rules:
 
 #### Keep the editorial rhythm natural
 
+- Never use the em dash character (Unicode U+2014) in article content, titles, descriptions, or metadata. Rewrite the sentence with commas, semicolons, parentheses, colons, or separate sentences as appropriate.
 - Use transition formulas such as “Asıl problem şu”, “Bu noktada”, “Kritik gerçek”, “Kural basit”, “En net çıkarım”, and “Son olarak” sparingly. Do not repeat the same formula across sections or introduce a claim with one when the preceding context already makes it clear.
 - Avoid sequences of short, emphatic sentences written only to create drama. Combine related thoughts into complete paragraphs unless a short sentence carries necessary contrast or technical emphasis.
 - Do not normalize paragraphs to a uniform size. Allow a developed argument to remain a substantial paragraph, use a short paragraph only when the idea genuinely benefits from isolation, and vary syntax rather than repeating the same sentence shape.
