@@ -1,0 +1,36 @@
+tr:
+  categories: Kaynak kategorileri
+  all: Tümü
+  website: Siteyi ziyaret et
+  empty: Bu kategoride kaynak bulunamadı.
+  intro: Bu seçki, farklı projelerde yolumun kesiştiği araç ve platformları bir araya getiriyor. Bazılarında mimari, geliştirme ve işletim süreçlerine derinlemesine dahil oldum; bazılarını ise kullanıcı veya istemci olarak kullandım. Yazılarımda ele aldığım teknolojiler de bu yaşayan kütüphanenin bir parçası.
+en:
+  categories: Resource categories
+  all: All
+  website: Visit website
+  empty: No resources found in this category.
+  intro: This collection brings together tools and platforms I have encountered across projects. With some, I have worked extensively on architecture, development and operations; with others, my experience comes from using them as a user or client. Technologies covered in my writing also form part of this growing library.
+categories:
+  Arama & İndeksleme: Search & Indexing
+  Veri İşleme & Analitik: Data Processing & Analytics
+  Veritabanı & Önbellek: Databases & Caching
+  Mesajlaşma & Olay Akışı: Messaging & Event Streaming
+  Gözlemlenebilirlik: Observability
+  Depolama: Storage
+  Konteyner & Kubernetes: Containers & Kubernetes
+  Sunucusuz İşlem: Serverless Compute
+  Web Sunucuları & Trafik: Web Servers & Traffic
+  API & Entegrasyon: APIs & Integration
+  Kimlik & Güvenlik: Identity & Security
+  Programlama & Sorgu Dilleri: Programming & Query Languages
+  Framework & Çalışma Ortamları: Frameworks & Runtimes
+  Geliştirme & Dokümantasyon: Development & Documentation
+  Sürüm Kontrolü & Kod Platformları: Version Control & Code Platforms
+  CI/CD & Teslimat: CI/CD & Delivery
+  Proje & İş Takibi: Project & Issue Tracking
+  İş Zamanlama: Job Scheduling
+  Endüstriyel Otomasyon & IoT: Industrial Automation & IoT
+  İş Uygulamaları: Business Applications
+  İşletim Sistemleri: Operating Systems
+  Yapay Zekâ: AI
+  Peppol & E-Belge: Peppol & E-Documents

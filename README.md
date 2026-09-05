@@ -12,4 +12,14 @@ bundle exec jekyll serve --host 0.0.0.0 --port 4000 --watch --force_polling --in
 
 The site is available at <http://localhost:4000>. Turkish is the default language. English browser preferences are redirected only when an English counterpart exists.
 
+### Docker
+
+Start the local site with:
+
+```bash
+docker compose up --build
+```
+
+Then open <http://localhost:4000>.
+
 See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for setup and validation details.

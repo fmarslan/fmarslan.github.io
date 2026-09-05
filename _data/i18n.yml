@@ -1,5 +1,9 @@
 tr:
-  role: "Çözüm Mimarı"
+  ai_note_title: "Deneyimler benim, içerik yönetimi yapay zekâ destekli."
+  ai_note_body: "Bu site, kendi deneyimlerimi ve fikirlerimi konuşarak yönlendirdiğim bir yapay zekâ ajanı aracılığıyla hazırlanıyor ve yönetiliyor. Metinlerin düzenlenmesinde anlam kaymaları veya editoryal hatalar oluşabilir."
+  ai_note_link: "Bu sitede yapay zekâyı nasıl kullanıyorum?"
+  ai_note_url: /bu-sitede-yapay-zeka/
+  role: "Software Engineer"
   nav_label: "Ana menü"
   nav_toggle: "Menüyü aç veya kapat"
   theme_toggle: "Renk temasını değiştir"
@@ -14,6 +18,8 @@ tr:
   read_article: "Makaleyi oku →"
   previous: "Önceki"
   next: "Sonraki"
+  related_posts: "İlgili yazılar"
+  related_posts_description: "Bu konuyla bağlantılı diğer yazılar"
   latest_writing: "Son yazılar"
   field_notes: "Sahadan notlar"
   writing_description: "Yazılım mimarisi, platformlar ve mühendislik deneyimlerim üzerine notlar."
@@ -27,7 +33,11 @@ tr:
   language_label: "Language"
   language_name: "English"
 en:
-  role: "Senior Software Engineer"
+  ai_note_title: "The experiences are mine; content management is AI-assisted."
+  ai_note_body: "This site is created and managed through an AI agent that I guide in conversation, sharing my own experiences and ideas. Editing may introduce shifts in meaning or editorial errors."
+  ai_note_link: "How do I use AI on this site?"
+  ai_note_url: /en/ai-on-this-site/
+  role: "Software Engineer"
   nav_label: "Primary navigation"
   nav_toggle: "Toggle site navigation"
   theme_toggle: "Toggle color theme"
@@ -42,6 +52,8 @@ en:
   read_article: "Read article →"
   previous: "Previous"
   next: "Next"
+  related_posts: "Related articles"
+  related_posts_description: "More writing related to this topic"
   latest_writing: "Latest writing"
   field_notes: "Notes from the field"
   writing_description: "Notes on software architecture, platforms, and engineering practice."

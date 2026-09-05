@@ -1,0 +1,563 @@
+- name: AKS
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Konteyner & Kubernetes
+  tags: [bulut, kubernetes, azure]
+  description: Azure üzerinde yönetilen Kubernetes kümeleri.
+  website: https://azure.microsoft.com/products/kubernetes-service
+- name: Apache Airflow
+  logo: /assets/img/tools/apacheairflow.svg
+  category: Veri İşleme & Analitik
+  tags: [veri, otomasyon]
+  description: Veri iş akışlarını zamanlama ve orkestrasyon platformu.
+  website: https://airflow.apache.org
+- name: Apache HTTP Server
+  logo: /assets/img/tools/apache.svg
+  category: Web Sunucuları & Trafik
+  tags: [web, altyapi]
+  description: Web sunucusu ve ters proxy çözümleri.
+  website: https://httpd.apache.org
+- name: Apache Kafka
+  logo: /assets/img/tools/apachekafka.svg
+  category: Mesajlaşma & Olay Akışı
+  tags: [mesajlasma, veri]
+  description: Dağıtık olay akışı ve gerçek zamanlı veri platformu.
+  website: https://kafka.apache.org
+- name: Apache Kong
+  logo: /assets/img/tools/kong.svg
+  category: API & Entegrasyon
+  tags: [api, bulut]
+  description: API gateway ve servis trafiği yönetimi.
+  website: https://konghq.com
+- name: Apache NiFi
+  category: Veri İşleme & Analitik
+  tags: [veri, otomasyon]
+  description: Görsel veri akışı tasarımı ve otomasyonu.
+  website: https://nifi.apache.org
+- name: Apache Superset
+  category: Veri İşleme & Analitik
+  tags: [veri, gorsellestirme]
+  description: Veri keşfi ve etkileşimli dashboard platformu.
+  website: https://superset.apache.org
+- name: AWS S3
+  logo: /assets/img/tools/amazons3.svg
+  category: Depolama
+  tags: [bulut, depolama, aws]
+  description: AWS nesne depolama servisi.
+  website: https://aws.amazon.com/s3
+- name: Azure Data Factory
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Veri İşleme & Analitik
+  tags: [bulut, veri, azure]
+  description: Bulut tabanlı veri entegrasyonu ve pipeline servisi.
+  website: https://azure.microsoft.com/products/data-factory
+- name: Azure Storage Account
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Depolama
+  tags: [bulut, depolama, azure]
+  description: Azure veri ve nesne depolama servisleri.
+  website: https://azure.microsoft.com/products/storage
+- name: Cassandra
+  logo: /assets/img/tools/apachecassandra.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, nosql]
+  description: Dağıtık ve yüksek erişilebilir NoSQL veritabanı.
+  website: https://cassandra.apache.org
+- name: Claude
+  category: Yapay Zekâ
+  tags: [yapay-zeka, verimlilik]
+  description: Araştırma, yazılım ve içerik üretimi için yapay zekâ aracı.
+  website: https://claude.ai
+- name: Codex
+  logo: /assets/img/tools/openai.svg
+  category: Yapay Zekâ
+  tags: [yapay-zeka, gelistirme]
+  description: Yazılım geliştirme ve mühendislik iş akışları için kodlama ajanı.
+  website: https://openai.com/codex
+- name: Cosmos DB
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, nosql, azure]
+  description: Azure üzerinde küresel dağıtık NoSQL veritabanı.
+  website: https://azure.microsoft.com/products/cosmos-db
+- name: Docker
+  logo: /assets/img/tools/docker.svg
+  category: Konteyner & Kubernetes
+  tags: [container, gelistirme]
+  description: Uygulamaları paketleme ve konteynerleştirme platformu.
+  website: https://www.docker.com
+- name: Elasticsearch Stack
+  logo: /assets/img/tools/elasticstack.svg
+  category: Arama & İndeksleme
+  tags: [arama, loglama]
+  description: Arama, analiz ve log yönetimi araç seti.
+  website: https://www.elastic.co/elastic-stack
+- name: Frappe
+  logo: /assets/img/tools/frappe.svg
+  category: Framework & Çalışma Ortamları
+  tags: [gelistirme, erp]
+  description: İş uygulamaları geliştirmek için açık kaynak framework.
+  website: https://frappe.io/framework
+- name: Git
+  logo: /assets/img/tools/git.svg
+  category: Sürüm Kontrolü & Kod Platformları
+  tags: [gelistirme, surum-kontrolu]
+  description: Dağıtık sürüm kontrol sistemi.
+  website: https://git-scm.com
+- name: GitHub
+  logo: /assets/img/tools/github.svg
+  category: Sürüm Kontrolü & Kod Platformları
+  tags: [gelistirme, surum-kontrolu]
+  description: Kod barındırma ve ekip iş birliği platformu.
+  website: https://github.com
+- name: Grafana
+  logo: /assets/img/tools/grafana.svg
+  category: Gözlemlenebilirlik
+  tags: [monitoring, gorsellestirme]
+  description: Metrik ve log verilerini görselleştirme platformu.
+  website: https://grafana.com
+- name: Headlamp
+  category: Konteyner & Kubernetes
+  tags: [kubernetes, bulut]
+  description: Kubernetes için web tabanlı kullanıcı arayüzü.
+  website: https://headlamp.dev
+- name: Helm
+  logo: /assets/img/tools/helm.svg
+  category: Konteyner & Kubernetes
+  tags: [kubernetes, otomasyon]
+  description: Kubernetes uygulamaları için paket yöneticisi.
+  website: https://helm.sh
+- name: Java
+  logo: /assets/img/tools/openjdk.svg
+  category: Programlama & Sorgu Dilleri
+  tags: [gelistirme, dil]
+  description: Kurumsal ve platform bağımsız uygulamalar için programlama dili.
+  website: https://www.java.com
+- name: JavaScript
+  logo: /assets/img/tools/javascript.svg
+  category: Programlama & Sorgu Dilleri
+  tags: [gelistirme, dil]
+  description: Web ve uygulama geliştirme programlama dili.
+  website: https://developer.mozilla.org/docs/Web/JavaScript
+- name: Jekyll
+  logo: /assets/img/tools/jekyll.svg
+  category: Framework & Çalışma Ortamları
+  tags: [web, icerik]
+  description: Statik site ve teknik içerik üretim aracı.
+  website: https://jekyllrb.com
+- name: Jenkins
+  logo: /assets/img/tools/jenkins.svg
+  category: CI/CD & Teslimat
+  tags: [cicd, otomasyon]
+  description: CI/CD ve yazılım teslim otomasyonu sunucusu.
+  website: https://www.jenkins.io
+- name: Kubernetes
+  logo: /assets/img/tools/kubernetes.svg
+  category: Konteyner & Kubernetes
+  tags: [kubernetes, container, bulut]
+  description: Konteyner orkestrasyonu platformu.
+  website: https://kubernetes.io
+- name: Linux
+  logo: /assets/img/tools/linux.svg
+  category: İşletim Sistemleri
+  tags: [altyapi, gelistirme]
+  description: Sunucu ve geliştirme ortamlarında kullanılan açık kaynak işletim sistemi ailesi.
+  website: https://www.kernel.org
+- name: Logstash
+  logo: /assets/img/tools/logstash.svg
+  category: Gözlemlenebilirlik
+  tags: [loglama, veri]
+  description: Veri toplama, dönüştürme ve iletme pipeline aracı.
+  website: https://www.elastic.co/logstash
+- name: MariaDB / MySQL
+  logo: /assets/img/tools/mariadb.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, sql]
+  description: Açık kaynak ilişkisel veritabanı sistemleri.
+  website: https://mariadb.org
+- name: MinIO
+  logo: /assets/img/tools/minio.svg
+  category: Depolama
+  tags: [depolama, s3, bulut]
+  description: S3 uyumlu yüksek performanslı nesne depolama.
+  website: https://min.io
+- name: MongoDB
+  logo: /assets/img/tools/mongodb.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, nosql]
+  description: Doküman tabanlı NoSQL veritabanı.
+  website: https://www.mongodb.com
+- name: Microsoft SQL Server
+  logo: /assets/img/tools/microsoftsqlserver.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, sql]
+  description: Microsoft ilişkisel veritabanı yönetim sistemi.
+  website: https://www.microsoft.com/sql-server
+- name: Nginx
+  logo: /assets/img/tools/nginx.svg
+  category: Web Sunucuları & Trafik
+  tags: [web, altyapi]
+  description: Web sunucusu, ters proxy ve yük dengeleyici.
+  website: https://nginx.org
+- name: OpenCart
+  category: İş Uygulamaları
+  tags: [e-ticaret, gelistirme]
+  description: Açık kaynak e-ticaret platformu.
+  website: https://www.opencart.com
+- name: OpenSearch Stack
+  logo: /assets/img/tools/opensearch.svg
+  category: Arama & İndeksleme
+  tags: [arama, loglama]
+  description: Arama, analiz ve gözlemlenebilirlik araç seti.
+  website: https://opensearch.org
+- name: Phoss AP
+  category: Peppol & E-Belge
+  tags: [peppol, entegrasyon]
+  description: Peppol erişim noktası çözümü.
+  website: https://github.com/phax/phoss-as4
+- name: Phoss Report
+  category: Peppol & E-Belge
+  tags: [peppol, raporlama]
+  description: Peppol raporlama süreçlerinde kullanılan araç.
+  website: https://github.com/phax
+- name: Phoss SMP
+  category: Peppol & E-Belge
+  tags: [peppol, entegrasyon]
+  description: Peppol servis metadata yayıncısı.
+  website: https://github.com/phax/phoss-smp
+- name: Phoss Validator
+  category: Peppol & E-Belge
+  tags: [peppol, dogrulama]
+  description: Elektronik belgeler için doğrulama aracı.
+  website: https://github.com/phax/phive
+- name: PostgreSQL
+  logo: /assets/img/tools/postgresql.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, sql]
+  description: Gelişmiş açık kaynak ilişkisel veritabanı.
+  website: https://www.postgresql.org
+- name: Prometheus
+  logo: /assets/img/tools/prometheus.svg
+  category: Gözlemlenebilirlik
+  tags: [monitoring, metrik]
+  description: Metrik toplama, sorgulama ve uyarı sistemi.
+  website: https://prometheus.io
+- name: RabbitMQ
+  logo: /assets/img/tools/rabbitmq.svg
+  category: Mesajlaşma & Olay Akışı
+  tags: [mesajlasma, entegrasyon]
+  description: Mesaj kuyruğu ve asenkron iletişim platformu.
+  website: https://www.rabbitmq.com
+- name: Rancher
+  logo: /assets/img/tools/rancher.svg
+  category: Konteyner & Kubernetes
+  tags: [kubernetes, bulut]
+  description: Kubernetes kümelerini merkezi olarak yönetme platformu.
+  website: https://www.rancher.com
+- name: Redis
+  logo: /assets/img/tools/redis.svg
+  category: Veritabanı & Önbellek
+  tags: [veritabani, cache]
+  description: Bellek içi veri deposu ve önbellek sistemi.
+  website: https://redis.io
+- name: Spring
+  logo: /assets/img/tools/spring.svg
+  category: Framework & Çalışma Ortamları
+  tags: [java, gelistirme]
+  description: Java tabanlı kurumsal uygulama framework'ü.
+  website: https://spring.io
+- name: Traefik
+  logo: /assets/img/tools/traefikproxy.svg
+  category: Web Sunucuları & Trafik
+  tags: [proxy, kubernetes, bulut]
+  description: Bulut-yerel ters proxy ve ingress controller.
+  website: https://traefik.io
+- name: TypeScript
+  logo: /assets/img/tools/typescript.svg
+  category: Programlama & Sorgu Dilleri
+  tags: [gelistirme, dil]
+  description: JavaScript'e statik tip desteği ekleyen programlama dili.
+  website: https://www.typescriptlang.org
+- name: Visual Studio Code
+  logo: /assets/img/tools/visualstudiocode.svg
+  category: Geliştirme & Dokümantasyon
+  tags: [editor, gelistirme]
+  description: Genişletilebilir kaynak kod editörü.
+  website: https://code.visualstudio.com
+- name: Zot Registry
+  category: Konteyner & Kubernetes
+  tags: [container, registry]
+  description: OCI uyumlu container image registry.
+  website: https://zotregistry.dev
+- name: "C#"
+  logo: /assets/img/tools/csharp.svg
+  category: Programlama & Sorgu Dilleri
+  description: Modern .NET uygulamaları için programlama dili.
+  website: https://learn.microsoft.com/dotnet/csharp/
+- name: "Python"
+  logo: /assets/img/tools/python.svg
+  category: Programlama & Sorgu Dilleri
+  description: Otomasyon, veri işleme ve uygulama geliştirme dili.
+  website: https://www.python.org/
+- name: "PHP"
+  logo: /assets/img/tools/php.svg
+  category: Programlama & Sorgu Dilleri
+  description: Sunucu taraflı web uygulamaları geliştirme dili.
+  website: https://www.php.net/
+- name: "Debian"
+  logo: /assets/img/tools/debian.svg
+  category: İşletim Sistemleri
+  description: Sunucu ve masaüstü ortamları için Linux dağıtımı.
+  website: https://www.debian.org/
+- name: "Windows"
+  logo: /assets/img/tools/windows.svg
+  category: İşletim Sistemleri
+  description: Microsoft masaüstü işletim sistemi.
+  website: https://www.microsoft.com/windows
+- name: "Node.js"
+  logo: /assets/img/tools/nodedotjs.svg
+  category: Framework & Çalışma Ortamları
+  description: Sunucu tarafında JavaScript çalıştırma ortamı.
+  website: https://nodejs.org/
+- name: "Angular"
+  logo: /assets/img/tools/angular.svg
+  category: Framework & Çalışma Ortamları
+  description: Bileşen tabanlı web uygulaması geliştirme framework'ü.
+  website: https://angular.dev/
+- name: "Vue.js"
+  logo: /assets/img/tools/vuedotjs.svg
+  category: Framework & Çalışma Ortamları
+  description: Etkileşimli web arayüzleri geliştirme framework'ü.
+  website: https://vuejs.org/
+- name: ".NET MAUI"
+  logo: /assets/img/tools/dotnet.svg
+  category: Framework & Çalışma Ortamları
+  description: C# ve XAML ile çok platformlu mobil ve masaüstü uygulamalar.
+  website: https://dotnet.microsoft.com/apps/maui
+- name: ".NET"
+  logo: /assets/img/tools/dotnet.svg
+  category: Framework & Çalışma Ortamları
+  description: Web, servis ve masaüstü uygulamaları için geliştirme platformu.
+  website: https://dotnet.microsoft.com/
+- name: "Flutter"
+  logo: /assets/img/tools/flutter.svg
+  category: Framework & Çalışma Ortamları
+  description: Tek kod tabanıyla çok platformlu kullanıcı arayüzleri geliştirme aracı.
+  website: https://flutter.dev/
+- name: "Peppol"
+  category: Peppol & E-Belge
+  description: Elektronik iş belgelerinin standartlara dayalı paylaşımı için ağ ve çerçeve.
+  website: https://peppol.org/
+- name: "XSLT"
+  category: Veri İşleme & Analitik
+  description: XML belgelerini dönüştürmek için şablon tabanlı dil.
+  website: https://www.w3.org/TR/xslt-30/
+- name: "JSLT"
+  category: Veri İşleme & Analitik
+  description: JSON verileri için sorgulama ve dönüştürme dili.
+  website: https://github.com/schibsted/jslt
+- name: "Vector"
+  category: Gözlemlenebilirlik
+  description: Log ve metrikleri toplama, dönüştürme ve yönlendirme aracı.
+  website: https://vector.dev/
+- name: "Keycloak"
+  logo: /assets/img/tools/keycloak.svg
+  category: Kimlik & Güvenlik
+  description: Kimlik, erişim yönetimi ve tek oturum açma platformu.
+  website: https://www.keycloak.org/
+- name: "RethinkDB"
+  category: Veritabanı & Önbellek
+  description: Gerçek zamanlı uygulamalar için doküman tabanlı veritabanı.
+  website: https://rethinkdb.com/
+- name: "T-SQL"
+  category: Programlama & Sorgu Dilleri
+  description: SQL Server üzerinde sorgu ve veritabanı programlama dili.
+  website: https://learn.microsoft.com/sql/t-sql/language-reference
+- name: "Modbus"
+  category: Endüstriyel Otomasyon & IoT
+  description: Endüstriyel cihazlar arasında veri alışverişi protokolü.
+  website: https://www.modbus.org/
+- name: "MCP"
+  category: Yapay Zekâ
+  description: Yapay zekâ uygulamalarını harici araç ve veri kaynaklarına bağlayan Model Context Protocol.
+  website: https://modelcontextprotocol.io/
+- name: "Azure Front Door"
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Web Sunucuları & Trafik
+  description: Web uygulamaları için küresel trafik yönlendirme ve içerik dağıtım servisi.
+  website: https://azure.microsoft.com/products/frontdoor
+- name: "Memcached"
+  category: Veritabanı & Önbellek
+  description: Dağıtık bellek içi önbellek sistemi.
+  website: https://memcached.org/
+- name: "Apache Tomcat"
+  logo: /assets/img/tools/apachetomcat.svg
+  category: Web Sunucuları & Trafik
+  description: Java web uygulamaları için servlet konteyneri.
+  website: https://tomcat.apache.org/
+- name: "InfluxDB"
+  logo: /assets/img/tools/influxdb.svg
+  category: Veritabanı & Önbellek
+  description: Zaman serisi verilerini saklama ve sorgulama veritabanı.
+  website: https://www.influxdata.com/
+- name: "TimescaleDB"
+  logo: /assets/img/tools/timescale.svg
+  category: Veritabanı & Önbellek
+  description: PostgreSQL üzerinde zaman serisi veri işleme uzantısı.
+  website: https://www.timescale.com/
+- name: "Rapid SCADA"
+  category: Endüstriyel Otomasyon & IoT
+  description: Endüstriyel veri toplama, izleme ve kontrol platformu.
+  website: https://rapidscada.org/
+- name: "Hasura"
+  logo: /assets/img/tools/hasura.svg
+  category: API & Entegrasyon
+  description: Veri kaynakları üzerinde API geliştirme platformu.
+  website: https://hasura.io/
+- name: "K3s"
+  logo: /assets/img/tools/k3s.svg
+  category: Konteyner & Kubernetes
+  description: Hafif Kubernetes dağıtımı.
+  website: https://k3s.io/
+- name: "Apache Druid"
+  logo: /assets/img/tools/apachedruid.svg
+  category: Veritabanı & Önbellek
+  description: Gerçek zamanlı analitik sorgular için dağıtık veritabanı.
+  website: https://druid.apache.org/
+- name: "Apache Spark"
+  logo: /assets/img/tools/apachespark.svg
+  category: Veri İşleme & Analitik
+  description: Büyük ölçekli veri işleme ve analitik motoru.
+  website: https://spark.apache.org/
+- name: "Apache HBase"
+  category: Veritabanı & Önbellek
+  description: Büyük veri kümeleri için dağıtık sütun ailesi veritabanı.
+  website: https://hbase.apache.org/
+- name: "Azure DevOps"
+  logo: /assets/img/tools/azuredevops.svg
+  category: CI/CD & Teslimat
+  description: Kod, iş takibi ve CI/CD süreçleri için geliştirme servisleri.
+  website: https://azure.microsoft.com/products/devops
+- name: "Jira"
+  logo: /assets/img/tools/jira.svg
+  category: Proje & İş Takibi
+  description: Proje planlama ve iş takibi platformu.
+  website: https://www.atlassian.com/software/jira
+- name: "Redmine"
+  logo: /assets/img/tools/redmine.svg
+  category: Proje & İş Takibi
+  description: Açık kaynak proje yönetimi ve iş takip uygulaması.
+  website: https://www.redmine.org/
+- name: "Hangfire"
+  category: İş Zamanlama
+  description: .NET uygulamaları için arka plan iş yürütme sistemi.
+  website: https://www.hangfire.io/
+- name: "Quartz Scheduler"
+  category: İş Zamanlama
+  description: Java uygulamaları için iş zamanlama kütüphanesi.
+  website: https://www.quartz-scheduler.org/
+- name: "Let's Encrypt"
+  logo: /assets/img/tools/letsencrypt.svg
+  category: Kimlik & Güvenlik
+  description: Otomatik TLS sertifikası sağlayan sertifika otoritesi.
+  website: https://letsencrypt.org/
+- name: "cert-manager"
+  category: Kimlik & Güvenlik
+  description: Kubernetes üzerinde TLS sertifikası yaşam döngüsü yönetimi.
+  website: https://cert-manager.io/
+- name: "Electron"
+  logo: /assets/img/tools/electron.svg
+  category: Framework & Çalışma Ortamları
+  description: Web teknolojileriyle masaüstü uygulaması geliştirme framework'ü.
+  website: https://www.electronjs.org/
+- name: "PWA"
+  logo: /assets/img/tools/pwa.svg
+  category: Framework & Çalışma Ortamları
+  description: Yüklenebilir ve çevrimdışı çalışabilen web uygulamaları yaklaşımı.
+  website: https://developer.mozilla.org/docs/Web/Progressive_web_apps
+- name: "Argo CD"
+  logo: /assets/img/tools/argo.svg
+  category: CI/CD & Teslimat
+  description: Kubernetes uygulamaları için GitOps tabanlı sürekli teslim aracı.
+  website: https://argo-cd.readthedocs.io/
+- name: "Go"
+  logo: /assets/img/tools/go.svg
+  category: Programlama & Sorgu Dilleri
+  description: Servisler ve sistem araçları geliştirmek için programlama dili.
+  website: https://go.dev/
+- name: "Apache Subversion (SVN)"
+  logo: /assets/img/tools/subversion.svg
+  category: Sürüm Kontrolü & Kod Platformları
+  description: Merkezi sürüm kontrol sistemi.
+  website: https://subversion.apache.org/
+- name: "Gitea"
+  logo: /assets/img/tools/gitea.svg
+  category: Sürüm Kontrolü & Kod Platformları
+  description: Git depoları ve ekip iş birliği için kod barındırma platformu.
+  website: https://about.gitea.com/
+- name: "GitLab"
+  logo: /assets/img/tools/gitlab.svg
+  category: Sürüm Kontrolü & Kod Platformları
+  description: Kod barındırma, iş birliği ve CI/CD platformu.
+  website: https://about.gitlab.com/
+- name: Azure Monitor
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Gözlemlenebilirlik
+  description: Uygulama ve altyapı metriklerini, loglarını ve uyarılarını merkezi olarak izleme servisi.
+  website: https://azure.microsoft.com/products/monitor
+- name: Azure Service Bus
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Mesajlaşma & Olay Akışı
+  description: Uygulamalar arasında kuyruklar ve konular üzerinden mesaj iletim servisi.
+  website: https://azure.microsoft.com/products/service-bus
+- name: Azure Functions
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Sunucusuz İşlem
+  description: Olay tetiklemeli kod çalıştırmak için sunucusuz işlem servisi.
+  website: https://azure.microsoft.com/products/functions
+- name: Azure Container Instances
+  logo: /assets/img/tools/microsoftazure.svg
+  category: Konteyner & Kubernetes
+  description: Sunucu yönetmeden konteyner çalıştırma servisi.
+  website: https://azure.microsoft.com/products/container-instances
+- name: Apache Solr
+  logo: /assets/img/tools/apachesolr.svg
+  category: Arama & İndeksleme
+  description: Tam metin arama ve indeksleme platformu.
+  website: https://solr.apache.org/
+- name: Apache PDFBox
+  category: Geliştirme & Dokümantasyon
+  description: PDF belgeleri oluşturma, okuma ve işleme için Java kütüphanesi.
+  website: https://pdfbox.apache.org/
+- name: OpenAPI
+  logo: /assets/img/tools/openapiinitiative.svg
+  category: API & Entegrasyon
+  description: HTTP API arayüzlerini tanımlamak için standart belirtim.
+  website: https://www.openapis.org/
+- name: KEPServerEX
+  category: Endüstriyel Otomasyon & IoT
+  description: Endüstriyel cihazları ve uygulamaları birbirine bağlayan veri iletişim platformu.
+  website: https://www.ptc.com/en/products/kepware/kepserverex
+- name: Astro
+  logo: /assets/img/tools/astro.svg
+  category: Framework & Çalışma Ortamları
+  description: İçerik odaklı web siteleri geliştirme framework'ü.
+  website: https://astro.build/
+- name: Markdown
+  logo: /assets/img/tools/markdown.svg
+  category: Geliştirme & Dokümantasyon
+  description: Dokümantasyon ve içerik yazımı için hafif işaretleme dili.
+  website: https://daringfireball.net/projects/markdown/
+- name: Ruby
+  logo: /assets/img/tools/ruby.svg
+  category: Programlama & Sorgu Dilleri
+  description: Web uygulamaları ve otomasyon için programlama dili.
+  website: https://www.ruby-lang.org/
+- name: Mermaid
+  logo: /assets/img/tools/mermaid.svg
+  category: Geliştirme & Dokümantasyon
+  description: Metin tabanlı tanımlardan diyagram üretme aracı.
+  website: https://mermaid.js.org/
+- name: Apache ActiveMQ
+  category: Mesajlaşma & Olay Akışı
+  description: Uygulamalar arasında asenkron iletişim için açık kaynak mesaj aracısı.
+  website: https://activemq.apache.org/

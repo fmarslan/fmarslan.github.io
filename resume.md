@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Özgeçmiş
-eyebrow: Kıdemli Yazılım Mühendisi
+eyebrow: Software Engineer
 description: Dağıtık sistemler, entegrasyon platformları ve bulut tabanlı uygulamalarda 14+ yıllık deneyime sahip uygulamalı backend mühendisi.
 permalink: /cv/
 lang: tr-TR
@@ -12,7 +12,7 @@ page_class: resume-page
 
 ## Profesyonel Özet
 
-Kurumsal uygulamalar, dağıtık sistemler, entegrasyon platformları ve bulut tabanlı yazılımlar geliştiren, 14 yılı aşkın deneyime sahip bir Kıdemli Yazılım Mühendisiyim. Başlıca uzmanlık alanlarım Java, .NET, Kafka, PostgreSQL, Docker ve Kubernetes ile geliştirilen backend sistemleri, olay güdümlü mimariler ve mikroservislerdir.
+Kurumsal uygulamalar, dağıtık sistemler, entegrasyon platformları ve bulut tabanlı yazılımlar geliştiren, 14 yılı aşkın deneyime sahip bir mimari tasarımdan kod geliştirmeye ve üretim sorunlarını çözmeye kadar uygulamanın içinde çalışan bir Software Engineer’ım. Başlıca uzmanlık alanlarım Java, .NET, Kafka, PostgreSQL, Docker ve Kubernetes ile geliştirilen backend sistemleri, olay güdümlü mimariler ve mikroservislerdir.
 
 Gereksinim ve çözüm tasarımından geliştirme, sorun giderme ve üretim operasyonuna kadar sürecin tamamına doğrudan katkı sağlamayı seviyorum.
 

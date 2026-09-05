@@ -1,0 +1,6 @@
+.git
+_site
+tmp
+vendor
+.bundle
+.jekyll-cache

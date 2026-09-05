@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume
-eyebrow: Senior Software Engineer
+eyebrow: Software Engineer
 description: Hands-on backend engineer with 14+ years of experience in distributed systems, integration platforms, and cloud-native applications.
 permalink: /en/cv/
 lang: en-US
@@ -12,7 +12,7 @@ page_class: resume-page
 
 ## Professional Summary
 
-I am a hands-on Senior Software Engineer with more than 14 years of experience building enterprise applications, distributed systems, integration platforms, and cloud-native software. My strongest areas are backend engineering, event-driven architectures, microservices, and production systems built with Java, .NET, Kafka, PostgreSQL, Docker, and Kubernetes.
+I am a Software Engineer with a hands-on approach to architecture and implementation with more than 14 years of experience building enterprise applications, distributed systems, integration platforms, and cloud-native software. My strongest areas are backend engineering, event-driven architectures, microservices, and production systems built with Java, .NET, Kafka, PostgreSQL, Docker, and Kubernetes.
 
 I enjoy writing code, solving complex technical problems, and contributing directly from requirements and solution design through implementation, troubleshooting, and production operation.
 

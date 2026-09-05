@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Search
+lang: en-US
 eyebrow: Internal tools
 description: Explore archived notes and blog posts with Google Custom Search.
 permalink: /search

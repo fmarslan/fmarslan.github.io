@@ -42,6 +42,39 @@ layout: base
       {%- endif -%}
     </footer>
   </article>
+  {%- assign related_posts = "" | split: "" -%}
+  {%- for candidate in site.posts -%}
+    {%- assign candidate_language = candidate.lang | default: 'tr-TR' | split: '-' | first -%}
+    {%- assign is_related = false -%}
+    {%- if candidate.url != page.url and candidate_language == language_code -%}
+      {%- for tag in page.tags -%}
+        {%- if candidate.tags contains tag -%}{%- assign is_related = true -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- unless is_related -%}
+        {%- for category in page.categories -%}
+          {%- if candidate.categories contains category -%}{%- assign is_related = true -%}{%- break -%}{%- endif -%}
+        {%- endfor -%}
+      {%- endunless -%}
+    {%- endif -%}
+    {%- if is_related -%}{%- assign related_posts = related_posts | push: candidate -%}{%- endif -%}
+    {%- if related_posts.size == 3 -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if related_posts != empty -%}
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+    <div class="related-posts__heading">
+      <h2 id="related-posts-title">{{ t.related_posts }}</h2>
+      <p>{{ t.related_posts_description }}</p>
+    </div>
+    <ul class="related-posts__list">
+      {%- for related_post in related_posts -%}
+      <li>
+        <a href="{{ related_post.url | relative_url }}">{{ related_post.title }}</a>
+        <time datetime="{{ related_post.date | date_to_xmlschema }}">{{ related_post.date | date: t.date_format }}</time>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </aside>
+  {%- endif -%}
   <nav class="post-nav" aria-label="{% if language_code == 'tr' %}Yazı navigasyonu{% else %}Article navigation{% endif %}">
     <div>
       {%- assign previous_post = nil -%}

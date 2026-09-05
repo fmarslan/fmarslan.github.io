@@ -1,0 +1,108 @@
+AKS: Managed Kubernetes clusters on Azure.
+Apache Airflow: Workflow scheduling and orchestration for data pipelines.
+Apache HTTP Server: Web server and reverse proxy solutions.
+Apache Kafka: Distributed event streaming and real-time data platform.
+Apache Kong: API gateway and service traffic management.
+Apache NiFi: Visual data flow design and automation.
+Apache Superset: Data exploration and interactive dashboards.
+AWS S3: AWS object storage service.
+Azure Data Factory: Cloud data integration and pipeline service.
+Azure Storage Account: Azure data and object storage services.
+Cassandra: Distributed, highly available NoSQL database.
+Claude: AI assistance for research, software and content creation.
+Codex: Coding agent for software development and engineering workflows.
+Cosmos DB: Globally distributed NoSQL database on Azure.
+Docker: Application packaging and containerization platform.
+Elasticsearch Stack: Tools for search, analytics and log management.
+Frappe: Open-source framework for building business applications.
+Git: Distributed version control system.
+GitHub: Code hosting and team collaboration platform.
+Grafana: Visualization platform for metrics and logs.
+Headlamp: Web-based user interface for Kubernetes.
+Helm: Package manager for Kubernetes applications.
+Java: Programming language for enterprise and cross-platform applications.
+JavaScript: Programming language for web and application development.
+Jekyll: Static site generator for websites and technical writing.
+Jenkins: Automation server for CI/CD and software delivery.
+Kubernetes: Container orchestration platform.
+Linux: Open-source operating system family for servers and development.
+Logstash: Pipeline tool for collecting, transforming and forwarding data.
+MariaDB / MySQL: Open-source relational database systems.
+MinIO: High-performance, S3-compatible object storage.
+MongoDB: Document-oriented NoSQL database.
+Microsoft SQL Server: Microsoft's relational database management system.
+Nginx: Web server, reverse proxy and load balancer.
+OpenCart: Open-source e-commerce platform.
+OpenSearch Stack: Tools for search, analytics and observability.
+Phoss AP: Peppol access point solution.
+Phoss Report: Tool used in Peppol reporting workflows.
+Phoss SMP: Peppol service metadata publisher.
+Phoss Validator: Validation tool for electronic documents.
+PostgreSQL: Advanced open-source relational database.
+Prometheus: Metrics collection, querying and alerting system.
+RabbitMQ: Message queue and asynchronous communication platform.
+Rancher: Centralized management for Kubernetes clusters.
+Redis: In-memory data store and cache.
+Spring: Framework for Java-based enterprise applications.
+Traefik: Cloud-native reverse proxy and ingress controller.
+TypeScript: Programming language that adds static types to JavaScript.
+Visual Studio Code: Extensible source code editor.
+Zot Registry: OCI-compatible container image registry.
+"C#": Programming language for modern .NET applications.
+"Python": Programming language for automation, data processing and applications.
+"PHP": Programming language for server-side web applications.
+"Debian": Linux distribution for servers and desktops.
+"Windows": Microsoft desktop operating system.
+"Node.js": JavaScript runtime for server-side applications.
+"Angular": Framework for building component-based web applications.
+"Vue.js": Framework for building interactive web interfaces.
+".NET MAUI": Cross-platform mobile and desktop applications with C# and XAML.
+".NET": Development platform for web, service and desktop applications.
+"Flutter": Toolkit for building cross-platform user interfaces from one codebase.
+"Peppol": Network and framework for standards-based exchange of electronic business documents.
+"XSLT": Template-based language for transforming XML documents.
+"JSLT": Query and transformation language for JSON data.
+"Vector": Pipeline for collecting, transforming and routing logs and metrics.
+"Keycloak": Identity and access management platform with single sign-on.
+"RethinkDB": Document database for real-time applications.
+"T-SQL": Query and database programming language for SQL Server.
+"Modbus": Data communication protocol for industrial devices.
+"MCP": Model Context Protocol for connecting AI applications to external tools and data sources.
+"Azure Front Door": Global traffic routing and content delivery service for web applications.
+"Memcached": Distributed in-memory caching system.
+"Apache Tomcat": Servlet container for Java web applications.
+"InfluxDB": Database for storing and querying time-series data.
+"TimescaleDB": PostgreSQL extension for time-series data workloads.
+"Rapid SCADA": Industrial data acquisition, monitoring and control platform.
+"Hasura": Platform for building APIs over data sources.
+"K3s": Lightweight Kubernetes distribution.
+"Apache Druid": Distributed database for real-time analytical queries.
+"Apache Spark": Engine for large-scale data processing and analytics.
+"Apache HBase": Distributed wide-column database for large datasets.
+"Azure DevOps": Development services for code, work tracking and CI/CD.
+"Jira": Project planning and issue tracking platform.
+"Redmine": Open-source project management and issue tracking application.
+"Hangfire": Background job processing system for .NET applications.
+"Quartz Scheduler": Job scheduling library for Java applications.
+"Let's Encrypt": Certificate authority providing automated TLS certificates.
+"cert-manager": TLS certificate lifecycle management on Kubernetes.
+"Electron": Framework for building desktop applications with web technologies.
+"PWA": Approach to installable web applications with offline capabilities.
+"Argo CD": GitOps-based continuous delivery tool for Kubernetes applications.
+"Go": Programming language for building services and system tools.
+"Apache Subversion (SVN)": Centralized version control system.
+"Gitea": Code hosting platform for Git repositories and team collaboration.
+"GitLab": Platform for code hosting, collaboration and CI/CD.
+Azure Monitor: Service for monitoring application and infrastructure metrics, logs and alerts.
+Azure Service Bus: Messaging service connecting applications through queues and topics.
+Azure Functions: Serverless compute service for running event-driven code.
+Azure Container Instances: Service for running containers without managing servers.
+Apache Solr: Full-text search and indexing platform.
+Apache PDFBox: Java library for creating, reading and processing PDF documents.
+OpenAPI: Standard specification for describing HTTP API interfaces.
+KEPServerEX: Industrial connectivity platform linking devices and applications.
+Astro: Framework for building content-driven websites.
+Markdown: Lightweight markup language for documentation and content authoring.
+Ruby: Programming language for web applications and automation.
+Mermaid: Tool for generating diagrams from text-based definitions.
+Apache ActiveMQ: Open-source message broker for asynchronous communication between applications.

@@ -1,0 +1,30 @@
+{% assign lang = page.lang | split: '-' | first %}
+{% assign t = site.data.resources_ui[lang] %}
+<div class="resources-intro"><p>{{ t.intro }}</p></div>
+<div class="resource-filters" role="group" aria-label="{{ t.categories }}">
+  <button type="button" class="resource-filter is-active" data-filter="all" aria-pressed="true">{{ t.all }}</button>
+  {% assign categories = site.data.tools | map: 'category' | uniq | sort %}
+  {% for category in categories %}
+  <button type="button" class="resource-filter" data-filter="{{ category | slugify }}" aria-pressed="false">{% if lang == 'en' %}{{ site.data.resources_ui.categories[category] }}{% else %}{{ category }}{% endif %}</button>
+  {% endfor %}
+</div>
+<div class="resource-grid">
+  {% assign resources = site.data.tools | sort_natural: 'name' %}
+  {% for resource in resources %}
+  <article class="resource-card" data-tags="{{ resource.category | slugify }}">
+    <div class="resource-card__top">
+      <span class="resource-logo{% if resource.logo %} resource-logo--image{% endif %}" aria-hidden="true">
+        {% if resource.logo %}<img src="{{ resource.logo | relative_url }}" alt="" width="28" height="28" loading="lazy" decoding="async">{% else %}{{ resource.name | slice: 0, 2 | upcase }}{% endif %}
+      </span>
+      <h2>{{ resource.name | escape }}</h2>
+    </div>
+    <p>{% if lang == 'en' %}{{ site.data.tools_en[resource.name] }}{% else %}{{ resource.description }}{% endif %}</p>
+    <div class="resource-card__bottom">
+      <span class="resource-tags">{% if lang == 'en' %}{{ site.data.resources_ui.categories[resource.category] }}{% else %}{{ resource.category }}{% endif %}</span>
+      <a href="{{ resource.website | escape }}" target="_blank" rel="noopener noreferrer" aria-label="{{ resource.name | escape }} — {{ t.website }}">{{ t.website }} ↗</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+<p class="resources-empty" role="status" hidden>{{ t.empty }}</p>
+<script src="{{ '/assets/js/resources.js' | relative_url }}" defer></script>

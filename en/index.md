@@ -6,14 +6,14 @@ lang: en-US
 alternate_url: /
 default_url: /
 hero:
-  eyebrow: Senior software engineer · distributed systems
+  eyebrow: Software Engineer · Hands-on architecture
   title: From code to production, I stay hands-on.
   description: |
     Hi, I am Fatih. For more than 14 years, I have built software for public services,
     energy, retail, SaaS, and regulated document exchange. I make architecture decisions
     close to the code, the data, and the problems that appear in production.
   seo_description: |
-    Fatih Mehmet Arslan is a senior software engineer working on distributed systems,
+    Fatih Mehmet Arslan is a Software Engineer combining hands-on architecture and implementation across distributed systems,
     Peppol integrations, cloud platforms, and production-focused backend engineering.
   image: /assets/fatih-mehmet-arslan-hero-v3.webp
   image_alt: Portrait of Fatih Mehmet Arslan
@@ -26,6 +26,12 @@ hero:
       url: /en/blog/
       style: secondary
       icon: "📚"
+
+toolbox:
+  heading: Tools I Build
+  title: Tarsolution Engineering Tools
+  description: A toolbox I built for practical needs in software development, data integration and industrial automation. It brings together utilities for JSON formatting and validation, data format conversion, JWT inspection, Modbus analysis and XML/XSLT transformation.
+  link_label: Explore the tools
 
 focus:
   eyebrow: What I work on

@@ -6,7 +6,7 @@ lang: tr-TR
 alternate_url: /en/
 default_url: /
 hero:
-  eyebrow: Kıdemli yazılım mühendisi · dağıtık sistemler
+  eyebrow: Software Engineer · Tasarımdan koda, uygulamanın içinde
   title: Koddan üretime, sistemin içindeyim.
   description: |
     Merhaba, ben Fatih. 14 yılı aşkın süredir kamu, enerji, perakende, SaaS ve
@@ -14,7 +14,7 @@ hero:
     alırken koddan, veriden ve üretimde yaşanan gerçek sorunlardan kopmamaya çalışıyorum.
   seo_description: |
     Fatih Mehmet Arslan; dağıtık sistemler, Peppol entegrasyonları, bulut platformları
-    ve üretim odaklı backend mühendisliği üzerine çalışan kıdemli yazılım mühendisidir.
+    ve üretim odaklı backend mühendisliği üzerine çalışan, mimari tasarımı doğrudan kod ve uygulamayla birleştiren bir Software Engineer'dır.
   image: /assets/fatih-mehmet-arslan-hero-v3.webp
   image_alt: Fatih Mehmet Arslan portresi
   actions:
@@ -26,6 +26,12 @@ hero:
       url: /blog/
       style: secondary
       icon: "📚"
+
+toolbox:
+  heading: Geliştirdiğim Araçlar
+  title: Tarsolution Engineering Tools
+  description: Yazılım geliştirme, veri entegrasyonu ve endüstriyel otomasyon çalışmalarında karşılaştığım pratik ihtiyaçlar için geliştirdiğim araç kutusu. JSON biçimlendirme ve doğrulama, veri formatı dönüştürme, JWT inceleme, Modbus analizi ve XML/XSLT dönüşümleri gibi işleri tek yerde topluyor.
+  link_label: Araçları keşfet
 
 focus:
   eyebrow: Çalışma alanlarım

@@ -706,6 +706,21 @@ section {
   color: var(--color-muted);
 }
 
+.ai-disclosure {
+  max-width: 850px;
+  margin: 0 auto 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-muted);
+  text-align: left;
+  line-height: 1.7;
+}
+
+.ai-disclosure p { margin: 0 0 .5rem; }
+.ai-disclosure strong { color: var(--color-text); }
+.ai-disclosure a { color: var(--color-primary); text-decoration: underline; text-underline-offset: .2em; }
+
 .footer-bottom {
   margin-top: 1.5rem;
   text-align: center;
@@ -1339,6 +1354,58 @@ section {
   border-top: 1px solid var(--color-border);
 }
 
+.related-posts {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  width: min(760px, 100%);
+  margin: 5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.related-posts__heading h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.related-posts__heading p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.related-posts__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-posts__list li {
+  display: grid;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: 0.3rem;
+}
+
+.related-posts__list li:first-child {
+  padding-top: 0;
+}
+
+.related-posts__list a {
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.related-posts__list time {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
 .post-page .post-body pre,
 .post-page .post-body table {
   font-family: "Inter", "Segoe UI", sans-serif;
@@ -1392,6 +1459,7 @@ section {
   .global-header,
   .global-footer,
   .post-nav,
+  .related-posts,
   .code-copy-btn,
   .language-switcher,
   .inline-search,
@@ -1510,6 +1578,10 @@ section {
 }
 
 @media (max-width: 720px) {
+  .related-posts {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     text-align: left;
   }

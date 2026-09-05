@@ -1,0 +1,20 @@
+.resources-intro { max-width:850px; margin-bottom:2rem; }
+.resource-filters { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:2rem; }
+.resource-filter { font:inherit; font-size:.85rem; cursor:pointer; border:1px solid var(--color-border); border-radius:999px; padding:.5rem .9rem; background:var(--color-surface); color:var(--color-text); }
+.resource-filter.is-active { background:var(--color-primary); color:var(--color-surface); border-color:var(--color-primary); }
+.resources-page :is(button,a):focus-visible { outline:3px solid var(--color-accent); outline-offset:4px; }
+.resource-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.resource-card { display:flex; flex-direction:column; min-width:0; padding:1.4rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); }
+.resource-card[hidden],.resources-empty[hidden] { display:none!important; }
+.resource-card__top { display:flex; align-items:center; gap:.8rem; margin-bottom:1.2rem; }
+.resource-card__top h2 { margin:0; }
+.resource-logo--image { background:#fff; border:1px solid #e3e8eb; }
+.resource-logo img { width:28px; height:28px; object-fit:contain; border-radius:0; }
+.resource-logo { display:grid; place-items:center; flex-shrink:0; width:42px; height:42px; border-radius:10px; background:var(--color-surface-muted); color:var(--color-primary); font-weight:700; font-size:.85rem; }
+.resource-card h2 { font-size:1.15rem; line-height:1.4; overflow-wrap:anywhere; }
+.resource-card p { font-size:.9rem; margin:0 0 1.5rem; }
+.resource-card__bottom { margin-top:auto; border-top:1px solid var(--color-border); padding-top:1rem; display:flex; flex-wrap:wrap; align-items:center; gap:.6rem; justify-content:space-between; font-size:.75rem; }
+.resource-tags { color:var(--color-muted); }
+.resource-card__bottom a { color:var(--color-primary); font-weight:600; }
+@media(max-width:1000px) { .resource-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .resource-grid { grid-template-columns:minmax(0,1fr); } .resource-card { padding:1.1rem; } .resource-filter { font-size:.8rem; } }

@@ -57,6 +57,18 @@ layout: base
   </section>
   {%- endif -%}
 
+  {%- if page.toolbox -%}
+  <section aria-labelledby="toolbox-heading">
+    <div class="section-heading"><h2 id="toolbox-heading">{{ page.toolbox.heading }}</h2></div>
+    <article class="card">
+      <p class="pill">tools.tarsolution.com</p>
+      <h3>{{ page.toolbox.title }}</h3>
+      <p>{{ page.toolbox.description }}</p>
+      <a class="btn btn-secondary" href="https://tools.tarsolution.com/" target="_blank" rel="noopener noreferrer">{{ page.toolbox.link_label }} ↗</a>
+    </article>
+  </section>
+  {%- endif -%}
+
   {%- if page.focus -%}
   <section>
     <div class="section-heading">

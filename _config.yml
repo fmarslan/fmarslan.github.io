@@ -19,7 +19,7 @@ author:
   name: Fatih Mehmet ARSLAN
   email: contact@fmarslan.com
   type: person
-  job_title: Çözüm Mimarı ve Yazılım Mühendisi
+  job_title: Software Engineer
 
 share_image: /android-chrome-512x512.png
 
@@ -69,6 +69,8 @@ navigation_tr:
     url: /about/
   - title: Özgeçmiş
     url: /cv/
+  - title: Teknolojiler
+    url: /teknolojiler/
 
 navigation_en:
   - title: Home
@@ -79,8 +81,15 @@ navigation_en:
     url: /en/about/
   - title: Resume
     url: /en/cv/
+  - title: Technologies
+    url: /en/technologies/
 
 exclude:
+  - scripts
+  - Dockerfile
+  - compose.yml
+  - docs
+  - assets/img/tools/README.md
   - vendor
   - Gemfile
   - Gemfile.lock
