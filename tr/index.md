@@ -1,15 +1,16 @@
 ---
 layout: home
 title: "Fatih Mehmet Arslan"
+seo_title: "Fatih Mehmet Arslan — Yazılım Mühendisliği ve Mimari"
 permalink: /tr/
 lang: tr-TR
 alternate_url: /
 default_url: /
 hero:
   eyebrow: Software Engineer · Tasarımdan koda, uygulamanın içinde
-  title: Koddan üretime, sistemin içindeyim.
+  title: Fatih Mehmet Arslan
   description: |
-    Merhaba, ben Fatih. 14 yılı aşkın süredir kamu, enerji, perakende, SaaS ve
+    Ben Fatih Mehmet Arslan; çevrimiçi platformlarda fmarslan adıyla da yer alıyorum. Mimariyi kodla birlikte ele alan bir yazılım mühendisiyim. 14 yılı aşkın süredir kamu, enerji, perakende, SaaS ve
     regüle belge entegrasyonu alanlarında yazılım geliştiriyorum. Mimari karar
     alırken koddan, veriden ve üretimde yaşanan gerçek sorunlardan kopmamaya çalışıyorum.
   seo_description: "Fatih Mehmet Arslan: dağıtık sistemler, Peppol entegrasyonları, bulut mimarisi ve üretim deneyimine dayanan yazılım mühendisliği."

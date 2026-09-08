@@ -31,7 +31,7 @@ Dir.glob("#{root}/**/*.html").each do |file|
     begin
       data = JSON.parse(script.text)
       graph = data.fetch('@graph', [])
-      errors << [path, 'missing WebPage/Article schema'] unless graph.any? { |node| %w[WebPage Article].include?(node['@type']) }
+      errors << [path, 'missing page schema'] unless graph.any? { |node| %w[WebPage Article ProfilePage].include?(node['@type']) }
     rescue JSON::ParserError => e
       errors << [path, "invalid JSON-LD: #{e.message[0, 80]}"]
     end
@@ -88,6 +88,18 @@ pages.each do |path, doc|
 end
 errors << ['/', 'default home must be English'] unless pages['/index.html']&.at_css('html')&.[]('lang') == 'en'
 errors << ['/tr/', 'Turkish home missing'] unless pages['/tr/index.html']&.at_css('html')&.[]('lang') == 'tr'
+['/about/index.html', '/en/about/index.html'].each do |path|
+  graph = JSON.parse(pages.fetch(path).at_css('script[type="application/ld+json"]').text).fetch('@graph')
+  person = graph.find { |item| item['@type'] == 'Person' }
+  profile = graph.find { |item| item['@type'] == 'ProfilePage' }
+  errors << [path, 'profile identity missing'] unless person&.fetch('name') == 'Fatih Mehmet Arslan' && person['alternateName'] == 'fmarslan'
+  errors << [path, 'profile must reference author'] unless profile&.dig('mainEntity', '@id') == person&.fetch('@id')
+end
+pages.each do |path, doc|
+  next unless doc.at_css('.post-byline')
+  expected_profile = doc.at_css('html')['lang'] == 'en' ? '/en/about/' : '/about/'
+  errors << [path, 'author profile link missing'] unless doc.at_css('.post-byline a[rel="author"]')&.[]('href') == expected_profile
+end
 Dir.glob("#{root}/**/*.html").each do |file|
   doc = Nokogiri::HTML(File.read(file))
   refresh = doc.at_css('meta[http-equiv="refresh"]')

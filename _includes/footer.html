@@ -15,6 +15,7 @@
     <div class="footer-meta">
       <p class="pill">{{ t.footer_tagline }}</p>
       <h4>{{ site.author.name | default: site.title }}</h4>
+      <p>{{ site.alternate_name }}</p>
       <p>{{ t.site_description }}</p>
       <a class="btn btn-link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
     </div>
@@ -28,6 +29,7 @@
     </div>
     <div>
       <h4>{{ t.resources }}</h4>
+      {% include expertise-links.html %}
       <ul class="footer-nav">
         <li><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></li>
         <li><a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></li>

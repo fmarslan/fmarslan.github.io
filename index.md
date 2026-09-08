@@ -1,15 +1,16 @@
 ---
 layout: home
 title: "Fatih Mehmet Arslan"
+seo_title: "Fatih Mehmet Arslan — Software Engineer & Architect"
 permalink: /
 lang: en-US
 alternate_url: /tr/
 default_url: /
 hero:
   eyebrow: Software Engineer · Hands-on architecture
-  title: From code to production, I stay hands-on.
+  title: Fatih Mehmet Arslan
   description: |
-    Hi, I am Fatih. For more than 14 years, I have built software for public services,
+    I am Fatih Mehmet Arslan, also known as fmarslan, a software engineer with a hands-on approach to architecture. For more than 14 years, I have built software for public services,
     energy, retail, SaaS, and regulated document exchange. I make architecture decisions
     close to the code, the data, and the problems that appear in production.
   seo_description: "Fatih Mehmet Arslan: software engineering, distributed systems, Peppol integrations and cloud architecture, grounded in production experience."

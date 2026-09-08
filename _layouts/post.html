@@ -31,7 +31,7 @@ layout: base
     </div>
     <footer class="post-footer-meta">
       <div class="post-byline">
-        <span itemprop="author">{{ site.author.name }}</span>
+        <a rel="author" href="{% if language_code == 'en' %}{{ '/en/about/' | relative_url }}{% else %}{{ '/about/' | relative_url }}{% endif %}">{{ site.author.name }}</a>
         <span aria-hidden="true">·</span>
         <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: t.date_format }}</time>
         <span aria-hidden="true">·</span>

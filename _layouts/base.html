@@ -21,9 +21,12 @@
   {%- assign seo_override = site.data.seo_overrides[page.url] -%}
   {%- assign page_title = seo_override.title | default: page.seo_title | default: page.title | default: site_name -%}
   {%- assign full_title = page_title -%}
-  {%- if page_title != site_name and page_title.size < 51 -%}
+  {%- assign branded_title_size = page_title.size | plus: site_name.size | plus: 3 -%}
+  {%- unless page_title contains site_name -%}
+  {%- if branded_title_size <= 65 -%}
   {%- assign full_title = page_title | append: " · " | append: site_name -%}
   {%- endif -%}
+  {%- endunless -%}
   {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
   {%- assign localized_description = site.data.i18n[language_code].site_description | default: site.description -%}
   {%- assign raw_description = seo_override.description | default: page.hero.seo_description | default: page.seo_description | default: page.description |
@@ -136,7 +139,9 @@
   {%- assign person_id = site.url | append: '/#person' -%}
   {%- assign website_id = site.url | append: '/#website' -%}
   {%- assign webpage_id = canonical_url | append: '#webpage' -%}
-  {%- assign person_image = '/android-chrome-512x512.png' | absolute_url -%}
+  {%- assign person_image = '/assets/fatih-mehmet-arslan-hero-v3.webp' | absolute_url -%}
+  {%- assign profile_url = '/en/about/' | absolute_url -%}
+  {%- if language_code == 'tr' -%}{%- assign profile_url = '/about/' | absolute_url -%}{%- endif -%}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -145,8 +150,9 @@
         "@type": "Person",
         "@id": {{ person_id | jsonify }},
         "name": {{ author_name | jsonify }},
+        "alternateName": {{ site.alternate_name | jsonify }},
         "jobTitle": {{ author_role | jsonify }},
-        "url": {{ site.url | jsonify }},
+        "url": {{ profile_url | jsonify }},
         "image": {{ person_image | jsonify }},
         "sameAs": {{ site.social.links | jsonify }}
       },
@@ -155,11 +161,12 @@
         "@id": {{ website_id | jsonify }},
         "url": {{ site.url | jsonify }},
         "name": {{ site_name | jsonify }},
+        "alternateName": {{ site.alternate_name | jsonify }},
         "inLanguage": ["tr", "en"],
         "publisher": {"@id": {{ person_id | jsonify }}}
       },
       {
-        "@type": "{% if page.layout == 'post' %}Article{% else %}WebPage{% endif %}",
+        "@type": "{% if page.layout == 'post' %}Article{% elsif page.profile_page %}ProfilePage{% else %}WebPage{% endif %}",
         "@id": {{ webpage_id | jsonify }},
         "url": {{ canonical_url | jsonify }},
         "name": {{ page_title | jsonify }},
@@ -169,6 +176,9 @@
         "isPartOf": {"@id": {{ website_id | jsonify }}},
         "author": {"@id": {{ person_id | jsonify }}},
         "publisher": {"@id": {{ person_id | jsonify }}}
+        {% if page.profile_page %},
+        "mainEntity": {"@id": {{ person_id | jsonify }}}
+        {% endif %}
         {% if is_post_layout %},
         "headline": {{ page_title | jsonify }},
         "mainEntityOfPage": {{ canonical_url | jsonify }},

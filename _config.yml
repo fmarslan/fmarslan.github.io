@@ -2,7 +2,8 @@ url: https://fmarslan.com
 baseurl: ""
 repository: fmarslan/fmarslan.github.io
 locale: "en-US"
-title: "F.M. Arslan"
+title: "Fatih Mehmet Arslan"
+alternate_name: fmarslan
 description: >
   Technical notes on software architecture, distributed systems, cloud platforms, and engineering.
 keywords:
@@ -18,7 +19,7 @@ social:
     - https://fmarslan.medium.com
 
 author:
-  name: Fatih Mehmet ARSLAN
+  name: Fatih Mehmet Arslan
   email: contact@fmarslan.com
   type: person
   job_title: Software Engineer

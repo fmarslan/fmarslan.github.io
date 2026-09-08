@@ -1,0 +1,13 @@
+<nav aria-label="{% if language_code == 'en' %}Engineering expertise{% else %}Uzmanlık alanları{% endif %}">
+  <ul>
+    {% if language_code == 'en' %}
+    <li><a href="{{ '/en/software-architecture/' | relative_url }}">Software architecture</a></li>
+    <li><a href="{{ '/en/distributed-systems/' | relative_url }}">Distributed systems</a></li>
+    <li><a href="{{ '/en/peppol-integration/' | relative_url }}">Peppol integration</a></li>
+    {% else %}
+    <li><a href="{{ '/yazilim-mimarisi/' | relative_url }}">Yazılım mimarisi</a></li>
+    <li><a href="{{ '/dagitik-sistemler/' | relative_url }}">Dağıtık sistemler</a></li>
+    <li><a href="{{ '/peppol-entegrasyonu/' | relative_url }}">Peppol entegrasyonu</a></li>
+    {% endif %}
+  </ul>
+</nav>

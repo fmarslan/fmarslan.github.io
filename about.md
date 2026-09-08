@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Hakkımda
+title: Fatih Mehmet Arslan Hakkında
+profile_page: true
 permalink: /about/
-description: Yazılım mühendisliği yolculuğum, üretime yakın çalışma biçimim ve teknik karar yaklaşımım.
+description: Fatih Mehmet Arslan (fmarslan); Java, .NET, dağıtık sistemler ve Peppol entegrasyonları üzerinde çalışan yazılım mühendisi. Deneyimim ve mimari yaklaşımım.
 lang: tr-TR
 alternate_url: /en/about/
 default_url: /about/

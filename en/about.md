@@ -1,11 +1,12 @@
 ---
 layout: page
-title: About
+title: About Fatih Mehmet Arslan
+profile_page: true
 permalink: /en/about/
 lang: en-US
 alternate_url: /about/
 default_url: /about/
-description: My software engineering path, the way I stay close to production, and how I make technical decisions.
+description: Fatih Mehmet Arslan (fmarslan), software engineer working with Java, .NET, distributed systems and Peppol integrations. My experience and approach to architecture.
 ---
 
 <div class="bio-grid">
