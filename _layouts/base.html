@@ -18,21 +18,22 @@
     {%- assign is_post_layout = true -%}
   {%- endif -%}
   {%- assign site_name = site.title | default: site.author.name | default: "Website" -%}
-  {%- assign page_title = page.title | default: site_name -%}
+  {%- assign seo_override = site.data.seo_overrides[page.url] -%}
+  {%- assign page_title = seo_override.title | default: page.seo_title | default: page.title | default: site_name -%}
   {%- assign full_title = page_title -%}
-  {%- if page_title != site_name -%}
+  {%- if page_title != site_name and page_title.size < 51 -%}
   {%- assign full_title = page_title | append: " · " | append: site_name -%}
   {%- endif -%}
   {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
   {%- assign localized_description = site.data.i18n[language_code].site_description | default: site.description -%}
-  {%- assign raw_description = page.hero.seo_description | default: page.seo_description | default: page.description |
+  {%- assign raw_description = seo_override.description | default: page.hero.seo_description | default: page.seo_description | default: page.description |
   default: localized_description | default: "Notes on software architecture, cloud platforms, and delivery." -%}
-  {%- if is_post_layout and page.description == nil -%}
+  {%- if is_post_layout and page.description == nil and seo_override.description == nil -%}
     {%- assign post_excerpt = page.excerpt | default: page.content -%}
-    {%- assign raw_description = post_excerpt | strip_html | strip_newlines | replace: "  ", " " | strip |
+    {%- assign raw_description = post_excerpt | strip_html | normalize_whitespace | replace: "  ", " " | strip |
     truncate: 160, "" -%}
   {%- endif -%}
-  {%- assign page_description = raw_description | strip_html | strip_newlines | replace: "  ", " " | strip | truncate: 180 -%}
+  {%- assign page_description = raw_description | strip_html | normalize_whitespace | replace: "  ", " " | strip | truncate: 160 -%}
   {%- assign author_name = site.author.name | default: site_name -%}
   {%- assign author_role = site.author.job_title | default: page.hero.eyebrow | default: "Solution Architect & Software
   Engineer" -%}
@@ -41,6 +42,9 @@
   {%- unless share_image contains 'http' -%}
   {%- assign share_image = share_image | relative_url | absolute_url -%}
   {%- endunless -%}
+  {%- assign share_image_key = share_image | remove: 'https://fmarslan.com' | remove: 'http://fmarslan.com' | url_decode -%}
+  {%- assign share_asset = site.data.image_assets[share_image_key] -%}
+  {%- if share_asset -%}{%- assign share_image = share_asset.src | absolute_url -%}{%- endif -%}
   {%- assign canonical_url = page.url | relative_url | absolute_url -%}
   {%- assign locale_code = page.lang | default: site.locale | default: 'en-US' -%}
   {%- assign og_locale = locale_code | replace: '-', '_' -%}
@@ -67,10 +71,10 @@
   {%- if effective_alternate_url -%}
   {%- assign alternate_lang = 'en' -%}
   {%- if locale_code contains 'en' -%}{%- assign alternate_lang = 'tr' -%}{%- endif -%}
-  {%- assign x_default_url = page.default_url | default: page.url -%}
-  {%- if locale_code contains 'en' and page.translation_key -%}
+  {%- assign x_default_url = page.url -%}
+  {%- unless locale_code contains 'en' -%}
     {%- assign x_default_url = effective_alternate_url -%}
-  {%- endif -%}
+  {%- endunless -%}
   <link rel="alternate" hreflang="{{ locale_code | split: '-' | first }}" href="{{ canonical_url }}">
   <link rel="alternate" hreflang="{{ alternate_lang }}" href="{{ effective_alternate_url | relative_url | absolute_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ x_default_url | relative_url | absolute_url }}">
@@ -180,9 +184,18 @@
 <body>
   {% include header.html %}
   <main id="main-content">
-    {{ content }}
+    {% include optimized-content.html html=content %}
   </main>
   {% include footer.html %}
+  {% if language_code == 'en' and effective_alternate_url %}
+  <aside id="language-suggestion" class="language-suggestion" lang="tr" aria-label="Türkçe sürüm" hidden>
+    <button type="button" class="language-suggestion__close" aria-label="Bildirimi kapat">×</button>
+    <p>Bu sayfanın Türkçe sürümü de var.</p>
+    <a href="{{ effective_alternate_url | relative_url }}" hreflang="tr">Türkçe sürüm için tıklayınız →</a>
+  </aside>
+  <script src="{{ '/assets/js/language-suggestion.js' | relative_url }}" defer></script>
+  {% endif %}
+  <script src="{{ '/assets/js/site-events.js' | relative_url }}" defer></script>
 </body>
 
 </html>

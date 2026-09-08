@@ -51,7 +51,7 @@ layout: base
         {%- assign list_image = post.image | default: post.hero.image -%}
         {%- if list_image -%}
         <a class="post-card__media" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
-          <img src="{{ list_image | relative_url }}" alt="" loading="lazy">
+          <img src="{{ list_image | relative_url }}" alt="" loading="lazy" sizes="(max-width: 640px) 90vw, 320px">
         </a>
         {%- endif -%}
       </article>

@@ -1,8 +1,10 @@
 url: https://fmarslan.com
-locale: "tr-TR"
+baseurl: ""
+repository: fmarslan/fmarslan.github.io
+locale: "en-US"
 title: "F.M. Arslan"
 description: >
-  Yazılım mimarisi, dağıtık sistemler, bulut platformları ve mühendislik üzerine teknik notlar.
+  Technical notes on software architecture, distributed systems, cloud platforms, and engineering.
 keywords:
   - Fatih Mehmet Arslan
   - solution architect
@@ -31,6 +33,9 @@ plugins:
   - jekyll-redirect-from
 
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 permalink: /:categories/:year/:month/:day/:title:output_ext
 paginate: 20
 paginate_path: /blog/:num
@@ -62,7 +67,7 @@ defaults:
 
 navigation_tr:
   - title: Ana Sayfa
-    url: /
+    url: /tr/
   - title: Blog
     url: /blog/
   - title: Hakkımda
@@ -74,7 +79,7 @@ navigation_tr:
 
 navigation_en:
   - title: Home
-    url: /en/
+    url: /
   - title: Blog
     url: /en/blog/
   - title: About
@@ -96,3 +101,4 @@ exclude:
   - README.md
   - _site
   - tmp
+  - tests

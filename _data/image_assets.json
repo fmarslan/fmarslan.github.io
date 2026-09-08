@@ -1,0 +1,998 @@
+{
+  "/assets/fatih-mehmet-arslan-1-522X450.png": {
+    "width": 522,
+    "height": 450,
+    "src": "/assets/optimized/5557684c83fa191e-522.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/5557684c83fa191e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/5557684c83fa191e-522.webp",
+        "width": 522
+      }
+    ]
+  },
+  "/assets/fatih-mehmet-arslan-hero-v2.webp": {
+    "width": 790,
+    "height": 1600,
+    "src": "/assets/optimized/34335b656e63377a-790.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/34335b656e63377a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/34335b656e63377a-790.webp",
+        "width": 790
+      }
+    ]
+  },
+  "/assets/fatih-mehmet-arslan-hero-v3.webp": {
+    "width": 700,
+    "height": 1600,
+    "src": "/assets/fatih-mehmet-arslan-hero-v3.webp"
+  },
+  "/assets/fatih-mehmet-arslan-hero.webp": {
+    "width": 900,
+    "height": 1600,
+    "src": "/assets/optimized/77a76dda67ae1252-900.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/77a76dda67ae1252-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/77a76dda67ae1252-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/assets/fmarslan.png": {
+    "width": 522,
+    "height": 456,
+    "src": "/assets/optimized/48207dba55206965-522.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/48207dba55206965-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/48207dba55206965-522.webp",
+        "width": 522
+      }
+    ]
+  },
+  "/assets/img/02bb2a47-c4ed-4c80-8ff0-d1e460a468ff.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/23bec480622e54dc-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/23bec480622e54dc-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/23bec480622e54dc-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/23bec480622e54dc-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/13431c72-3ebd-447b-aab9-6836653d12da.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/ee82f54c1b167f33-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/ee82f54c1b167f33-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/ee82f54c1b167f33-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/ee82f54c1b167f33-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/1c8df5c1-0eba-48ae-8bea-a0c895ae5407.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/e4496260ff4e88a6-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/e4496260ff4e88a6-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/e4496260ff4e88a6-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/e4496260ff4e88a6-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/20b9c292-816b-43cc-a652-1de9cc4ca2f2.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/9f47c351643c177a-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/9f47c351643c177a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/9f47c351643c177a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/9f47c351643c177a-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/22c51fd6-862b-4813-8877-1c5ce692ab76.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/cea28dc4d8380b20-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/cea28dc4d8380b20-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/cea28dc4d8380b20-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/cea28dc4d8380b20-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/242c6430-9d74-463e-993d-6fb7d47266e9.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/9b2bc0e726e9a0da-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/9b2bc0e726e9a0da-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/9b2bc0e726e9a0da-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/9b2bc0e726e9a0da-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/258f48f7-8297-4ca3-b0c7-dda1df84b119.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/5b7e5214bad287f8-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/5b7e5214bad287f8-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/5b7e5214bad287f8-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/5b7e5214bad287f8-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/31579b3a-c863-48da-937e-ba17cce39009.png": {
+    "width": 1535,
+    "height": 1024,
+    "src": "/assets/optimized/3deb95f80a8eaf4b-1535.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/3deb95f80a8eaf4b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/3deb95f80a8eaf4b-960.webp",
+        "width": 959
+      },
+      {
+        "src": "/assets/optimized/3deb95f80a8eaf4b-1535.webp",
+        "width": 1535
+      }
+    ]
+  },
+  "/assets/img/403d882b-7907-47f5-9d06-098b3c873539.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/af5f6ef394d66a5c-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/af5f6ef394d66a5c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/af5f6ef394d66a5c-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/af5f6ef394d66a5c-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/5198cfa0-de03-4bb5-b637-e100abef9ab1.png": {
+    "width": 1024,
+    "height": 1536,
+    "src": "/assets/optimized/fe59f886740c0759-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/fe59f886740c0759-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/fe59f886740c0759-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/fe59f886740c0759-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/596f2bf2-a150-4f92-9693-e34f771adcd9.png": {
+    "width": 1024,
+    "height": 1536,
+    "src": "/assets/optimized/3e16d71d3bca7f45-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/3e16d71d3bca7f45-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/3e16d71d3bca7f45-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/3e16d71d3bca7f45-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/717eb0e5-78ae-4359-a524-a7a1df7ac11b.png": {
+    "width": 1284,
+    "height": 588,
+    "src": "/assets/img/717eb0e5-78ae-4359-a524-a7a1df7ac11b.png"
+  },
+  "/assets/img/7f100c91-2ecb-40ad-b64e-e54e08778f34.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/9d20da016463e83a-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/9d20da016463e83a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/9d20da016463e83a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/9d20da016463e83a-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/7fbabe90-a44c-4ae1-868d-7f31948feaee.png": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/b1ad6307c1c18c18-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/b1ad6307c1c18c18-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/b1ad6307c1c18c18-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/b1ad6307c1c18c18-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/8404d81f-465b-449a-a9a3-c4ab95e41276.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/0f01956c8a231e4f-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/0f01956c8a231e4f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/0f01956c8a231e4f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/0f01956c8a231e4f-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/8839b539-b011-4bc1-adff-8a69afb65f8c.png": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/e2201a8bab51c1d6-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/e2201a8bab51c1d6-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/e2201a8bab51c1d6-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/e2201a8bab51c1d6-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/9ee28aab-30b5-47d1-aca5-460f78acef4b.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/bc72e15f16eb8e3f-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/bc72e15f16eb8e3f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/bc72e15f16eb8e3f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/bc72e15f16eb8e3f-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/ai-operations-decision-authority-cover.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/148a8e893a94f87b-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/148a8e893a94f87b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/148a8e893a94f87b-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/148a8e893a94f87b-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/apache-lets-encrypt.webp": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/3da9087030a6cc3b-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/3da9087030a6cc3b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/3da9087030a6cc3b-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/3da9087030a6cc3b-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/aWryH.png": {
+    "width": 1756,
+    "height": 858,
+    "src": "/assets/optimized/6b23f097e7861f03-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/6b23f097e7861f03-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/6b23f097e7861f03-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/6b23f097e7861f03-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/b792ab8e-af1d-4c65-a787-c4d73c41d6d3.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/fd40c551580a5d93-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/fd40c551580a5d93-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/fd40c551580a5d93-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/fd40c551580a5d93-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/bounded-context-abstract.png": {
+    "width": 1200,
+    "height": 630,
+    "src": "/assets/optimized/a4d0215e100b8e60-1200.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/a4d0215e100b8e60-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/a4d0215e100b8e60-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/a4d0215e100b8e60-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/assets/img/cert-manager.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/87fe4c1119c3ec5a-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/87fe4c1119c3ec5a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/87fe4c1119c3ec5a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/87fe4c1119c3ec5a-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/coding-man.jpg": {
+    "width": 7360,
+    "height": 4912,
+    "src": "/assets/optimized/d4dc3bb27d349e43-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/d4dc3bb27d349e43-480.webp",
+        "width": 479
+      },
+      {
+        "src": "/assets/optimized/d4dc3bb27d349e43-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/d4dc3bb27d349e43-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/connected-to-dev-container.png": {
+    "width": 3000,
+    "height": 1920,
+    "src": "/assets/optimized/76d76eeb00895385-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/76d76eeb00895385-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/76d76eeb00895385-960.webp",
+        "width": 959
+      },
+      {
+        "src": "/assets/optimized/76d76eeb00895385-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/context-rotasi.png": {
+    "width": 1200,
+    "height": 630,
+    "src": "/assets/img/context-rotasi.png"
+  },
+  "/assets/img/dlq2azuredevops.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/92c83cb978c36aac-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/92c83cb978c36aac-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/92c83cb978c36aac-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/92c83cb978c36aac-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/dynamic-flow-engine-cover.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/c78a23638de98e61-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/c78a23638de98e61-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/c78a23638de98e61-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/c78a23638de98e61-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/ee03c2f2-9c67-4873-9774-ffe63459eff4.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/b1a4a979c3568234-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/b1a4a979c3568234-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/b1a4a979c3568234-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/b1a4a979c3568234-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/favpng_big-data-cloud-computing-cloud-storage.png": {
+    "width": 640,
+    "height": 425,
+    "src": "/assets/optimized/ccb1bea3fa5dfd67-640.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/ccb1bea3fa5dfd67-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/ccb1bea3fa5dfd67-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "/assets/img/harici-araclardan-dogru-sekilde-faydalanma.png": {
+    "width": 1024,
+    "height": 1536,
+    "src": "/assets/optimized/546679ba2789169f-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/546679ba2789169f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/546679ba2789169f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/546679ba2789169f-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/icann-dns-kapak.png": {
+    "width": 1600,
+    "height": 570,
+    "src": "/assets/optimized/d32a167a2de191b9-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/d32a167a2de191b9-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/d32a167a2de191b9-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/d32a167a2de191b9-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/icons8-website-24.png": {
+    "width": 24,
+    "height": 24,
+    "src": "/assets/img/icons8-website-24.png"
+  },
+  "/assets/img/image.png": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/1dd62d57f1c6c270-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/1dd62d57f1c6c270-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/1dd62d57f1c6c270-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/1dd62d57f1c6c270-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/image1-4.png.png": {
+    "width": 574,
+    "height": 305,
+    "src": "/assets/img/image1-4.png.png"
+  },
+  "/assets/img/kubernetes-delivery-layers-cover.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/e8bfb4f492c9589a-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/e8bfb4f492c9589a-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/e8bfb4f492c9589a-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/e8bfb4f492c9589a-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/kubernetes-release-default.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/5010d785514dc801-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/5010d785514dc801-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/5010d785514dc801-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/5010d785514dc801-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/managing-domain-values-cover.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/556e599e6a77d6d8-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/556e599e6a77d6d8-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/556e599e6a77d6d8-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/556e599e6a77d6d8-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/mariadb-maxscale.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/4d55851de8805f72-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/4d55851de8805f72-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/4d55851de8805f72-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/4d55851de8805f72-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/microservice-dependency-boundaries.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/bc0a107b751155e5-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/bc0a107b751155e5-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/bc0a107b751155e5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/bc0a107b751155e5-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/microservice.png": {
+    "width": 1920,
+    "height": 745,
+    "src": "/assets/optimized/77bf9a32ff52516f-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/77bf9a32ff52516f-480.webp",
+        "width": 479
+      },
+      {
+        "src": "/assets/optimized/77bf9a32ff52516f-960.webp",
+        "width": 959
+      },
+      {
+        "src": "/assets/optimized/77bf9a32ff52516f-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/modern-bulut-mimarisi-cover.png": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/60f180600fa58c61-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/60f180600fa58c61-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/60f180600fa58c61-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/60f180600fa58c61-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/npm-supply-chain-shai-hulud-cover.png": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/eecb2d134f17e43f-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/eecb2d134f17e43f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/eecb2d134f17e43f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/eecb2d134f17e43f-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/packaged-distributed-application.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/e21adea7eb6ddfbb-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/e21adea7eb6ddfbb-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/e21adea7eb6ddfbb-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/e21adea7eb6ddfbb-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/peppol-network-cover.png": {
+    "width": 1000,
+    "height": 766,
+    "src": "/assets/optimized/1cc657817718901d-1000.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/1cc657817718901d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/1cc657817718901d-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/1cc657817718901d-1000.webp",
+        "width": 1000
+      }
+    ]
+  },
+  "/assets/img/saas-faas.png": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/assets/optimized/d506a1c8ddec5963-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/d506a1c8ddec5963-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/d506a1c8ddec5963-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/d506a1c8ddec5963-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/Screenshot from 2020-12-03 14-43-04.png": {
+    "width": 392,
+    "height": 149,
+    "src": "/assets/img/Screenshot%20from%202020-12-03%2014-43-04.png"
+  },
+  "/assets/img/Screenshot from 2020-12-03 14-53-20.png": {
+    "width": 1356,
+    "height": 175,
+    "src": "/assets/img/Screenshot%20from%202020-12-03%2014-53-20.png"
+  },
+  "/assets/img/Screenshot from 2020-12-08 09-18-55.png": {
+    "width": 315,
+    "height": 72,
+    "src": "/assets/img/Screenshot%20from%202020-12-08%2009-18-55.png"
+  },
+  "/assets/img/sdasvfdw.png": {
+    "width": 1024,
+    "height": 1536,
+    "src": "/assets/optimized/0b9045ee3a3a4b83-1024.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/0b9045ee3a3a4b83-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/0b9045ee3a3a4b83-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/0b9045ee3a3a4b83-1024.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/assets/img/spilo.jpeg": {
+    "width": 474,
+    "height": 201,
+    "src": "/assets/img/spilo.jpeg"
+  },
+  "/assets/img/Spilo_Architecture_Instance[1].png": {
+    "width": 953,
+    "height": 406,
+    "src": "/assets/optimized/381e220931ec28c6-953.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/381e220931ec28c6-480.webp",
+        "width": 479
+      },
+      {
+        "src": "/assets/optimized/381e220931ec28c6-953.webp",
+        "width": 953
+      }
+    ]
+  },
+  "/assets/img/tech-selection-compass.png": {
+    "width": 1200,
+    "height": 630,
+    "src": "/assets/img/tech-selection-compass.png"
+  },
+  "/assets/img/test-centric-development.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/8879b665cf66138f-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/8879b665cf66138f-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/8879b665cf66138f-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/8879b665cf66138f-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/profile.png": {
+    "width": 522,
+    "height": 450,
+    "src": "/assets/optimized/c9c19a9ea656ef1d-522.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/c9c19a9ea656ef1d-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/c9c19a9ea656ef1d-522.webp",
+        "width": 522
+      }
+    ]
+  },
+  "/assets/Screenshot from 2020-12-03 14-43-04.png": {
+    "width": 392,
+    "height": 149,
+    "src": "/assets/Screenshot%20from%202020-12-03%2014-43-04.png"
+  },
+  "/assets/tarsolution/19691.jpg": {
+    "width": 7501,
+    "height": 4001,
+    "src": "/assets/optimized/01db17a0c6abbd0b-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/01db17a0c6abbd0b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/01db17a0c6abbd0b-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/01db17a0c6abbd0b-1600.webp",
+        "width": 1599
+      }
+    ]
+  }
+}

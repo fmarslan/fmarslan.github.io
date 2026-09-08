@@ -1,0 +1,50 @@
+{%- comment -%}
+Enhance rendered HTML with existing Liquid filters supported by GitHub Pages.
+Keep article source text and original image files unchanged.
+{%- endcomment -%}
+{%- assign optimized_html = include.html -%}
+{%- for alias in site.data.url_aliases -%}
+  {%- capture old_href -%}href="{{ alias[0] }}"{%- endcapture -%}
+  {%- capture new_href -%}href="{{ alias[1] }}"{%- endcapture -%}
+  {%- assign optimized_html = optimized_html | replace: old_href, new_href -%}
+  {%- capture old_absolute_href -%}href="{{ alias[0] | absolute_url }}"{%- endcapture -%}
+  {%- assign optimized_html = optimized_html | replace: old_absolute_href, new_href -%}
+{%- endfor -%}
+{%- assign image_parts = optimized_html | split: '<img' -%}
+{%- for part in image_parts -%}
+  {%- if forloop.first -%}{{ part }}{%- else -%}
+    {%- assign attributes = part | split: '>' | first -%}
+    {%- assign remainder = part | remove_first: attributes | remove_first: '>' -%}
+    {%- assign attributes = attributes | strip -%}
+    {%- assign last_character = attributes | slice: -1, 1 -%}
+    {%- if last_character == '/' -%}
+      {%- assign attribute_length = attributes.size | minus: 1 -%}
+      {%- assign attributes = attributes | slice: 0, attribute_length | strip -%}
+    {%- endif -%}
+    {%- assign quote = '"' -%}
+    {%- assign src_marker = 'src="' -%}
+    {%- unless attributes contains src_marker -%}
+      {%- assign quote = "'" -%}
+      {%- assign src_marker = "src='" -%}
+    {%- endunless -%}
+    {%- assign image_src = attributes | split: src_marker | last | split: quote | first -%}
+    {%- comment -%}url_decode resolves encoded spaces and existing percent escapes.{%- endcomment -%}
+    {%- assign image_key = image_src | remove: 'https://fmarslan.com' | remove: 'http://fmarslan.com' | url_decode -%}
+    {%- assign asset = site.data.image_assets[image_key] | default: site.data.external_image_dimensions[image_src] -%}
+    {%- if asset -%}
+      {%- capture original_src -%}{{ src_marker }}{{ image_src }}{{ quote }}{%- endcapture -%}
+      {%- capture replacement_src -%}src="{{ asset.src }}"{%- endcapture -%}
+      {%- assign attributes = attributes | replace: original_src, replacement_src -%}
+      <img {{ attributes }}
+      {%- unless attributes contains 'width=' %} width="{{ asset.width }}"{% endunless -%}
+      {%- unless attributes contains 'height=' %} height="{{ asset.height }}"{% endunless -%}
+      {%- unless attributes contains 'decoding=' %} decoding="async"{% endunless -%}
+      {%- unless attributes contains 'loading=' or attributes contains 'fetchpriority="high"' %} loading="lazy"{% endunless -%}
+      {%- if asset.variants and attributes contains 'srcset=' -%}
+      {%- elsif asset.variants %} srcset="{% for variant in asset.variants %}{{ variant.src }} {{ variant.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+        {%- unless attributes contains 'sizes=' %} sizes="(max-width: 900px) 92vw, 900px"{% endunless -%}
+      {%- endif -%}>
+    {%- else -%}<img {{ attributes }}>{%- endif -%}
+    {{- remainder -}}
+  {%- endif -%}
+{%- endfor -%}

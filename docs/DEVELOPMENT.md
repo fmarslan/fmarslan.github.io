@@ -27,8 +27,9 @@ bundle exec jekyll serve --host 0.0.0.0 --port 4000 --watch --force_polling --in
 ## URL and language rules
 
 - Existing post filenames, dates, permalinks, and canonical URLs must remain unchanged.
-- Turkish is the default language.
-- English pages live below `/en/`.
+- English is the default at `/`; Turkish home is `/tr/`.
+- English articles and section pages keep `/en/`; the former `/en/` home redirects to `/`.
+- Turkish browser users get a dismissible suggestion on English pages once per tab session. No automatic language redirect runs.
 - Language switching is explicit; `alternate_url` and post `translation_key` connect real translations and generate reciprocal hreflang links.
 - A post without a real translation must not redirect to an unrelated English page.
 
@@ -41,3 +42,5 @@ Use a plain URL such as `http://localhost:4000/` in preview inspectors, not Mark
 Every indexable page should have a descriptive title and language-appropriate description. Use `social_image` to override a sharing image independently of the page hero. Use `image_alt` for its description. Real translations need `alternate_url` (pages) or matching `translation_key` (posts). Non-indexable utility pages need both `robots: noindex, follow` and `sitemap: false`.
 
 The shared base layout owns SEO tags; do not add a second SEO include. JSON-LD distinguishes Person, WebSite, WebPage and Article; article modification dates use actual front matter, not the build time.
+
+Publishing stays on the existing GitHub Pages branch-based build. HTML enhancements use standard Liquid includes, without a custom plugin or workflow.

@@ -19,11 +19,15 @@ layout: base
     </header>
     {%- if page.image -%}
     <figure class="post-cover">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" fetchpriority="high">
     </figure>
     {%- endif -%}
     <div class="post-body" itemprop="articleBody">
-      {{ content }}
+      {%- assign article_body = content -%}
+      {%- if article_body contains '<h1' -%}
+        {%- assign article_body = article_body | replace: '<h5', '<h6' | replace: '</h5>', '</h6>' | replace: '<h4', '<h5' | replace: '</h4>', '</h5>' | replace: '<h3', '<h4' | replace: '</h3>', '</h4>' | replace: '<h2', '<h3' | replace: '</h2>', '</h3>' | replace: '<h1', '<h2' | replace: '</h1>', '</h2>' -%}
+      {%- endif -%}
+      {{ article_body }}
     </div>
     <footer class="post-footer-meta">
       <div class="post-byline">

@@ -2,6 +2,44 @@
 ---
 @charset "UTF-8";
 
+.header-language {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  white-space: nowrap;
+}
+
+.language-suggestion[hidden] { display: none; }
+.language-suggestion {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 100;
+  width: min(23rem, calc(100vw - 2rem));
+  padding: 1.25rem 3rem 1.25rem 1.25rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.language-suggestion p { margin: 0 0 .5rem; }
+.language-suggestion a { text-decoration: underline; font-weight: 600; }
+.language-suggestion__close {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.language-suggestion :focus-visible, .header-language:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
 :root {
   --color-primary: #012c32;
   --color-accent: #f28b66;

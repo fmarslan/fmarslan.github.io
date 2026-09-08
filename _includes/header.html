@@ -2,10 +2,10 @@
   {%- assign language_code = page.lang | default: site.locale | split: '-' | first -%}
   {%- assign t = site.data.i18n[language_code] | default: site.data.i18n.tr -%}
   {%- assign navigation = site.navigation_tr -%}
-  {%- assign home_url = '/' -%}
+  {%- assign home_url = '/tr/' -%}
   {%- if language_code == 'en' -%}
     {%- assign navigation = site.navigation_en -%}
-    {%- assign home_url = '/en/' -%}
+    {%- assign home_url = '/' -%}
   {%- endif -%}
   <div class="global-header__inner">
     <a class="brand" rel="author" href="{{ home_url | relative_url }}">
@@ -16,6 +16,9 @@
       </span>
     </a>
     <div class="nav-wrapper">
+      {% if effective_alternate_url %}
+      <a class="header-language" href="{{ effective_alternate_url | relative_url }}" hreflang="{% if language_code == 'en' %}tr{% else %}en{% endif %}" lang="{% if language_code == 'en' %}tr{% else %}en{% endif %}">{% if language_code == 'en' %}Türkçe{% else %}English{% endif %}</a>
+      {% endif %}
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-navigation">
         <span class="sr-only">{{ t.nav_toggle }}</span>
         <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">

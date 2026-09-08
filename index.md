@@ -2,116 +2,114 @@
 layout: home
 title: "Fatih Mehmet Arslan"
 permalink: /
-lang: tr-TR
-alternate_url: /en/
+lang: en-US
+alternate_url: /tr/
 default_url: /
 hero:
-  eyebrow: Software Engineer · Tasarımdan koda, uygulamanın içinde
-  title: Koddan üretime, sistemin içindeyim.
+  eyebrow: Software Engineer · Hands-on architecture
+  title: From code to production, I stay hands-on.
   description: |
-    Merhaba, ben Fatih. 14 yılı aşkın süredir kamu, enerji, perakende, SaaS ve
-    regüle belge entegrasyonu alanlarında yazılım geliştiriyorum. Mimari karar
-    alırken koddan, veriden ve üretimde yaşanan gerçek sorunlardan kopmamaya çalışıyorum.
-  seo_description: |
-    Fatih Mehmet Arslan; dağıtık sistemler, Peppol entegrasyonları, bulut platformları
-    ve üretim odaklı backend mühendisliği üzerine çalışan, mimari tasarımı doğrudan kod ve uygulamayla birleştiren bir Software Engineer'dır.
+    Hi, I am Fatih. For more than 14 years, I have built software for public services,
+    energy, retail, SaaS, and regulated document exchange. I make architecture decisions
+    close to the code, the data, and the problems that appear in production.
+  seo_description: "Fatih Mehmet Arslan: software engineering, distributed systems, Peppol integrations and cloud architecture, grounded in production experience."
   image: /assets/fatih-mehmet-arslan-hero-v3.webp
-  image_alt: Fatih Mehmet Arslan portresi
+  image_alt: Portrait of Fatih Mehmet Arslan
   actions:
-    - label: Özgeçmiş
-      url: /cv/
+    - label: Resume
+      url: /en/cv/
       style: primary
       icon: "📄"
-    - label: Blogu oku
-      url: /blog/
+    - label: Read the blog
+      url: /en/blog/
       style: secondary
       icon: "📚"
 
 toolbox:
-  heading: Geliştirdiğim Araçlar
+  heading: Tools I Build
   title: Tarsolution Engineering Tools
-  description: Yazılım geliştirme, veri entegrasyonu ve endüstriyel otomasyon çalışmalarında karşılaştığım pratik ihtiyaçlar için geliştirdiğim araç kutusu. JSON biçimlendirme ve doğrulama, veri formatı dönüştürme, JWT inceleme, Modbus analizi ve XML/XSLT dönüşümleri gibi işleri tek yerde topluyor.
-  link_label: Araçları keşfet
+  description: A toolbox I built for practical needs in software development, data integration and industrial automation. It brings together utilities for JSON formatting and validation, data format conversion, JWT inspection, Modbus analysis and XML/XSLT transformation.
+  link_label: Explore the tools
 
 focus:
-  eyebrow: Çalışma alanlarım
-  title: Sahada tekrar tekrar karşıma çıkan işler
+  eyebrow: What I work on
+  title: The problems I keep meeting in real systems
   description: |
-    Teknoloji seçimini tek başına bir başarı ölçütü olarak görmüyorum. Sınırlar,
-    veri sahipliği, hata anındaki davranış ve ekibin sistemi işletebilmesi benim için
-    kullanılan araç kadar önemli.
+    A technology choice is not a result by itself. Clear boundaries, data ownership,
+    failure behaviour, and the team's ability to operate the system matter just as much
+    as the tools we choose.
   items:
-    - title: Dağıtık sistemler
+    - title: Distributed systems
       copy: |
-        Kafka, asenkron işleme ve çok kiracılı yapılarda servis sınırlarını,
-        veri sahipliğini ve hata senaryolarını açık hale getiriyorum.
+        I make service boundaries, data ownership, and failure paths explicit in systems
+        built with Kafka, asynchronous processing, and multi-tenant services.
       icon: "🧭"
-      tags: Backend ve entegrasyon
+      tags: Backend and integration
 
-    - title: Regüle entegrasyonlar
+    - title: Regulated integrations
       copy: |
-        Peppol ve belge akışlarında yalnızca teslimatı değil; doğrulama, denetim izi,
-        veri konumu ve kiracı izolasyonunu birlikte ele alıyorum.
+        In Peppol and document flows, I work on delivery together with validation,
+        audit trails, data location, and tenant isolation.
       icon: "🔗"
-      tags: Peppol ve uyumluluk
+      tags: Peppol and compliance
 
-    - title: Sistem modernizasyonu
+    - title: System modernisation
       copy: |
-        Monoliti parçalamadan önce darboğazı ölçüyorum. Mantis'te bir platformun
-        yaklaşık 300 kullanıcıdan 20.000'in üzerine ölçeklenmesine bu yaklaşımla katkı sağladım.
+        I measure the bottleneck before splitting a monolith. At Mantis, this approach
+        helped one platform grow from about 300 to more than 20,000 concurrent users.
       icon: "⚙️"
-      tags: SaaS ve bulut
+      tags: SaaS and cloud
 
-    - title: Üretim sahipliği
+    - title: Production ownership
       copy: |
-        Kod inceleme, gözlemlenebilirlik ve sorun gidermeyi mimarinin dışında görmüyorum.
-        Bir kararın doğruluğu, gerçek yük ve gerçek hata altında ortaya çıkıyor.
+        I treat code review, observability, and troubleshooting as part of architecture.
+        The value of a decision becomes clear under real traffic and real failures.
       icon: "🛠️"
-      tags: Teslimat ve operasyon
+      tags: Delivery and operations
 
 highlights:
-  eyebrow: Deneyimden örnekler
-  title: Bugünkü yaklaşımımı şekillendiren sistemler
+  eyebrow: Examples from my work
+  title: Systems that shaped how I think
   description: |
-    Farklı sektörlerde değişen teknoloji yığınlarıyla çalıştım; değişmeyen konu,
-    sistemin sınırlarını ve başarısızlık biçimlerini açık hale getirmek oldu.
+    I have worked across different industries and technology stacks. The common task
+    has always been to make system boundaries and failure modes visible.
   items:
-    - label: 2025 · Belçika
-      title: Peppol ve belge entegrasyon platformu
+    - label: 2025 · Belgium
+      title: Peppol and document integration platform
       copy: |
-        ERP ve SaaS sistemlerinden gelen belgeleri doğrulayan, dönüştüren ve Avrupa'daki
-        ağlara yönlendiren çok kiracılı servisler geliştiriyorum.
+        I build multi-tenant services that validate, transform, and route documents
+        from ERP and SaaS products to European delivery networks.
 
     - label: 2019–2022 · Türkiye
-      title: Mantis SaaS modernizasyonu
+      title: SaaS modernisation at Mantis
       copy: |
-        Büyük kurumsal uygulamaları modüler SaaS ve FaaS bileşenlerine ayırdık;
-        teslimatı sadeleştirirken bir platformu 20.000+ eşzamanlı kullanıcıya taşıdık.
+        We separated large enterprise applications into modular SaaS and FaaS components,
+        while scaling one platform beyond 20,000 concurrent users.
 
     - label: 2017–2018 · Türkiye
-      title: Enerji ve saha telemetrisi
+      title: Energy and field telemetry
       copy: |
-        Uzak santrallerde bağlantı kesildiğinde veriyi kaybetmeyen store-and-forward
-        servisleri ve yüksek hacimli telemetri akışları geliştirdim.
+        I built store-and-forward services that protected data during connection loss
+        at remote plants, together with high-volume telemetry pipelines.
 
 blog_section:
-  eyebrow: Son yazılar
-  title: Üretimden ve karar masasından notlar
+  eyebrow: Latest writing
+  title: Notes from production and architecture work
   description: |
-    Bir kararı neden aldığımı, nerede işe yaramadığını ve üretimde hangi bedeli
-    çıkardığını mümkün olduğunca somut örneklerle yazıyorum.
+    I write about why a decision was made, where it failed, and what it cost in
+    production, using concrete examples whenever possible.
   limit: 8
 
 contact:
-  title: Benzer bir teknik problem üzerinde mi çalışıyorsunuz?
+  title: Working on a similar technical problem?
   description: |
-    Dağıtık sistemler, regüle entegrasyonlar veya modernizasyon kararları üzerine
-    konuşmak isterseniz bana doğrudan e-posta gönderebilirsiniz.
+    If you want to discuss distributed systems, regulated integrations, or a
+    modernisation decision, you can reach me directly by email.
   actions:
-    - label: E-posta gönder
+    - label: Send email
       url: mailto:contact@fmarslan.com
       style: primary
-    - label: Özgeçmiş
-      url: /cv/
+    - label: Resume
+      url: /en/cv/
       style: secondary
 ---

@@ -1,0 +1,700 @@
+{
+  "/2025/11/24/jekyll-github-pages-ve-statik-siteler.html": {
+    "description": "Son yıllarda WordPress gibi dinamik sistemler yerini yavaş yavaş daha sade, daha hızlı ve daha bakımı kolay yapılara bırakmaya başladı: statik site…",
+    "title": "Jekyll ve GitHub Pages ile Statik Site Yayımlama"
+  },
+  "/2025/12/12/chrome-edge-unknown-address-space-cors-hatasi.html": {
+    "title": "Chrome / Edge: unknown address space CORS hatası"
+  },
+  "/2025/12/13/chrome-third-party-cookie-privacy-sandbox.html": {
+    "description": "Web uzun yıllar boyunca basit bir varsayımla yürüdü: Bir siteye girdiğinizde, sizi başka sitelerde tanıyabilen third-party cookie‘ler sessizce devreye…",
+    "title": "Chrome Privacy Sandbox ve Third-Party Cookie’ler"
+  },
+  "/2026/01/07/harici-araclardan-dogru-sekilde-faydalanma.html": {
+    "description": "Bir sistemi geliştirirken en erken fark ettiğim ama en geç kabullendiğim şey şu oldu: Her şeyi kendin yazmaya çalışmak güç değil, yük. Başta çok cazip…",
+    "title": "Her Şeyi Yazmak Yerine Harici Araçlardan Faydalanmak"
+  },
+  "/2026/01/08/regule-aglarda-neden-eventual-consistency-kacinilmazdir.html": {
+    "description": "Regüle ağlarla çalışan ekiplerin en sık yaşadığı hayal kırıklıklarından biri şudur: Kurallar nettir, standartlar tanımlıdır ama sistemler beklenen şekilde…",
+    "title": "Regüle Ağlarda Eventual Consistency"
+  },
+  "/2026/01/30/ai-gercegiyle-yuzlesmek-musteri-mi-operator-mu.html": {
+    "description": "AI günümüzün gerçeği. İnkâr etmek de, karalar bağlamak da yersiz. Bu bir dönüşüm; hatta belki de bir çağ atlayışı. Bir şeyler oluyor ve buna ayak…"
+  },
+  "/2026/04/27/sovereign-cell-architecture-regulation-driven-design.html": {
+    "description": "Bu konuya teknik bir problem gibi bakmak en baştan yanlış bir çerçeve çizmek olur Kısa bir hikâye ile başlayayım. Avrupa’da faaliyet gösteren bir SaaS…",
+    "title": "Sovereign Cell Architecture: Regüle Sistem Tasarımı"
+  },
+  "/apache/nifi/2025/08/05/apache-nifi.html": {
+    "description": "Apache NiFi, farklı kaynaklardan gelen verilerin otomatik olarak toplanması, dönüştürülmesi ve hedef sistemlere aktarılması için geliştirilmiş güçlü bir…"
+  },
+  "/architecture/2025/10/10/bir-platform-tasarlarken-ogrendigim-8-ders.html": {
+    "description": "Bir platformu sıfırdan tasarlamak, insana sadece teknik değil, düşünsel anlamda da çok şey öğretiyor. Aşağıdaki maddeler, bu süreç boyunca gerçekten…"
+  },
+  "/azure/2023/10/07/azure-function-hazirlama.html": {
+    "description": "Azure Functions, Microsoft’un sunuculess (sunucu olmadan) hesaplama platformudur. Bu platform, uygulamalarınızı ve servislerinizi küçük, bağımsız işlevlere…"
+  },
+  "/bigdata/2021/01/21/bigdata-sistemleri-ve-tool-secimi.html": {
+    "description": "Piyasada birçok open-source olarak geçen tool var bunları yeteri kadar takip edebilirsek çok güzel big data sistemlerini basit bir şekilde kurabiliriz.…"
+  },
+  "/bot/2021/01/12/telegram-bot-olusturma-ve-kullanma.html": {
+    "description": "Merhaba bugün notlarımıza telegram da bot oluşturmayı ekleyelim öncelikle telegram hesabımız yoksa açıyoruz sonra chat bölümünden onaylanmış…"
+  },
+  "/cap/event-driven/2025/11/14/event-driven-cap.html": {
+    "description": "Dağıtık sistemler hızla büyürken, uygulamaların tek bir makinede çalıştığı dönem çok geride kaldı. Artık yüzlerce bileşenin eşzamanlı çalıştığı, farklı…",
+    "title": "CAP Yaklaşımı ve Event-Driven Tasarım"
+  },
+  "/container/2023/10/07/container-hazirlama-ve-docker-hub-ile-yayinlama.html": {
+    "description": "Docker, uygulamalarınızı hızlı ve taşınabilir bir şekilde çalıştırmanıza olanak tanıyan güçlü bir konteynerleştirme platformudur. Bu rehberde, kendi özel…",
+    "title": "Docker Container Hazırlama ve Docker Hub’da Yayımlama"
+  },
+  "/cosmos,/net6/2023/09/29/cosmos-db-net-connection-ve-nested-sorgular.html": {
+    "description": "Cosmos DB, Microsoft’un küresel ölçekte dağıtılmış bir NoSQL veritabanı hizmetidir. .NET 6 ile, Cosmos DB’ye kolayca bağlanabilir ve JSON dokümanları içinde…",
+    "title": ".NET 6 ile Cosmos DB Bağlantısı ve Nested JSON Sorguları"
+  },
+  "/csharp/2014/11/02/csharp-extensions-metod-hazirlama.html": {
+    "description": "C# ta bazen kod yazımını kolaylaştırmak için kendi class larınıza veya herhangi bir hazır olan veri tipine extension metod yazmak isteye bilirsiniz bunun…"
+  },
+  "/csharp/2018/07/27/csharp-xml-serialize-ederken-xml-icerigine-yorum-ekleme.html": {
+    "description": "Sayfanıza time out için zaman sayacı koymak isteyenler aşağıdaki kodu düzenleyebilirler XmlComment Attribute oluşturulur Serialize edeceğiniz nesneye…",
+    "title": "C# XML Serialization: XML İçeriğine Yorum Ekleme"
+  },
+  "/dns/2020/12/14/dns-icin-ozel-kurallara-bagli-server-ekleme.html": {
+    "description": "xx.fmarslan domain adreslerini çözebilmek için sadece bu dns sorgularını kendi sunucumuza yönlendirmek isteyebiliriz. Burada önemli nokta isme özel farklı…"
+  },
+  "/docker/2024/12/01/docker-compose-ile-uretim-icin-olceklenebilir-uygulama-mimarisi-app-database-ve-proxy.html": {
+    "description": "Bu mimari, bir web uygulaması (app), bir veritabanı (db) ve bir ters proxy (nginx) gibi üç temel bileşenden oluşan kompakt bir Docker-Compose yapısıdır. Hem…"
+  },
+  "/easyrsa/2021/04/11/openvpn-ve-easyrsa-ile-yeni-sertifika-olusturma.html": {
+    "description": "Lazım olduğunda hatırlamak adına küçük bi not ca dosyası hazır olmalı siteminiz kurulu olmalı Sertifika İsteği Oluşturma İmzalama Doğrulama Sertifikaları…"
+  },
+  "/elasticsearch/2020/11/28/elastic-search-python-ile-veri-indeksleme.html": {
+    "description": "Elimizdeki bir csvden verileri okuyarak elastic search indeksleme işlemini yapcağız. Burada önemli bir nokta işlemlerin hepsi rest api üzerinden…"
+  },
+  "/en/2014/10/23/jquery-ajax-file-upload.html": {
+    "description": "If you want to upload a file with JQuery ajax one day, you can do it by running a code like the one below in the change method of the input file object."
+  },
+  "/en/2014/10/23/timeout-javascript.html": {
+    "description": "Those who want to put a timer on your page for time out can edit the code below."
+  },
+  "/en/2014/10/24/base64-with-javascript.html": {
+    "description": "If you want to change the image when you click on the image on your page and save the new image to the server with Ajax, the code below will work for you.…"
+  },
+  "/en/2014/10/24/java-servlet-file-upload-post-method.html": {
+    "description": "Uploading files via servlet in Java"
+  },
+  "/en/2014/10/24/javascript-on-off-button-creation.html": {
+    "description": "You may need on/off buttons or checkboxes in your web applications. Here is a script you can use for such situations. HTML script style"
+  },
+  "/en/2014/10/24/spinning-button-effect.html": {
+    "description": "The following code may be useful to give a rotation effect when the mouse button is hovered over."
+  },
+  "/en/2014/10/26/input-file-upload-component-for-jsf-1-2.html": {
+    "description": "I don’t know if anyone uses it, but there is no file upload in JSF 1.2. To tolerate this, I re-wrote an inputFile component so that someone else who needs…"
+  },
+  "/en/2014/10/27/add-script-to-your-page-at-run-time.html": {
+    "description": "You can use the following function to add scripts to your page while working on the client. Usage:"
+  },
+  "/en/2014/10/27/creating-extension-method-for-jquery.html": {
+    "description": "To create your own custom methods for jQuery, you can write a function as follows: Usage: Note: If you use it as “jQuery.fn.functionName”, it will be called…"
+  },
+  "/en/2014/10/30/using-jsf-1-2-datatable-and-paginator.html": {
+    "description": "The following example for using datatable with the pagination feature in JSF 1.2 may be useful to you. XHTML PaginationAction.java QueryAction.java When…"
+  },
+  "/en/2014/11/02/csharp-extensions-method-preparation.html": {
+    "description": "In C#, sometimes you may want to write an extension method to your own classes or any ready-made data type to make writing code easier. For this reason, if…"
+  },
+  "/en/2014/11/07/computer-shutdown-or-restart.html": {
+    "description": "To restart and shut down the computer via command line or software You need to run Shutdown.exe with the following parameters according to your needs.…"
+  },
+  "/en/2014/11/07/html5-video-tag.html": {
+    "description": "Do you want to use a video player on your site? Don’t worry too much. Thanks to HTML5, you can use the <video/> tag like the <img/> tag. You can look here…"
+  },
+  "/en/2014/11/09/windows-8-login-password-reset.html": {
+    "description": "When you want to reset Windows 8 login password, follow the steps below Start your computer with any software that supports NTFS command system. (E.g. Hiren…"
+  },
+  "/en/2014/11/10/creating-dynamic-json-object-with-javascript.html": {
+    "description": "While programming in Javascript, you may want to create a json object according to the data during the run, the following code will help you."
+  },
+  "/en/2014/11/10/json-object-merge.html": {
+    "description": "You can use the jQuery.extends method to compare the two json objects you have. The first parameter, which can take the value true/false, if given true…"
+  },
+  "/en/2014/11/24/file-compression-using-winrar-with-batch-file.html": {
+    "description": "To compress a folder using winrar with batch file, the following commands may be useful. Arrange the file addresses according to your needs."
+  },
+  "/en/2014/11/24/file-compression-with-windows-vbscript.html": {
+    "description": "The following code may be useful for file compression with VBScript."
+  },
+  "/en/2015/01/28/jsf-component-definition.html": {
+    "description": "Definitions to be made for the use of an existing component The following definitions should be made in web xml:"
+  },
+  "/en/2015/01/28/jsf-treeview-component-preparation.html": {
+    "description": "If one day you need a treeview like me, here are the codes and I will try to help you wherever you get stuck :) Dependencies: jQuery & Font Awesome Usage…"
+  },
+  "/en/2015/02/04/adding-events-to-your-jsf-custom-components.html": {
+    "description": "I gave custom control examples in my old articles, we prepared a control, but we want to define a custom event. For this, first define the event property as…"
+  },
+  "/en/2015/02/04/preparing-a-button-with-jsf-icon.html": {
+    "description": "If you want to use icons for the submit buttons you use when using the JSF framework, you can prepare your own button as follows (I could not clean the code…"
+  },
+  "/en/2015/05/13/log4j-mail-customization.html": {
+    "description": "You have configured the logs written with log4j to send them as e-mail, but you want to format the e-mails you send specifically for you, so what you need…"
+  },
+  "/en/2015/06/12/taking-a-picture-of-a-web-page.html": {
+    "description": "Add the Html2Canvas library and jQuery library to your site, then you can capture the screenshot with the code below."
+  },
+  "/en/2015/09/21/jsf-1-2-inputdate.html": {
+    "description": "The inputdate and render classes are below. You need to add the xdsoft datetimepicker (jQuery) library to your page. Input Date InputDateRender"
+  },
+  "/en/2017/04/07/creating-a-google-maps-polygon-from-wkt-information.html": {
+    "description": "From time to time, we may need to draw polygons on a map. In such a case, if the data you have is in WKT format and you do not use any layers, you can draw…"
+  },
+  "/en/2017/04/07/creating-a-javascript-tree.html": {
+    "description": "Now we come to preparing a javascript component. In general, I prefer to prepare my own component instead of using ready-made javascript components for…"
+  },
+  "/en/2017/04/07/creating-javascript-custom-style-checkbox.html": {
+    "description": "If you are one of those who are annoyed by the statements you see on some web pages such as “How do they make a checkbox component like this? How does it…"
+  },
+  "/en/2017/04/07/finding-polygon-midpoint.html": {
+    "description": "If one day you want to find the midpoint of a polygon, but this process gives a result other than the polygon in cases where the polygon shape is strange…"
+  },
+  "/en/2017/04/07/preparing-javascript-tab-control.html": {
+    "description": "From time to time, we may need to prepare components with JavaScript for simple instant solutions. In such a case, I wanted to share with you the script I…"
+  },
+  "/en/2017/07/21/checkpoint-ssl-vpn-connection-in-linux-operating-system.html": {
+    "description": "Step 1: Installation of the following packages and additionally installation of updated Oracle JRE (Source) Step 2: Let’s install the SNX file shared from…",
+    "title": "Checkpoint SSL VPN on Linux"
+  },
+  "/en/2018/07/27/adding-comments-to-xml-content-when-serializing-csharp-xml.html": {
+    "description": "Those who want to put a timer on your page for time out can edit the code below. XmlComment Attribute is created The IXmlSerializable interface must be…",
+    "title": "Adding XML Comments During C# Serialization"
+  },
+  "/en/2020/11/09/creating-deleting-centos-8-partition.html": {
+    "description": "Those who want to put a timer on your page for time out can edit the code below. Important Note: The following commands from this section will be applied to…"
+  },
+  "/en/2020/11/09/installing-kubernete-on-centos-8.html": {
+    "description": "First of all, I recommend that you separate the OS and Data disk partition as a partition, if not as a disk, if possible. Then, if you have to move to…"
+  },
+  "/en/2020/11/13/query-with-rest-api-via-cli-for-elastic-search.html": {
+    "description": "Can be updated over time The following commands are given with curl for cli. The same requests can be made from postman or directly from the browser. If you…"
+  },
+  "/en/2020/11/13/using-s3-server-and-providing-connection.html": {
+    "description": "S3 server works with git logic, we can call it a bucket for each repo. Likewise, imagine creating as many folders as you want (it’s just for display). This…"
+  },
+  "/en/2020/11/14/configuring-kubernete-nfs-storage.html": {
+    "description": "First of all, we must have an NFS server. If you already have an NFS server, you do not need to do this part. We need to install rbac for authorization…"
+  },
+  "/en/2020/11/14/kubectl-commands.html": {
+    "description": "Kubectl Config Notification namespace operations Pod Operations yaml file or view information Job manual start (can be cron job or norm job) To set up new…"
+  },
+  "/en/2020/11/14/useful-linux-commands.html": {
+    "description": "Can be updated over time checkwinsize feature checks the row and column size with window size before writing each character in Linux and rearranges them by…"
+  },
+  "/en/2020/11/16/preparing-kubernete-deployment.html": {
+    "description": "We will basically make an application on how to do deployment with Kubernete. As a first step, it is important to know the application we will deploy and…"
+  },
+  "/en/2020/11/28/data-indexing-with-elastic-search-python.html": {
+    "description": "We will perform elastic search indexing by reading the data from a CSV we have. An important point here is that all transactions are made via rest API. All…"
+  },
+  "/en/2020/11/28/installing-elastich-search-kibana-elastichq-on-kubernete.html": {
+    "description": "NOTE: This document is more of a condensed translation rather than a retelling, the sources are shared below. It is also an example application this method…",
+    "title": "Elasticsearch, Kibana and ElasticHQ on Kubernetes"
+  },
+  "/en/2020/12/03/using-okhttp3-and-okhttp-together-in-the-same-project.html": {
+    "description": "Sometimes we experience incompatibility between the libraries we use when developing applications in Java. Many people have encountered this. Here we will…",
+    "title": "Using OkHttp3 and OkHttp Together"
+  },
+  "/en/2020/12/08/publish-your-own-library-for-nodejs.html": {
+    "description": "We start by assuming that nodejs, npm and ng have been installed, we will publish the Angular library in this process. First of all, we create our library…"
+  },
+  "/en/2020/12/11/writing-logs-to-rabbit-mq-with-log4j2.html": {
+    "description": "I will try to share a few simple settings here to print rabbit mqya log with Log4j2. We add the org.springframework.amqp.rabbit.log4j2 package, which is the…"
+  },
+  "/en/2020/12/14/conditional-server-forwarding-for-your-dns.html": {
+    "description": "In order to resolve xx.fmarslan domain addresses, we may only want to direct these DNS queries to our own server. The important point here is to redirect to…"
+  },
+  "/en/2021/01/12/creating-and-using-telegram-bot.html": {
+    "description": "Hello, today let’s add creating a bot in Telegram to our notes. First of all, if we do not have a Telegram account, we open it, then we find the father of…"
+  },
+  "/en/2021/01/21/big-data-systems-and-tool-selection.html": {
+    "description": "There are many open-source tools on the market. If we can follow them sufficiently, we can easily establish very nice big data systems. Is that all? So, if…"
+  },
+  "/en/2021/01/22/what-is-this-microservices-movement.html": {
+    "description": "You have always heard the sentence “We are developing projects in microservice architecture” around you, of course everyone comments on it as saying…"
+  },
+  "/en/2021/03/18/how-to-upload-your-own-library-to-the-global-maven-repository.html": {
+    "description": "Sometimes people, like me, may get bored of always being a consumer and think that they should become a producer and maybe add something in their own way.…",
+    "title": "Publishing a Library to the Global Maven Repository"
+  },
+  "/en/2021/04/02/creating-updating-solr-collection.html": {
+    "description": "These days, when we started using Solr intensively after changing the Elastic Search license, we generally install Solr Collection. And instead of going…"
+  },
+  "/en/2021/04/11/creating-a-new-certificate-with-openvpn-and-easyrsa.html": {
+    "description": "A small note ca file should be ready and your system should be installed to remember when you need it. Creating a Certificate Request signing verification…"
+  },
+  "/en/2021/07/03/where-is-the-software-industry-heading.html": {
+    "description": "In this article, I wanted to share my humble thoughts about the software industry. There may be people who have different opinions, if they share them, I…"
+  },
+  "/en/2021/07/23/ubuntu-wifi-settings.html": {
+    "description": "In step 1, let’s check the existing network hardware and find out its name. addition to file content We apply the settings After restarting, if your wifi…"
+  },
+  "/en/2021/07/28/solr-nested-field.html": {
+    "description": "There is a nice feature like nested field in Solr. Let’s briefly talk about what kind of configuration we need to make to benefit from this feature (these…"
+  },
+  "/en/2021/08/19/error-eperm-operation-not-permitted-symlink.html": {
+    "title": "npm EPERM symlink error on FAT32 in Linux",
+    "description": "Fix npm install failing with EPERM symlink errors on a FAT32 filesystem in Linux using npm config set bin-links false."
+  },
+  "/en/2021/09/10/raspberry-pi-customized-image-preparation.html": {
+    "description": "Sometimes, in the software we make or for another reason, we may intervene in the operating system installation images and request that some settings be…"
+  },
+  "/en/2021/09/10/solr-notes.html": {
+    "description": "leader selection UP config DELETE config Source"
+  },
+  "/en/2021/11/26/patrony-commands.html": {
+    "description": "You can use the following short commands to list the replicas in the Patroni cluster and restart a problematic replica. First check the cluster status, then…"
+  },
+  "/en/2021/11/28/image-file-resizing.html": {
+    "description": "Sometimes we have an image file (such as .img) and we may need to increase its size. In these cases, we can follow the steps below. Our image file is a…"
+  },
+  "/en/2022/04/24/raspberry-pi-password-reset.html": {
+    "description": "If one day you forget your Raspberry Pi password and cannot open it, you can reset the password as follows. 1: First, remove the SD card from the device and…"
+  },
+  "/en/2022/06/05/some-advice-for-new-graduates-and-students-based-on-my-10-years-of-experience.html": {
+    "description": "Preliminary Reminder: There are criticisms in this article. There are definitely exceptions to these criticisms. Here we evaluate/criticize general…",
+    "title": "Career Advice from 10+ Years in Software"
+  },
+  "/en/2022/10/23/python-windows-11-virtual-environment-problem.html": {
+    "description": "If you get the following error when you want to use virtual env in Windows 11 with Python: for solution powershell Set-ExecutionPolicy -Scope CurrentUser…"
+  },
+  "/en/2023/06/16/chat-gpt-api-usage.html": {
+    "description": "This Python application allows you to create a simple text-based chat application using the ChatGPT API. First, enter the API endpoint URL and your API key…"
+  },
+  "/en/2023/09/29/connecting-to-cosmos-db-with-net-6-sdk-and-creating-nested-json-queries.html": {
+    "description": "Cosmos DB is a globally distributed NoSQL database service from Microsoft. With .NET 6, you can easily connect to Cosmos DB and create deep queries within…",
+    "title": "Cosmos DB with .NET 6: Connecting and Nested JSON Queries"
+  },
+  "/en/2023/09/29/cosmos-db-complex-query-example.html": {
+    "description": "It is quite common to create queries on complex and nested JSON documents in Cosmos DB. Let’s walk through an example to understand this type of query.…"
+  },
+  "/en/2023/09/29/mysql-json-parse-operation-in-query-and-use-of-create-insert-command-with-with.html": {
+    "description": "The example below performs the query json parse operation, creates a table and inserts the query result created with with into it.",
+    "title": "MySQL JSON Parsing and WITH Queries"
+  },
+  "/en/2023/10/07/azure-functions-example.html": {
+    "description": "Azure Functions is Microsoft’s serverless computing platform. This platform provides an environment where you can split your applications and services into…"
+  },
+  "/en/2023/10/07/preparing-containers-with-docker-and-publishing-to-docker-hub.html": {
+    "description": "Docker is a powerful containerization platform that allows you to run your applications quickly and portably. In this guide, you will learn the basic steps…",
+    "title": "Building Docker Containers and Publishing to Docker Hub"
+  },
+  "/en/2023/10/20/important-points-to-consider-when-preparing-a-serverless-architecture.html": {
+    "description": "Image created with Bing Image Generator Microservices are gaining more and more popularity in the world of software development. This approach, which…",
+    "title": "Serverless Architecture: Key Design Considerations"
+  },
+  "/en/2024/08/30/postgresql-cluster-creation-a-powerful-structure-with-spilo-patroni-wal-g-and-psql.html": {
+    "description": "Image taken from Spilo official repository account PostgreSQL is a database management system known for its durability, wide scalability and high…",
+    "title": "PostgreSQL Clusters with Spilo, Patroni and WAL-G"
+  },
+  "/en/2024/09/13/helm-and-kubernetes-rendering-and-managing-helm-charts-locally.html": {
+    "description": "Helm is one of the most powerful tools for packaging, deploying and managing applications on Kubernetes. In this article, we discuss Helm’s basic working…",
+    "title": "Rendering and Managing Helm Charts Locally"
+  },
+  "/en/2024/12/01/dockerized-architecture-app-database-proxy.html": {
+    "description": "This architecture is a compact Docker-Compose structure consisting of three basic components: a web application (app), a database (db) and a reverse proxy…"
+  },
+  "/en/2024/12/10/ssl-certificate-for-apache-with-let-s-encrypt.html": {
+    "description": "This guide walks you through the step-by-step process of automatically obtaining and renewing an SSL certificate using Let’s Encrypt for an Apache server…"
+  },
+  "/en/2025/05/30/mariadb-maxscale-cluster-setup-with-kubernetes.html": {
+    "description": "Creating a highly available, scalable and centrally manageable MariaDB cluster on Kubernetes is an important requirement, especially in enterprise…"
+  },
+  "/en/2025/08/05/data-flow-automation-with-apache-nifi.html": {
+    "description": "Apache NiFi is a powerful data flow automation platform developed to automatically collect, transform and transfer data from different sources to target…"
+  },
+  "/en/2025/08/20/installing-cert-manager-on-kubernetes-step-by-step-guide.html": {
+    "description": "Manually managing TLS certificates in applications running on Kubernetes is a process that is both time-consuming and error-prone. This is where…",
+    "title": "Installing cert-manager on Kubernetes"
+  },
+  "/en/2025/10/10/8-lessons-i-learned-while-redesigning-a-platform.html": {
+    "description": "Designing a platform from scratch teaches people a lot not only technically but also intellectually. The following items are the most valuable lessons that…"
+  },
+  "/en/2025/10/25/misconceptions-about-integration-architectures.html": {
+    "description": "With the growth of distributed systems, integration has moved far beyond its old meaning of simply “moving data.” Today, it is one of the most critical…"
+  },
+  "/en/2025/11/14/cap-approach-and-event-driven-design-the-invisible-backbone-of-modern-systems.html": {
+    "description": "While distributed systems are growing rapidly, the era of applications running on a single machine is long gone. We are now dealing with structures where…",
+    "title": "CAP and Event-Driven System Design"
+  },
+  "/en/2025/11/22/choosing-the-right-technology-kafka-or-rabbitmq-c-java-or-python-but-that-s-not-the-real-question.html": {
+    "description": "When it comes to technology selection, the same questions always come to mind: But these questions have a very critical problem: This article is just asking…",
+    "title": "Choosing Technology: Context Before Tools"
+  },
+  "/en/2025/11/24/jekyll-github-pages-and-static-sites-launching-a-simple-site-from-scratch.html": {
+    "description": "In recent years, dynamic systems such as WordPress have gradually begun to be replaced by simpler, faster and more maintainable structures: static site…",
+    "title": "Launching a Static Site with Jekyll and GitHub Pages"
+  },
+  "/en/2025/12/12/unknown-address-space-cors-error-in-chrome-edge-what-does-it-protect-how-to-solve-it.html": {
+    "title": "Chrome / Edge: unknown address space CORS error",
+    "description": "Understand the unknown address space CORS error in Chrome and Edge, why local network access is restricted, and the solutions described in this article."
+  },
+  "/en/2025/12/13/chrome-third-party-cookies-and-the-privacy-sandbox-how-is-tracking-changing.html": {
+    "description": "For many years, the web operated with a simple assumption: When you entered a site, third-party cookies that could recognize you on other sites would…",
+    "title": "Chrome Privacy Sandbox and Third-Party Cookies"
+  },
+  "/en/2025/12/25/how-does-peppol-network-work-technically-with-dns-logic.html": {
+    "description": "When trying to understand Peppol, dozens of terms such as SML, SMP, Access Point, Participant ID may seem like complex topics that need to be memorized.…",
+    "title": "How Peppol Works: DNS and Network Discovery"
+  },
+  "/en/2026/01/07/should-i-write-everything-on-properly-leveraging-external-tools.html": {
+    "description": "While developing a system, the earliest thing I realized but the last thing I accepted was this: Trying to write everything yourself is not difficult, it’s…",
+    "title": "Using External Tools Without Building Everything"
+  },
+  "/en/2026/01/08/why-is-eventual-consistency-inevitable-in-regulated-networks.html": {
+    "description": "One of the most common frustrations experienced by teams working with regulated networks is this: The rules are clear, the standards are defined, but the…",
+    "title": "Eventual Consistency in Regulated Networks"
+  },
+  "/en/2026/01/30/facing-the-reality-of-ai-customer-or-operator.html": {
+    "description": "AI is today’s reality. It is useless to deny or make conclusions. This is a transformation; Maybe even a leap of age. Things are happening and if we don’t…"
+  },
+  "/en/2026/01/31/own-what-s-yours-don-t-carry-what-s-not-yours.html": {
+    "description": "When I talk to people around me, there is a common point that has recently caught my attention. I have previously written different articles for new…"
+  },
+  "/en/2026/04/27/sovereign-cell-architecture-regulation-oriented-system-design.html": {
+    "description": "Looking at this issue as a technical problem would be drawing the wrong framework from the very beginning. Let me start with a short story. A SaaS company…",
+    "title": "Sovereign Cell Architecture for Regulated Systems"
+  },
+  "/entegrasyon/architecture/2025/10/25/entegrasyon-mimarilerinde-yanlis-bilinen-dogrular.html": {
+    "description": "Dağıtık sistemlerin büyümesiyle birlikte entegrasyon, sadece “veriyi taşımak” olarak görülen eski anlamının çok ötesine geçti. Bugün finans, sağlık, kamu ve…"
+  },
+  "/helm/2024/09/13/helm-chart-local-render.html": {
+    "description": "Helm, Kubernetes üzerinde uygulamaları paketlemek, dağıtmak ve yönetmek için kullanılan en güçlü araçlardan biridir. Bu yazıda, Helm’in temel çalışma…",
+    "title": "Helm Chart’larını Localde Render Etme ve Yönetme"
+  },
+  "/html/2014/11/07/html5-video-tag.html": {
+    "description": "Sitenizde Video player mi kullanmak istiyorsunuz kendinizi çok yormayın HTML5 sayesinde <img/> tagı gibi <video/> tagını kullanabilirsiniz. Detaylı bilgi…"
+  },
+  "/java/2014/10/24/java-servlet-dosya-yukleme-post-method.html": {
+    "description": "Javada servlet aracılığı ile dosya yükleme"
+  },
+  "/java/2014/11/10/json-object-merge.html": {
+    "description": "Elinizde bulunan iki json objeyi karsılastırmak icin jQuery.extends metodunu kullanabilirsiniz ilk parametre olan true/false degerini alabilen parametre…"
+  },
+  "/java/2015/05/13/log4j-mail-ozellestirme.html": {
+    "description": "log4j ile yazılan logları mail olarak göndermek için yapılandırdınız fakat gönderdiğiniz mailleri size özel biçimlendirmek istiyorsunuz onun için yapmanız…"
+  },
+  "/java/2020/12/03/okhttp3-ile-okhttp-ayni-projede-birlikte-kullanma.html": {
+    "description": "Bazen javada uygulama geliştirirken kullandığımız kütüphaneler arasında uyumsuzluk yaşarız bir çok kişi bunula karşılaşmıştır. Burada bir örnek üzerinden…"
+  },
+  "/java/2020/12/11/log4j2-ile-rabbit-mq-log-yazmak.html": {
+    "description": "Log4j2 ile rabbit mqya log yazdırmak için basit bir kaç ayarı burada paylaşmaya çalışacağım log4j2 xml yapılandırmasında packages olarak kullanacağımız…"
+  },
+  "/javascript/2014/10/23/jquery-ajax-file-upload.html": {
+    "description": "Eğer birgün JQuery ajax ile dosya upload etmek isterseniz aşağıdaki gibi bir kodu input file nesnesinin change metodunda çalıştırarak yapabilirsiniz"
+  },
+  "/javascript/2014/10/23/timeout-javascript.html": {
+    "description": "Sayfanıza time out için zaman sayacı koymak isteyenler aşağıdaki kodu düzenleyebilirler"
+  },
+  "/javascript/2014/10/24/donen-buton-efekti.html": {
+    "description": "Mouse button üzerine gelince dönme efekti vermek için aşağıdaki kod işe yarayabilir"
+  },
+  "/javascript/2014/10/24/javascript-ac-kapa-buton-yapimi.html": {
+    "description": "web uygulamalarınızda aç/kapa buttonlara veya checkbox lara ihtiyaç duyabilirsiniz bu gibi durumlar için kullanabileceğiniz bir script HTML Script Style"
+  },
+  "/javascript/2014/10/24/javascript-ile-base64.html": {
+    "description": "Sayfanızda bulunan resim üzerine tıklayınca resim değiştirip yeni resmi ajax ile sunucuya kaydetmek isterseniz aşağıdaki kod işinizi görecektir. Html Script"
+  },
+  "/javascript/2014/10/27/calisma-aninda-sayfaniza-script-ekleyin.html": {
+    "description": "Client üzerinde çalışırken sayfanıza script ekleyebilmek için aşağıdaki fonksiyonu kullanabilirsiniz Kullanımı :"
+  },
+  "/javascript/2014/10/27/jquery-icin-extension-method-olusturma.html": {
+    "description": "jQuery için kendi özel methodlarınızı oluşturmak için aşağıdaki şekilde fonksiyon yazabilirsiniz Kullanımı : Not: “jQuery.fn.functionName” şeklinde…"
+  },
+  "/javascript/2014/11/10/javascript-ile-dinamik-json-objesi-olusturma.html": {
+    "description": "Javasript programlama yaparken çalışma esnasında ki verilere göre json objesi oluşturmak isteyebilirsiniz bunun için aşağıdaki kod yardımcı olacaktır"
+  },
+  "/javascript/2015/06/12/web-sayfasinin-resmini-cekme.html": {
+    "description": "Html2Canvas kütüphanesini ve jQuery kütüphanesini sitenize ekleyin sonrasında aşağıdaki kod ile ekran görünütüsünü yakalayabilirsiniz."
+  },
+  "/javascript/2017/04/07/Polygon-orta-nokta-bulma.html": {
+    "description": "Eğer birgün sizde bir polygonun orta noktasını bulmak isterseniz fakat bu işlem polygon şeklinin garip olduğu durumlarda polygon dışında bir sonuç veriyor…"
+  },
+  "/javascript/2017/04/07/javascript-custom-style-checkbox-olusturma.html": {
+    "description": "Bazı web sayfalarında görüp ya bir checkbox componentini nasıl böyle yapıyorlar nasıl böyle görünüyor gibi ifadelere sinir olanlardansanız işte size basit…"
+  },
+  "/javascript/2017/04/07/javascript-tab-control-hazirlama.html": {
+    "description": "Zaman zaman basit anlık çözümler için javascript ile component hazırlama ihtiyacı duyabiliriz yine böyle bir durumda ihtiyaç duyduğum tab control için…"
+  },
+  "/javascript/2017/04/07/javascript-tree-olusturma.html": {
+    "description": "Yine geldik bir javascript componenti hazırlamaya ben genel itibariyle basit işler için hazır javascript componentleri kullanmak yerine kendi componentimi…"
+  },
+  "/javascript/2017/04/07/wkt-bilgisinden-google-maps-polygon-olusturma.html": {
+    "description": "Zaman zaman bir harita üzerinde polygon çizme ihtiyacımız olabilir yine böyle bir durumda elinizde ki veri WKT formatında ise ve herhangi bir layer…"
+  },
+  "/jsf/2014/10/26/jsf-12-icin-input-file-upload-componenti.html": {
+    "description": "Malum kullanan varmıdır bilmiyorum ama JSF 1.2 de file upload yok bunu tolere edebilmek için ben yeniden bir inputFile componenti yazdım başkası ihtiyacı…"
+  },
+  "/jsf/2014/10/30/jsf-12-datatable-ve-paginator-kullanimi.html": {
+    "description": "JSF 1.2 de sayfalama özelliğiyle birlikte datatable kullanımı için aşağıdaki örnek işinize yarayabilir. XHTML PaginationAction.java SorgulamaAction.java Bu…"
+  },
+  "/jsf/2015/01/28/jsf-component-tanimlama.html": {
+    "description": "Mevcut bir komponentin kullanımı için nyapılması gereken tanımlamalar Web xml içerisine aşağıdaki şekilde tanımlamalar yapılmalıdır"
+  },
+  "/jsf/2015/01/28/jsf-treeview-component-hazirlama.html": {
+    "description": "Birgün gelirde sizinde benim gibi treeview ihtiyacınız olursa işte kodlar takıldığınız yerde ayrıca yardımcı olmaya çalışırım :) Bağımlılıklar : jQuery &…"
+  },
+  "/jsf/2015/02/04/jsf-custom-componentlerinize-event-ekleme.html": {
+    "description": "Eski yazılarımda custom control örnekleri vermiştim control hazırladık fakat custom bir event tanımlamak istiyoruz bunun için öncelik hazırladığımız kontrol…"
+  },
+  "/jsf/2015/02/04/jsf-ikonlu-buton-hazirlama.html": {
+    "description": "Jsf framework kullanırken kullandığınız submit butonlar için ikon kullanmak istiyorsanız aşağıdaki gibi kendinize özgü bir button hazırlayabilirsiniz…"
+  },
+  "/jsf/2015/09/21/jsf-12-inputdate.html": {
+    "description": "inputdate ve render classları aşağıdadır sayfanıza xdsoft datetimepicker(jQuery) kütüphanesini eklemeniz gerekmektedir. Input Date InputDateRender"
+  },
+  "/kariyer/2022/06/05/yeni-mezun-arkadaslara-tavsiyeler.html": {
+    "description": "Ön Hatırlatma: Bu yazıda eleştiriler mevcuttur bu eleştirilerde mutlaka istisnalar vardır burada istisnaları değil genel yaklaşımları…",
+    "title": "10+ Yıllık Deneyimden Öğrenci ve Yeni Mezunlara Tavsiyeler"
+  },
+  "/kubernate/2020/11/14/kubernete-kubectl-komutlari.html": {
+    "description": "Kubectl Config Bildirimi namespace işlemleri Pod İşlemleri yaml dosyası veya bilgi görüntüleme Job manuel başlatma (cron job veya normla job olabilir) yeni…"
+  },
+  "/kubernete/2020/11/14/kubernete-nfs-storage-yapilandirma.html": {
+    "description": "Öncelikle elimize bir nfs sunucu olmalıdır eğer mevcutta bir nfs sunucunuz var ise bu kısım ile işiniz yok yetkilendirme işlemi için rbac kurulumunu…"
+  },
+  "/kubernete/2020/11/16/kubernete-deployment-nasil-yapilir.html": {
+    "description": "Kubernete ile deployment nasıl yapılır temel olarak bir uygulama yapacağız. İlk adım olarak öncelikle deploy edeceğimiz uygulamayı tanımak ve belkide hakim…"
+  },
+  "/kubernete/2020/11/28/kubernete-uzerine-elastich-search-kibana-elastichhq-kurulumu.html": {
+    "description": "NOT: Bu döküman yeniden anlatımdan ziyade özet bir şekilde çeviri gibidir, kaynaklar aşağıda paylaşılmıştır. Aynı zamanda örnek bir uygulamadır bu yöntem…",
+    "title": "Kubernetes’te Elasticsearch, Kibana ve ElasticHQ"
+  },
+  "/kubernetes/2025/08/20/kubernetes-cert-manager-kurulum.html": {
+    "description": "Kubernetes üzerinde çalışan uygulamalarda TLS sertifikalarını manuel yönetmek, hem zaman alan hem de hata yapmaya açık bir süreç. İşte tam bu noktada…",
+    "title": "Kubernetes Üzerinde cert-manager Kurulumu"
+  },
+  "/linux/2017/07/21/linux-isletim-sisteminde-checkpoint-ssl-vpn-baglantisi.html": {
+    "description": "Adım aşağıdaki paketlerin kurulumu ve ek olarak güncel oracle JRE kurulumu sağlanmalıdır (Kaynak) Adım checkpoint web panelinden paylaşılan SNX dosyasını…",
+    "title": "Linux’ta Checkpoint SSL VPN bağlantısı"
+  },
+  "/linux/2020/11/09/centos-8-partition-olusturma-silme.html": {
+    "description": "Sayfanıza time out için zaman sayacı koymak isteyenler aşağıdaki kodu düzenleyebilirler Önemli Not: Bu kısımdan aşağıdaki komutlar anında diske…"
+  },
+  "/linux/2020/11/09/centos-8-uzerine-kubernete-kurulumu.html": {
+    "description": "Öncelikle OS ve Data disk bölümünü eğer mümkünse disk olarak değilse partition oalrak ayırmanızı tavsiye ederim daha sonra olurda başka bir sunucuya…"
+  },
+  "/linux/2020/11/14/yararli-linux-komutlari.html": {
+    "description": "Zaman içinde güncellenebilir checkwinsize özelliği linuxta her bir karakteri yazmadan önce window size ile satır sütun boyutunu kontrol edip gerekirse alt…"
+  },
+  "/maven/2021/03/18/global-mvn-repo-kutuphane-yukleme.html": {
+    "description": "İnsan benim gibi bazen hep tüketici konumda olmaktan sıkılıp birazda üretici olayım bende kendimce belki birşeyler katarım diye düşünebiliyor böyle bir…",
+    "title": "Global Maven Repository’ye Kütüphane Yükleme"
+  },
+  "/microservice/2021/01/22/nedir-bu-mikroservis-akimi.html": {
+    "description": "Çevrenizde hep duymuşsunuzdur “biz mikroservis mimarisinde proje geliştiriyoruz” cümlesini, tabiki herkeste mikroservis projeleri çok iyidir güzeldir…"
+  },
+  "/mysql/2023/09/29/mysql-json-parse-in-query-and-create-insert-with-WITH-clause.html": {
+    "description": "aşağıdaki örnek query json parse işlemini yapmakta ve table oluşturup içerisine with ile oluşturulan sorgu sonucunu insert etmektedir.",
+    "title": "MySQL JSON Parse ve WITH ile Create/Insert"
+  },
+  "/nodejs/2020/12/08/nodejs-kutuphanenizi-local-repoya-publish-etme.html": {
+    "description": "nodejs, npm ve ng kurulumu yapılmıştır diye varsayarak başlıyoruz bu süreçte angular kütüphanesi yayınlayacağız öncelikle angular cli ile kütüphanemizi…"
+  },
+  "/nodejs/2021/08/19/linuxta-fat32-dosya-sisteminde-npm-install-Error-EPERM-operation-not-permitted-symlink.html": {
+    "description": "linux işletim sisteminde fat32 dosya sistemi üzerinde npm install yaparken aşağıdaki gibi bir hata alıyorsanız çözüm için npm config set bin-links false…"
+  },
+  "/patroni/2021/11/26/patroni-replica-reinit.html": {
+    "description": "Patroni kümesindeki replikaları listelemek ve sorunlu bir replikayı yeniden başlatmak için aşağıdaki kısa komutları kullanabilirsiniz. Önce küme durumunu…"
+  },
+  "/postgresql/2024/08/30/postgresql-ha-cluster.html": {
+    "description": "Görsel Spilo resmi repository hesabindan alinmistir PostgreSQL, dayanıklılığı, geniş ölçeklenebilirliği ve yüksek performansı ile bilinen bir veritabanı…",
+    "title": "Spilo, Patroni ve WAL-G ile PostgreSQL Cluster"
+  },
+  "/python/2022/10/23/windows-11-python-virtual-environment-UnauthorizedAccess-problem.html": {
+    "description": "Python ile windows 11 de virtual env kullanmak istediğiniz aşağıdaki hatayı aldıysanız Çözüm için powershell Set-ExecutionPolicy -Scope CurrentUser…"
+  },
+  "/raspberry/2021/09/10/raspberry-custom-image-hazirlama.html": {
+    "description": "Bazen yaptığımız yazılımlarda veya başka bir sebepten işletim sistemi kurulum imagelarının içerisine müdahale ederek bazı ayarların yapılı gelmesi veya…"
+  },
+  "/raspberrypi/2022/04/24/raspberry-pi-sifre-sifirlama.html": {
+    "description": "Eğer birgün raspberry pi şifresini unutur açamazsanız aşağıdaki şekilde şifreyi sıfırlayabilirsiniz 1: Öncelikle sd kartı cihazdan çıkartıp bir bilgisayarda…"
+  },
+  "/shell/2014/11/24/batch-file-ile-winrar-kullanarak-dosya-sikistirma-islemi.html": {
+    "description": "Batch file ile winrar kullanarak klasör sıkıştırma işlemi yapmak için aşağıdaki komutlar işinizi görebilir dosya adreslerin kendinize göre düzenleyin",
+    "title": "Batch dosyasıyla WinRAR kullanarak dosya sıkıştırma"
+  },
+  "/solr/2021/04/02/solr-collection-olusturma-guncelleme.html": {
+    "description": "Elastic Search lisans değiştirdikten sonra yoğun bi şekilde solr kullanmaya başladığımız şu günlerde genelde solr Collection yükleme işlemi yapıyoruz. ve…"
+  },
+  "/solr/2021/07/28/solr-nested-field.html": {
+    "description": "Solrda nested field gibi güzel bir yetenek mevcut bu yetenekten faydalanmak için nasıl bir yapılandırma yapmamız gerekiyor kısaca değinecek olursak (bu…"
+  },
+  "/solr/2021/09/10/solr-cloud-notlar.html": {
+    "description": "leader seçimi UP config DELETE config Kaynak"
+  },
+  "/ssl/apache/2024/12/10/lets-encrypt-apache-ssl.html": {
+    "description": "Bu rehber, Docker ortamında çalışan bir Apache sunucusu için Let’s Encrypt kullanarak otomatik SSL sertifikası alma ve yenileme sürecini adım adım anlatır.…"
+  },
+  "/system/2021/07/23/ubuntu-server-wifi-settings.html": {
+    "description": "dosya içeriğine yapılacak ekleme ayarları uyguluyoruz yeniden başladıktan sonra eğer wifi bilgileriniz doğru ve wifi access point açık ise bağlantı…"
+  },
+  "/tools/2020/11/13/elastik-search-rest-api-ile-cli-uzerinden-sorgu.html": {
+    "description": "Zaman içinde güncellenebilir Aşağıdaki komutlar cli için curl ile verilmiştir aynı istekelr postman veya doğrudan tarayıcıdan yapılabilir eğer json result…",
+    "title": "Elasticsearch REST API: CLI ile Sorgulama"
+  },
+  "/tools/2020/11/13/s3-fileserver-connect-on-cli.html": {
+    "description": "S3 server git mantığı ile çalışır her bir repo için bir bucket diyebiliriz aynı şekilde istediğiniz kadar alt altta klasör oluşturduğunuzu düşünün(sadece…"
+  },
+  "/tr/2026/07/28/kubernetes-kustomize-helm-chart-ve-gitops-nedir.html": {
+    "description": "Kubernetes öğrenmeye başlayanların karşısına kısa süre içinde yeni kavramlar çıkar: YAML manifestleri, Helm Chart, Kustomize, GitOps, Argo CD ve Flux. Bu…",
+    "title": "Kubernetes, Kustomize, Helm Chart ve GitOps"
+  },
+  "/vbscript/2014/11/24/windows-vbscriptile-dosya-sikistirma.html": {
+    "description": "VBScript ile dosya sıkıştırma yapmak için aşağıdaki kod işinizi görebilir"
+  },
+  "/windows/2014/11/07/bilgisayari-kapatma-veya-yeniden-baslatma.html": {
+    "description": "Bilgisayarı command line üzerinden veya yazılımla yeniden başlatıp kapatabilmek için Shutdown.exe yi aşağıdaki parametreler ile ihtiyacınıza göre…"
+  },
+  "/windows/2014/11/09/windows-8-logi-password-sifirlama.html": {
+    "description": "Windows 8 login şifresini sıfırlamak istediğiniz zaman aşağıdaki adımları takip edin Bilgisayarınızı herhangi bir NTFS komut sistemi desteği olan yazılım…"
+  },
+  "/yazilim/2021/07/03/yazilim-sektoru-nereye-gidiyor.html": {
+    "description": "Bu yazımda yazılım sektörü ile alakalı naçizane kendi düşüncelerimi paylaşmak istedim farklı görüşü düşüncesi olan kişiler olabilir paylaşırlar ise onlardan…"
+  },
+  "/en/2023/10/06/connecting-a-shared-container-to-azure-container-app.html": {
+    "title": "Connecting a Shared Container to Azure Container Apps"
+  },
+  "/en/2025/09/15/architectural-decisions-changing-context-and-the-power-of-a-platform-with-a-determined-route.html": {
+    "title": "Architectural Decisions and Changing Context"
+  },
+  "/2025/09/15/mimari-kararlar-degisen-context-ve-rotasi-belli-bir-platformun-gucu.html": {
+    "title": "Mimari Kararlar ve Değişen Context"
+  },
+  "/2025/11/19/asenkron-platformlarda-performans-olcumu-nerede-tikanir-nasil-tespit-edilir.html": {
+    "title": "Asenkron Platformlarda Performans ve Darboğaz Tespiti"
+  },
+  "/en/2025/11/20/performance-measurement-in-asynchronous-platforms-where-is-it-blocked-and-how-to-detect-it.html": {
+    "title": "Measuring Performance in Asynchronous Platforms"
+  },
+  "/2025/11/22/dogru-teknoloji-secimi.html": {
+    "title": "Doğru Teknoloji Seçimi: Araçlardan Önce Context"
+  },
+  "/en/2025/11/23/breaking-up-or-merging-services-my-guide-to-bounded-context.html": {
+    "title": "Bounded Context: Splitting or Merging Services?"
+  },
+  "/2025/11/23/bounded-context-karari-nasil-verilir.html": {
+    "title": "Bounded Context: Servisleri Bölmek mi, Birleştirmek mi?"
+  },
+  "/en/2025/11/25/artificial-intelligence-and-the-human-mind-the-erosion-of-thinking-decay-of-code-and-loss-of-control.html": {
+    "title": "AI and the Human Mind: Thinking, Code and Control"
+  },
+  "/2025/11/25/yapay-zeka-dusunmenin-yerini-alabilir-mi.html": {
+    "title": "Yapay Zekâ: Düşünme, Kod ve Kontrolün Kaybı"
+  },
+  "/2025/11/26/kubernetes-uzerinde-versioning-ve-releasing-yonetimi.html": {
+    "title": "Kubernetes’te Versioning ve Releasing Yönetimi"
+  },
+  "/en/2025/11/27/npm-supply-chain-threats-shai-hulud-case-and-modern-security-approach.html": {
+    "title": "NPM Supply-Chain Security: The Shai-Hulud Case"
+  },
+  "/2025/11/27/npm-supply-chain-tehditleri-shai-hulud-ornegi-ve-modern-guvenlik-yaklasimi.html": {
+    "title": "NPM Supply-Chain Güvenliği: Shai-Hulud Örneği"
+  },
+  "/en/2025/11/29/why-is-debug-not-enough-in-event-driven-architecture-on-tracing-replay-and-true-observability.html": {
+    "title": "Event-Driven Debugging: Tracing and Replay"
+  },
+  "/2025/11/29/event-driven-mimaride-debug-neden-yetmez.html": {
+    "title": "Event-Driven Mimaride Tracing, Replay ve Debug"
+  },
+  "/en/2025/12/01/my-development-environment-a-lightweight-portable-and-simple-approach.html": {
+    "title": "My Lightweight and Portable Development Environment"
+  },
+  "/2025/12/01/benim-gelistirme-ortamim-hafif-tasinabilir-ve-sade-bir-yaklasim.html": {
+    "title": "Hafif ve Taşınabilir Geliştirme Ortamım"
+  },
+  "/networking/2025/12/25/peppol-aginin-dns-mantikla-calisma-prensibi.html": {
+    "title": "Peppol Ağı Nasıl Çalışır? DNS Mantığıyla"
+  },
+  "/en/2025/12/30/test-centric-development-let-testing-be-the-first-place-where-the-code-runs.html": {
+    "title": "Test-Centric Development: Run the Code in Tests First"
+  },
+  "/2025/12/30/test-centric-development.html": {
+    "title": "Test-Centric Development: Kod Önce Testte Çalışsın"
+  },
+  "/en/2025/12/31/dlq-in-self-hosted-kubernetes-azure-devops-bug-automatically-report-unhandled-api-error-simulate-it-.html": {
+    "title": "Kubernetes DLQ to Azure DevOps: Bugs and Local Replay"
+  },
+  "/2025/12/31/self-hosted-kubernetes-te-dlq-azure-devops-bug-unhandled-api-hatasini-otomatik-raporla.html": {
+    "title": "Kubernetes DLQ → Azure DevOps: Hata Raporu ve Replay"
+  },
+  "/2026/01/05/dokumantasyon-nerede-biter-muhendislik-nerede-baslar.html": {
+    "title": "Dokümantasyon ve Mühendislik Arasındaki Sınır"
+  },
+  "/en/2026/01/09/serving-github-files-via-cdn-with-jsdelivr-short-and-clear-guide.html": {
+    "title": "Serving GitHub Files Through the jsDelivr CDN"
+  },
+  "/2026/01/09/jsdelivr-ile-github-dosyalarini-cdn-uzerinden-sunmak.html": {
+    "title": "jsDelivr CDN ile GitHub Dosyalarını Sunmak"
+  },
+  "/en/2026/01/12/digitalization-is-not-a-project-it-is-an-earthquake.html": {
+    "title": "Digitalization Is an Earthquake, Not a Project"
+  },
+  "/en/software/dotnet/api/2026/03/10/separating-public-and-internal-swagger-docs-dotnet.html": {
+    "title": ".NET: Separate Public and Internal Swagger Docs"
+  },
+  "/2026/04/07/ai-nasil-kullanilmamali-deneyim-uzerinden-gercekler.html": {
+    "title": "AI Nasıl Kullanılmamalı? Deneyimden Notlar"
+  },
+  "/en/2026/05/16/we-are-at-the-beginning-of-a-new-layer-of-intelligence.html": {
+    "title": "The Beginning of a New Layer of Intelligence"
+  },
+  "/en/2026/07/04/managing-domain-values-in-distributed-systems.html": {
+    "title": "Managing Domain Values in Distributed Systems"
+  },
+  "/tr/2026/07/04/dagtk-sistemlerde-etki-alan-degerlerini-nasl-yonetmeliyiz.html": {
+    "title": "Dağıtık Sistemlerde Etki Alanı Değerlerini Yönetmek"
+  },
+  "/en/2026/07/28/what-are-kubernetes-kustomize-helm-charts-and-gitops.html": {
+    "title": "Kubernetes, Kustomize, Helm Charts and GitOps Explained"
+  },
+  "/en/2026/08/01/designing-a-dynamic-flow-engine.html": {
+    "title": "Designing a Dynamic Flow Engine"
+  },
+  "/tr/2026/08/01/dinamik-bir-flow-engine-tasarlamak.html": {
+    "title": "Dinamik Bir Flow Engine Tasarlamak"
+  },
+  "/en/2026/08/04/managing-dependencies-and-microservice-boundaries.html": {
+    "title": "Managing Dependencies and Microservice Boundaries"
+  },
+  "/tr/2026/08/04/projelerde-bagimlilik-ve-mikroservislerde-sinirlari.html": {
+    "title": "Mikroservislerde Bağımlılık ve Servis Sınırları"
+  },
+  "/en/2026/08/07/how-i-use-ai-operations-without-giving-up-decisions.html": {
+    "title": "How I Use AI: Automated Operations, Human Decisions"
+  },
+  "/tr/2026/08/07/aiyi-nasil-kullaniyorum-operasyonlar-aida-kararlar-bende.html": {
+    "title": "AI Kullanımım: Operasyonlar AI’da, Kararlar Bende"
+  },
+  "/en/2026/09/07/from-code-to-customer-packaging-a-product-with-kubernetes.html": {
+    "title": "Packaging a Product with Kubernetes"
+  },
+  "/tr/2026/09/07/koddan-musteri-ortamina-kubernetes-ile-bir-urunu-paketlemek.html": {
+    "title": "Kubernetes ile Bir Ürünü Paketlemek"
+  },
+  "/cosmos/2023/09/29/cosmos-db-karmaşık-query-ornekleri.html": {
+    "description": "Cosmos DB’de karmaşık ve iç içe geçmiş JSON dokümanları üzerinde sorgular oluşturmak oldukça yaygındır. Bu tür sorguları anlamak için bir örnek üzerinden…"
+  },
+  "/javascript/2023/10/20/serverless-tasarımlarda-dikkat-edilmesi-gereken-hususlar.html": {
+    "description": "Görsel Bing Görüntü Oluşturucu ile hazırlanmıştır Mikro servisler, yazılım geliştirme dünyasında giderek daha fazla popülerlik kazanıyor. Büyük monolitik…",
+    "title": "Serverless Mimari Tasarımında Dikkat Edilecek Noktalar"
+  },
+  "/kubernetes/mariadb/maxscale/veritabanı/2025/05/30/kubernetes-mariadb-maxscale-cluster-kurulumu.md.html": {
+    "description": "Kubernetes üzerinde yüksek erişilebilir, ölçeklenebilir ve merkezi yönetilebilir bir MariaDB kümesi oluşturmak, özellikle kurumsal uygulamalarda önemli bir…"
+  },
+  "/openai/gpt/2023/06/16/chat-gpt-api-kullanımı.html": {
+    "description": "Bu Python uygulaması, ChatGPT API’sini kullanarak basit bir metin tabanlı sohbet uygulaması oluşturmanızı sağlar. Öncelikle, API endpoint URL’sini ve API…"
+  },
+  "/sys/2021/11/28/image-dosyası-boyutlandirma.html": {
+    "description": "Bazen elimizde bir image(.img gibi) dosyası olur bunun boyutunu artırmamız gerekebilir bu durumlarda aşağıdaki adımları takipe debiliriz bizim image…"
+  }
+}

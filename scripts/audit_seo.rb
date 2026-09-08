@@ -14,6 +14,12 @@ Dir.glob("#{root}/**/*.html").each do |file|
   errors << [path, 'missing language'] if doc.at_css('html')['lang'].to_s.empty?
   errors << [path, 'missing title'] if doc.at_css('title')&.text.to_s.strip.empty?
   errors << [path, 'canonical count'] unless doc.css('link[rel="canonical"]').size == 1
+  errors << [path, 'expected one main heading'] unless doc.css('h1').size == 1
+  errors << [path, 'automatic language redirect'] if doc.css('script[src]').any? { |n| n['src'].include?('language-redirect') }
+  doc.css('img').each do |img|
+    errors << [path, "missing image dimensions #{img['src']}"] unless img['width'].to_i > 0 && img['height'].to_i > 0
+    errors << [path, "HTTP image #{img['src']}"] if img['src'].to_s.start_with?('http:')
+  end
   %w[description robots twitter:card twitter:title twitter:description twitter:image twitter:image:alt].each do |name|
     errors << [path, "missing #{name}"] if doc.at_css("meta[name='#{name}']")&.[]('content').to_s.strip.empty?
   end
@@ -32,7 +38,7 @@ Dir.glob("#{root}/**/*.html").each do |file|
   end
   doc.css('meta[property="og:image"], link[rel="icon"], link[rel="alternate icon"]').each do |node|
     url = node['content'] || node['href']
-    uri = URI.parse(url)
+    uri = URI.parse(URI::DEFAULT_PARSER.escape(url, /[^\x21-\x7e]/))
     next if uri.host && uri.host != 'fmarslan.com'
     asset = File.join(root, URI::DEFAULT_PARSER.unescape(uri.path))
     errors << [path, "missing asset #{url}"] unless File.file?(asset)
@@ -58,6 +64,44 @@ urls.each do |url|
     errors << [url, "missing alternate #{target}"] unless target_doc
     next if link['hreflang'] == 'x-default' || !target_doc
     errors << [url, "nonreciprocal alternate #{target}"] unless target_doc.css('link[hreflang]').any? { |n| n['href'] == url }
+    errors << [url, "alternate language mismatch #{target}"] unless target_doc.at_css('html')['lang'] == link['hreflang']
+  end
+  x_default = doc.at_css('link[hreflang="x-default"]')
+  english = doc.at_css('link[hreflang="en"]')
+  errors << [url, 'x-default must match English'] if english && x_default&.[]('href') != english['href']
+end
+pages.each do |path, doc|
+  doc.css('a[href],img[src],script[src],link[rel="stylesheet"]').each do |node|
+    value = node['href'] || node['src']
+    next if value.to_s.empty? || value.start_with?('#', 'mailto:', 'tel:', 'data:')
+    begin
+      base = 'https://fmarslan.com' + URI::DEFAULT_PARSER.escape(path)
+      uri = URI.join(base, URI::DEFAULT_PARSER.escape(value, /[^\x21-\x7e]/))
+      next unless uri.host == 'fmarslan.com'
+      target = File.join(root, URI::DEFAULT_PARSER.unescape(uri.path))
+      target = File.join(target, 'index.html') if File.directory?(target)
+      errors << [path, "broken internal resource #{value}"] unless File.file?(target)
+    rescue URI::InvalidURIError
+      errors << [path, "invalid internal URL #{value}"]
+    end
+  end
+end
+errors << ['/', 'default home must be English'] unless pages['/index.html']&.at_css('html')&.[]('lang') == 'en'
+errors << ['/tr/', 'Turkish home missing'] unless pages['/tr/index.html']&.at_css('html')&.[]('lang') == 'tr'
+Dir.glob("#{root}/**/*.html").each do |file|
+  doc = Nokogiri::HTML(File.read(file))
+  refresh = doc.at_css('meta[http-equiv="refresh"]')
+  next unless refresh
+  target = refresh['content'].to_s.split(/url=/i, 2).last.to_s.strip
+  begin
+    uri = URI.parse(target)
+    raise URI::InvalidURIError unless uri.scheme == 'https' && uri.host == 'fmarslan.com'
+    target_path = uri.path.end_with?('/') ? uri.path + 'index.html' : uri.path
+    target_doc = pages[target_path]
+    errors << [file.delete_prefix(root), "redirect target missing or chained #{target}"] unless target_doc
+    errors << [file.delete_prefix(root), 'redirect canonical mismatch'] unless doc.at_css('link[rel="canonical"]')&.[]('href') == target
+  rescue URI::InvalidURIError
+    errors << [file.delete_prefix(root), "invalid redirect #{target}"]
   end
 end
 puts JSON.pretty_generate({pages: pages.size, sitemap_urls: urls.size, errors: errors})
