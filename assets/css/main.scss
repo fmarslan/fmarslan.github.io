@@ -2,12 +2,6 @@
 ---
 @charset "UTF-8";
 
-.header-language {
-  text-decoration: underline;
-  text-underline-offset: .2em;
-  white-space: nowrap;
-}
-
 .language-suggestion[hidden] { display: none; }
 .language-suggestion {
   position: fixed;
@@ -35,7 +29,7 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.language-suggestion :focus-visible, .header-language:focus-visible {
+.language-suggestion :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 4px;
 }
