@@ -6,7 +6,7 @@ lang: tr-TR
 description: "Serverless Bir Mimari Hazırlarken Dikkat Etmeniz Gereken Önemli Noktalar konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
 translation_key: "serverless-tasarmlarda-dikkat-edilmesi-gereken-hususlar-d8d46e21"
 image: "/assets/img/saas-faas.png"
-permalink: /javascript/2023/10/20/serverless-tasar%C4%B1mlarda-dikkat-edilmesi-gereken-hususlar.html
+permalink: /javascript/2023/10/20/serverless-tasarimlarda-dikkat-edilmesi-gereken-hususlar.html
 ---
 
 *Görsel [Bing Görüntü Oluşturucu](https://www.bing.com/images/create) ile hazırlanmıştır*

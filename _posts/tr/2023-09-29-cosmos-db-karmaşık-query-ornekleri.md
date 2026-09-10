@@ -5,7 +5,7 @@ categories: cosmos
 lang: tr-TR
 description: "Cosmos db karmaşık query örneği konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
 translation_key: "cosmos-db-karmask-query-ornekleri-c00373a4"
-permalink: /cosmos/2023/09/29/cosmos-db-karma%C5%9F%C4%B1k-query-ornekleri.html
+permalink: /cosmos/2023/09/29/cosmos-db-karmasik-query-ornekleri.html
 ---
 
 Cosmos DB'de karmaşık ve iç içe geçmiş JSON dokümanları üzerinde sorgular oluşturmak oldukça yaygındır. Bu tür sorguları anlamak için bir örnek üzerinden ilerleyelim.

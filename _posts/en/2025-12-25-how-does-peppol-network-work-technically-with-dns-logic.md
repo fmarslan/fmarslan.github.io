@@ -18,7 +18,7 @@ permalink: /en/2025/12/25/how-does-peppol-network-work-technically-with-dns-logi
 
 When trying to understand Peppol, dozens of terms such as SML, SMP, Access Point, Participant ID may seem like complex topics that need to be memorized. However, the essence of the matter is based on the following question: **“How do I deliver an electronic document to the right institution, to the right technical endpoint, securely?”** This is the same problem that DNS has been solving on the Internet for years. Peppol architecture also re-establishes the authority delegation and resolution chain we learned from DNS for institutions and e-documents.
 
-If you are wondering how DNS works layer by layer, I suggest you first look at this article: [ICANN, DNS Resolution Chain and Authority Map](/networking/2025/12/20/icann-dns-cozme-ve-authority-chain.html). The explanation here assumes that you know that chain.
+If you are wondering how DNS works layer by layer, I suggest you first look at this article: [ICANN, DNS Resolution Chain and Authority Map](/en/2025/12/20/icann-dns-resolution-chain-and-authority-map.html). The explanation here assumes that you know that chain.
 
 ## What is Peppol Network?
 

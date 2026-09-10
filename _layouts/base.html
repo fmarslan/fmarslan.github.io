@@ -78,12 +78,6 @@
   {%- unless locale_code contains 'en' -%}
     {%- assign x_default_url = effective_alternate_url -%}
   {%- endunless -%}
-  {%- if is_post_layout -%}
-    {%- assign x_default_url = page.url -%}
-    {%- if locale_code contains 'en' -%}
-      {%- assign x_default_url = effective_alternate_url -%}
-    {%- endif -%}
-  {%- endif -%}
   <link rel="alternate" hreflang="{{ locale_code | split: '-' | first }}" href="{{ canonical_url }}">
   <link rel="alternate" hreflang="{{ alternate_lang }}" href="{{ effective_alternate_url | relative_url | absolute_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ x_default_url | relative_url | absolute_url }}">

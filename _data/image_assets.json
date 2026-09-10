@@ -1,4 +1,9 @@
 {
+  "/assets/Screenshot from 2020-12-03 14-43-04.png": {
+    "width": 392,
+    "height": 149,
+    "src": "/assets/Screenshot%20from%202020-12-03%2014-43-04.png"
+  },
   "/assets/fatih-mehmet-arslan-1-522X450.png": {
     "width": 522,
     "height": 450,
@@ -373,6 +378,74 @@
       }
     ]
   },
+  "/assets/img/Screenshot from 2020-12-03 14-43-04.png": {
+    "width": 392,
+    "height": 149,
+    "src": "/assets/img/Screenshot%20from%202020-12-03%2014-43-04.png"
+  },
+  "/assets/img/Screenshot from 2020-12-03 14-53-20.png": {
+    "width": 1356,
+    "height": 175,
+    "src": "/assets/img/Screenshot%20from%202020-12-03%2014-53-20.png"
+  },
+  "/assets/img/Screenshot from 2020-12-08 09-18-55.png": {
+    "width": 315,
+    "height": 72,
+    "src": "/assets/img/Screenshot%20from%202020-12-08%2009-18-55.png"
+  },
+  "/assets/img/Spilo_Architecture_Instance[1].png": {
+    "width": 953,
+    "height": 406,
+    "src": "/assets/optimized/381e220931ec28c6-953.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/381e220931ec28c6-480.webp",
+        "width": 479
+      },
+      {
+        "src": "/assets/optimized/381e220931ec28c6-953.webp",
+        "width": 953
+      }
+    ]
+  },
+  "/assets/img/aWryH.png": {
+    "width": 1756,
+    "height": 858,
+    "src": "/assets/optimized/6b23f097e7861f03-1600.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/6b23f097e7861f03-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/6b23f097e7861f03-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/6b23f097e7861f03-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/assets/img/adapting-technology-to-regulation.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/c1e67a77398ad448-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/c1e67a77398ad448-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/c1e67a77398ad448-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/c1e67a77398ad448-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
   "/assets/img/ai-operations-decision-authority-cover.png": {
     "width": 1536,
     "height": 1024,
@@ -408,25 +481,6 @@
       {
         "src": "/assets/optimized/3da9087030a6cc3b-1024.webp",
         "width": 1024
-      }
-    ]
-  },
-  "/assets/img/aWryH.png": {
-    "width": 1756,
-    "height": 858,
-    "src": "/assets/optimized/6b23f097e7861f03-1600.webp",
-    "variants": [
-      {
-        "src": "/assets/optimized/6b23f097e7861f03-480.webp",
-        "width": 480
-      },
-      {
-        "src": "/assets/optimized/6b23f097e7861f03-960.webp",
-        "width": 960
-      },
-      {
-        "src": "/assets/optimized/6b23f097e7861f03-1600.webp",
-        "width": 1600
       }
     ]
   },
@@ -878,21 +932,6 @@
       }
     ]
   },
-  "/assets/img/Screenshot from 2020-12-03 14-43-04.png": {
-    "width": 392,
-    "height": 149,
-    "src": "/assets/img/Screenshot%20from%202020-12-03%2014-43-04.png"
-  },
-  "/assets/img/Screenshot from 2020-12-03 14-53-20.png": {
-    "width": 1356,
-    "height": 175,
-    "src": "/assets/img/Screenshot%20from%202020-12-03%2014-53-20.png"
-  },
-  "/assets/img/Screenshot from 2020-12-08 09-18-55.png": {
-    "width": 315,
-    "height": 72,
-    "src": "/assets/img/Screenshot%20from%202020-12-08%2009-18-55.png"
-  },
   "/assets/img/sdasvfdw.png": {
     "width": 1024,
     "height": 1536,
@@ -916,21 +955,6 @@
     "width": 474,
     "height": 201,
     "src": "/assets/img/spilo.jpeg"
-  },
-  "/assets/img/Spilo_Architecture_Instance[1].png": {
-    "width": 953,
-    "height": 406,
-    "src": "/assets/optimized/381e220931ec28c6-953.webp",
-    "variants": [
-      {
-        "src": "/assets/optimized/381e220931ec28c6-480.webp",
-        "width": 479
-      },
-      {
-        "src": "/assets/optimized/381e220931ec28c6-953.webp",
-        "width": 953
-      }
-    ]
   },
   "/assets/img/tech-selection-compass.png": {
     "width": 1200,
@@ -970,11 +994,6 @@
         "width": 522
       }
     ]
-  },
-  "/assets/Screenshot from 2020-12-03 14-43-04.png": {
-    "width": 392,
-    "height": 149,
-    "src": "/assets/Screenshot%20from%202020-12-03%2014-43-04.png"
   },
   "/assets/tarsolution/19691.jpg": {
     "width": 7501,

@@ -8,7 +8,7 @@ lang: tr-TR
 description: "Kubernetes ile MariaDB MaxScale Cluster Kurulumu konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
 translation_key: "kubernetes-mariadb-maxscale-cluster-kurulumu-708f93ef"
 image: "/assets/img/mariadb-maxscale.png"
-permalink: /kubernetes/mariadb/maxscale/veritaban%C4%B1/2025/05/30/kubernetes-mariadb-maxscale-cluster-kurulumu.md.html
+permalink: /kubernetes/mariadb/maxscale/veritabani/2025/05/30/kubernetes-mariadb-maxscale-cluster-kurulumu.html
 ---
 
 Kubernetes üzerinde yüksek erişilebilir, ölçeklenebilir ve merkezi yönetilebilir bir **MariaDB kümesi** oluşturmak, özellikle kurumsal uygulamalarda önemli bir gereksinim. Bu rehberde; **MariaDB replikasyon kümesi** ve üzerinde çalışan **MaxScale read/write split proxy** yapısını adım adım nasıl kurabileceğinizi sade ve uygulanabilir bir şekilde özetledim.

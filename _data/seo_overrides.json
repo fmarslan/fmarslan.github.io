@@ -48,7 +48,7 @@
     "description": "Docker, uygulamalarınızı hızlı ve taşınabilir bir şekilde çalıştırmanıza olanak tanıyan güçlü bir konteynerleştirme platformudur. Bu rehberde, kendi özel…",
     "title": "Docker Container Hazırlama ve Docker Hub’da Yayımlama"
   },
-  "/cosmos,/net6/2023/09/29/cosmos-db-net-connection-ve-nested-sorgular.html": {
+  "/cosmos/net6/2023/09/29/cosmos-db-net-connection-ve-nested-sorgular.html": {
     "description": "Cosmos DB, Microsoft’un küresel ölçekte dağıtılmış bir NoSQL veritabanı hizmetidir. .NET 6 ile, Cosmos DB’ye kolayca bağlanabilir ve JSON dokümanları içinde…",
     "title": ".NET 6 ile Cosmos DB Bağlantısı ve Nested JSON Sorguları"
   },
@@ -416,7 +416,7 @@
   "/javascript/2015/06/12/web-sayfasinin-resmini-cekme.html": {
     "description": "Html2Canvas kütüphanesini ve jQuery kütüphanesini sitenize ekleyin sonrasında aşağıdaki kod ile ekran görünütüsünü yakalayabilirsiniz."
   },
-  "/javascript/2017/04/07/Polygon-orta-nokta-bulma.html": {
+  "/javascript/2017/04/07/polygon-orta-nokta-bulma.html": {
     "description": "Eğer birgün sizde bir polygonun orta noktasını bulmak isterseniz fakat bu işlem polygon şeklinin garip olduğu durumlarda polygon dışında bir sonuç veriyor…"
   },
   "/javascript/2017/04/07/javascript-custom-style-checkbox-olusturma.html": {
@@ -493,14 +493,14 @@
   "/microservice/2021/01/22/nedir-bu-mikroservis-akimi.html": {
     "description": "Çevrenizde hep duymuşsunuzdur “biz mikroservis mimarisinde proje geliştiriyoruz” cümlesini, tabiki herkeste mikroservis projeleri çok iyidir güzeldir…"
   },
-  "/mysql/2023/09/29/mysql-json-parse-in-query-and-create-insert-with-WITH-clause.html": {
+  "/mysql/2023/09/29/mysql-json-parse-in-query-and-create-insert-with-with-clause.html": {
     "description": "aşağıdaki örnek query json parse işlemini yapmakta ve table oluşturup içerisine with ile oluşturulan sorgu sonucunu insert etmektedir.",
     "title": "MySQL JSON Parse ve WITH ile Create/Insert"
   },
   "/nodejs/2020/12/08/nodejs-kutuphanenizi-local-repoya-publish-etme.html": {
     "description": "nodejs, npm ve ng kurulumu yapılmıştır diye varsayarak başlıyoruz bu süreçte angular kütüphanesi yayınlayacağız öncelikle angular cli ile kütüphanemizi…"
   },
-  "/nodejs/2021/08/19/linuxta-fat32-dosya-sisteminde-npm-install-Error-EPERM-operation-not-permitted-symlink.html": {
+  "/nodejs/2021/08/19/linuxta-fat32-dosya-sisteminde-npm-install-error-eperm-operation-not-permitted-symlink.html": {
     "description": "linux işletim sisteminde fat32 dosya sistemi üzerinde npm install yaparken aşağıdaki gibi bir hata alıyorsanız çözüm için npm config set bin-links false…"
   },
   "/patroni/2021/11/26/patroni-replica-reinit.html": {
@@ -510,7 +510,7 @@
     "description": "Görsel Spilo resmi repository hesabindan alinmistir PostgreSQL, dayanıklılığı, geniş ölçeklenebilirliği ve yüksek performansı ile bilinen bir veritabanı…",
     "title": "Spilo, Patroni ve WAL-G ile PostgreSQL Cluster"
   },
-  "/python/2022/10/23/windows-11-python-virtual-environment-UnauthorizedAccess-problem.html": {
+  "/python/2022/10/23/windows-11-python-virtual-environment-unauthorized-access-problem.html": {
     "description": "Python ile windows 11 de virtual env kullanmak istediğiniz aşağıdaki hatayı aldıysanız Çözüm için powershell Set-ExecutionPolicy -Scope CurrentUser…"
   },
   "/raspberry/2021/09/10/raspberry-custom-image-hazirlama.html": {

@@ -50,6 +50,7 @@ errors << ['sitemap', 'duplicate URLs'] unless urls.uniq == urls
 urls.each do |url|
   uri = URI.parse(url)
   errors << [url, 'non-production URL'] unless uri.scheme == 'https' && uri.host == 'fmarslan.com'
+  errors << [url, 'unclean permalink'] if uri.path.match?(/%[0-9A-Fa-f]{2}|,|\.md\.html|[A-Z]/)
   path = URI::DEFAULT_PARSER.unescape(uri.path)
   path += 'index.html' if path.end_with?('/')
   errors << [url, 'missing output'] unless File.file?(File.join(root, path))
@@ -81,6 +82,9 @@ pages.each do |path, doc|
       target = File.join(root, URI::DEFAULT_PARSER.unescape(uri.path))
       target = File.join(target, 'index.html') if File.directory?(target)
       errors << [path, "broken internal resource #{value}"] unless File.file?(target)
+      if node.name == 'img' && File.file?(target) && File.size(target) > 1_000_000
+        errors << [path, "image exceeds 1 MB #{value}"]
+      end
     rescue URI::InvalidURIError
       errors << [path, "invalid internal URL #{value}"]
     end

@@ -5,7 +5,7 @@ categories: OpenAI GPT
 lang: tr-TR
 description: "Chat GPT Api kullanımı konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
 translation_key: "chat-gpt-api-kullanm-1cd910aa"
-permalink: /openai/gpt/2023/06/16/chat-gpt-api-kullan%C4%B1m%C4%B1.html
+permalink: /openai/gpt/2023/06/16/chat-gpt-api-kullanimi.html
 ---
 
 ## ChatGPT API Uygulaması

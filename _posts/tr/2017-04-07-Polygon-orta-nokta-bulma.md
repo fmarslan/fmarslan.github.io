@@ -5,7 +5,7 @@ categories: javascript
 lang: tr-TR
 description: "Polygon orta nokta bulma konusunda temel yaklaşımı ve uygulanabilir adımları özetleyen kısa bir teknik not."
 translation_key: "polygon-orta-nokta-bulma-1a62edb7"
-permalink: /javascript/2017/04/07/Polygon-orta-nokta-bulma.html
+permalink: /javascript/2017/04/07/polygon-orta-nokta-bulma.html
 ---
 
 Eğer birgün sizde bir polygonun orta noktasını bulmak isterseniz fakat bu işlem polygon şeklinin garip olduğu durumlarda polygon dışında bir sonuç veriyor ve siz bundan memnun değilseniz aşağıdaki script tam size göre (Not her zamanki gibi kişisel geliştirmelere açıktır :) )
