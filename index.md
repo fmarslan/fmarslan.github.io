@@ -31,6 +31,8 @@ toolbox:
   title: Tarsolution Engineering Tools
   description: A toolbox I built for practical needs in software development, data integration and industrial automation. It brings together utilities for JSON formatting and validation, data format conversion, JWT inspection, Modbus analysis and XML/XSLT transformation.
   link_label: Explore the tools
+  vault_description: A desktop tool I built to restore development workspaces and manage secrets. It connects encrypted vaults and secret providers to local files and project configuration through explicit synchronization rules.
+  vault_link_label: Explore TAR Vault Sync
 
 focus:
   eyebrow: What I work on

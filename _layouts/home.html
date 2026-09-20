@@ -32,7 +32,6 @@ layout: base
       <div class="hero-social">
         {% include social.html %}
       </div>
-      {% include expertise-links.html %}
       {%- if page.metrics -%}
       <ul class="hero-meta">
         {%- for metric in page.metrics -%}
@@ -61,12 +60,20 @@ layout: base
   {%- if page.toolbox -%}
   <section aria-labelledby="toolbox-heading">
     <div class="section-heading"><h2 id="toolbox-heading">{{ page.toolbox.heading }}</h2></div>
+    <div class="card-grid">
     <article class="card">
       <p class="pill">tools.tarsolution.com</p>
       <h3>{{ page.toolbox.title }}</h3>
       <p>{{ page.toolbox.description }}</p>
       <a class="btn btn-secondary" href="https://tools.tarsolution.com/" target="_blank" rel="noopener noreferrer">{{ page.toolbox.link_label }} ↗</a>
     </article>
+    <article class="card">
+      <p class="pill">tarvault.tarsolution.com</p>
+      <h3>TAR Vault Sync</h3>
+      <p>{{ page.toolbox.vault_description }}</p>
+      <a class="btn btn-secondary" href="http://tarvault.tarsolution.com/" target="_blank" rel="noopener noreferrer">{{ page.toolbox.vault_link_label }} ↗</a>
+    </article>
+    </div>
   </section>
   {%- endif -%}
 

@@ -31,6 +31,8 @@ toolbox:
   title: Tarsolution Engineering Tools
   description: Yazılım geliştirme, veri entegrasyonu ve endüstriyel otomasyon çalışmalarında karşılaştığım pratik ihtiyaçlar için geliştirdiğim araç kutusu. JSON biçimlendirme ve doğrulama, veri formatı dönüştürme, JWT inceleme, Modbus analizi ve XML/XSLT dönüşümleri gibi işleri tek yerde topluyor.
   link_label: Araçları keşfet
+  vault_description: Geliştirme ortamlarını yeniden kurmak ve gizli bilgileri yönetmek için geliştirdiğim masaüstü aracı. Şifreli kasaları ve gizli bilgi kaynaklarını, tanımlı senkronizasyon kurallarıyla yerel dosyalara ve proje yapılandırmalarına bağlıyor.
+  vault_link_label: TAR Vault Sync’i keşfet
 
 focus:
   eyebrow: Çalışma alanlarım
