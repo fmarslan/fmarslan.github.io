@@ -103,3 +103,8 @@ exclude:
   - _site
   - tmp
   - tests
+  - worker
+  - package.json
+  - package-lock.json
+  - dist
+  - codex-package
