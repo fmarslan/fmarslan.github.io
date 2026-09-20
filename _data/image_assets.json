@@ -956,6 +956,44 @@
     "height": 201,
     "src": "/assets/img/spilo.jpeg"
   },
+  "/assets/img/tar-vault-sync-24-hours-en.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/73bd2c3c68357866-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/73bd2c3c68357866-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/73bd2c3c68357866-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/73bd2c3c68357866-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/assets/img/tar-vault-sync-24-hours-tr.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/059fa451f766ed82-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/059fa451f766ed82-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/059fa451f766ed82-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/059fa451f766ed82-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
   "/assets/img/tech-selection-compass.png": {
     "width": 1200,
     "height": 630,
