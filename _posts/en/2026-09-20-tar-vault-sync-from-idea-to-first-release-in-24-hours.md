@@ -94,3 +94,10 @@ In the longer term, I want a tool that other developers can adapt to their own e
 Contributing with AI agents is part of that approach. I want a project where people can define their own needs, develop with their agents, verify the results, and share their contributions. The source code and development roadmap are available in the [TAR Vault Sync repository](https://github.com/tarsolution/tarvaultsync).
 
 The experience I want is simple: when I restore a workspace, I want to continue the work I left behind instead of starting a search for missing connection details.
+
+---
+
+**Explore TAR Vault Sync**
+
+- [Project website and user guide](https://tarvault.tarsolution.com/)
+- [GitHub — source code and development roadmap](https://github.com/tarsolution/tarvaultsync)

@@ -94,3 +94,10 @@ Daha uzun vadede, farklı geliştiricilerin kendi ortamlarına uyarlayabileceği
 AI agent'larla katkı yaklaşımı da bunun bir parçası. Kendi ihtiyacını tanımlayan, agent'ıyla geliştiren ve sonucunu doğrulayarak paylaşan insanların birlikte üretebildiği bir proje hedefliyorum. Kaynak kod ve geliştirme yol haritası [TAR Vault Sync deposunda](https://github.com/tarsolution/tarvaultsync) bulunuyor.
 
 Ulaşmak istediğim deneyim oldukça basit: Bir çalışma ortamını geri getirdiğimde, eksik bağlantı bilgilerini aramaya başlamak yerine kaldığım işe devam edebilmek.
+
+---
+
+**TAR Vault Sync'i keşfedin**
+
+- [Proje sitesi ve kullanım rehberi](https://tarvault.tarsolution.com/)
+- [GitHub — kaynak kod ve geliştirme yol haritası](https://github.com/tarsolution/tarvaultsync)

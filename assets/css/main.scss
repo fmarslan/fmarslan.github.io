@@ -44,6 +44,8 @@
   --color-border: rgba(1, 44, 50, 0.12);
   --color-text: #0b1f23;
   --color-muted: #4a5d68;
+  --color-link: #256b78;
+  --color-link-underline: rgba(37, 107, 120, 0.38);
   --shadow-soft: none;
   --shadow-border: none;
   --radius-xl: 14px;
@@ -61,6 +63,8 @@
   --color-border: rgba(255, 255, 255, 0.08);
   --color-text: #e1eef2;
   --color-muted: #a9bec6;
+  --color-link: #83c8d1;
+  --color-link-underline: rgba(131, 200, 209, 0.42);
   --shadow-soft: none;
   --shadow-border: none;
 }
@@ -95,6 +99,31 @@ a {
 
 a:hover {
   color: var(--color-accent-strong);
+}
+
+// Prose links stay recognizable without adding visual weight to navigation.
+.post-body a[href]:not(.btn),
+.page-content :is(p, li, dd, td) a[href]:not(.btn),
+main p a[href]:not(.btn) {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-color: var(--color-link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: auto;
+
+  &:hover {
+    color: var(--color-link);
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    border-radius: 2px;
+    text-decoration-color: currentColor;
+  }
 }
 
 p {
