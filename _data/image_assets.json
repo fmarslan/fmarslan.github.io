@@ -446,6 +446,25 @@
       }
     ]
   },
+  "/assets/img/ai-coding-technical-debt.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/7d5976360f65a000-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/7d5976360f65a000-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/7d5976360f65a000-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/7d5976360f65a000-1536.webp",
+        "width": 1536
+      }
+    ]
+  },
   "/assets/img/ai-operations-decision-authority-cover.png": {
     "width": 1536,
     "height": 1024,
@@ -583,6 +602,25 @@
     "width": 1200,
     "height": 630,
     "src": "/assets/img/context-rotasi.png"
+  },
+  "/assets/img/controlled-agent-automation.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/assets/optimized/281f592771266dd0-1536.webp",
+    "variants": [
+      {
+        "src": "/assets/optimized/281f592771266dd0-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/281f592771266dd0-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/281f592771266dd0-1536.webp",
+        "width": 1536
+      }
+    ]
   },
   "/assets/img/dlq2azuredevops.png": {
     "width": 1536,

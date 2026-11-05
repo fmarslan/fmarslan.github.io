@@ -1,0 +1,1 @@
+{"name":"fmarslan-sites","private":true,"type":"module","scripts":{"build":"node scripts/build-sites.js","test:hosting":"node --test tests/sites-routing.test.js"}}

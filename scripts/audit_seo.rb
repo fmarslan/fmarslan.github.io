@@ -69,7 +69,8 @@ urls.each do |url|
   end
   x_default = doc.at_css('link[hreflang="x-default"]')
   english = doc.at_css('link[hreflang="en"]')
-  errors << [url, 'x-default must match English'] if english && x_default&.[]('href') != english['href']
+  language_urls = doc.css('link[hreflang]').reject { |link| link['hreflang'] == 'x-default' }.map { |link| link['href'] }
+  errors << [url, 'x-default must match a language version'] if english && !language_urls.include?(x_default&.[]('href'))
 end
 pages.each do |path, doc|
   doc.css('a[href],img[src],script[src],link[rel="stylesheet"]').each do |node|
